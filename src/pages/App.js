@@ -1,6 +1,10 @@
 
 import NavBar from '../components/NavBar';
-import AboutMe from './AboutMe';
+import ContactMe from './ContactMe';
+import Project from './Project';
+import Blog from './Blog';
+import Resume from './Resume';
+import Home from './Home';
 import { Container } from 'reactstrap';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -8,13 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../stylesheets/App.css';
 
 
-
 function App() {
   const AppConstantElements = (
     <div className="App">
       <NavBar />
       <Container>
-        <h1>Rodo Nguyen</h1>
         <Outlet></Outlet>
       </Container>
     </div>
@@ -25,9 +27,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={AppConstantElements}>
-            <Route path="me" element={<AboutMe/>} />
-            <Route path="blog" element={<AboutMe/>} />
-            <Route path="myresume" element={<AboutMe/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="contactme" element={<ContactMe/>} />
+            <Route path="projects" element={<Project/>} />
+            <Route path="resume" element={<Resume/>} />
+            <Route path="blog" element={<Blog/>} />
           </Route>
         </Routes>
       </BrowserRouter>

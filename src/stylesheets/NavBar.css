@@ -1,0 +1,12 @@
+.navbar-brand {
+  font-size: small;
+  margin-right: 2rem;
+}
+
+.nav-link:hover {
+  color: azure;
+}
+
+.nav-link, .me-auto {
+  --bs-navbar-active-color: #fa0b0b;
+}
