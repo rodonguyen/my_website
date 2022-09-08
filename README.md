@@ -19,7 +19,7 @@ The page will reload when you make changes.\
 - Tabs: https://mui.com/material-ui/react-tabs/
 
 ### TODO:
-- 
+- Replace className and write my own css
 
 
 

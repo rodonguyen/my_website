@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  background-color: #111317;
+  background-color: var(--dark-blue-2);
   color: white;
   height: 100%;
   min-height: 100vh;
-  font-size: larger;
+  font-size: var(--font-size-h2);
 }
 
 .App-logo {
@@ -18,4 +18,60 @@
 
 h1 {
   padding: 10px 10px;
+}
+
+/* Nav */
+nav .navbar {
+  color: #111317;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+nav {
+  background-color: var(--black-blue);
+}
+div.container-fluid {
+  max-width: 1340px;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nav Item */
+
+li .nav-item {
+  color: var(--white-vanilla);
+  color: var(--light-1);
+  text-decoration: none;
+  padding: var(--nav-item-padding);
+  text-align: center;
+  display: inline-block;
+  transition: 0.2s;
+}
+a.nav-item:hover {
+  color: var(--white);
+  font-size: var(--font-size-h2-slightly-larger);
+}
+
+
+
+/* 
+Global variables 
+Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
+*/
+:root {
+  --red-vanilla: #E63946;
+  --white: #ffffff;
+  --light-1: #e1e1e1;
+  --white-vanilla: #F1FAEE;
+  --light-blue: #A8DADC;
+  --pale-blue: #457B9D;
+  --dark-blue-1: #1D3557;
+  --dark-blue-2: #001e45;
+  --black-blue: #00132d;
+
+  --nav-item-padding: 0.4rem;
+
+  --font-size-h2: 1.5rem;
+  --font-size-h2-slightly-larger: 1.55rem;
 }
