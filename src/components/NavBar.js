@@ -11,26 +11,28 @@ const NavBar = () => (
           Home
         </Link>
       </NavItem>
-      <NavItem>
-        <Link to="/resume" className="nav-item">
-          My resume
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/projects" className="nav-item">
-          My projects
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/blog" className="nav-item">
-          Blog
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/contactme" className="nav-item">
-          Contact me
-        </Link>
-      </NavItem>
+    </Nav>
+    <Nav className='right'>
+        <NavItem>
+          <Link to="/resume" className="nav-item">
+            My resume
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link to="/projects" className="nav-item">
+            My projects
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link to="/blog" className="nav-item">
+            Blog
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link to="/contactme" className="nav-item">
+            Contact me
+          </Link>
+        </NavItem>
     </Nav>
   </Navbar>
 );

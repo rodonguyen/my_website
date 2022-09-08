@@ -1,3 +1,4 @@
+/* Main page and App */
 .App {
   text-align: center;
   background-color: var(--dark-blue-2);
@@ -21,14 +22,20 @@ h1 {
 }
 
 /* Nav */
-nav .navbar {
+nav {
   color: #111317;
   flex-wrap: nowrap;
   justify-content: flex-start;
-}
-nav {
   background-color: var(--black-blue);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
+
+.navbar {
+  /* Sticky properties */
+  position: sticky;  
+  top: 0;
+}
+
 div.container-fluid {
   max-width: 1340px;
   display: flex;
@@ -43,7 +50,7 @@ li .nav-item {
   color: var(--white-vanilla);
   color: var(--light-1);
   text-decoration: none;
-  padding: var(--nav-item-padding);
+  padding: var(--nav-item-padding) var(--nav-item-padding-side);
   text-align: center;
   display: inline-block;
   transition: 0.2s;
@@ -68,10 +75,12 @@ Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
   --pale-blue: #457B9D;
   --dark-blue-1: #1D3557;
   --dark-blue-2: #001e45;
+  --dark: #191919;
   --black-blue: #00132d;
 
   --nav-item-padding: 0.4rem;
+  --nav-item-padding-side: 1rem;
 
-  --font-size-h2: 1.5rem;
-  --font-size-h2-slightly-larger: 1.55rem;
+  --font-size-h2: 1.2rem;
+  --font-size-h2-slightly-larger: calc(var(--font-size-h2) * 1.04);
 }
