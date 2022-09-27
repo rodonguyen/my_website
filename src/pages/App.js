@@ -16,9 +16,9 @@ function App() {
   const AppConstantElements = (
     <div className="App">
       <NavBar />
-      <Container>
+      {/* <Container> */}
         <Outlet></Outlet>
-      </Container>
+      {/* </Container> */}
     </div>
   );
 

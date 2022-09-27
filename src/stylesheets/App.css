@@ -1,7 +1,7 @@
 /* Main page and App */
 .App {
   text-align: center;
-  background-color: var(--dark-blue-2);
+  background-color: var(--dark-background);
   color: white;
   height: 100%;
   min-height: 100vh;
@@ -23,11 +23,11 @@ h1 {
 
 /* Nav */
 nav {
-  color: #111317;
   flex-wrap: nowrap;
   justify-content: flex-start;
   background-color: var(--black-blue);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 3px 3px 0 var(--black-blue-2);
+  z-index: 1; /* Overlay content / Make element lie above others */
 }
 
 .navbar {
@@ -60,7 +60,44 @@ a.nav-item:hover {
   font-size: var(--font-size-h2-slightly-larger);
 }
 
+/* Content elements */
+section {
+  padding: 1.5em 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
+  max-width: 1340px;
+  margin: 0 auto
+  /* display: flex; */
+  /* flex-wrap: inherit; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+div.background-color-2 {
+  background: var(--dark-background-2);
+}
 
 /* 
 Global variables 
@@ -74,9 +111,11 @@ Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
   --dark-blue-1: #1D3557;
-  --dark-blue-2: #001e45;
+  --dark-background: #273952;
+  --dark-background-2: #293d56;
   --dark: #191919;
-  --black-blue: #00132d;
+  --black-blue: #4C6983;
+  --black-blue-2: #46647b;
 
   --nav-item-padding: 0.4rem;
   --nav-item-padding-side: 1rem;
@@ -84,3 +123,4 @@ Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
   --font-size-h2: 1.2rem;
   --font-size-h2-slightly-larger: calc(var(--font-size-h2) * 1.04);
 }
+

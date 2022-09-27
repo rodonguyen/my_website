@@ -8,7 +8,7 @@ const NavBar = () => (
     <Nav >
       <NavItem>
         <Link to="/" className="nav-item">
-          Home
+          Rodo
         </Link>
       </NavItem>
     </Nav>
