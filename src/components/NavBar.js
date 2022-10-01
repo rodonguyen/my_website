@@ -1,5 +1,5 @@
 
-import { Navbar, Collapse, Nav, NavItem } from 'reactstrap';
+import { Navbar, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => (
@@ -7,29 +7,29 @@ const NavBar = () => (
   <Navbar >
     <Nav >
       <NavItem>
-        <Link to="/" className="nav-item">
+        <Link to="/" className="nav-link brand">
           Rodo
         </Link>
       </NavItem>
     </Nav>
     <Nav className='right'>
         <NavItem>
-          <Link to="/resume" className="nav-item">
+          <Link to="/resume" className="nav-link">
             My resume
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/projects" className="nav-item">
+          <Link to="/projects" className="nav-link">
             My projects
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/blog" className="nav-item">
+          <Link to="/blog" className="nav-link">
             Blog
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/contactme" className="nav-item">
+          <Link to="/contactme" className="nav-link">
             Contact me
           </Link>
         </NavItem>

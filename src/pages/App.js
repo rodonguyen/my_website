@@ -5,7 +5,7 @@ import Project from './Project';
 import Blog from './Blog';
 import Resume from './Resume';
 import Home from './Home';
-import { Container } from 'reactstrap';
+// import { Container } from 'reactstrap';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import '../stylesheets/App.css';
