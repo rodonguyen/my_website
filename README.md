@@ -1,3 +1,5 @@
+# Rodo's Website
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -17,11 +19,14 @@ The page will reload when you make changes.\
 
 ### RESOURCES: 
 - Tabs: https://mui.com/material-ui/react-tabs/
+- Card https://coreui.io/react/docs/components/card/#
+- Modal https://react-bootstrap.github.io/components/modal/
+- Dark Mode https://www.youtube.com/watch?v=VzF2iTTc0MA 
+            https://www.youtube.com/watch?v=VzF2iTTc0MA
+- 
 
 ### TODO:
 - Replace className and write my own css
-
-
 
 
 <!-- You may also see any lint errors in the console.

@@ -1,4 +1,6 @@
-/* Main page and App */
+/**************************************************************************
+  APP 
+*/
 .App {
   text-align: center;
   background-color: var(--dark-background);
@@ -21,7 +23,9 @@ h1 {
   padding: 10px 10px;
 }
 
-/* Nav */
+/**************************************************************************
+  NAV BAR 
+*/
 nav {
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -44,8 +48,7 @@ div.container-fluid {
   justify-content: space-between;
 }
 
-/* Nav Item */
-
+/* NAV ITEM */
 li .nav-link {
   color: var(--white-vanilla);
   text-decoration: none;
@@ -61,17 +64,31 @@ a.nav-link:hover {
   color: var(--white);
   font-size: calc(var(--font-size-large) * 1.06)
 }
+a.nav-link{
+  color: var(--white)
+}
 li .nav-link.brand {
   font-size: calc(var(--font-size-large) * 1.2)
 }
 a.nav-link.brand:hover {
   font-size: calc(var(--font-size-large) * 1.26)
 }
+a:hover {
+  color: var(--white);
+  font-size: calc(var(--font-size-large) * 1.06)
+}
+.nav {
+  --bs-nav-link-color: var(--white);
+  --bs-nav-link-hover-color: var(--white);
+}
 
 
-/* Content elements */
-section {
-  padding: 1.5em 1rem;
+
+/**************************************************************************
+  CONTENT ELEMENT 
+*/
+  section {
+  padding: 1rem 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -96,7 +113,6 @@ section {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-
 }
 
 p {
@@ -108,15 +124,18 @@ div.background-color-2 {
   background: var(--dark-background-2);
 }
 
-/* 
-Global variables 
-Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
+
+
+
+/**************************************************************************
+  Global variables 
+  Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 */
 :root {
   --red-vanilla: #E63946;
   --white: #ffffff;
   --light-1: #e1e1e1;
-  --white-vanilla: #fdfdfd;
+  --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
   --dark-blue-1: #1D3557;
