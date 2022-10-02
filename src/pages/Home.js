@@ -74,20 +74,19 @@ const Home = () => {
           <CCard color={mode} style={{ width: '18rem', height: '20rem' }}>
           <CCardImage orientation="top" src={twitterSpamDetection} />
           <CCardBody>
-            <CCardTitle>Card title</CCardTitle>
+            <CCardTitle>Twitter Spam Detector</CCardTitle>
             <CCardText>
               Some quick example text the bulk of the card's content.
             </CCardText>
-            <CButton href="">Go somewhere</CButton>
+            <CButton href="">View Live App</CButton>
+            <Button variant="primary" onClick={() => setModalShow(true)}>
+              Read More
+            </Button>
           </CCardBody>
           </CCard>
         </section>
 
       <>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
-        </Button>
-
         <MyVerticallyCenteredModal
           show={modalShow}
           onHide={() => setModalShow(false)}

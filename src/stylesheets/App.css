@@ -23,71 +23,7 @@ h1 {
   padding: 10px 10px;
 }
 
-/**************************************************************************
-  NAV BAR 
-*/
-nav {
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  background-color: var(--black-blue);
-  box-shadow: 0 3px 3px 0 var(--black-blue-2);
-  z-index: 1; /* Overlay content / Make element lie above others */
-}
-
-.navbar {
-  /* Sticky properties */
-  position: sticky;  
-  top: 0;
-}
-
-div.container-fluid {
-  max-width: 1340px;
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* NAV ITEM */
-li .nav-link {
-  color: var(--white-vanilla);
-  text-decoration: none;
-  padding: var(--nav-link-padding) var(--nav-link-padding-side);
-  text-align: center;
-  display: inline-block;
-  transition: 0.2s;
-  text-shadow: 0px 0px 2px ;
-  font-size: var(--font-size-large);
-  /* font-weight: bold; */
-}
-a.nav-link:hover {
-  color: var(--white);
-  font-size: calc(var(--font-size-large) * 1.06)
-}
-a.nav-link{
-  color: var(--white)
-}
-li .nav-link.brand {
-  font-size: calc(var(--font-size-large) * 1.2)
-}
-a.nav-link.brand:hover {
-  font-size: calc(var(--font-size-large) * 1.26)
-}
-a:hover {
-  color: var(--white);
-  font-size: calc(var(--font-size-large) * 1.06)
-}
-.nav {
-  --bs-nav-link-color: var(--white);
-  --bs-nav-link-hover-color: var(--white);
-}
-
-
-
-/**************************************************************************
-  CONTENT ELEMENT 
-*/
-  section {
+section {
   padding: 1rem 1rem;
   position: relative;
   display: flex;
@@ -125,23 +61,116 @@ div.background-color-2 {
 }
 
 
+/**************************************************************************
+  NAV BAR 
+*/
+nav {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background-color: var(--dark-background-3);
+  box-shadow: 5px 6px 6px 0 cal(var(--dark-background-3)*0.2);
+  /* box-shadow: 1px 10px 10px 0 var(--white); */
+  z-index: 1; /* Overlay content / Make element lie above others */
+}
+
+.navbar {
+  /* Sticky properties */
+  position: sticky;  
+  top: 0;
+}
+
+div.container-fluid {
+  max-width: 1340px;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* NAV ITEM */
+a.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  padding: var(--nav-link-padding) var(--nav-link-padding-side);
+  text-align: center;
+  display: inline-block;
+  transition: 0.2s;
+  text-shadow: 0px 0px 2px ;
+  font-size: var(--font-size-large);
+  border-radius: 0.77rem;
+  /* font-weight: bold; */
+}
+a.nav-link:hover {
+  font-size: calc(var(--font-size-large) * 1.06);
+  background-color: var(--dark-background);
+  
+}
+a.nav-link{
+  color: var(--white)
+}
+a.nav-link.brand {
+  font-size: calc(var(--font-size-large) * 1.2)
+}
+a.nav-link.brand:hover {
+  font-size: calc(var(--font-size-large) * 1.26)
+}
+a:hover {
+  color: var(--white);
+  font-size: calc(var(--font-size-large) * 1.06)
+}
+.nav {
+  --bs-nav-link-color: var(--white);
+  --bs-nav-link-hover-color: var(--white);
+}
 
 
 /**************************************************************************
-  Global variables 
+  MODEL 
+*/
+.modal {
+  --bs-modal-bg: var(--dark-background);
+}
+
+
+/**************************************************************************
+  CARD 
+*/
+.card-body {
+  background-color: var(--dark-background-3);
+  border-color: var(--dark-background-3);
+  border-radius: 0 0 .5rem .5rem;
+}
+.bg-dark {
+  --bs-bg-opacity: 0.1;
+}
+
+/**************************************************************************
+  BUTTON 
+*/
+.btn-primary {
+  /* --bs-btn-bg: var(--dark-background-3); */
+  margin: 0 0.2rem;
+  --bs-btn-focus-shadow-rgb: none;
+}
+
+
+/**************************************************************************
+  GLOBAL VARIABLES 
   Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 */
 :root {
   --red-vanilla: #E63946;
-  --white: #ffffff;
+  --white: #fcfcfc;
   --light-1: #e1e1e1;
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
-  --dark-blue-1: #1D3557;
+  /* --dark-blue-1: #1D3557;
   --dark-background: #273952;
-  --dark-background-2: #293d56;
-  --dark: #191919;
+  --dark-background-2: #293d56; */
+  --dark-background: #003060;
+  --dark-background-2: #055C9D;
+  --dark-background-3: #003B73;
   --black-blue: #4C6983;
   --black-blue-2: #46647b;
   --bs-card-color: #111111;
@@ -153,6 +182,10 @@ div.background-color-2 {
 
   --font-size-h2: 1.2rem;
   --font-size-h2-slightly-larger: calc(var(--font-size-h2) * 1.04);
-  --font-size-large: 1.6rem
+  --font-size-large: 1.6rem;
+
+
+  --bs-body-color: var(--white);
+  
 }
 
