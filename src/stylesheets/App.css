@@ -7,12 +7,7 @@
   color: white;
   height: 100%;
   min-height: 100vh;
-  font-size: var(--font-size-h2);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-size: var(--font-size-p);
 }
 
 .App-link {
@@ -20,7 +15,15 @@
 }
 
 h1 {
-  padding: 10px 10px;
+  font-size: var(--font-size-large);
+}
+
+h5 {
+  font-size: var(--font-size-medium);
+}
+
+.x-large {
+  font-size: var(--font-size-xlarge);
 }
 
 section {
@@ -40,9 +43,15 @@ section {
 .row {
   display: flex;
 }
-
 .column {
-  flex: 50%;
+  /* flex: 50%; */
+  flex: none
+}
+.left.intro {
+  width: 40%;
+}
+.right.intro {
+  width: 52%;
 }
 
 .vertical-center {
@@ -60,6 +69,10 @@ div.background-color-2 {
   background: var(--dark-background-2);
 }
 
+img.rodo-portrait {
+  width: 70%;
+  height: auto;
+}
 
 /**************************************************************************
   NAV BAR 
@@ -128,13 +141,17 @@ a:hover {
   MODEL 
 */
 .modal {
-  --bs-modal-bg: var(--dark-background);
+  --bs-modal-bg: var(--dark-background-4);
 }
 
 
 /**************************************************************************
   CARD 
 */
+.card {
+  --bs-card-border-radius: 0.5rem;
+  --bs-card-inner-border-radius: calc(0.5rem - 1px);
+}
 .card-body {
   background-color: var(--dark-background-3);
   border-color: var(--dark-background-3);
@@ -151,6 +168,7 @@ a:hover {
   /* --bs-btn-bg: var(--dark-background-3); */
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
+  font-size: var(--font-size-p);
 }
 
 
@@ -171,21 +189,19 @@ a:hover {
   --dark-background: #003060;
   --dark-background-2: #055C9D;
   --dark-background-3: #003B73;
+  --dark-background-4: rgb(28, 77, 126);
   --black-blue: #4C6983;
   --black-blue-2: #46647b;
   --bs-card-color: #111111;
 
-
-
-  --nav-link-padding: 0.4rem;
+  --nav-link-padding: 0.5rem;
   --nav-link-padding-side: 1rem;
 
-  --font-size-h2: 1.2rem;
-  --font-size-h2-slightly-larger: calc(var(--font-size-h2) * 1.04);
-  --font-size-large: 1.6rem;
-
+  --font-size-p: 1.6vmin;
+  --font-size-medium: 2vmin;
+  --font-size-large: 2.4vmin;
+  --font-size-xlarge: 3vmin;
 
   --bs-body-color: var(--white);
-  
 }
 
