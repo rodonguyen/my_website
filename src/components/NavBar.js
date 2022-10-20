@@ -24,9 +24,14 @@ const NavBar = () => (
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/blog" className="nav-link">
-            Blog
+          <Link to="/list-100" className="nav-link">
+            List-100
           </Link>
+        </NavItem>
+        <NavItem>
+          <a href="https://rodonguyen.medium.com/" className="nav-link" target="_blank" rel="noopener noreferrer">
+            Blog
+          </a>
         </NavItem>
         <NavItem>
           <Link to="/contactme" className="nav-link">

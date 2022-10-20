@@ -1,0 +1,52 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const List100 = () => {
+  const readBookNum = 16;
+
+  return (
+  <>
+    <section>
+      <h1 className="text-align-left">List 100</h1>
+      <p>We all have 1 life. Why not making the most of it and do exciting things?</p>
+      <p>Inspired by Chip huyen's List 100</p>
+      <p>Progress: 0/100</p>
+      <ol className="text-align-left">
+        <li>✗ Read 100 books ({readBookNum}/100)</li>
+        <li>✗ Read 1000 books ({readBookNum}/100)</li>
+        <li>✗ Net worth AU$1,000,000</li>
+        <li>✗ See Aurora</li>
+        <li>✗ Conquer Fansipan Mountain</li>
+        <li>✗ 10-day Vipassana Meditation Retreat</li>
+        <li>✗ Teach a course in university</li>
+        <li>✗ Pay and have a 14-day holidy with my family</li>
+        <li>✗ Walk on the moon</li>
+        <li>✗ Swimming in Exosphere</li>
+        <li>✗ Found a tech company in Vietnam and it survives :)</li>
+        <li>✗ Give a talk to &gt;100 audiences (like... any talk)</li>
+        <li>✗ Visit Norway's mountains</li>
+        <li>✗ Travel to 10 countries (1/10)</li>
+        <li>✗ Get a PhD</li>
+        <li>✗ Be an Australian Permanent Resident</li>
+        <li>✗ Give my parents a house to retire in Australia</li>
+        <li>✗ Learn to drive</li>
+        <li>✗ Learn to fly a helicopter</li>
+        <li>✗ Be Financial Independent</li>
+        <li>✗ Date a model</li>
+        <li>✗ Bring a girl home from club</li>
+        <li>✗ Vacation on an island/a yatch</li>
+        <li>✗ Work in a big financial insitution</li>
+        <li>✗ Sit on the 5th level rock of Giza pyramid</li>
+        <li>✗ Sky dive (without an instructor)</li>
+        <li>✗ </li>
+        <li>✗ </li>
+        <li>✗ </li>
+        <li>✗ </li>
+        {/* <li>✗ Have sex with 10 people (at different time)</li> */}
+        {/* <li>✓ </li> */}
+      </ol>
+    </section>
+  </>
+  );
+};
+
+export default List100;

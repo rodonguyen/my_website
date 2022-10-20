@@ -2,7 +2,7 @@
 import NavBar from '../components/NavBar';
 import ContactMe from './ContactMe';
 import Project from './Project';
-import Blog from './Blog';
+import List100 from './List100';
 import Resume from './Resume';
 import Home from './Home';
 // import { Container } from 'reactstrap';
@@ -33,7 +33,7 @@ function App() {
             <Route path="contactme" element={<ContactMe/>} />
             <Route path="projects" element={<Project/>} />
             <Route path="resume" element={<Resume/>} />
-            <Route path="blog" element={<Blog/>} />
+            <Route path="list-100" element={<List100/>} />
           </Route>
         </Routes>
       </BrowserRouter>
