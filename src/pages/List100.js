@@ -12,9 +12,8 @@ const List100 = () => {
       <p>Progress: 0/100</p>
       <ol className="text-align-left">
         <li>✗ Read 100 books ({readBookNum}/100)</li>
-        <li>✗ Read 1000 books ({readBookNum}/100)</li>
         <li>✗ Net worth AU$1,000,000</li>
-        <li>✗ See Aurora</li>
+        <li>✗ See Auroras</li>
         <li>✗ Conquer Fansipan Mountain</li>
         <li>✗ 10-day Vipassana Meditation Retreat</li>
         <li>✗ Teach a course in university</li>
@@ -32,15 +31,16 @@ const List100 = () => {
         <li>✗ Learn to fly a helicopter</li>
         <li>✗ Be Financial Independent</li>
         <li>✗ Date a model</li>
-        <li>✗ Bring a girl home from club</li>
+        <li>✗ Read 1000 books ({readBookNum}/100)</li>
         <li>✗ Vacation on an island/a yatch</li>
         <li>✗ Work in a big financial insitution</li>
-        <li>✗ Sit on the 5th level rock of Giza pyramid</li>
+        <li>✗ Climb Great Pyramid of Giza, Egypt</li>
         <li>✗ Sky dive (without an instructor)</li>
+        <li>✗ Camp and enjoy the Milky Way Galaxy</li>
+        <li>✗ Hike to Everest base camp</li>
         <li>✗ </li>
         <li>✗ </li>
-        <li>✗ </li>
-        <li>✗ </li>
+        {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Have sex with 10 people (at different time)</li> */}
         {/* <li>✓ </li> */}
       </ol>

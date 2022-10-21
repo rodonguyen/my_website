@@ -27,7 +27,12 @@ The page will reload when you make changes.\
 - 
 
 ### TODO:
-- Replace className and write my own css
+- [x] Deploy
+- [ ] Check SSL
+- [ ] Add temporary information
+- [ ] Add Contacts
+- [ ] Edit CSS: no enlarging when hovered, and consider different pallette colors?
+
 
 
 <!-- You may also see any lint errors in the console.
