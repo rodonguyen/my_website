@@ -10,7 +10,7 @@ import NotFound from './NotFound';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import '../stylesheets/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
