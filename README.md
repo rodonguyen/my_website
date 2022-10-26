@@ -28,11 +28,12 @@ The page will reload when you make changes.\
 
 ### TODO:
 - [x] Deploy
-- [ ] Check SSL
+- [x] Check SSL
 - [ ] Add temporary information
+- [ ] Add more info to bio
 - [ ] Add Contacts
 - [ ] Edit CSS: no enlarging when hovered, and consider different pallette colors?
-
+- [ ] Contacts in footer, remove Contacts tab
 
 
 <!-- You may also see any lint errors in the console.

@@ -7,7 +7,7 @@
   color: var(--text-color-1);
   height: 100%;
   min-height: 100vh;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-normal);
 }
 
 .App-link {
@@ -19,7 +19,7 @@ h1 {
 }
 
 h5 {
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-normal);
 }
 
 .x-large {
@@ -87,11 +87,13 @@ nav {
   justify-content: flex-start;
   background-color: var(--light-1);
   box-shadow: 5px 6px 6px 5px cal(var(--light-1)*0.2);
-  /* box-shadow: 1px 10px 10px 0 var(--white); */
   z-index: 1; /* Overlay content / Make element lie above others */
+  border-bottom: 1px solid #c6c6c6;
+  /* box-shadow: 1px 10px 10px 0 var(--white); */
 }
 
 .navbar {
+  --bs-navbar-padding-y: 0.1rem; /* nav bar height */
   /* Sticky properties */
   position: sticky;  
   top: 0;
@@ -111,10 +113,10 @@ a.nav-link {
   padding: var(--nav-link-padding) var(--nav-link-padding-side);
   text-align: center;
   display: inline-block;
+  font-size: var(--font-size-normal);
+  border-radius: 0.5rem;
   /* transition: 0.2s; */
   /* text-shadow: 0px 0px 2px ; */
-  font-size: var(--font-size-large);
-  border-radius: 0.77rem;
   /* font-weight: bold; */
 }
 a.nav-link:hover {
@@ -126,12 +128,15 @@ a.nav-link{
 }
 
 a.nav-link.brand {
-  font-size: calc(var(--font-size-large) * 1.1)
+  font-size: var(--font-size-large)
 }
+
 .nav {
   --bs-nav-link-color: var(--white);
   --bs-nav-link-hover-color: var(--white);
 }
+
+
 
 /**************************************************************************
   List 1000 
@@ -169,7 +174,7 @@ a.nav-link.brand {
   /* --bs-btn-bg: var(--light-2); */
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-normal);
 }
 
 
@@ -180,7 +185,7 @@ a.nav-link.brand {
 :root {
   --text-color-1: #000000;
   --light-1: #dee1e5;
-  --light-2: #dcdfe3;
+  --light-2: #cacaca;
   
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
@@ -200,7 +205,7 @@ a.nav-link.brand {
   --nav-link-padding: 0.5rem;
   --nav-link-padding-side: 1rem;
 
-  --font-size-p: 18px;
+  --font-size-normal: 18px;
   --font-size-large: 24px;
   --font-size-xlarge: 30px;
 
