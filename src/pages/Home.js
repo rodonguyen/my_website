@@ -53,6 +53,8 @@ const Home = () => {
       {/* content block 2: Projects */}
       <div className="background-color-2">
         <section>
+          <h1 className="xlarge text-align-left">My side projects</h1>
+
           <CRow>
             <CCol>
               <CCard color={mode} >

@@ -65,7 +65,7 @@ p {
   text-justify: inter-word;
 }
 
-div.background-color-2 {
+.background-color-2 {
   background: var(--light-1);
 }
 
@@ -77,6 +77,10 @@ img.rodo-portrait {
 
 .text-align-left {
   text-align: left;
+}
+
+.center {
+  align-self: center;
 }
 
 /**************************************************************************
@@ -183,6 +187,18 @@ a.nav-link.brand {
 */
 footer {
   height: 200px;
+}
+
+/**************************************************************************
+  CONTACT 
+*/
+.contact-list {
+  /* list-style: none; */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
 }
 
 /**************************************************************************
