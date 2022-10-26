@@ -18,11 +18,11 @@ const NavBar = () => (
             My resume
           </Link>
         </NavItem>
-        <NavItem>
+        {/* <NavItem>
           <Link to="/projects" className="nav-link">
             My projects
           </Link>
-        </NavItem>
+        </NavItem> */}
         <NavItem>
           <Link to="/list-100" className="nav-link">
             List-100

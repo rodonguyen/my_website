@@ -33,7 +33,7 @@ const Home = () => {
           </div>
           <div class="column right intro">
             <div className="vertical-center right intro">
-              <h1 className="x-large text-align-left">Hello World!</h1>
+              <h1 className="xlarge text-align-left">Hello World!</h1>
               <p>
                 I’m a motivated gonna-be Software Engineer wanting to build
                 tools that improve human lives and solve impactful problems. I
@@ -114,6 +114,8 @@ const Home = () => {
             onHide={() => setModalShow(false)}
           />
         </>
+
+        <div class='footer'> hi</div>
       </div>
     </>
   );

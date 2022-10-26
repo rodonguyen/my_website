@@ -6,7 +6,7 @@ const List100 = () => {
   return (
   <>
     <section>
-      <h1 className="text-align-left">List 100</h1>
+      <h1 className="text-align-left xlarge">List 100</h1>
       <p>We all have 1 life. Why not making the most of it and do exciting things? These are the things that keep me excited every morning and that I plan to do before I die. Inspired by Chip Huyen's.</p>
       <p>Progress: 0/100</p>
       <ol className="text-align-left">

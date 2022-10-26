@@ -22,7 +22,7 @@ h5 {
   font-size: var(--font-size-normal);
 }
 
-.x-large {
+.xlarge {
   font-size: var(--font-size-xlarge);
 }
 
@@ -88,6 +88,7 @@ nav {
   background-color: var(--light-1);
   box-shadow: 5px 6px 6px 5px cal(var(--light-1)*0.2);
   z-index: 1; /* Overlay content / Make element lie above others */
+  border-top: 5px solid #424242;
   border-bottom: 1px solid #c6c6c6;
   /* box-shadow: 1px 10px 10px 0 var(--white); */
 }
@@ -177,6 +178,12 @@ a.nav-link.brand {
   font-size: var(--font-size-normal);
 }
 
+/**************************************************************************
+  BUTTON 
+*/
+footer {
+  height: 200px;
+}
 
 /**************************************************************************
   GLOBAL VARIABLES 

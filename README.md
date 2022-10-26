@@ -34,6 +34,7 @@ The page will reload when you make changes.\
 - [ ] Add Contacts
 - [ ] Edit CSS: no enlarging when hovered, and consider different pallette colors?
 - [ ] Contacts in footer, remove Contacts tab
+- [ ] Build secrect dating page
 
 
 <!-- You may also see any lint errors in the console.
