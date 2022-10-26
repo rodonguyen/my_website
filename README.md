@@ -24,17 +24,19 @@ The page will reload when you make changes.\
 - Dark Mode https://www.youtube.com/watch?v=VzF2iTTc0MA 
             https://www.youtube.com/watch?v=VzF2iTTc0MA
             github repo https://github.com/Satellite-system/TextUtils---React-js-Web/blob/master/src/App.js 
-- 
+- Examples:
+  - https://karpathy.ai/
+  - https://huyenchip.com/ 
 
 ### TODO:
 - [x] Deploy
 - [x] Check SSL
-- [ ] Add temporary information
+- [x] Add Contacts
+- [x] Edit CSS: no enlarging when hovered, and consider different pallette colors?
 - [ ] Add more info to bio
-- [ ] Add Contacts
-- [ ] Edit CSS: no enlarging when hovered, and consider different pallette colors?
-- [ ] Contacts in footer, remove Contacts tab
-- [ ] Build secrect dating page
+- [ ] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+- [ ] Get rid of framework in NavBar
+- [ ] Build secret dating page
 
 
 <!-- You may also see any lint errors in the console.
