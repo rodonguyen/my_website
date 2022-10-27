@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import rodoResumePdf from '../media/Rodo_Resume.pdf';
 

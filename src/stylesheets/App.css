@@ -26,27 +26,6 @@ h5 {
   font-size: var(--font-size-xlarge);
 }
 
-section {
-  padding: 1rem 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  max-width: 1340px;
-  margin: 0 auto
-  /* display: flex; */
-  /* flex-wrap: inherit; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-}
-
-.row {
-  display: flex;
-}
-.column {
-  /* flex: 50%; */
-  flex: none
-}
 .left.intro {
   width: 40%;
 }
@@ -69,12 +48,6 @@ p {
   background: var(--light-1);
 }
 
-img.rodo-portrait {
-  width: 70%;
-  height: auto;
-  border-radius: 10px;
-}
-
 .text-align-left {
   text-align: left;
 }
@@ -95,35 +68,39 @@ img.rodo-portrait {
   max-width: 982px;
 }
 
-.rownew {
+.row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-.portrait {
-  grid-column: span 5;
-  text-align: right;
-  margin-right: 20px;
-}
-img.portrait {
-  border-radius: 10px;
-}
-.bio {
-  grid-column: span 7;
-  text-align: left;
-}
 
 /**************************************************************************
   NAV BAR 
 */
+.navbar-container {
+
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.standard-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 982px;
+}
+
+li.nav-item {
+  display: inline;
+}
+
+
 nav {
   flex-wrap: nowrap;
   justify-content: flex-start;
   background-color: var(--light-1);
   box-shadow: 5px 6px 6px 5px cal(var(--light-1)*0.2);
   z-index: 1; /* Overlay content / Make element lie above others */
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #c6c6c6;
+
   /* box-shadow: 1px 10px 10px 0 var(--white); */
 }
 
@@ -147,7 +124,7 @@ a.nav-link {
   text-decoration: none;
   padding: var(--nav-link-padding) var(--nav-link-padding-side);
   text-align: center;
-  display: inline-block;
+  display: inline;
   font-size: var(--font-size-normal);
   border-radius: 0.5rem;
   /* transition: 0.2s; */
@@ -171,7 +148,21 @@ a.nav-link.brand {
   --bs-nav-link-hover-color: var(--white);
 }
 
-
+/**************************************************************************
+  HOME BIO
+*/
+.portrait {
+  grid-column: span 5;
+  text-align: right;
+  margin-right: 20px;
+}
+img.portrait {
+  border-radius: 10px;
+}
+.bio {
+  grid-column: span 7;
+  text-align: left;
+}
 
 /**************************************************************************
   List 1000 
