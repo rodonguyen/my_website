@@ -1,13 +1,13 @@
-import {
-  CRow,
-  CCol,
-  CCard,
-  CCardImage,
-  CCardBody,
-  CCardTitle,
-  CCardText,
-  CButton,
-} from "@coreui/react";
+// import {
+//   CRow,
+//   CCol,
+//   CCard,
+//   CCardImage,
+//   CCardBody,
+//   CCardTitle,
+//   CCardText,
+//   CButton,
+// } from "@coreui/react";
 
 import Button from "react-bootstrap/Button";
 import React from "react";
@@ -17,7 +17,7 @@ import twitterSpamDetection from "../media/twitter_overall_performance.png";
 import TwitterSpamDetectorModal from "../components/TwitterSpamDetectorModal";
 
 const Home = () => {
-  const mode = "dark";
+  const mode = "light";   // For future dark/light mode
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -60,7 +60,7 @@ const Home = () => {
         <div className="row grid-gap">
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection}></img>
+              <img src={twitterSpamDetection} alt='Project demo'></img>
             </a>
             <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
             different Machine Learning models: LSTM, Transformer, Naive
@@ -69,7 +69,7 @@ const Home = () => {
 
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection}></img>
+              <img src={twitterSpamDetection}  alt='Project demo'></img>
             </a>
             <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
             different Machine Learning models: LSTM, Transformer, Naive
@@ -78,7 +78,7 @@ const Home = () => {
 
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection}></img>
+              <img src={twitterSpamDetection}  alt='Project demo'></img>
             </a>
             <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
             different Machine Learning models: LSTM, Transformer, Naive

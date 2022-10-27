@@ -12,6 +12,7 @@ const NavBar = () => (
           </Link>
         </NavItem>
       </Nav>
+
       <Nav className="right">
         <NavItem>
           <Link to="/resume" className="nav-link">

@@ -34,9 +34,9 @@ The page will reload when you make changes.\
 - [x] Add Contacts
 - [x] Edit CSS: no enlarging when hovered, and consider different pallette colors?
 - [x] Page icon
+- [x] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
 - [ ] Add more info to bio
-- [ ] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-- [ ] Get rid of framework in NavBar
+- [ ] Remake NavBar (copy chip's)
 - [ ] Build secret dating page
 
 
