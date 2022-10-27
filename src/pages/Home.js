@@ -47,15 +47,47 @@ const Home = () => {
               With the accumulated strong and diverse skill-set, I’m excited to
               take on new challenges!
             </p>
+            <p>
+              #data #AI #software #blockchain
+            </p>
           </div>
         </div>
       </div>
 
       {/* content block 2: Projects */}
       <div className="container background-color-2">
-        <div className="row">
-          <h1 className="xlarge text-align-left">My pet projects</h1>
+        <h1 className="xlarge text-align-left">My pet projects</h1>
+        <div className="row grid-gap">
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection}></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
 
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection}></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
+
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection}></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
+        </div>
+
+
+{/* 
           <CRow>
             <CCol>
               <CCard color={mode}>
@@ -108,7 +140,7 @@ const Home = () => {
                 </CCardBody>
               </CCard>
             </CCol>
-          </CRow>
+          </CRow> */}
 
           <>
             <TwitterSpamDetectorModal
@@ -117,8 +149,7 @@ const Home = () => {
             />
           </>
 
-          <div class="footer"> hi</div>
-        </div>
+          {/* <div class="footer"> hi</div> */}
       </div>
     </>
   );

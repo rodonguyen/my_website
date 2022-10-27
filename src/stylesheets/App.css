@@ -165,10 +165,26 @@ img.portrait {
 }
 
 /**************************************************************************
-  List 1000 
+  MY PET PROJECTS
 */
-
-
+.card {
+  grid-column: span 4;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: white;
+  padding-bottom: 10px;
+  /* margin: 3px; */
+}
+.card img {
+  border-radius: 5px;
+  width: 100%;
+}
+.row.grid-gap {
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
 /**************************************************************************
   MODAL 
 */
