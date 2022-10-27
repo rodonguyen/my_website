@@ -26,13 +26,12 @@ const Home = () => {
     <>
       {/* content block 1: Quick Introduction */}
 
-      <section>
-        <div class="row">
-          <div class="column left intro">
-            <img src={rodoImage} className='rodo-portrait' width="416" height="553" alt="Rodo Potrait" />
+      <div className="container">
+        <div className="rownew">
+          <div className="portrait">
+            <img src={rodoImage} className='portrait' width="291" height="387" alt="Rodo Potrait" />
           </div>
-          <div class="column right intro">
-            <div className="vertical-center right intro">
+          <div className="bio">
               <h1 className="xlarge text-align-left">Hello World!</h1>
               <p>
                 I’m a motivated gonna-be Software Engineer wanting to build
@@ -46,9 +45,8 @@ const Home = () => {
                 to take on new challenges!
               </p>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* content block 2: Projects */}
       <div className="background-color-2">

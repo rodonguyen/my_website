@@ -6,10 +6,10 @@ import List100 from './List100';
 import Resume from './Resume';
 import Home from './Home';
 import NotFound from './NotFound';
-// import { Container } from 'reactstrap';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import '../stylesheets/App.css';
+
+// import { Container } from 'reactstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 

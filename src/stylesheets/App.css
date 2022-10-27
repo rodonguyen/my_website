@@ -83,6 +83,36 @@ img.rodo-portrait {
   align-self: center;
 }
 
+.container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 982px;
+}
+
+.rownew {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.portrait {
+  grid-column: span 5;
+  text-align: right;
+  margin-right: 20px;
+}
+img.portrait {
+  border-radius: 10px;
+}
+.bio {
+  grid-column: span 7;
+  text-align: left;
+}
+
 /**************************************************************************
   NAV BAR 
 */
