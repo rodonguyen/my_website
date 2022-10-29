@@ -96,22 +96,20 @@ a.navbar-item:visited {
   color: black;
 }
 
-ul.navbar {
-  display: flex;
-  padding: 0;
-}
 li.navbar {
   list-style-type: none;
-  margin: 0 1rem;
   width: 6rem;
 }
 a.navbar-item {
   text-decoration: none;
-  display: block;
   width: 100%;
 }
 a.navbar-item.brand {
-  padding-left: 15px;
+  font-size: var(--font-size-large);
+}
+
+.navmenu {
+  margin-left: auto;
 }
 /* === */
 
