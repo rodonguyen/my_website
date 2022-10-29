@@ -110,15 +110,13 @@ a:visited {
   margin-right: 0;
 }
 .navbar-container li {
-  grid-column: span 3;
   margin-left: auto;
 }
 
 a.navbar-item {
-
   color: black;
   text-decoration: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 1.3rem;
   display: block;
   border-radius: 0.5rem;
 }
@@ -134,13 +132,13 @@ div.navbar-container {
   margin-left: auto;
 }
 
-@media (max-width: 600px) {
-  .navbar-container li {
-    grid-column: span 12;
-  }
+@media (max-width: 700px) {
   .navbar-container ul {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+  }
+  .navbar-container li {
+    grid-column: span 6;
   }
   /*
   .bio {
