@@ -9,7 +9,7 @@
 //   CButton,
 // } from "@coreui/react";
 
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import React from "react";
 
 import rodoImage from "../media/Rodo.jpg";
@@ -17,7 +17,7 @@ import twitterSpamDetection from "../media/twitter_overall_performance.png";
 import TwitterSpamDetectorModal from "../components/TwitterSpamDetectorModal";
 
 const Home = () => {
-  const mode = "light";   // For future dark/light mode
+  // const mode = "light";   // For future dark/light mode
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
