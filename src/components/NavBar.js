@@ -24,6 +24,11 @@ const NavBar = () => {
               <li className="navbar">
                 <a href="/contactme" className="navbar-item">Contact me</a>
               </li>
+              <li className="navbar">
+                <a href="https://rodonguyen.medium.com/" className="navbar-item"
+                  target="_blank"
+                  rel="noopener noreferrer">Blog</a>
+              </li>
             </ul>
           </div>
         </nav>
