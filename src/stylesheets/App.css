@@ -95,22 +95,19 @@ a:visited {
   display: flex;
   align-items: center;
   height: auto;
-  padding: 0.5rem 0rem;
+  padding: 0.4rem 0rem;
 }
 
 .navbar-container ul, .navbar-container li {
   width: fit-content;
   display: flex;
+  margin-left: auto;
 }
 
 .navbar-container ul {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: auto;
   margin-right: 0;
-}
-.navbar-container li {
-  margin-left: auto;
 }
 
 a.navbar-item {
@@ -140,12 +137,6 @@ div.navbar-container {
   .navbar-container li {
     grid-column: span 6;
   }
-  /*
-  .bio {
-    grid-column: span 12;
-    padding-top: 20px;
-    text-align: center;
-  } */
 }
 /* === */
 
