@@ -1,13 +1,13 @@
-import {
-  CRow,
-  CCol,
-  CCard,
-  CCardImage,
-  CCardBody,
-  CCardTitle,
-  CCardText,
-  CButton,
-} from "@coreui/react";
+// import {
+//   CRow,
+//   CCol,
+//   CCard,
+//   CCardImage,
+//   CCardBody,
+//   CCardTitle,
+//   CCardText,
+//   CButton,
+// } from "@coreui/react";
 
 import Button from "react-bootstrap/Button";
 import React from "react";
@@ -16,63 +16,81 @@ import rodoImage from "../media/Rodo.jpg";
 import twitterSpamDetection from "../media/twitter_overall_performance.png";
 import TwitterSpamDetectorModal from "../components/TwitterSpamDetectorModal";
 
-
-
 const Home = () => {
-  const mode = "dark";
+  const mode = "light";   // For future dark/light mode
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
-      {/* content block 1: Quick Introduction */}
+      {/* content block 1: A little introduction */}
 
-      <section>
-        <div class="row">
-          <div class="column left intro">
-            <img src={rodoImage} className='rodo-portrait' width="416" height="553" alt="Rodo Potrait" />
+      <div className="container">
+        <div className="row">
+          <div className="portrait">
+            <img
+              src={rodoImage}
+              className="portrait"
+              width="291"
+              height="387"
+              alt="Rodo Potrait"
+            />
           </div>
-          <div class="column right intro">
-            <div className="vertical-center right intro">
-              <h1 className="x-large text-align-left">Hello World!</h1>
-              <p>
-                I’m a motivated gonna-be Software Engineer wanting to build
-                tools that improve human lives and solve impactful problems. I
-                have participated in multiple projects that involves developing
-                software, building deep learning models, analysing data and so
-                on.
-              </p>
-              <p>
-                With the accumulated strong and diverse skill-set, I’m excited
-                to take on new challenges!
-              </p>
-            </div>
+          <div className="bio">
+            <h1 className="xlarge text-align-left">Hello World!</h1>
+            <p>
+              I’m a motivated gonna-be Software Engineer wanting to build tools
+              that improve human lives and solve impactful problems. I have
+              participated in multiple projects that involves developing
+              software, building deep learning models, analysing data and so on.
+            </p>
+            <p>
+              With the accumulated strong and diverse skill-set, I’m excited to
+              take on new challenges!
+            </p>
+            <p>
+              #data #AI #software #blockchain
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* content block 2: Projects */}
-      <div className="background-color-2">
-        <section>
+      <div className="container background-color-2">
+        <h1 className="xlarge text-align-left">My pet projects</h1>
+        <div className="row grid-gap">
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection} alt='Project demo'></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
+
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection}  alt='Project demo'></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
+
+          <div className="card">
+            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
+              <img src={twitterSpamDetection}  alt='Project demo'></img>
+            </a>
+            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
+            different Machine Learning models: LSTM, Transformer, Naive
+            Bayes and SVM</div>
+          </div>
+        </div>
+
+
+{/* 
           <CRow>
             <CCol>
-              <CCard color={mode} >
-                <CCardImage orientation="top" src={twitterSpamDetection} />
-                <CCardBody>
-                  <CCardTitle>Twitter Spam Detector</CCardTitle>
-                  <CCardText>
-                    Identify spam Tweet with {">"}95% accuracy by using 4
-                    different Machine Learning models: LSTM, Transformer, Naive
-                    Bayes and SVM
-                  </CCardText>
-                  <CButton href="">View Live</CButton>
-                  <Button variant="primary" onClick={() => setModalShow(true)}>
-                    Read More
-                  </Button>
-                </CCardBody>
-              </CCard>
-            </CCol>
-            <CCol>
-              <CCard color={mode} >
+              <CCard color={mode}>
                 <CCardImage orientation="top" src={twitterSpamDetection} />
                 <CCardBody>
                   <CCardTitle>Twitter Spam Detector</CCardTitle>
@@ -105,15 +123,33 @@ const Home = () => {
                 </CCardBody>
               </CCard>
             </CCol>
-          </CRow>
-        </section>
+            <CCol>
+              <CCard color={mode}>
+                <CCardImage orientation="top" src={twitterSpamDetection} />
+                <CCardBody>
+                  <CCardTitle>Twitter Spam Detector</CCardTitle>
+                  <CCardText>
+                    Identify spam Tweet with {">"}95% accuracy by using 4
+                    different Machine Learning models: LSTM, Transformer, Naive
+                    Bayes and SVM
+                  </CCardText>
+                  <CButton href="">View Live</CButton>
+                  <Button variant="primary" onClick={() => setModalShow(true)}>
+                    Read More
+                  </Button>
+                </CCardBody>
+              </CCard>
+            </CCol>
+          </CRow> */}
 
-        <>
-          <TwitterSpamDetectorModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
-        </>
+          <>
+            <TwitterSpamDetectorModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
+          </>
+
+          {/* <div class="footer"> hi</div> */}
       </div>
     </>
   );

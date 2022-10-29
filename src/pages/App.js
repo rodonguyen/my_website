@@ -5,11 +5,12 @@ import Project from './Project';
 import List100 from './List100';
 import Resume from './Resume';
 import Home from './Home';
-// import { Container } from 'reactstrap';
+import NotFound from './NotFound';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import '../stylesheets/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import { Container } from 'reactstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="projects" element={<Project/>} />
             <Route path="resume" element={<Resume/>} />
             <Route path="list-100" element={<List100/>} />
+            <Route path="*" element={<NotFound/>} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -3,11 +3,11 @@
 */
 .App {
   text-align: center;
-  background-color: var(--dark-background);
-  color: white;
+  background-color: var(--light-1);
+  color: var(--text-color-1);
   height: 100%;
   min-height: 100vh;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-normal);
 }
 
 .App-link {
@@ -19,34 +19,13 @@ h1 {
 }
 
 h5 {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-normal);
 }
 
-.x-large {
+.xlarge {
   font-size: var(--font-size-xlarge);
 }
 
-section {
-  padding: 1rem 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  max-width: 1340px;
-  margin: 0 auto
-  /* display: flex; */
-  /* flex-wrap: inherit; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-}
-
-.row {
-  display: flex;
-}
-.column {
-  /* flex: 50%; */
-  flex: none
-}
 .left.intro {
   width: 40%;
 }
@@ -65,32 +44,68 @@ p {
   text-justify: inter-word;
 }
 
-div.background-color-2 {
-  background: var(--dark-background-2);
-}
-
-img.rodo-portrait {
-  width: 70%;
-  height: auto;
+.background-color-2 {
+  background: var(--light-1);
 }
 
 .text-align-left {
   text-align: left;
 }
 
+.center {
+  margin-left: 20%;
+  margin-right: auto;
+}
+
+.container {
+  margin-top: 15px;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 982px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+
 /**************************************************************************
   NAV BAR 
 */
+.navbar-container {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.standard-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 982px;
+}
+
+li.nav-item {
+  display: inline;
+}
+
+
 nav {
   flex-wrap: nowrap;
   justify-content: flex-start;
-  background-color: var(--dark-background-3);
-  box-shadow: 5px 6px 6px 0 cal(var(--dark-background-3)*0.2);
-  /* box-shadow: 1px 10px 10px 0 var(--white); */
+  background-color: var(--light-1);
+  box-shadow: 5px 6px 6px 5px cal(var(--light-1)*0.2);
   z-index: 1; /* Overlay content / Make element lie above others */
+
+  /* box-shadow: 1px 10px 10px 0 var(--white); */
 }
 
 .navbar {
+  --bs-navbar-padding-y: 0.1rem; /* nav bar height */
   /* Sticky properties */
   position: sticky;  
   top: 0;
@@ -106,44 +121,87 @@ div.container-fluid {
 
 /* NAV ITEM */
 a.nav-link {
-  color: var(--white);
   text-decoration: none;
   padding: var(--nav-link-padding) var(--nav-link-padding-side);
   text-align: center;
-  display: inline-block;
-  transition: 0.2s;
-  text-shadow: 0px 0px 2px ;
-  font-size: var(--font-size-large);
-  border-radius: 0.77rem;
+  display: inline;
+  font-size: var(--font-size-normal);
+  border-radius: 0.5rem;
+  /* transition: 0.2s; */
+  /* text-shadow: 0px 0px 2px ; */
   /* font-weight: bold; */
 }
 a.nav-link:hover {
-  font-size: calc(var(--font-size-large) * 1.06);
-  background-color: var(--dark-background);
-  
+  background-color: var(--light-2);
 }
+
 a.nav-link{
-  color: var(--white)
+  color: var(--text-color-1);
 }
+
 a.nav-link.brand {
-  font-size: calc(var(--font-size-large) * 1.2)
+  font-size: var(--font-size-large)
 }
-a.nav-link.brand:hover {
-  font-size: calc(var(--font-size-large) * 1.26)
-}
-a:hover {
-  color: var(--white);
-  font-size: calc(var(--font-size-large) * 1.06)
-}
+
 .nav {
   --bs-nav-link-color: var(--white);
   --bs-nav-link-hover-color: var(--white);
 }
 
 /**************************************************************************
-  List 1000 
+  HOME BIO
 */
+.portrait {
+  grid-column: span 5;
+  text-align: right;
+  margin-right: 20px;
+}
+img.portrait {
+  border-radius: 10px;
+}
+.bio {
+  grid-column: span 7;
+  text-align: left;
+}
 
+@media (max-width: 800px) {
+  .portrait {
+    grid-column: span 12;
+    text-align: center;
+  }
+  .bio {
+    grid-column: span 12;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+/**************************************************************************
+  MY PET PROJECTS
+*/
+.card {
+  grid-column: span 4;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: white;
+  padding-bottom: 10px;
+  /* margin: 3px; */
+}
+.card img {
+  border-radius: 5px;
+  width: 100%;
+}
+.row.grid-gap {
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    grid-column: span 6;
+  }
+}
 
 /**************************************************************************
   MODAL 
@@ -161,8 +219,8 @@ a:hover {
   --bs-card-inner-border-radius: calc(0.5rem - 1px);
 }
 .card-body {
-  background-color: var(--dark-background-3);
-  border-color: var(--dark-background-3);
+  background-color: var(--light-2);
+  border-color: var(--light-2);
   border-radius: 0 0 .5rem .5rem;
 }
 .bg-dark {
@@ -173,31 +231,51 @@ a:hover {
   BUTTON 
 */
 .btn-primary {
-  /* --bs-btn-bg: var(--dark-background-3); */
+  /* --bs-btn-bg: var(--light-2); */
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-normal);
 }
 
+/**************************************************************************
+  BUTTON 
+*/
+footer {
+  height: 200px;
+}
+
+/**************************************************************************
+  CONTACT 
+*/
+.contact-list {
+  /* list-style: none; */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
 
 /**************************************************************************
   GLOBAL VARIABLES 
   Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 */
 :root {
+  --text-color-1: #000000;
+  --light-1: #dee1e5;
+  --light-2: #cacaca;
+  
   --red-vanilla: #E63946;
-  --white: #fcfcfc;
-  --light-1: #e1e1e1;
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
   /* --dark-blue-1: #1D3557;
   --dark-background: #273952;
-  --dark-background-2: #293d56; */
+  --light-1: #293d56; */
   --dark-background: #003060;
-  --dark-background-2: #055C9D;
-  --dark-background-3: #003B73;
-  --dark-background-4: rgb(28, 77, 126);
+  --dark-xbackground-2: #055C9D;
+  --dark-xbackground-3: #003B73;
+  --dark-xbackground-4: rgb(28, 77, 126);
   --black-blue: #4C6983;
   --black-blue-2: #46647b;
   --bs-card-color: #111111;
@@ -205,10 +283,9 @@ a:hover {
   --nav-link-padding: 0.5rem;
   --nav-link-padding-side: 1rem;
 
-  --font-size-p: 1.6vmin;
-  --font-size-medium: 2vmin;
-  --font-size-large: 2.4vmin;
-  --font-size-xlarge: 3vmin;
+  --font-size-normal: 18px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 30px;
 
   --bs-body-color: var(--white);
 }

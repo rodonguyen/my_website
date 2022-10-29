@@ -24,15 +24,20 @@ The page will reload when you make changes.\
 - Dark Mode https://www.youtube.com/watch?v=VzF2iTTc0MA 
             https://www.youtube.com/watch?v=VzF2iTTc0MA
             github repo https://github.com/Satellite-system/TextUtils---React-js-Web/blob/master/src/App.js 
-- 
+- Examples:
+  - https://karpathy.ai/
+  - https://huyenchip.com/ 
 
 ### TODO:
 - [x] Deploy
-- [ ] Check SSL
-- [ ] Add temporary information
-- [ ] Add Contacts
-- [ ] Edit CSS: no enlarging when hovered, and consider different pallette colors?
-
+- [x] Check SSL
+- [x] Add Contacts
+- [x] Edit CSS: no enlarging when hovered, and consider different pallette colors?
+- [x] Page icon
+- [x] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+- [ ] Add more info to bio
+- [ ] Remake NavBar (copy chip's)
+- [ ] Build secret dating page
 
 
 <!-- You may also see any lint errors in the console.
