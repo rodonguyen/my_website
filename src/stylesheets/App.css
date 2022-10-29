@@ -78,9 +78,49 @@ p {
 /**************************************************************************
   NAV BAR 
 */
+/* NEW */
+  
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+
+a.navbar-item {
+  color: black;
+}
+a.navbar-item:visited {
+  color: black;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  margin: 0 1rem;
+  width: 6rem;
+}
+a.navbar-item {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+a.navbar-item.brand {
+  padding-left: 15px;
+}
+/* === */
+
+
 .navbar-container {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #c6c6c6;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .standard-width {

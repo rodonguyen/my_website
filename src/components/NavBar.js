@@ -1,10 +1,34 @@
 import { Navbar, Nav, NavItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const NavBar = () => (
+
+
+const NavBar = () => {
+  
+  return (
   <div className="navbar-container">
     <div className="standard-width">
-    <Navbar>
+      <div class="navbar">
+        <nav className="navbar">
+          <a href="/" className="navbar-item brand text-align-left">
+            Rodo
+          </a>
+          <ul>
+            <li>
+              <a href="/resume" className="navbar-item">Resume</a>
+            </li>
+            <li>
+              <a href="/list-100" className="navbar-item">List 100</a>
+            </li>
+            <li>
+              <a href="/contact" className="navbar-item">Contact me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+      {/* <Navbar>
       <Nav>
         <NavItem>
           <Link to="/" className="nav-link brand">
@@ -19,11 +43,11 @@ const NavBar = () => (
             My resume
           </Link>
         </NavItem>
-        {/* <NavItem>
+        <NavItem>
           <Link to="/projects" className="nav-link">
             My projects
           </Link>
-        </NavItem> */}
+        </NavItem> 
         <NavItem>
           <Link to="/list-100" className="nav-link">
             List-100
@@ -45,9 +69,9 @@ const NavBar = () => (
           </Link>
         </NavItem>
       </Nav>
-    </Navbar>
+    </Navbar> */}
     </div>
   </div>
-);
+)};
 
 export default NavBar;
