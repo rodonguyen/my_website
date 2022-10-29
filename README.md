@@ -36,7 +36,8 @@ The page will reload when you make changes.\
 - [x] Page icon
 - [x] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
 - [ ] Add more info to bio
-- [ ] Remake NavBar (copy chip's)
+- [ ] Remake NavBar https://codesandbox.io/s/react-responsive-nav-3n3lu?resolutionWidth=1436&resolutionHeight=675&file=/src/components/Navbar.js
+- [ ] Merge 'main' here
 - [ ] Build secret dating page
 
 

@@ -1,10 +1,39 @@
-import { Navbar, Nav, NavItem } from "reactstrap";
-import { Link } from "react-router-dom";
+// import { Navbar, Nav, NavItem } from "reactstrap";
+// import { Link } from "react-router-dom";
 
-const NavBar = () => (
+const NavBar = () => {
+  
+  return (
   <div className="navbar-container">
     <div className="standard-width">
-    <Navbar>
+      <div class="navbar">
+        <nav className="navbar">
+          <a href="/" className="navbar-item brand text-align-left">
+            Rodo
+          </a>
+          <div className="navmenu">
+            <ul className="navbar">
+              <li className="navbar">
+                <a href="/resume" className="navbar-item">Resume</a>
+              </li>
+              <li className="navbar">
+                <a href="/list-100" className="navbar-item">List 100</a>
+              </li>
+              <li className="navbar">
+                <a href="/contactme" className="navbar-item">Contact me</a>
+              </li>
+              <li className="navbar">
+                <a href="https://rodonguyen.medium.com/" className="navbar-item"
+                  target="_blank"
+                  rel="noopener noreferrer">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+{/* 
+      <Navbar>
       <Nav>
         <NavItem>
           <Link to="/" className="nav-link brand">
@@ -19,11 +48,6 @@ const NavBar = () => (
             My resume
           </Link>
         </NavItem>
-        {/* <NavItem>
-          <Link to="/projects" className="nav-link">
-            My projects
-          </Link>
-        </NavItem> */}
         <NavItem>
           <Link to="/list-100" className="nav-link">
             List-100
@@ -45,9 +69,9 @@ const NavBar = () => (
           </Link>
         </NavItem>
       </Nav>
-    </Navbar>
+    </Navbar> */}
     </div>
   </div>
-);
+)};
 
 export default NavBar;
