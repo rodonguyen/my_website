@@ -96,11 +96,11 @@ a.navbar-item:visited {
   color: black;
 }
 
-ul {
+ul.navbar {
   display: flex;
   padding: 0;
 }
-li {
+li.navbar {
   list-style-type: none;
   margin: 0 1rem;
   width: 6rem;
