@@ -6,29 +6,27 @@ const NavBar = () => {
   return (
   <div className="navbar-container">
     <div className="standard-width">
-      <div class="navbar">
-        <nav className="navbar">
+      <div>
+        <nav>
           <a href="/" className="navbar-item brand text-align-left">
             Rodo
           </a>
-          <div className="navmenu">
-            <ul className="navbar">
-              <li className="navbar">
+            <ul>
+              <li>
                 <a href="/resume" className="navbar-item">Resume</a>
               </li>
-              <li className="navbar">
+              <li>
                 <a href="/list-100" className="navbar-item">List 100</a>
               </li>
-              <li className="navbar">
+              <li>
                 <a href="/contactme" className="navbar-item">Contact me</a>
               </li>
-              <li className="navbar">
+              <li>
                 <a href="https://rodonguyen.medium.com/" className="navbar-item"
                   target="_blank"
                   rel="noopener noreferrer">Blog</a>
               </li>
             </ul>
-          </div>
         </nav>
       </div>
 
