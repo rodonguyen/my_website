@@ -26,6 +26,13 @@ h5 {
   font-size: var(--font-size-xlarge);
 }
 
+a {
+  color: #05108f;
+}
+a:visited {
+  color: #131385;
+}
+
 .left.intro {
   width: 40%;
 }
@@ -89,21 +96,21 @@ p {
   padding: 0.5rem 0rem;
 }
 
-a.navbar-item {
-  color: black;
-}
-a.navbar-item:visited {
-  color: black;
+li.navbar {
+  width: fit-content;
 }
 
-li.navbar {
-  list-style-type: none;
-  width: 6rem;
-}
 a.navbar-item {
+  color: black;
   text-decoration: none;
-  width: 100%;
+  padding: 0.5rem 1.5rem;
+  display: block;
+  border-radius: 0.5rem;
 }
+a.navbar-item:hover {
+  background-color: var(--light-2);
+}
+
 a.navbar-item.brand {
   font-size: var(--font-size-large);
 }

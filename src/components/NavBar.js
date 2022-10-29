@@ -1,7 +1,5 @@
-import { Navbar, Nav, NavItem } from "reactstrap";
-import { Link } from "react-router-dom";
-
-
+// import { Navbar, Nav, NavItem } from "reactstrap";
+// import { Link } from "react-router-dom";
 
 const NavBar = () => {
   
@@ -34,8 +32,8 @@ const NavBar = () => {
         </nav>
       </div>
 
-
-      {/* <Navbar>
+{/* 
+      <Navbar>
       <Nav>
         <NavItem>
           <Link to="/" className="nav-link brand">
@@ -50,11 +48,6 @@ const NavBar = () => {
             My resume
           </Link>
         </NavItem>
-        <NavItem>
-          <Link to="/projects" className="nav-link">
-            My projects
-          </Link>
-        </NavItem> 
         <NavItem>
           <Link to="/list-100" className="nav-link">
             List-100
