@@ -30,11 +30,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={AppConstantElements}>
-            <Route path="/" element={<Home/>} />
             <Route path="contactme" element={<ContactMe/>} />
             <Route path="projects" element={<Project/>} />
             <Route path="resume" element={<Resume/>} />
             <Route path="list-100" element={<List100/>} />
+            <Route path="/" exact element={<Home/>} />
             <Route path="*" element={<NotFound/>} />
           </Route>
         </Routes>
