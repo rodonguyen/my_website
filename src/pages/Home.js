@@ -25,7 +25,7 @@ const Home = () => {
       {/* content block 1: A little introduction */}
 
       <div className="container">
-        <div className="row">
+        <div className="row introduction">
           <div className="portrait">
             <img
               src={rodoImage}
@@ -71,7 +71,7 @@ const Home = () => {
       {/* content block 2: Projects */}
       <div className="container background-color-2">
         <h1 className="xlarge text-align-left">My pet projects</h1>
-        <div className="row grid-gap">
+        <div className="row projects">
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
               <img src={twitterSpamDetection} alt="Project demo"></img>
