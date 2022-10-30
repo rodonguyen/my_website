@@ -32,24 +32,38 @@ const Home = () => {
               className="portrait"
               width="291"
               height="387"
+              loading="lazy"
               alt="Rodo Potrait"
             />
           </div>
           <div className="bio">
             <h1 className="xlarge text-align-left">Hello World!</h1>
             <p>
-              I’m a motivated gonna-be Software Engineer wanting to build tools
-              that improve human lives and solve impactful problems. I have
-              participated in multiple projects that involves developing
-              software, building deep learning models, analysing data and so on.
+              I’m a motivated data scientist who loves to create data-driven
+              products that bring value to users at scale. Equipped with a
+              diverse skill set, from software development, data analysis to
+              deep learning model design, I’m excited to take on new challenges.
             </p>
             <p>
-              With the accumulated strong and diverse skill-set, I’m excited to
-              take on new challenges!
+              During my free time, I like to build pet projects where I put my
+              skills or my recently acquired knowledge to practice. Don't forget
+              to pay a visit to my{" "}
+              <a
+                href="https://github.com/rodonguyen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>{" "}
+              :)
             </p>
             <p>
-              #data #AI #software #blockchain
+              Besides doing hands-on work, I'm also a future-focus person who
+              pays attention to the long-term plan. I have a strong analytical
+              thinking mentality from working in research environments (QUT and
+              CSIRO).
             </p>
+            <p>#data #AI #software #blockchain</p>
           </div>
         </div>
       </div>
@@ -60,34 +74,36 @@ const Home = () => {
         <div className="row grid-gap">
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection} alt='Project demo'></img>
+              <img src={twitterSpamDetection} alt="Project demo"></img>
             </a>
-            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
-            different Machine Learning models: LSTM, Transformer, Naive
-            Bayes and SVM</div>
+            <div className="text-align-left">
+              Identify spam Tweet with {">"}95% accuracy by using 4 different
+              Machine Learning models: LSTM, Transformer, Naive Bayes and SVM
+            </div>
           </div>
 
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection}  alt='Project demo'></img>
+              <img src={twitterSpamDetection} alt="Project demo"></img>
             </a>
-            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
-            different Machine Learning models: LSTM, Transformer, Naive
-            Bayes and SVM</div>
+            <div className="text-align-left">
+              Identify spam Tweet with {">"}95% accuracy by using 4 different
+              Machine Learning models: LSTM, Transformer, Naive Bayes and SVM
+            </div>
           </div>
 
           <div className="card">
             <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection}  alt='Project demo'></img>
+              <img src={twitterSpamDetection} alt="Project demo"></img>
             </a>
-            <div className="text-align-left">Identify spam Tweet with {">"}95% accuracy by using 4
-            different Machine Learning models: LSTM, Transformer, Naive
-            Bayes and SVM</div>
+            <div className="text-align-left">
+              Identify spam Tweet with {">"}95% accuracy by using 4 different
+              Machine Learning models: LSTM, Transformer, Naive Bayes and SVM
+            </div>
           </div>
         </div>
 
-
-{/* 
+        {/* 
           <CRow>
             <CCol>
               <CCard color={mode}>
@@ -142,14 +158,14 @@ const Home = () => {
             </CCol>
           </CRow> */}
 
-          <>
-            <TwitterSpamDetectorModal
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-            />
-          </>
+        <>
+          <TwitterSpamDetectorModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
+        </>
 
-          {/* <div class="footer"> hi</div> */}
+        {/* <div class="footer"> hi</div> */}
       </div>
     </>
   );

@@ -35,8 +35,11 @@ The page will reload when you make changes.\
 - [x] Edit CSS: no enlarging when hovered, and consider different pallette colors?
 - [x] Page icon
 - [x] Use grid for Home, Bio, Projects: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-- [ ] Add more info to bio
-- [ ] Remake NavBar (copy chip's)
+- [x] Add more info to bio
+- [x] Remake NavBar https://codesandbox.io/s/react-responsive-nav-3n3lu?resolutionWidth=1436&resolutionHeight=675&file=/src/components/Navbar.js
+- [x] Update resume
+- [x] Merge 'main' here
+- [ ] Add 'projects'
 - [ ] Build secret dating page
 
 
