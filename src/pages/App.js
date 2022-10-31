@@ -5,6 +5,7 @@ import Project from './Project';
 import List100 from './List100';
 import Resume from './Resume';
 import Home from './Home';
+import DateMe from './DateMe';
 import NotFound from './NotFound';
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../stylesheets/App.css';
@@ -17,13 +18,9 @@ function App() {
   const AppConstantElements = (
     <div className="App">
       <NavBar />
-      {/* <Container> */}
         <Outlet></Outlet>
-      {/* </Container> */}
     </div>
   );
-
-
 
   return (
     <div className="App">
@@ -34,6 +31,7 @@ function App() {
             <Route path="projects" element={<Project/>} />
             <Route path="resume" element={<Resume/>} />
             <Route path="list-100" element={<List100/>} />
+            <Route path="dateme/:code" element={<DateMe/>} />
             <Route path="/" exact element={<Home/>} />
             <Route path="*" element={<NotFound/>} />
           </Route>

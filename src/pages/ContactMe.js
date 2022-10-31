@@ -1,9 +1,7 @@
 
 const ContactMe = () => {
   return (
-  <>
-  <section>
-    <div class='container'>
+  <div className="container">
       <h1>
       I love having deep conversations.
       </h1>
@@ -14,11 +12,7 @@ const ContactMe = () => {
         <li><a href='https://github.com/rodonguyen/' target="_blank" rel="noopener noreferrer">Github</a></li>
         <li><a href='https://rodonguyen.medium.com/' target="_blank" rel="noopener noreferrer">Medium</a></li>
       </ul>
-
-    </div>
-
-  </section>
-  </>
+  </div>
   );
 };
 
