@@ -68,8 +68,8 @@ a:visited {
 }
 
 .container {
-  margin-top: 15px;
-  margin-bottom: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -127,6 +127,7 @@ a.navbar-item {
   display: block;
   border-radius: 0.5rem;
 }
+
 a.navbar-item:hover {
   background-color: var(--light-2);
 }
@@ -261,7 +262,7 @@ img.portrait {
 }
 
 /**************************************************************************
-  BUTTON 
+  FOOTER 
 */
 footer {
   height: 200px;
@@ -277,6 +278,19 @@ footer {
 .icon {
   width: 16px;
   height: 16px;
+}
+
+
+
+/**************************************************************************
+  RESUME 
+*/
+
+.container.resume {
+  height: 86vh;
+}
+.container.resume button {
+  margin: 0.3rem;
 }
 
 /**************************************************************************
