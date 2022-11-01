@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 
 const DateMe = () => {
   const { code } = useParams();
+  console.log(code);
 
 
   return (
