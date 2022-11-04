@@ -3,7 +3,7 @@ const ContactMe = () => {
   return (
   <div className="container">
       <h1>
-      I love having deep conversations.
+      I love deep conversations.
       </h1>
       
       <ul className='contact-list text-align-left center'>
