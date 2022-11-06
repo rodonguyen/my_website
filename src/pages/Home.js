@@ -1,21 +1,8 @@
-// import {
-//   CRow,
-//   CCol,
-//   CCard,
-//   CCardImage,
-//   CCardBody,
-//   CCardTitle,
-//   CCardText,
-//   CButton,
-// } from "@coreui/react";
-
-// import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 import rodoImage from "../media/Rodo.jpg";
 import twitterPic from "../media/twitterPic.png";
 import bittrackerPic from "../media/bittrackerPic.png";
 import sentimentPic from "../media/sentimentPic.png";
-import TwitterSpamDetectorModal from "../components/MyModals";
 import createHyperlink from '../components/utils';
 
 
