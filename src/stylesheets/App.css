@@ -12,7 +12,6 @@
 
 .App-link {
   color: #61dafb;
-
 }
 
 /* Content tags */
@@ -22,6 +21,7 @@ h1 {
 }
 h5 {
   font-size: var(--font-size-normal);
+  margin: 0.5rem auto;
 }
 p {
   text-align: justify;
@@ -55,7 +55,7 @@ a:visited {
 }
 
 .background-color-2 {
-  background: var(--light-1);
+  background: var(--light-2);
 }
 
 .text-align-left {
@@ -180,11 +180,15 @@ div.navbar-container {
   text-align: right;
   /* margin-right: 20px; */
 }
-img.portrait {
+.portrait img {
   border-radius: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .bio {
-  grid-column: span 7;
+  grid-column: span 5;
   text-align: left;
 }
 
@@ -202,6 +206,51 @@ img.portrait {
 /**************************************************************************
   MY PET PROJECTS
 */
+.project {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  min-height: 5.5rem;
+}
+
+.project p {
+  text-align: left;
+}
+.ppicture {
+  float: left;
+  margin-right: 1rem;
+}
+
+.project img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5px;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.project svg {
+  width: 20px;
+  height: 20px;
+}
+.project svg:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+.pdescription p {
+  margin: 0.1rem auto;
+  text-align: justify;
+}
+
+@media (max-width: 500px) {
+  .pdescription p {
+    text-align: left;
+  }
+}
+
+/* 
+OLD CARD CSS STUFF
 .card {
   grid-column: span 4;
   vertical-align: top;
@@ -210,7 +259,6 @@ img.portrait {
   padding: 5px;
   background-color: white;
   padding-bottom: 10px;
-  /* margin: 3px; */
 }
 .card img {
   border-radius: 5px;
@@ -225,8 +273,7 @@ img.portrait {
   .card {
     grid-column: span 6;
   }
-}
-
+} */
 /**************************************************************************
   MODAL 
 */
@@ -255,7 +302,6 @@ img.portrait {
   BUTTON 
 */
 .btn-primary {
-  /* --bs-btn-bg: var(--light-2); */
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
   font-size: var(--font-size-normal);
@@ -300,7 +346,7 @@ footer {
 :root {
   --text-color-1: #000000;
   --light-1: #e6ecf4;
-  --light-2: #cacaca;
+  --light-2: #e2e2e6;
   
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
@@ -321,7 +367,7 @@ footer {
   --nav-link-padding-side: 1rem;
 
   --font-size-small: 15px;
-  --font-size-normal: 18px;
+  --font-size-normal: 16px;
   --font-size-large: 24px;
   --font-size-xlarge: 30px;
 
