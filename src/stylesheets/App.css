@@ -21,7 +21,7 @@ h1 {
 }
 h5 {
   font-size: var(--font-size-normal);
-  margin: 0.8rem auto;
+  margin: 0.5rem auto;
 }
 p {
   text-align: justify;
@@ -228,9 +228,29 @@ div.navbar-container {
   border: 1px solid rgb(202, 202, 202);
 }
 
+.project svg {
+  width: 20px;
+  height: 20px;
+}
+.project svg:hover {
+  background-color: white;
+  border-radius: 50%;
+}
 
 
+.pdescription p {
+  margin: 0.1rem auto;
+  text-align: justify;
+}
 
+@media (max-width: 500px) {
+  .pdescription p {
+    text-align: left;
+  }
+}
+
+/* 
+OLD CARD CSS STUFF
 .card {
   grid-column: span 4;
   vertical-align: top;
@@ -239,7 +259,6 @@ div.navbar-container {
   padding: 5px;
   background-color: white;
   padding-bottom: 10px;
-  /* margin: 3px; */
 }
 .card img {
   border-radius: 5px;
@@ -254,8 +273,7 @@ div.navbar-container {
   .card {
     grid-column: span 6;
   }
-}
-
+} */
 /**************************************************************************
   MODAL 
 */
@@ -284,7 +302,6 @@ div.navbar-container {
   BUTTON 
 */
 .btn-primary {
-  /* --bs-btn-bg: var(--light-2); */
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
   font-size: var(--font-size-normal);
