@@ -47,7 +47,6 @@ const List100 = () => {
         <li>✓ </li>
         {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Have sex with 10 people (at different time)</li> */}
-        {/* <li>✓ </li> */}
       </ol>
     </div>
   </>

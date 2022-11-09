@@ -154,6 +154,12 @@ const Home = () => {
             new challenges.
           </p>
           <p>
+            Around age 8, I had the chance to play around with computer (which
+            is very lucky of me) and never stopped since. I loved the Iron Man
+            movies so much that I decided to pursue Artificial Inteligence to
+            make a J.A.R.V.I.S for my own.
+          </p>
+          <p>
             During my free time, I like to build pet projects where I put my
             skills or my recently acquired knowledge to practice. Don't forget
             to pay a visit to my{" "}
@@ -175,11 +181,10 @@ const Home = () => {
         </div>
       </div>
 
-
       {/* content block: History */}
       <div className="background-color-2">
         <div className="container">
-        <h1>Experience</h1>
+          <h1>Experience</h1>
           {/* <h1 className="xlarge text-align-left">Experience</h1> */}
           <div className="row entry history">
             <div className="time">2022 - 2023</div>
@@ -232,8 +237,6 @@ const Home = () => {
         </div>
       </div>
 
-
-
       {/* content block: Professional achievements */}
       <div className="container">
         <p>
@@ -253,8 +256,6 @@ const Home = () => {
           </ul>
         </p>
       </div>
-
-
 
       {/* content block: Projects */}
       <div className="background-color-2">
