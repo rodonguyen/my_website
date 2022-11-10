@@ -192,7 +192,15 @@ const Home = () => {
               <div class="entry-dot"></div>
               <img src={csirodata61Logo} alt="qutguild logo" />
             </div>
-            <div className="description">CSIRO</div>
+            <div className="description">
+              <p>Also another Vacation Researcher role but at CSIRO :)</p>
+              <p>
+                I will be researching and developing lightweight Artificial
+                Intelligent models that can be deployed in Edge AI devices. This
+                aims to sense the ocean's temperature without a specialised
+                device, only based on signal perturbations of underwater cables. How cool is that?!
+              </p>
+            </div>
           </div>
           <div className="row entry history">
             <div className="time">2021 - 2022</div>
@@ -200,7 +208,31 @@ const Home = () => {
               <div class="entry-dot"></div>
               <img src={qutLogo} alt="qutguild logo" />
             </div>
-            <div className="description">QUT VRES 2021</div>
+            <div className="description">
+              <p>
+                In the QUT VRES 2021 program, I was delighted to work as a
+                Vacation Researcher for project "Analysing the Effectiveness of
+                Verifiable Python (a Python variant) for Software Cybersecurity"
+                led by{" "}
+                {createHyperlink(
+                  "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
+                  "Dr. Gowri Ramachandran"
+                )}
+                .
+              </p>
+              <p></p>
+              This was achieved by identifying a 90%
+              Confidence Interval that covers 75% of the spotted memory trace
+              variations. I eliminated ~95% of manual work by developing
+              an automated analysis pipeline that executes the programs,
+              analyses and records results with Bash Script and Python and in
+              the end, won the{" "}
+              {createHyperlink(
+                "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
+                "best research poster award!"
+              )}
+              .
+            </div>
           </div>
           <div className="row entry history">
             <div className="time">2021</div>
@@ -208,7 +240,12 @@ const Home = () => {
               <div class="entry-dot"></div>
               <img src={qutLogo} alt="qutguild logo" />
             </div>
-            <div className="description">HiQ Concierge</div>
+            <div className="description">
+              As a HiQ Concierge, I worked collaboratively to service our
+              students and the public for all of their university-related
+              queries, and communicated effectively with clients and guided them
+              through the resources.
+            </div>
           </div>
           <div className="row entry history">
             <div className="time">2020 - 2021</div>
@@ -216,7 +253,21 @@ const Home = () => {
               <div class="entry-dot"></div>
               <img src={vietqLogo} alt="qutguild logo" />
             </div>
-            <div className="description">VietQ</div>
+            <div className="description">
+              <p>
+                I was proud to be elected as the Secretary of VietQ - Vietnamese
+                Students Association at QUT. This was an amazing experience as I
+                had the opportunity to work with vibrant people as well as VietQ
+                members from different majors.
+              </p>
+              <p>
+                Here I promoted Vietnamese culture as a team through our
+                exciting events, managed intermediate & long-term operations of
+                the organisation like assisting other sub-teams/President/VP
+                where applicable, organising documents, communicating with
+                external stakeholders, and so on.
+              </p>
+            </div>
           </div>
           <div className="row entry history">
             <div className="time">2020 - 2021</div>
@@ -225,13 +276,12 @@ const Home = () => {
               <img src={qutguildLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              Template Template Template I was the Sr. Director of AI at Tesla,
-              where I led the computer vision team of Tesla Autopilot. Today,
-              the Autopilot increases the safety and convenience of driving, but
-              the team's goal is to develop and deploy Full Self-Driving to our
-              rapidly growing fleet of millions of cars. Our Aug 2021 Tesla AI
-              Day provides the most detailed and up-to-date overview of this
-              effort.
+              As an International Students Officer, I advocated for and assisted
+              international students on a university-wide scale to ensure they
+              have adequate conditions to thrive. My work in summary: liasing
+              with a wide range of stakeholders, assisting with planning
+              initiatives, campaigns and events that benefit and represent
+              international students, etc.
             </div>
           </div>
         </div>
@@ -240,7 +290,7 @@ const Home = () => {
       {/* content block: Professional achievements */}
       <div className="container">
         <p>
-          Other kinda professional achievements are:
+          Other achievements:
           <ul>
             <li>[ 2022 ]</li>
             <li>
