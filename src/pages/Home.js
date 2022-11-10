@@ -293,6 +293,7 @@ const Home = () => {
           Other achievements:
           <ul>
             <li>[ 2022 ]</li>
+            <li>Graduated with the Bachelor of Information Technology!</li>
             <li>
               Received the Dean's List of Students with Excellent Academic
               Performance Certificate{" "}

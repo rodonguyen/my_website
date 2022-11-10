@@ -21,15 +21,18 @@ h1 {
   text-align: left;
   font-size: var(--font-size-xlarge);
 }
+
 h5 {
   font-size: var(--font-size-normal);
   margin: 0.5rem auto;
 }
+
 p {
   text-align: justify;
   text-justify: inter-word;
   margin: 0.8rem auto;
 }
+
 /* ------------ */
 
 .xlarge {
@@ -39,6 +42,7 @@ p {
 a {
   color: #05108f;
 }
+
 a:visited {
   color: #131385;
 }
@@ -46,6 +50,7 @@ a:visited {
 .left.intro {
   width: 40%;
 }
+
 .right.intro {
   width: 52%;
 }
@@ -101,15 +106,17 @@ a:visited {
 .navbar-container {
   /* Sticky properties */
   /* position:static;   */
-  position: sticky;  
+  position: sticky;
   top: 0;
-  z-index: 1; /* Overlay content / Make element lies above others */
+  z-index: 1;
+  /* Overlay content / Make element lies above others */
   background-color: var(--light-1);
   /* overflow: auto; */
 }
 
 
-.navbar-container ul, .navbar-container li {
+.navbar-container ul,
+.navbar-container li {
   width: fit-content;
   display: flex;
   margin-left: auto;
@@ -147,9 +154,11 @@ div.navbar-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
+
   .navbar-container li {
     grid-column: span 6;
   }
+
   a.navbar-item {
     padding: 0.2rem 0.3rem;
     display: inline-block;
@@ -182,6 +191,7 @@ div.navbar-container {
   text-align: right;
   /* margin-right: 20px; */
 }
+
 .portrait img {
   border-radius: 10px;
   vertical-align: middle;
@@ -190,6 +200,7 @@ div.navbar-container {
   /* top: 50%;
   transform: translate(0, -50%); */
 }
+
 .bio {
   grid-column: span 6;
   text-align: left;
@@ -200,6 +211,7 @@ div.navbar-container {
     grid-column: span 12;
     text-align: center;
   }
+
   .bio {
     grid-column: span 12;
     padding-top: 20px;
@@ -212,7 +224,6 @@ div.navbar-container {
 */
 .history .time {
   grid-column: span 1;
-
 }
 
 .history .entry-dot {
@@ -222,8 +233,8 @@ div.navbar-container {
   width: 6px;
   height: 6px;
   border-radius: 7px;
-  background-color: #cfcfcf;
-  border: 2px solid #eaeaea;
+  background-color: #a8a8a8;
+  border: 2px solid #f5f5f5;
 }
 
 .history .company-logo {
@@ -242,10 +253,10 @@ div.navbar-container {
 
 .history .description {
   grid-column: span 10;
-  font-size: 17px;;
+  font-size: 17px;
   vertical-align: top;
   padding-left: 20px;
-  padding-bottom: 0.8rem;
+  padding-bottom: 1rem;
   text-align: left;
 }
 
@@ -253,6 +264,7 @@ div.navbar-container {
   margin: auto auto 0.5rem auto;
   text-align: left;
 }
+
 /**************************************************************************
   MY PET PROJECTS
 */
@@ -266,6 +278,7 @@ div.navbar-container {
 .project p {
   text-align: left;
 }
+
 .ppicture {
   float: left;
   margin-right: 1rem;
@@ -282,6 +295,7 @@ div.navbar-container {
   width: 20px;
   height: 20px;
 }
+
 .project svg:hover {
   background-color: white;
   border-radius: 50%;
@@ -339,11 +353,13 @@ OLD CARD CSS STUFF
   --bs-card-border-radius: 0.5rem;
   --bs-card-inner-border-radius: calc(0.5rem - 1px);
 }
+
 .card-body {
   background-color: var(--light-2);
   border-color: var(--light-2);
   border-radius: 0 0 .5rem .5rem;
 }
+
 .bg-dark {
   --bs-bg-opacity: 0.1;
 }
@@ -385,6 +401,7 @@ footer {
 .container.resume {
   height: 86vh;
 }
+
 .container.resume button {
   margin: 0.3rem;
 }
@@ -397,7 +414,7 @@ footer {
   --text-color-1: #000000;
   --light-1: #e6ecf4;
   --light-2: #e2e2e6;
-  
+
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
@@ -423,4 +440,3 @@ footer {
 
   --bs-body-color: var(--white);
 }
-
