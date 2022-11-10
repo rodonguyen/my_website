@@ -5,7 +5,7 @@ const List100 = () => {
   <>
     <div className="container">
       <h1 className="text-align-left xlarge">List 100</h1>
-      <p>We all have 1 life. Why not making the most of it and do exciting things? These are the things that keep me excited every morning and that I plan to do before I die. Inspired by Chip Huyen's.</p>
+      <p>We all have 1 life. Why not making the most of it and do exciting things? These are the things that keep me excitedly waking up every morning and that I plan to do before I die. Inspired by Chip Huyen's.</p>
       <p>Progress: 0/100</p>
       <ol className="text-align-left">
         <li>✗ Read 100 books ({readBookNum}/100)</li>
@@ -17,7 +17,7 @@ const List100 = () => {
         <li>✗ Teach a course in university</li>
         <li>✗ Pay and have a 14-day holiday with my family</li>
         <li>✗ Walk on the moon</li>
-        <li>✗ Swimming in Exosphere</li>
+        <li>✗ Swimming in Exosphere in a space suit</li>
         <li>✗ Found a tech company in Vietnam and it survives :)</li>
         <li>✗ Give a talk to &gt;100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>

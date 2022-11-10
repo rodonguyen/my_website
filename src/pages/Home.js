@@ -193,12 +193,15 @@ const Home = () => {
               <img src={csirodata61Logo} alt="qutguild logo" />
             </div>
             <div className="description">
-              <p>Also another Vacation Researcher role but at CSIRO :)</p>
+              <p>
+                Also another Vacation Researcher role but at CSIRO's Data61 :)
+              </p>
               <p>
                 I will be researching and developing lightweight Artificial
                 Intelligent models that can be deployed in Edge AI devices. This
                 aims to sense the ocean's temperature without a specialised
-                device, only based on signal perturbations of underwater cables. How cool is that?!
+                device, only based on signal perturbations of underwater cables.
+                How cool is that?!
               </p>
             </div>
           </div>
@@ -221,17 +224,15 @@ const Home = () => {
                 .
               </p>
               <p></p>
-              This was achieved by identifying a 90%
-              Confidence Interval that covers 75% of the spotted memory trace
-              variations. I eliminated ~95% of manual work by developing
-              an automated analysis pipeline that executes the programs,
-              analyses and records results with Bash Script and Python and in
-              the end, won the{" "}
+              For the final result, a 90% Confidence Interval that covers 75% of the
+              spotted memory trace variations was identified. I eliminated ~95%
+              of manual work by developing an automated analysis pipeline that
+              executes the programs, analyses and records results with Bash
+              Script and Python and in the end, won the{" "}
               {createHyperlink(
                 "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
-                "best research poster award!"
-              )}
-              .
+                "best research poster award"
+              )}!
             </div>
           </div>
           <div className="row entry history">
@@ -255,7 +256,7 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                I was proud to be elected as the Secretary of VietQ - Vietnamese
+                I was proud to be elected as the Secretary of {createHyperlink('https://www.facebook.com/vietqbrisbane/', 'VietQ')} - Vietnamese
                 Students Association at QUT. This was an amazing experience as I
                 had the opportunity to work with vibrant people as well as VietQ
                 members from different majors.
@@ -276,7 +277,7 @@ const Home = () => {
               <img src={qutguildLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              As an International Students Officer, I advocated for and assisted
+              As an International Students Officer at QUT Guild, I advocated for and assisted
               international students on a university-wide scale to ensure they
               have adequate conditions to thrive. My work in summary: liasing
               with a wide range of stakeholders, assisting with planning
@@ -303,7 +304,14 @@ const Home = () => {
               shame for an IT student to do it this late :)
             </li>
             <li>[ 2021 ]</li>
-            <li>GovHack Honourable Mention with project 'Outliers'</li>
+            <li>
+              GovHack Honourable Mention with project '
+              {createHyperlink(
+                "https://github.com/rodonguyen/govhack21-vietausit-brisbane/blob/main/docs/index.md",
+                "Outliers"
+              )}
+              '
+            </li>
           </ul>
         </p>
       </div>
