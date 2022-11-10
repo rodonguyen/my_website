@@ -40,14 +40,13 @@ const List100 = () => {
         <li>✗ Ask a stranger out successfully</li>
         <li>✗ Finish a full marathon</li>
         <li>✗ Be 70kg and muscular</li>
-        <li>✗ </li>
-        <li>✗ </li>
-        <li>✗ </li>
-        <li>✗ </li>
+        <li>✗ Cuddle lions</li>
+        <li>✗ Swim with whales/dolphins</li>
+        <li>✗ Travel to Africa</li>
+        <li>✗ See the Hymalayas</li>
         <li>✓ </li>
         {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Have sex with 10 people (at different time)</li> */}
-        {/* <li>✓ </li> */}
       </ol>
     </div>
   </>

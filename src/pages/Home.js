@@ -3,8 +3,12 @@ import rodoImage from "../media/Rodo.jpg";
 import twitterPic from "../media/twitterPic.png";
 import bittrackerPic from "../media/bittrackerPic.png";
 import sentimentPic from "../media/sentimentPic.png";
-import createHyperlink from '../components/utils';
+import qutguildLogo from "../media/qutguild_logo.png";
+import vietqLogo from "../media/vietq_logo.jpg";
+import qutLogo from "../media/qut_logo.jpeg";
+import csirodata61Logo from "../media/csirodata61_logo.jpeg";
 
+import createHyperlink from "../components/utils";
 
 const projectContents = {
   1: {
@@ -108,15 +112,13 @@ const projectContentHandler = (projects, setProjects, target) => {
   setProjects({ ...projects });
 };
 
-
-
 const Home = () => {
   // const mode = "light";   // For future dark/light mode
   const githubIconSvg = (
-      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <title>View in GitHub</title>
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-      </svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>View in GitHub</title>
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+    </svg>
   );
   const [projects, setProjects] = useState({
     expandedTarget: "-1",
@@ -145,10 +147,17 @@ const Home = () => {
         <div className="bio">
           <h1 className="xlarge text-align-left">Hello World!</h1>
           <p>
-            I’m a motivated data scientist who loves to create data-driven
-            products that bring value to users at scale. Equipped with a diverse
-            skill set, from software development, data analysis to deep learning
-            model design, I’m excited to take on new challenges.
+            I’m a motivated machine learning engineer who loves to create
+            data-driven, AI-integrated products that bring value to users at
+            scale. Equipped with a diverse skill set, from software development,
+            data analysis to deep learning model design, I’m excited to take on
+            new challenges.
+          </p>
+          <p>
+            Around age 8, I had the chance to play around with computer (which
+            is very lucky of me) and never stopped since. I loved the Iron Man
+            movies so much that I decided to pursue Artificial Inteligence to
+            make a J.A.R.V.I.S for my own.
           </p>
           <p>
             During my free time, I like to build pet projects where I put my
@@ -168,19 +177,146 @@ const Home = () => {
             attention to the long-term plan. I have a strong analytical thinking
             mentality from working in research environments (QUT and CSIRO).
           </p>
-          <p>#data #AI #software #blockchain</p>
+          <p>#data #artificial_intelligence #software #blockchain</p>
         </div>
       </div>
 
-      {/* content block 2: Projects */}
+      {/* content block: History */}
       <div className="background-color-2">
         <div className="container">
-          <h1 className="xlarge text-align-left">Pet Projects</h1>
+          <h1>Experience</h1>
+          {/* <h1 className="xlarge text-align-left">Experience</h1> */}
+          <div className="row entry history">
+            <div className="time">2022 - 2023</div>
+            <div className="company-logo">
+              <div class="entry-dot"></div>
+              <img src={csirodata61Logo} alt="qutguild logo" />
+            </div>
+            <div className="description">
+              <p>Also another Vacation Researcher role but at CSIRO :)</p>
+              <p>
+                I will be researching and developing lightweight Artificial
+                Intelligent models that can be deployed in Edge AI devices. This
+                aims to sense the ocean's temperature without a specialised
+                device, only based on signal perturbations of underwater cables. How cool is that?!
+              </p>
+            </div>
+          </div>
+          <div className="row entry history">
+            <div className="time">2021 - 2022</div>
+            <div className="company-logo">
+              <div class="entry-dot"></div>
+              <img src={qutLogo} alt="qutguild logo" />
+            </div>
+            <div className="description">
+              <p>
+                In the QUT VRES 2021 program, I was delighted to work as a
+                Vacation Researcher for project "Analysing the Effectiveness of
+                Verifiable Python (a Python variant) for Software Cybersecurity"
+                led by{" "}
+                {createHyperlink(
+                  "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
+                  "Dr. Gowri Ramachandran"
+                )}
+                .
+              </p>
+              <p></p>
+              This was achieved by identifying a 90%
+              Confidence Interval that covers 75% of the spotted memory trace
+              variations. I eliminated ~95% of manual work by developing
+              an automated analysis pipeline that executes the programs,
+              analyses and records results with Bash Script and Python and in
+              the end, won the{" "}
+              {createHyperlink(
+                "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
+                "best research poster award!"
+              )}
+              .
+            </div>
+          </div>
+          <div className="row entry history">
+            <div className="time">2021</div>
+            <div className="company-logo">
+              <div class="entry-dot"></div>
+              <img src={qutLogo} alt="qutguild logo" />
+            </div>
+            <div className="description">
+              As a HiQ Concierge, I worked collaboratively to service our
+              students and the public for all of their university-related
+              queries, and communicated effectively with clients and guided them
+              through the resources.
+            </div>
+          </div>
+          <div className="row entry history">
+            <div className="time">2020 - 2021</div>
+            <div className="company-logo">
+              <div class="entry-dot"></div>
+              <img src={vietqLogo} alt="qutguild logo" />
+            </div>
+            <div className="description">
+              <p>
+                I was proud to be elected as the Secretary of VietQ - Vietnamese
+                Students Association at QUT. This was an amazing experience as I
+                had the opportunity to work with vibrant people as well as VietQ
+                members from different majors.
+              </p>
+              <p>
+                Here I promoted Vietnamese culture as a team through our
+                exciting events, managed intermediate & long-term operations of
+                the organisation like assisting other sub-teams/President/VP
+                where applicable, organising documents, communicating with
+                external stakeholders, and so on.
+              </p>
+            </div>
+          </div>
+          <div className="row entry history">
+            <div className="time">2020 - 2021</div>
+            <div className="company-logo">
+              <div class="entry-dot"></div>
+              <img src={qutguildLogo} alt="qutguild logo" />
+            </div>
+            <div className="description">
+              As an International Students Officer, I advocated for and assisted
+              international students on a university-wide scale to ensure they
+              have adequate conditions to thrive. My work in summary: liasing
+              with a wide range of stakeholders, assisting with planning
+              initiatives, campaigns and events that benefit and represent
+              international students, etc.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* content block: Professional achievements */}
+      <div className="container">
+        <p>
+          Other achievements:
+          <ul>
+            <li>[ 2022 ]</li>
+            <li>Graduated with the Bachelor of Information Technology!</li>
+            <li>
+              Received the Dean's List of Students with Excellent Academic
+              Performance Certificate{" "}
+            </li>
+            <li>
+              Deployed my very first personal website, this website (such a
+              shame for an IT student to do it this late :)
+            </li>
+            <li>[ 2021 ]</li>
+            <li>GovHack Honourable Mention with project 'Outliers'</li>
+          </ul>
+        </p>
+      </div>
+
+      {/* content block: Projects */}
+      <div className="background-color-2">
+        <div className="container">
+          <h1>Pet Projects</h1>
           <div className="project">
             <div className="ppicture">
               <img src={twitterPic} loading="lazy" alt="twitterPic" />
             </div>
-            <div className="pdescription text-align-left">
+            <div className="description text-align-left">
               <h5>
                 Spam Tweet Detector &ensp;{" "}
                 {createHyperlink(
@@ -205,7 +341,7 @@ const Home = () => {
             <div className="ppicture">
               <img src={bittrackerPic} loading="lazy" alt="twitterPic" />
             </div>
-            <div className="pdescription text-align-left">
+            <div className="description text-align-left">
               <h5>
                 BitTracker &ensp;{" "}
                 {createHyperlink(
@@ -230,7 +366,7 @@ const Home = () => {
             <div className="ppicture">
               <img src={sentimentPic} loading="lazy" alt="twitterPic" />
             </div>
-            <div className="pdescription text-align-left">
+            <div className="description text-align-left">
               <h5>
                 Twitter E-nalyst &ensp;{" "}
                 {createHyperlink(
@@ -256,54 +392,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="container">
-        <h1 className="xlarge text-align-left">Woww a publication!</h1>
-      </div> 
-      
-      
-      <h1 className="xlarge text-align-left">Pet projects</h1>
-        <div className="row projects">
-          <div className="card">
-            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection} alt="Project demo"></img>
-            </a>
-            <div className="text-align-left">
-              <h5>Spam Tweet Detector</h5>
-              Led a team of 4 to design 4 separate Machine Learning models that
-              can identify spam tweets with {">"}95% accuracy (LSTM,
-              Transformer, SVM and Naive Bayes), provided insights into each
-              model’s strengths and shortcomings
-              <Button variant="primary" onClick={() => setModalShow(true)}>
-                Read More
-              </Button>
-            </div>
-          </div>
-
-          <div className="card">
-            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection} alt="Project demo"></img>
-            </a>
-            <div className="text-align-left">
-              <h5>BitTracker</h5>
-              A cryptocurrency trading bot programmed in Python that theoretically brings +110% profit annually on average in a market cycle by utilising SuperTrend indicator.
-            </div>
-          </div>
-
-          <div className="card">
-            <a href="https://www.youtube.com/watch?v=hx7BXih7zx8">
-              <img src={twitterSpamDetection} alt="Project demo"></img>
-            </a>
-            <div className="text-align-left">
-              <h5>Spam Tweet Detector</h5>
-              Identify spam Tweet with {">"}95% accuracy by using 4 different
-              Machine Learning models: LSTM, Transformer, Naive Bayes and SVM
-            </div>
-          </div>
-        </div> 
-        
-
-      */}
     </>
   );
 };
