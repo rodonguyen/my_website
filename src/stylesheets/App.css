@@ -144,6 +144,23 @@ div.navbar-container {
   margin-left: auto;
 }
 
+.navbar-container {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #c6c6c6;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.standard-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 982px;
+}
+
+button.theme-mode {
+  float: right;
+}
+
 @media (max-width: 700px) {
   .navbar-container ul {
     display: grid;
@@ -161,18 +178,6 @@ div.navbar-container {
   }
 }
 
-.navbar-container {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #c6c6c6;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.standard-width {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 982px;
-}
 
 /**************************************************************************
   HOME BIO
