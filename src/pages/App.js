@@ -18,7 +18,7 @@ function App() {
   const AppConstantElements = (
     <div className="App">
       <NavBar />
-        <Outlet></Outlet>
+        <Outlet/>
     </div>
   );
 

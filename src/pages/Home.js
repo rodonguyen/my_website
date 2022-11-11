@@ -127,9 +127,9 @@ const Home = () => {
     3: projectContents["3"].short,
   });
 
-  useEffect(() => {
-    console.log("state changes");
-  }, []);
+  // useEffect(() => {
+  //   console.log("state changes");
+  // }, []);
 
   return (
     <>
