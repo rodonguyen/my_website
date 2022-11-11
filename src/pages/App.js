@@ -31,7 +31,7 @@ function App() {
             <Route path="projects" element={<Project/>} />
             <Route path="resume" element={<Resume/>} />
             <Route path="list-100" element={<List100/>} />
-            <Route path="dateme/:code" element={<DateMe/>} />
+            <Route path="dateme" element={<DateMe/>} />
             <Route path="/" exact element={<Home/>} />
             <Route path="*" element={<NotFound/>} />
           </Route>
