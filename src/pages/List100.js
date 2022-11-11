@@ -2,7 +2,6 @@ const List100 = () => {
   const readBookNum = 16;
 
   return (
-  <>
     <div className="container">
       <h1 className="text-align-left xlarge">List 100</h1>
       <p>We all have 1 life. Why not making the most of it and do exciting things? These are the things that keep me excitedly waking up every morning and that I plan to do before I die. Inspired by Chip Huyen's.</p>
@@ -49,7 +48,6 @@ const List100 = () => {
         {/* <li>✗ Have sex with 10 people (at different time)</li> */}
       </ol>
     </div>
-  </>
   );
 };
 

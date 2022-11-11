@@ -1,5 +1,4 @@
-// import { Navbar, Nav, NavItem } from "reactstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   
@@ -8,18 +7,18 @@ const NavBar = () => {
     <div className="standard-width">
       <div>
         <nav>
-          <a href="/" className="navbar-item brand text-align-left">
+          <Link to="/" className="navbar-item brand text-align-left">
             Rodo
-          </a>
+          </Link>
             <ul>
               <li>
-                <a href="/resume" className="navbar-item">Resume</a>
+                <Link to="/resume" className="navbar-item">Resume</Link>
               </li>
               <li>
-                <a href="/list-100" className="navbar-item">List 100</a>
+                <Link to="/list-100" className="navbar-item">List 100</Link>
               </li>
               <li>
-                <a href="/contactme" className="navbar-item">Contact me</a>
+                <Link to="/contactme" className="navbar-item">Contact me</Link>
               </li>
               <li>
                 <a href="https://rodonguyen.medium.com/" className="navbar-item"
@@ -52,14 +51,14 @@ const NavBar = () => {
           </Link>
         </NavItem>
         <NavItem>
-          <a
-            href="https://rodonguyen.medium.com/"
+          <Link
+            to="https://rodonguyen.medium.com/"
             className="nav-link"
             target="_blank"
             rel="noopener noreferrer"
           >
             Blog
-          </a>
+          </Link>
         </NavItem>
         <NavItem>
           <Link to="/contactme" className="nav-link">

@@ -69,11 +69,6 @@ a:visited {
   text-align: left;
 }
 
-.center {
-  margin-left: 20%;
-  margin-right: auto;
-}
-
 .container {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -383,8 +378,8 @@ footer {
 /**************************************************************************
   CONTACT 
 */
-.contact-list {
-  /* list-style: none; */
+.contact-list .center {
+  margin-left: 25%;
 }
 
 .icon {
@@ -392,6 +387,11 @@ footer {
   height: 16px;
 }
 
+@media (max-width: 500px) {
+  .contact-list .center {
+    margin-left: 10%;
+  }
+}
 
 
 /**************************************************************************
@@ -405,6 +405,16 @@ footer {
 .container.resume button {
   margin: 0.3rem;
 }
+
+/**************************************************************************
+  NOT FOUND 
+*/
+
+.notfound h1 {
+  text-align: center;
+  margin: 3rem auto;
+}
+
 
 /**************************************************************************
   GLOBAL VARIABLES 
