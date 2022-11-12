@@ -17,18 +17,19 @@ import { useState, useEffect } from "react";
 
 
 function App() {
-  const [mode, setMode] = useState('Light')
+  const 
+  const [themeMode, setThemeMode] = useState('Light')
   useEffect(() => {
-    if (mode === 'Dark') {
+    if (themeMode === 'Dark') {
       document.body.classList.add("dark");
-    } else if (mode === 'Light') {
+    } else if (themeMode === 'Light') {
       document.body.classList.remove("dark");
     }
-  }, [mode]);
+  }, [themeMode]);
   
   const AppConstantElements = (
     <div className="App">
-      <NavBar mode={mode} setMode={setMode}/>
+      <NavBar themeMode={themeMode} setThemeMode={setThemeMode}/>
         <Outlet/>
     </div>
   );

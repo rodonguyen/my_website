@@ -1,17 +1,12 @@
 /**************************************************************************
-  APP 
-*/
+  APP                                                                     */
 .App {
   text-align: center;
   background-color: var(--light-1);
-  color: var(--text-color-1);
+  color: var(--text-color-dark-1);
   height: 100%;
   min-height: 100vh;
   font-size: var(--font-size-normal);
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 h1 {
@@ -41,7 +36,7 @@ a {
 }
 
 a:visited {
-  color: #7130cd;
+  color: var(--light-purle);
 }
 
 .left.intro {
@@ -83,28 +78,38 @@ a:visited {
   grid-template-columns: repeat(12, 1fr);
 }
 
-.dark .App, .dark .navbar-container, .dark .navbar-container {
-  background: #0B1119;
-  color: #e6e6e6;
+.dark .App,
+.dark .navbar-container,
+.dark .navbar-container {
+  background: var(--dark-1);
+  color: var(--text-color-light-1);
 }
-.dark .background-color-2  {
-  background: #070b10;
+
+.dark .background-color-2 {
+  background: var(--dark-2);
 }
+
 .dark a {
   color: #4b6884;
 }
+
 .dark a:visited {
-  color: #7130cd;
+  color: var(--light-purle);
 }
+
 .dark button {
-  background-color: #262f3b;
+  background-color: #232b36;
   border-radius: 4px;
   border-width: 2px solid #aaaaaa;
-  color: #e6e6e6;
+  color: var(--text-color-light-1);
 }
+
+.dark button:hover {
+  background-color: #323d4b;
+}
+
 /**************************************************************************
-  NAV BAR 
-*/
+  NAV BAR                                                                 */
 .navbar-container nav {
   position: relative;
   display: flex;
@@ -154,10 +159,13 @@ a.navbar-item.brand {
   font-size: var(--font-size-large);
 }
 
-a.navbar-item, a.navbar-item:visited {
+a.navbar-item,
+a.navbar-item:visited {
   color: #1e2030;
 }
-.dark a.navbar-item, dark a.navbar-item:visited {
+
+.dark a.navbar-item,
+dark a.navbar-item:visited {
   color: #a7abca;
 }
 
@@ -200,10 +208,13 @@ button.theme-mode {
   }
 }
 
+.dark a.navbar-item:hover {
+  background-color: var(--dark-3);
+}
+
 
 /**************************************************************************
-  HOME BIO
-*/
+  HOME BIO                                                                */
 .row.introduction {
   grid-column-gap: 20px;
 }
@@ -242,8 +253,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  HISTORY
-*/
+  HISTORY                                                                 */
+
 .history .time {
   grid-column: span 1;
 }
@@ -288,8 +299,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  MY PET PROJECTS
-*/
+  MY PET PROJECTS                                                         */
+
 .project {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -318,11 +329,9 @@ button.theme-mode {
   height: 20px;
 }
 
-.project svg:hover {
-  background-color: #ffffff;
-  border-radius: 50%;
+.project svg:hover path {
+  fill: var(--purple-1);
 }
-
 
 .project .description p {
   margin: 0.1rem auto;
@@ -335,20 +344,17 @@ button.theme-mode {
   }
 }
 
-.dark .project svg {
-  background-size: 90%;
-  background-color: #e4e4e4;
-  border-radius: 50%;
-}
-.dark .project svg:hover {
-  background-color: #008902;
-  border-radius: 50%;
+.dark .project svg path {
+  fill: white;
 }
 
+.dark .project svg:hover path {
+  fill: var(--purple-1);
+}
 
 /**************************************************************************
-  CARD 
-*/
+  CARD                                                                    */
+
 .card {
   --bs-card-border-radius: 0.5rem;
   --bs-card-inner-border-radius: calc(0.5rem - 1px);
@@ -365,8 +371,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  BUTTON 
-*/
+  BUTTON                                                                  */
+
 .btn-primary {
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
@@ -374,8 +380,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  FOOTER 
-*/
+  FOOTER                                                                  */
+
 footer {
   height: 200px;
 }
@@ -400,8 +406,7 @@ footer {
 
 
 /**************************************************************************
-  RESUME 
-*/
+  RESUME                                                                  */
 
 .container.resume {
   height: 86vh;
@@ -412,8 +417,7 @@ footer {
 }
 
 /**************************************************************************
-  NOT FOUND 
-*/
+  NOT FOUND                                                               */
 
 .notfound h1 {
   text-align: center;
@@ -423,17 +427,24 @@ footer {
 
 /**************************************************************************
   GLOBAL VARIABLES 
-  Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
-*/
+  Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557           */
+
 :root {
-  --text-color-1: #000000;
+  --text-color-dark-1: #000000;
   --light-1: #e6ecf4;
   --light-2: #e2e2e6;
+
+  --text-color-light-1: #e6e6e6;
+  --dark-1: #0B1119;
+  --dark-2: #070b10;
+  --dark-3: #070707;
 
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
+  --purple-1: #5b02a4;
+  --light-purle: #7130cd;
 
   --dark-background: #003060;
   --dark-xbackground-2: #055C9D;
