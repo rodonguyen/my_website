@@ -7,21 +7,25 @@ import Resume from './Resume';
 import Home from './Home';
 import DateMe from './DateMe';
 import NotFound from './NotFound';
-import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../stylesheets/App.css';
+
+import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from "react";
 
 // import { Container } from 'reactstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+  const [mode, setMode] = useState('Light')
+  
   const AppConstantElements = (
     <div className="App">
-      <NavBar />
+      <NavBar mode={mode} setMode={setMode}/>
         <Outlet/>
     </div>
   );
-
+  
   return (
     <div className="App">
       <BrowserRouter>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import rodoImage from "../media/Rodo.jpg";
 import twitterPic from "../media/twitterPic.png";
 import bittrackerPic from "../media/bittrackerPic.png";
