@@ -10,7 +10,7 @@ import NotFound from './NotFound';
 import '../stylesheets/App.css';
 
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import { Container } from 'reactstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,13 @@ import { useState } from "react";
 
 function App() {
   const [mode, setMode] = useState('Light')
+  useEffect(() => {
+    if (mode === 'Dark') {
+      document.body.classList.add("dark");
+    } else if (mode === 'Light') {
+      document.body.classList.remove("dark");
+    }
+  }, [mode]);
   
   const AppConstantElements = (
     <div className="App">
