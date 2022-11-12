@@ -41,7 +41,8 @@ The page will reload when you make changes.\
 - [x] Merge 'main' here
 - [x] Add 'projects'
 - [x] Improve NavItem (using <Link>)
-- [ ] Dark mode (30%)
+- [ ] Dark mode (30%) https://www.code-boost.com/dark-mode-in-react/ 
+- [ ] Crazy mode
 - [ ] Build secret dating page (30%)
 
 

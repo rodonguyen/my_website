@@ -17,7 +17,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState('Light')
   
   const AppConstantElements = (
     <div className="App">

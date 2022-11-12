@@ -4,8 +4,8 @@ const NavBar = ({mode, setMode}) => {
 
   const changeMode = () => {
     const modes = {
-      0: 'light',
-      1: 'dark',
+      0: 'Light',
+      1: 'Dark',
     }
     // console.log('mode index:', mode, Object.values(modes).indexOf(mode))
     setMode(modes[(Object.values(modes).indexOf(mode)+1)%2])
@@ -54,7 +54,7 @@ const NavBar = ({mode, setMode}) => {
         // console.log('Mode button clicked!');
         changeMode();
       }}>
-        Mode
+        {mode} Mode
       </button>
     </>
   );
