@@ -158,7 +158,8 @@ div.navbar-container {
 }
 
 button.theme-mode {
-  float: right;
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 700px) {
