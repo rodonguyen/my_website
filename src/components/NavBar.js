@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NavBar = ({mode, setMode}) => {
+const NavBar = ({themeMode, setThemeMode}) => {
 
   const changeMode = () => {
     const modes = {
@@ -8,8 +8,8 @@ const NavBar = ({mode, setMode}) => {
       1: 'Dark',
     }
     // console.log('mode index:', mode, Object.values(modes).indexOf(mode))
-    setMode(modes[(Object.values(modes).indexOf(mode)+1)%2])
-    console.log('mode after clicked:', mode)
+    setThemeMode(modes[(Object.values(modes).indexOf(themeMode)+1)%2])
+    console.log('mode after clicked:', themeMode)
   }
 
   return (
@@ -54,7 +54,7 @@ const NavBar = ({mode, setMode}) => {
         // console.log('Mode button clicked!');
         changeMode();
       }}>
-        {mode} Mode
+        {themeMode} Mode
       </button>
     </>
   );

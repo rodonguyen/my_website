@@ -1,20 +1,14 @@
 /**************************************************************************
-  APP 
-*/
+  APP                                                                     */
 .App {
   text-align: center;
   background-color: var(--light-1);
-  color: var(--text-color-1);
+  color: var(--text-color-dark-1);
   height: 100%;
   min-height: 100vh;
   font-size: var(--font-size-normal);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-/* Content tags */
 h1 {
   font-size: var(--font-size-large);
   margin: 0.8rem auto;
@@ -33,18 +27,16 @@ p {
   margin: 0.8rem auto;
 }
 
-/* ------------ */
-
 .xlarge {
   font-size: var(--font-size-xlarge);
 }
 
 a {
-  color: #05108f;
+  color: #0d1cc3;
 }
 
 a:visited {
-  color: #131385;
+  color: var(--light-purle);
 }
 
 .left.intro {
@@ -86,10 +78,38 @@ a:visited {
   grid-template-columns: repeat(12, 1fr);
 }
 
+.dark .App,
+.dark .navbar-container,
+.dark .navbar-container {
+  background: var(--dark-1);
+  color: var(--text-color-light-1);
+}
+
+.dark .background-color-2 {
+  background: var(--dark-2);
+}
+
+.dark a {
+  color: #4b6884;
+}
+
+.dark a:visited {
+  color: var(--light-purle);
+}
+
+.dark button {
+  background-color: #232b36;
+  border-radius: 4px;
+  border-width: 2px solid #aaaaaa;
+  color: var(--text-color-light-1);
+}
+
+.dark button:hover {
+  background-color: #323d4b;
+}
 
 /**************************************************************************
-  NAV BAR 
-*/
+  NAV BAR                                                                 */
 .navbar-container nav {
   position: relative;
   display: flex;
@@ -125,7 +145,6 @@ a:visited {
 }
 
 a.navbar-item {
-  color: black;
   text-decoration: none;
   padding: 0.2rem 0.8rem;
   display: block;
@@ -138,6 +157,16 @@ a.navbar-item:hover {
 
 a.navbar-item.brand {
   font-size: var(--font-size-large);
+}
+
+a.navbar-item,
+a.navbar-item:visited {
+  color: #1e2030;
+}
+
+.dark a.navbar-item,
+dark a.navbar-item:visited {
+  color: #a7abca;
 }
 
 div.navbar-container {
@@ -179,10 +208,13 @@ button.theme-mode {
   }
 }
 
+.dark a.navbar-item:hover {
+  background-color: var(--dark-3);
+}
+
 
 /**************************************************************************
-  HOME BIO
-*/
+  HOME BIO                                                                */
 .row.introduction {
   grid-column-gap: 20px;
 }
@@ -221,8 +253,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  HISTORY
-*/
+  HISTORY                                                                 */
+
 .history .time {
   grid-column: span 1;
 }
@@ -267,8 +299,8 @@ button.theme-mode {
 }
 
 /**************************************************************************
-  MY PET PROJECTS
-*/
+  MY PET PROJECTS                                                         */
+
 .project {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -297,11 +329,9 @@ button.theme-mode {
   height: 20px;
 }
 
-.project svg:hover {
-  background-color: white;
-  border-radius: 50%;
+.project svg:hover path {
+  fill: var(--purple-1);
 }
-
 
 .project .description p {
   margin: 0.1rem auto;
@@ -314,42 +344,17 @@ button.theme-mode {
   }
 }
 
-/* 
-OLD CARD CSS STUFF
-.card {
-  grid-column: span 4;
-  vertical-align: top;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 5px;
-  background-color: white;
-  padding-bottom: 10px;
-}
-.card img {
-  border-radius: 5px;
-  width: 100%;
-}
-.row.projects {
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
+.dark .project svg path {
+  fill: white;
 }
 
-@media (max-width: 800px) {
-  .card {
-    grid-column: span 6;
-  }
-} */
-/**************************************************************************
-  MODAL 
-*/
-.modal {
-  --bs-modal-bg: var(--dark-background-4);
+.dark .project svg:hover path {
+  fill: var(--purple-1);
 }
-
 
 /**************************************************************************
-  CARD 
-*/
+  CARD                                                                    */
+
 .card {
   --bs-card-border-radius: 0.5rem;
   --bs-card-inner-border-radius: calc(0.5rem - 1px);
@@ -366,8 +371,8 @@ OLD CARD CSS STUFF
 }
 
 /**************************************************************************
-  BUTTON 
-*/
+  BUTTON                                                                  */
+
 .btn-primary {
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
@@ -375,8 +380,8 @@ OLD CARD CSS STUFF
 }
 
 /**************************************************************************
-  FOOTER 
-*/
+  FOOTER                                                                  */
+
 footer {
   height: 200px;
 }
@@ -401,8 +406,7 @@ footer {
 
 
 /**************************************************************************
-  RESUME 
-*/
+  RESUME                                                                  */
 
 .container.resume {
   height: 86vh;
@@ -413,8 +417,7 @@ footer {
 }
 
 /**************************************************************************
-  NOT FOUND 
-*/
+  NOT FOUND                                                               */
 
 .notfound h1 {
   text-align: center;
@@ -424,20 +427,25 @@ footer {
 
 /**************************************************************************
   GLOBAL VARIABLES 
-  Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
-*/
+  Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557           */
+
 :root {
-  --text-color-1: #000000;
+  --text-color-dark-1: #000000;
   --light-1: #e6ecf4;
   --light-2: #e2e2e6;
+
+  --text-color-light-1: #e6e6e6;
+  --dark-1: #0B1119;
+  --dark-2: #070b10;
+  --dark-3: #070707;
 
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
-  /* --dark-blue-1: #1D3557;
-  --dark-background: #273952;
-  --light-1: #293d56; */
+  --purple-1: #5b02a4;
+  --light-purle: #7130cd;
+
   --dark-background: #003060;
   --dark-xbackground-2: #055C9D;
   --dark-xbackground-3: #003B73;
