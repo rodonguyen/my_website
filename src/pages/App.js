@@ -15,7 +15,7 @@ import { useState, useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const themeModeFromLS = localStorage.getItem("themeMode");
+  let themeModeFromLS = localStorage.getItem("themeMode");
   if (!themeModeFromLS) {
     themeModeFromLS = 'Light';
   }
