@@ -36,7 +36,7 @@ a {
 }
 
 a:visited {
-  color: var(--light-purle);
+  color: var(--purple-1);
 }
 
 .left.intro {
@@ -90,11 +90,11 @@ a:visited {
 }
 
 .dark a {
-  color: #4b6884;
+  color: var(--light-pink-1);
 }
 
 .dark a:visited {
-  color: var(--light-purle);
+  color: var(--light-pink-2);
 }
 
 .dark button {
@@ -443,8 +443,9 @@ footer {
   --white-vanilla: #fefefe;
   --light-blue: #A8DADC;
   --pale-blue: #457B9D;
-  --purple-1: #5b02a4;
-  --light-purle: #7130cd;
+  --purple-1: #a344a3;
+  --light-pink-1: #d984d9;
+  --light-pink-2: #FFAFFF;
 
   --dark-background: #003060;
   --dark-xbackground-2: #055C9D;

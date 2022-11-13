@@ -11,20 +11,9 @@ import "../stylesheets/App.css";
 import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-// import { Container } from 'reactstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 function App() {
   let themeModeFromLS = localStorage.getItem("themeMode");
-  if (!themeModeFromLS) {
-    themeModeFromLS = 'Light';
-  }
-  const [themeMode, setThemeMode] = useState(themeModeFromLS);
-
-  // if (themeModeFromLS === "Dark") {
-  //   document.body.classList.add("dark");
-  //   setThemeMode("Dark");
-  // }
+  const [themeMode, setThemeMode] = useState(themeModeFromLS || 'Light');
 
   useEffect(() => {
     if (themeMode === "Dark") {
