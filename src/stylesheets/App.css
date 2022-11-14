@@ -1,8 +1,9 @@
 /**************************************************************************
   APP                                                                     */
+
 .App {
   text-align: center;
-  background-color: var(--light-1);
+  background: var(--light-1);
   color: var(--text-color-dark-1);
   height: 100%;
   min-height: 100vh;
@@ -79,8 +80,7 @@ a:visited {
 }
 
 .dark .App,
-.dark .navbar-container,
-.dark .navbar-container {
+.dark .navbar-container{
   background: var(--dark-1);
   color: var(--text-color-light-1);
 }
@@ -98,14 +98,25 @@ a:visited {
 }
 
 .dark button {
-  background-color: #232b36;
+  background: #232b36;
   border-radius: 4px;
   border-width: 2px solid #aaaaaa;
   color: var(--text-color-light-1);
 }
 
 .dark button:hover {
-  background-color: #323d4b;
+  background: #323d4b;
+}
+
+.App,
+a, a:visited, 
+.background-color-2,
+.dark a, .dark a:visited, 
+.dark .background-color-2, 
+.dark .App,
+.dark .navbar-container,
+.navbar-container {
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 /**************************************************************************
@@ -125,8 +136,7 @@ a:visited {
   top: 0;
   z-index: 1;
   /* Overlay content / Make element lies above others */
-  background-color: var(--light-1);
-  /* overflow: auto; */
+  background: var(--light-1);
 }
 
 
@@ -152,7 +162,7 @@ a.navbar-item {
 }
 
 a.navbar-item:hover {
-  background-color: var(--light-2);
+  background: var(--light-2);
 }
 
 a.navbar-item.brand {
@@ -209,7 +219,7 @@ button.theme-mode {
 }
 
 .dark a.navbar-item:hover {
-  background-color: var(--dark-3);
+  background: var(--dark-3);
 }
 
 
@@ -266,7 +276,7 @@ button.theme-mode {
   width: 6px;
   height: 6px;
   border-radius: 7px;
-  background-color: #a8a8a8;
+  background: #a8a8a8;
   border: 2px solid #f5f5f5;
 }
 
@@ -361,7 +371,7 @@ button.theme-mode {
 }
 
 .card-body {
-  background-color: var(--light-2);
+  background: var(--light-2);
   border-color: var(--light-2);
   border-radius: 0 0 .5rem .5rem;
 }
