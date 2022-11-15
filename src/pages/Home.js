@@ -194,14 +194,12 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                Also another Vacation Researcher role but at CSIRO's Data61 :)
-              </p>
-              <p>
-                I will be researching and developing lightweight Artificial
-                Intelligent models that can be deployed in Edge AI devices. This
-                aims to sense the ocean's temperature without a specialised
-                device, only based on signal perturbations of underwater cables.
-                How cool is that?!
+                As a Vacation Researcher at CSIRO's Data61, I will be
+                researching and developing lightweight Artificial Intelligent
+                models that can be deployed in Edge AI devices. This aims to
+                sense the ocean's temperature without a specialised device, only
+                based on signal perturbations of underwater cables. How cool is
+                that?!
               </p>
             </div>
           </div>
@@ -213,10 +211,10 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                In the QUT VRES 2021 program, I was delighted to work as a
-                Vacation Researcher for project "Analysing the Effectiveness of
-                Verifiable Python (a Python variant) for Software Cybersecurity"
-                led by{" "}
+                Also another Vacation Researcher role but at QUT (VRES 2021
+                program) :) I was delighted to work as a Vacation Researcher for project
+                "Analysing the Effectiveness of Verifiable Python (a Python
+                variant) for Software Cybersecurity" led by{" "}
                 {createHyperlink(
                   "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
                   "Dr. Gowri Ramachandran"
@@ -224,15 +222,16 @@ const Home = () => {
                 .
               </p>
               <p></p>
-              For the final result, a 90% Confidence Interval that covers 75% of the
-              spotted memory trace variations was identified. I eliminated ~95%
-              of manual work by developing an automated analysis pipeline that
-              executes the programs, analyses and records results with Bash
-              Script and Python and in the end, won the{" "}
+              For the final result, a 90% Confidence Interval that covers 75% of
+              the spotted memory trace variations was identified. I eliminated
+              ~95% of manual work by developing an automated analysis pipeline
+              that executes the programs, analyses and records results with Bash
+              Script and Python. I won the{" "}
               {createHyperlink(
                 "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
                 "best research poster award"
-              )}!
+              )}
+              {' '} in the end!
             </div>
           </div>
           <div className="row entry history">
@@ -256,10 +255,14 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                I was proud to be elected as the Secretary of {createHyperlink('https://www.facebook.com/vietqbrisbane/', 'VietQ')} - Vietnamese
-                Students Association at QUT. This was an amazing experience as I
-                had the opportunity to work with vibrant people as well as VietQ
-                members from different majors.
+                I was proud to be elected as the Secretary of{" "}
+                {createHyperlink(
+                  "https://www.facebook.com/vietqbrisbane/",
+                  "VietQ"
+                )}{" "}
+                - Vietnamese Students Association at QUT. This was an amazing
+                experience as I had the opportunity to work with vibrant people
+                as well as VietQ members from different majors.
               </p>
               <p>
                 Here I promoted Vietnamese culture as a team through our
@@ -277,12 +280,12 @@ const Home = () => {
               <img src={qutguildLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              As an International Students Officer at QUT Guild, I advocated for and assisted
-              international students on a university-wide scale to ensure they
-              have adequate conditions to thrive. My work in summary: liasing
-              with a wide range of stakeholders, assisting with planning
-              initiatives, campaigns and events that benefit and represent
-              international students, etc.
+              As an International Students Officer at QUT Guild, I advocated for
+              and assisted international students on a university-wide scale to
+              ensure they have adequate conditions to thrive. My work in
+              summary: liasing with a wide range of stakeholders, assisting with
+              planning initiatives, campaigns and events that benefit and
+              represent international students, etc.
             </div>
           </div>
         </div>
@@ -295,6 +298,7 @@ const Home = () => {
           <ul>
             <li>[ 2022 ]</li>
             <li>Graduated with the Bachelor of Information Technology!</li>
+            <li>Joined Ravi's Study Program</li>
             <li>
               Received the Dean's List of Students with Excellent Academic
               Performance Certificate{" "}
