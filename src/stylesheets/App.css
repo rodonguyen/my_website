@@ -159,6 +159,7 @@ a.navbar-item {
   padding: 0.2rem 0.8rem;
   display: block;
   border-radius: 0.5rem;
+  transition: none;
 }
 
 a.navbar-item:hover {
