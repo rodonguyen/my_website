@@ -157,7 +157,9 @@ const Home = () => {
             Around age 8, I had the chance to play around with computer (which
             is very lucky of me) and never stopped since. I loved the Iron Man
             movies so much that I decided to pursue Artificial Inteligence to
-            make a J.A.R.V.I.S for my own.
+            make a J.A.R.V.I.S for my own. And yes, to this date I'm still
+            working on things closely relating to Artificial Intelligence and
+            Machine Learning.
           </p>
           <p>
             During my free time, I like to build pet projects where I put my
@@ -212,9 +214,9 @@ const Home = () => {
             <div className="description">
               <p>
                 Also another Vacation Researcher role but at QUT (VRES 2021
-                program) :) I was delighted to work as a Vacation Researcher for project
-                "Analysing the Effectiveness of Verifiable Python (a Python
-                variant) for Software Cybersecurity" led by{" "}
+                program) :) I was delighted to work as a Vacation Researcher for
+                project "Analysing the Effectiveness of Verifiable Python (a
+                Python variant) for Software Cybersecurity" led by{" "}
                 {createHyperlink(
                   "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
                   "Dr. Gowri Ramachandran"
@@ -230,8 +232,8 @@ const Home = () => {
               {createHyperlink(
                 "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
                 "best research poster award"
-              )}
-              {' '} in the end!
+              )}{" "}
+              in the end!
             </div>
           </div>
           <div className="row entry history">
@@ -403,6 +405,34 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Skills section */}
+      <div className="container text-align-left skills">
+        <h1>Skills</h1>
+        <ul>
+          <li>
+            <b>Languages</b>:&ensp; Python, JavaScript, C/C++/C#, Java
+          </li>
+          <li>
+            <b>Amazon Web Services</b>:&ensp; S3, DynamoDB, Elasti Cache, Redis,
+            Auto Scaling, Elastic Load Balancing, EC2
+          </li>
+          <li>
+            <b>Data</b>:&ensp; Pandas, Numpy, Matplotlib, SQL, ETL{" "}
+          </li>
+          <li>
+            <b>Machine Learning</b>:&ensp; Keras, SKlearn, Pytorch, ML Model
+            Engineering
+          </li>
+          <li>
+            <b>Web</b>:&ensp; React, NodeJs, aaa Docker, AWS
+          </li>
+          <li>
+            <b>Others</b>:&ensp; Linux, Bash Script, Git/GitHub, Embedded
+            Systems{" "}
+          </li>
+        </ul>
       </div>
     </>
   );

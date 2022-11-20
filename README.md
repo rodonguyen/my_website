@@ -42,9 +42,10 @@ The page will reload when you make changes.\
 - [x] Add 'projects'
 - [x] Improve NavItem (using <Link>)
 - [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
+- [x] Skills section (or a way to show this)
+- [ ] Certificates section 
 - [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
 - [ ] Build secret dating page (30%)
-- [ ] Skills section (or a way to show this)
 - [ ] Crazy mode
 
 
