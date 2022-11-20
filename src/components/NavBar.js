@@ -1,75 +1,63 @@
-// import { Navbar, Nav, NavItem } from "reactstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
-  
+const NavBar = ({themeMode, setThemeMode}) => {
+
+  const changeMode = () => {
+    const modes = {
+      0: 'Light',
+      1: 'Dark',
+    }
+    // console.log('mode index:', mode, Object.values(modes).indexOf(mode))
+    setThemeMode(modes[(Object.values(modes).indexOf(themeMode)+1)%2])
+    console.log('mode after clicked:', themeMode)
+  }
+
   return (
-  <div className="navbar-container">
-    <div className="standard-width">
-      <div>
-        <nav>
-          <a href="/" className="navbar-item brand text-align-left">
-            Rodo
-          </a>
+    <>
+      <div className="navbar-container">
+        <div className="standard-width">
+          <nav>
+            <Link to="/" className="navbar-item brand text-align-left">
+              Rodo
+            </Link>
             <ul>
               <li>
-                <a href="/resume" className="navbar-item">Resume</a>
+                <Link to="/resume" className="navbar-item">
+                  Resume
+                </Link>
               </li>
               <li>
-                <a href="/list-100" className="navbar-item">List 100</a>
+                <Link to="/list-100" className="navbar-item">
+                  List 100
+                </Link>
               </li>
               <li>
-                <a href="/contactme" className="navbar-item">Contact me</a>
+                <Link to="/contactme" className="navbar-item">
+                  Contact me
+                </Link>
               </li>
               <li>
-                <a href="https://rodonguyen.medium.com/" className="navbar-item"
+                <a
+                  href="https://rodonguyen.medium.com/"
+                  className="navbar-item"
                   target="_blank"
-                  rel="noopener noreferrer">Blog</a>
+                  rel="noopener noreferrer"
+                >
+                  Blog
+                </a>
               </li>
             </ul>
-        </nav>
+          </nav>
+        </div>
       </div>
-
-{/* 
-      <Navbar>
-      <Nav>
-        <NavItem>
-          <Link to="/" className="nav-link brand">
-            Rodo
-          </Link>
-        </NavItem>
-      </Nav>
-
-      <Nav className="right">
-        <NavItem>
-          <Link to="/resume" className="nav-link">
-            My resume
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link to="/list-100" className="nav-link">
-            List-100
-          </Link>
-        </NavItem>
-        <NavItem>
-          <a
-            href="https://rodonguyen.medium.com/"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </a>
-        </NavItem>
-        <NavItem>
-          <Link to="/contactme" className="nav-link">
-            Contact me
-          </Link>
-        </NavItem>
-      </Nav>
-    </Navbar> */}
-    </div>
-  </div>
-)};
+      <button type="button" className="theme-mode" onClick={() => {
+        // console.log('Mode button clicked!');
+        changeMode();
+      }}>
+        {themeMode} Mode
+      </button>
+    </>
+  );
+};
 
 export default NavBar;

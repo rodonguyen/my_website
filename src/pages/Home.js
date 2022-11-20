@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import rodoImage from "../media/Rodo.jpg";
 import twitterPic from "../media/twitterPic.png";
 import bittrackerPic from "../media/bittrackerPic.png";
@@ -127,9 +127,9 @@ const Home = () => {
     3: projectContents["3"].short,
   });
 
-  useEffect(() => {
-    console.log("state changes");
-  }, []);
+  // useEffect(() => {
+  //   console.log("state changes");
+  // }, []);
 
   return (
     <>
@@ -157,7 +157,9 @@ const Home = () => {
             Around age 8, I had the chance to play around with computer (which
             is very lucky of me) and never stopped since. I loved the Iron Man
             movies so much that I decided to pursue Artificial Inteligence to
-            make a J.A.R.V.I.S for my own.
+            make a J.A.R.V.I.S for my own. And yes, to this date I'm still
+            working on things closely relating to Artificial Intelligence and
+            Machine Learning.
           </p>
           <p>
             During my free time, I like to build pet projects where I put my
@@ -194,14 +196,24 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                Also another Vacation Researcher role but at CSIRO's Data61 :)
+                As a Vacation Researcher at CSIRO's Data61, I will be developing
+                lightweight Artificial Intelligent models that can be trained on
+                and deployed on Edge AI devices. This aims to sense the ocean's
+                temperature without a specialised device, only based on signal
+                perturbations of underwater cables. How cool is that?!
               </p>
               <p>
-                I will be researching and developing lightweight Artificial
-                Intelligent models that can be deployed in Edge AI devices. This
-                aims to sense the ocean's temperature without a specialised
-                device, only based on signal perturbations of underwater cables.
-                How cool is that?!
+                My advisors are{" "}
+                {createHyperlink(
+                  "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
+                  "Dr. Gowri Ramachandran"
+                )}{" "}
+                and{" "}
+                {createHyperlink(
+                  "https://www.linkedin.com/in/sara-khalifa-3618bb94/",
+                  "Dr. Sara Khalifa"
+                )}{" "}
+                whom I have a pleasure to work with.
               </p>
             </div>
           </div>
@@ -213,10 +225,10 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                In the QUT VRES 2021 program, I was delighted to work as a
-                Vacation Researcher for project "Analysing the Effectiveness of
-                Verifiable Python (a Python variant) for Software Cybersecurity"
-                led by{" "}
+                Also another Vacation Researcher role but at QUT (VRES 2021
+                program) :) I was delighted to work as a Vacation Researcher for
+                project "Analysing the Effectiveness of Verifiable Python (a
+                Python variant) for Software Cybersecurity" led by{" "}
                 {createHyperlink(
                   "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
                   "Dr. Gowri Ramachandran"
@@ -224,15 +236,16 @@ const Home = () => {
                 .
               </p>
               <p></p>
-              For the final result, a 90% Confidence Interval that covers 75% of the
-              spotted memory trace variations was identified. I eliminated ~95%
-              of manual work by developing an automated analysis pipeline that
-              executes the programs, analyses and records results with Bash
-              Script and Python and in the end, won the{" "}
+              For the final result, a 90% Confidence Interval that covers 75% of
+              the spotted memory trace variations was identified. I eliminated
+              ~95% of manual work by developing an automated analysis pipeline
+              that executes the programs, analyses and records results with Bash
+              Script and Python. I won the{" "}
               {createHyperlink(
                 "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
                 "best research poster award"
-              )}!
+              )}{" "}
+              in the end!
             </div>
           </div>
           <div className="row entry history">
@@ -256,10 +269,14 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                I was proud to be elected as the Secretary of {createHyperlink('https://www.facebook.com/vietqbrisbane/', 'VietQ')} - Vietnamese
-                Students Association at QUT. This was an amazing experience as I
-                had the opportunity to work with vibrant people as well as VietQ
-                members from different majors.
+                I was proud to be elected as the Secretary of{" "}
+                {createHyperlink(
+                  "https://www.facebook.com/vietqbrisbane/",
+                  "VietQ"
+                )}{" "}
+                - Vietnamese Students Association at QUT. This was an amazing
+                experience as I had the opportunity to work with vibrant people
+                as well as VietQ members from different majors.
               </p>
               <p>
                 Here I promoted Vietnamese culture as a team through our
@@ -277,12 +294,12 @@ const Home = () => {
               <img src={qutguildLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              As an International Students Officer at QUT Guild, I advocated for and assisted
-              international students on a university-wide scale to ensure they
-              have adequate conditions to thrive. My work in summary: liasing
-              with a wide range of stakeholders, assisting with planning
-              initiatives, campaigns and events that benefit and represent
-              international students, etc.
+              As an International Students Officer at QUT Guild, I advocated for
+              and assisted international students on a university-wide scale to
+              ensure they have adequate conditions to thrive. My work in
+              summary: liasing with a wide range of stakeholders, assisting with
+              planning initiatives, campaigns and events that benefit and
+              represent international students, etc.
             </div>
           </div>
         </div>
@@ -295,6 +312,7 @@ const Home = () => {
           <ul>
             <li>[ 2022 ]</li>
             <li>Graduated with the Bachelor of Information Technology!</li>
+            <li>Joined Ravi's Study Program</li>
             <li>
               Received the Dean's List of Students with Excellent Academic
               Performance Certificate{" "}
@@ -400,6 +418,45 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Skills section */}
+      <div className="container text-align-left skills">
+        <h1>Skills</h1>
+        <ul>
+          <li>
+            <b>Languages</b>:&ensp; Python, JavaScript, C/C++/C#, Java
+          </li>
+          <li>
+            <b>Data</b>:&ensp; Pandas, Numpy, Matplotlib, SQL, ETL{" "}
+          </li>
+          <li>
+            <b>Machine Learning</b>:&ensp; Keras, SKlearn, Pytorch, ML Model
+            Engineering
+          </li>
+          <li>
+            <b>Web</b>:&ensp; React, NodeJs, HTML, CSS, Docker, AWS (Serverless
+            framework),
+          </li>
+          <li>
+            <b>Amazon Web Services</b>:&ensp; S3, DynamoDB, Elasti Cache, Redis,
+            Auto Scaling, Elastic Load Balancing, EC2
+          </li>
+          <li>
+            <b>Project Management tools</b>:&ensp; JIRA, Confluence, Trello
+          </li>
+          <li>
+            <b>Others</b>:&ensp; Linux, Bash Script, Git/GitHub, Embedded
+            Systems{" "}
+          </li>
+        </ul>
+      </div>
+
+      {/* Certificates section
+      <div className="background-color-2">
+        <div className="container text-align-left certificate">
+          <h1>Certificates</h1>
+        </div>
+      </div> */}
     </>
   );
 };

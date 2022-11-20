@@ -39,8 +39,14 @@ The page will reload when you make changes.\
 - [x] Remake NavBar https://codesandbox.io/s/react-responsive-nav-3n3lu?resolutionWidth=1436&resolutionHeight=675&file=/src/components/Navbar.js
 - [x] Update resume
 - [x] Merge 'main' here
-- [ ] Add 'projects'
-- [ ] Build secret dating page
+- [x] Add 'projects'
+- [x] Improve NavItem (using <Link>)
+- [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
+- [x] Skills section (or a way to show this)
+- [ ] Certificates section 
+- [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
+- [ ] Build secret dating page (30%)
+- [ ] Crazy mode
 
 
 <!-- You may also see any lint errors in the console.
