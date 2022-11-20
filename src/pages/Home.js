@@ -196,12 +196,24 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                As a Vacation Researcher at CSIRO's Data61, I will be
-                researching and developing lightweight Artificial Intelligent
-                models that can be deployed in Edge AI devices. This aims to
-                sense the ocean's temperature without a specialised device, only
-                based on signal perturbations of underwater cables. How cool is
-                that?!
+                As a Vacation Researcher at CSIRO's Data61, I will be developing
+                lightweight Artificial Intelligent models that can be trained on
+                and deployed on Edge AI devices. This aims to sense the ocean's
+                temperature without a specialised device, only based on signal
+                perturbations of underwater cables. How cool is that?!
+              </p>
+              <p>
+                My advisors are{" "}
+                {createHyperlink(
+                  "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
+                  "Dr. Gowri Ramachandran"
+                )}{" "}
+                and{" "}
+                {createHyperlink(
+                  "https://www.linkedin.com/in/sara-khalifa-3618bb94/",
+                  "Dr. Sara Khalifa"
+                )}{" "}
+                whom I have a pleasure to work with.
               </p>
             </div>
           </div>
@@ -415,10 +427,6 @@ const Home = () => {
             <b>Languages</b>:&ensp; Python, JavaScript, C/C++/C#, Java
           </li>
           <li>
-            <b>Amazon Web Services</b>:&ensp; S3, DynamoDB, Elasti Cache, Redis,
-            Auto Scaling, Elastic Load Balancing, EC2
-          </li>
-          <li>
             <b>Data</b>:&ensp; Pandas, Numpy, Matplotlib, SQL, ETL{" "}
           </li>
           <li>
@@ -426,15 +434,29 @@ const Home = () => {
             Engineering
           </li>
           <li>
-            <b>Web</b>:&ensp; React, NodeJs, HTML, CSS, Docker, AWS (Serverless framework),  
+            <b>Web</b>:&ensp; React, NodeJs, HTML, CSS, Docker, AWS (Serverless
+            framework),
           </li>
-          <li><b>Project Management tools</b>:&ensp;: JIRA, Confluence, Trello</li>
+          <li>
+            <b>Amazon Web Services</b>:&ensp; S3, DynamoDB, Elasti Cache, Redis,
+            Auto Scaling, Elastic Load Balancing, EC2
+          </li>
+          <li>
+            <b>Project Management tools</b>:&ensp; JIRA, Confluence, Trello
+          </li>
           <li>
             <b>Others</b>:&ensp; Linux, Bash Script, Git/GitHub, Embedded
             Systems{" "}
           </li>
         </ul>
       </div>
+
+      {/* Certificates section
+      <div className="background-color-2">
+        <div className="container text-align-left certificate">
+          <h1>Certificates</h1>
+        </div>
+      </div> */}
     </>
   );
 };
