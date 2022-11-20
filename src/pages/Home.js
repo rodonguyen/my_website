@@ -426,8 +426,9 @@ const Home = () => {
             Engineering
           </li>
           <li>
-            <b>Web</b>:&ensp; React, NodeJs, aaa Docker, AWS
+            <b>Web</b>:&ensp; React, NodeJs, HTML, CSS, Docker, AWS (Serverless framework),  
           </li>
+          <li><b>Project Management tools</b>:&ensp;: JIRA, Confluence, Trello</li>
           <li>
             <b>Others</b>:&ensp; Linux, Bash Script, Git/GitHub, Embedded
             Systems{" "}
