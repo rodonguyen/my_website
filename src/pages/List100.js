@@ -26,7 +26,6 @@ const List100 = () => {
         <li>✗ Learn to drive</li>
         <li>✗ Learn to fly a helicopter/plane</li>
         <li>✗ Be Financial Independent</li>
-        <li>✗ Date a model</li>
         <li>✗ Read 1000 books ({readBookNum}/100)</li>
         <li>✗ Vacation on an island/a yatch</li>
         <li>✗ Work in a big financial insitution</li>
@@ -39,6 +38,10 @@ const List100 = () => {
         <li>✗ Finish a full marathon</li>
         <li>✗ Be 70kg and muscular</li>
         <li>✗ Cuddle lions</li>
+        <li>✗ Master Vim</li>
+        {/* <li>✗ </li> */}
+        {/* <li>✗ </li> */}
+        <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
         <li>✗ Travel to Africa</li>
         <li>✗ See the Hymalayas</li>

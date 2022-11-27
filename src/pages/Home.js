@@ -196,11 +196,10 @@ const Home = () => {
             </div>
             <div className="description">
               <p>
-                As a Vacation Researcher at CSIRO's Data61, I will be developing
-                lightweight Artificial Intelligent models that can be trained on
-                and deployed on Edge AI devices. This aims to sense the ocean's
-                temperature without a specialised device, only based on signal
-                perturbations of underwater cables. How cool is that?!
+                As a Vacation Researcher at CSIRO's Data61, I'm developing{" "}
+                <i>super</i>{" "}
+                lightweight Deep Learning models that can be trained and
+                deployed on Edge AI devices (microprocessors).
               </p>
               <p>
                 My advisors are{" "}
@@ -276,7 +275,7 @@ const Home = () => {
                 )}{" "}
                 - Vietnamese Students Association at QUT. This was an amazing
                 experience as I had the opportunity to work with vibrant people
-                as well as VietQ members from different majors.
+                from different majors.
               </p>
               <p>
                 Here I promoted Vietnamese culture as a team through our
