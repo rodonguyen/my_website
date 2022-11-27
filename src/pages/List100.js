@@ -45,7 +45,8 @@ const List100 = () => {
         <li>✗ Swim with whales/dolphins</li>
         <li>✗ Travel to Africa</li>
         <li>✗ See the Hymalayas</li>
-        <li>✓ </li>
+        {/* <li>✓ </li> */}
+        <li>~ Live a good life</li>
         {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Have sex with 10 people (at different time)</li> */}
       </ol>

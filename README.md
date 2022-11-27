@@ -43,7 +43,7 @@ The page will reload when you make changes.\
 - [x] Improve NavItem (using <Link>)
 - [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
 - [x] Skills section (or a way to show this)
-- [ ] Certificates section 
+- [x] Achievements section
 - [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
 - [ ] Build secret dating page (30%)
 - [ ] Crazy mode

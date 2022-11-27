@@ -307,7 +307,7 @@ const Home = () => {
       {/* content block: Professional achievements */}
       <div className="container">
         <p>
-          Other achievements:
+          <h1>Achievements</h1>
           <ul>
             <li>[ 2022 ]</li>
             <li>Graduated with the Bachelor of Information Technology!</li>
