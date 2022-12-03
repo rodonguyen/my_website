@@ -45,6 +45,7 @@ The page will reload when you make changes.\
 - [x] Skills section (or a way to show this)
 - [x] Achievements section
 - [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
+- [ ] Add Leetcode section
 - [ ] Build secret dating page (30%)
 - [ ] Crazy mode
 
