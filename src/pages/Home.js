@@ -195,11 +195,11 @@ const Home = () => {
               <img src={csirodata61Logo} alt="qutguild logo" />
             </div>
             <div className="description">
+              <h5>Vacation Researcher at CSIRO's Data61</h5>
               <p>
-                As a Vacation Researcher at CSIRO's Data61, I'm developing{" "}
-                <i>super</i>{" "}
-                lightweight Deep Learning models that can be trained and
-                deployed on Edge AI devices (microprocessors).
+                I'm developing super lightweight Deep Learning models in C/C++
+                language that can be trained and deployed on Edge AI devices
+                (microprocessors).
               </p>
               <p>
                 My advisors are{" "}
@@ -223,28 +223,31 @@ const Home = () => {
               <img src={qutLogo} alt="qutguild logo" />
             </div>
             <div className="description">
+              <h5>Vacation Researcher at QUT (VRES 2021 program)</h5>
               <p>
-                Also another Vacation Researcher role but at QUT (VRES 2021
-                program) :) I was delighted to work as a Vacation Researcher for
-                project "Analysing the Effectiveness of Verifiable Python (a
-                Python variant) for Software Cybersecurity" led by{" "}
+                Also another Vacation Researcher role! I was delighted to work
+                as a Vacation Researcher for project "Analysing the
+                Effectiveness of Verifiable Python (a Python variant) for
+                Software Cybersecurity" led by{" "}
                 {createHyperlink(
                   "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
                   "Dr. Gowri Ramachandran"
                 )}
                 .
               </p>
-              <p></p>
-              For the final result, a 90% Confidence Interval that covers 75% of
-              the spotted memory trace variations was identified. I eliminated
-              ~95% of manual work by developing an automated analysis pipeline
-              that executes the programs, analyses and records results with Bash
-              Script and Python. I won the{" "}
-              {createHyperlink(
-                "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
-                "best research poster award"
-              )}{" "}
-              in the end!
+              <p>
+                For the final result, I managed to identify a 90% Confidence
+                Interval that covers 75% of the spotted memory trace variations,
+                which was important finding of vPython's characteristics. I
+                eliminated ~95% of manual work by developing an automated
+                analysis pipeline that executes the programs, analyses and
+                records results with Bash Script and Python. I won the{" "}
+                {createHyperlink(
+                  "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
+                  "best research poster award"
+                )}{" "}
+                in the end!
+              </p>
             </div>
           </div>
           <div className="row entry history">
@@ -254,10 +257,12 @@ const Home = () => {
               <img src={qutLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              As a HiQ Concierge, I worked collaboratively to service our
-              students and the public for all of their university-related
-              queries, and communicated effectively with clients and guided them
-              through the resources.
+              <h5>HiQ Concierge at QUT</h5>
+              <p>
+                I worked collaboratively to service our students and the public
+                for all of their university-related queries, and communicated
+                effectively with clients and guided them through the resources.
+              </p>
             </div>
           </div>
           <div className="row entry history">
@@ -267,15 +272,18 @@ const Home = () => {
               <img src={vietqLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              <p>
-                I was proud to be elected as the Secretary of{" "}
+              <h5>
+                Secretary at{" "}
                 {createHyperlink(
                   "https://www.facebook.com/vietqbrisbane/",
                   "VietQ"
                 )}{" "}
-                - Vietnamese Students Association at QUT. This was an amazing
-                experience as I had the opportunity to work with vibrant people
-                from different majors.
+                - Vietnamese Students Association (QUT)
+              </h5>
+              <p>
+                I was super proud to be elected for this position. This was an
+                amazing experience as I had the opportunity to work with vibrant
+                people from different majors.
               </p>
               <p>
                 Here I promoted Vietnamese culture as a team through our
@@ -293,44 +301,44 @@ const Home = () => {
               <img src={qutguildLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              As an International Students Officer at QUT Guild, I advocated for
-              and assisted international students on a university-wide scale to
-              ensure they have adequate conditions to thrive. My work in
-              summary: liasing with a wide range of stakeholders, assisting with
-              planning initiatives, campaigns and events that benefit and
-              represent international students, etc.
+              <h5>International Students Officer at QUT Guild</h5>
+              <p>
+                I advocated for and assisted international students on a
+                university-wide scale to ensure they have adequate conditions to
+                thrive. My work in summary: liasing with a wide range of
+                stakeholders, taking part in planning campaigns and initiatives that
+                benefit and represent international students, etc.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       {/* content block: Professional achievements */}
-      <div className="container">
-        <p>
-          <h1>Achievements</h1>
-          <ul>
-            <li>[ 2022 ]</li>
-            <li>Graduated with the Bachelor of Information Technology!</li>
-            <li>Joined Ravi's Study Program</li>
-            <li>
-              Received the Dean's List of Students with Excellent Academic
-              Performance Certificate{" "}
-            </li>
-            <li>
-              Deployed my very first personal website, this website (such a
-              shame for an IT student to do it this late :)
-            </li>
-            <li>[ 2021 ]</li>
-            <li>
-              GovHack Honourable Mention with project '
-              {createHyperlink(
-                "https://github.com/rodonguyen/govhack21-vietausit-brisbane/blob/main/docs/index.md",
-                "Outliers"
-              )}
-              '
-            </li>
-          </ul>
-        </p>
+      <div className="container achievements">
+        <h1>Achievements</h1>
+        <ul>
+          <li className="no-list-style">[ 2022 ]</li>
+          <li>Graduated with the Bachelor of Information Technology!</li>
+          <li>Joined Ravi's Study Program</li>
+          <li>
+            Received the Dean's List of Students with Excellent Academic
+            Performance Certificate{" "}
+          </li>
+          <li>
+            Deployed my very first personal website, this website (such a shame
+            for an IT student to do it this late :)
+          </li>
+          <li className="no-list-style">[ 2021 ]</li>
+          <li>
+            GovHack Honourable Mention with project '
+            {createHyperlink(
+              "https://github.com/rodonguyen/govhack21-vietausit-brisbane/blob/main/docs/index.md",
+              "Outliers"
+            )}
+            '
+          </li>
+        </ul>
       </div>
 
       {/* content block: Projects */}
@@ -444,8 +452,33 @@ const Home = () => {
             <b>Project Management tools</b>:&ensp; JIRA, Confluence, Trello
           </li>
           <li>
-            <b>Others</b>:&ensp; Linux, Bash Script, Git/GitHub, Embedded
-            Systems{" "}
+            <b>Others</b>:&ensp; Algorithms, Linux, Bash Script, Git/GitHub,
+            Embedded Systems{" "}
+          </li>
+        </ul>
+
+        <h2>LeetCode</h2>
+        <ul>
+          <li>
+            <b>Rank</b>: 1,000,000
+          </li>
+          <li>
+            <b>Profile</b>:{" "}
+            {createHyperlink("https://leetcode.com/rodonguyen/", "rodonguyen")}
+          </li>
+        </ul>
+
+        <h2>Chess</h2>
+        <ul>
+          <li>
+            <b>ELO</b>: ~1000 (Rapid), ~800 (Blitz)
+          </li>
+          <li>
+            <b>Profile</b>:{" "}
+            {createHyperlink(
+              "https://www.chess.com/member/rodobolo",
+              "rodobolo"
+            )}
           </li>
         </ul>
       </div>
