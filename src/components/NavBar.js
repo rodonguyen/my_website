@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ClickAwayListener from '@mui/base/ClickAwayListener';
+import { useRef } from "react";
 
 
 const NavBar = ({ themeMode, setThemeMode }) => {
@@ -24,7 +25,7 @@ const NavBar = ({ themeMode, setThemeMode }) => {
       <path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill="#6f7380" />
     </svg>
   );
-  const navbarItems = document.querySelector(".navbar-items");
+  const navbarItemsRef = useRef(null);
 
   return (
     <>
@@ -34,7 +35,7 @@ const NavBar = ({ themeMode, setThemeMode }) => {
             <Link to="/" className="navbar-item brand text-align-left">
               Rodo
             </Link>
-            <ul className="navbar-items">
+            <ul className="navbar-items" ref={navbarItemsRef}>
               <li>
                 <Link to="/resume" className="navbar-item">
                   Resume
@@ -62,12 +63,12 @@ const NavBar = ({ themeMode, setThemeMode }) => {
               </li>
             </ul>
             <ClickAwayListener onClickAway={() => {
-              navbarItems.classList.toggle("display-vertical-nav-items");
+              navbarItemsRef.current.classList.toggle("display-vertical-nav-items");
             }}>
               <button
                 class="hamburger-menu navbar-item"
                 onClick={() => {
-                  navbarItems.classList.toggle("display-vertical-nav-items");
+                  navbarItemsRef.current.classList.toggle("display-vertical-nav-items");
                 }}
               >
                 {hamburgerMenuSvg}
