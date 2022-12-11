@@ -63,7 +63,7 @@ const NavBar = ({ themeMode, setThemeMode }) => {
               </li>
             </ul>
             <ClickAwayListener onClickAway={() => {
-              navbarItemsRef.current.classList.toggle("display-vertical-nav-items");
+              navbarItemsRef.current.classList.remove("display-vertical-nav-items");
             }}>
               <button
                 class="hamburger-menu navbar-item"
