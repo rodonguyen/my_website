@@ -24,9 +24,11 @@ The page will reload when you make changes.\
 - Dark Mode https://www.youtube.com/watch?v=VzF2iTTc0MA 
             https://www.youtube.com/watch?v=VzF2iTTc0MA
             github repo https://github.com/Satellite-system/TextUtils---React-js-Web/blob/master/src/App.js 
+- Responsive web app: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 - Examples:
   - https://karpathy.ai/
   - https://huyenchip.com/ 
+
 
 ### TODO:
 - [x] Deploy
