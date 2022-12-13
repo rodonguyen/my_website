@@ -14,6 +14,9 @@
 - Examples:
   - https://karpathy.ai/
   - https://huyenchip.com/ 
+- DynamoDB:
+  - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/src/dynamodb_basics.js
+  - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/libs/ddbClient.js
 
 
 ### TODO:
@@ -32,9 +35,11 @@
 - [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
 - [x] Skills section (or a way to show this)
 - [x] Achievements section
+- [ ] Build secret dating page (30%)
+    - Adminn page to add new codes (to DynamoDB or any DB that we use), maybe implement a server repo to do this
+    - Dateme page, send request to 
 - [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
 - [ ] Add Leetcode section
-- [ ] Build secret dating page (30%)
 - [ ] Crazy mode
 
 
