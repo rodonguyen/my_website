@@ -53,15 +53,11 @@ const projectContents = {
         <p>
           A cryptocurrency <b>trading bot</b> programmed in Python that
           theoretically brings +110% profit on average annually in a market
-          cycle by utilising SuperTrend indicator&emsp;•&emsp;
-          {createHyperlink(
-            "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
-            "Read more in this blog"
-          )}
-          &emsp;•&emsp;Intensively backtested BitTracker to select the best
-          configuration and maximise potential risk-adjusted
-          return&emsp;•&emsp;I’m developing a User Interface with React for an
-          intuitive backtest history review and bot operation
+          cycle by utilising SuperTrend indicator &emsp;•&emsp;Intensively
+          backtested BitTracker to select the best configuration and maximise
+          potential risk-adjusted return&emsp;•&emsp;I’m developing a User
+          Interface with React for an intuitive backtest history review and bot
+          operation
         </p>
       </>
     ),
@@ -360,6 +356,11 @@ const Home = () => {
                 >
                   Read More
                 </button>
+                &ensp;
+                {createHyperlink(
+                  "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
+                  <button>Demo App</button>
+                )}
               </h5>
               {projects["1"]}
             </div>
@@ -384,7 +385,11 @@ const Home = () => {
                   }
                 >
                   Read More
-                </button>
+                </button>&ensp;
+                {createHyperlink(
+                  "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
+                  <button>Read in Blog</button>
+                )}
               </h5>
               {projects["2"]}
             </div>
