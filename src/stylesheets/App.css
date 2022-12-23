@@ -33,8 +33,6 @@ p {
   margin: 0.8rem auto;
 }
 
-.fade {}
-
 br.small {
   font-size: 10px;
   margin: 0;
@@ -502,6 +500,15 @@ button.hamburger-menu {
 
 .container.resume button {
   margin: 0.3rem;
+}
+
+
+/**************************************************************************
+  DATEME                                                                  */
+
+.container.dateme {
+  padding-top: 3rem;
+  max-width: 700px;
 }
 
 /**************************************************************************

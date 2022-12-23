@@ -52,15 +52,10 @@ const projectContents = {
       <>
         <p>
           A cryptocurrency <b>trading bot</b> programmed in Python that
-          theoretically brings +110% profit annually on average in a market
-          cycle by utilising SuperTrend indicator&emsp;•&emsp;
-          {createHyperlink(
-            "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
-            "Read more in this blog"
-          )}
-          &emsp;•&emsp;Maximised potential BitTracker risk-adjusted return by
-          backtesting the algorithm on historical price data using Pandas and
-          selecting the best configuration&emsp;•&emsp;I’m developing a User
+          theoretically brings +110% profit on average annually in a market
+          cycle by utilising SuperTrend indicator &emsp;•&emsp;Intensively
+          backtested BitTracker to select the best configuration and maximise
+          potential risk-adjusted return&emsp;•&emsp;I’m developing a User
           Interface with React for an intuitive backtest history review and bot
           operation
         </p>
@@ -164,14 +159,10 @@ const Home = () => {
           <p>
             During my free time, I like to build pet projects where I put my
             skills or my recently acquired knowledge to practice. Don't forget
-            to pay a visit to my{" "}
-            <a
-              href="https://github.com/rodonguyen"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>{" "}
+            to pay a visit to my
+            {" " +
+              createHyperlink("https://github.com/rodonguyen", "GitHub") +
+              " "}
             :)
           </p>
           <p>
@@ -212,7 +203,7 @@ const Home = () => {
                   "https://www.linkedin.com/in/sara-khalifa-3618bb94/",
                   "Dr. Sara Khalifa"
                 )}{" "}
-                whom I have a pleasure to work with.
+                whom I have the pleasure to work with.
               </p>
             </div>
           </div>
@@ -223,7 +214,7 @@ const Home = () => {
               <img src={qutLogo} alt="qutguild logo" />
             </div>
             <div className="description">
-              <h5>Vacation Researcher at QUT (VRES 2021 program)</h5>
+              <h5>Vacation Researcher at QUT</h5>
               <p>
                 Also another Vacation Researcher role! I was delighted to work
                 as a Vacation Researcher for project "Analysing the
@@ -306,8 +297,8 @@ const Home = () => {
                 I advocated for and assisted international students on a
                 university-wide scale to ensure they have adequate conditions to
                 thrive. My work in summary: liasing with a wide range of
-                stakeholders, taking part in planning campaigns and initiatives that
-                benefit and represent international students, etc.
+                stakeholders, taking part in planning campaigns and initiatives
+                that benefit and represent international students, etc.
               </p>
             </div>
           </div>
@@ -365,6 +356,11 @@ const Home = () => {
                 >
                   Read More
                 </button>
+                &ensp;
+                {createHyperlink(
+                  "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
+                  <button>Demo App</button>
+                )}
               </h5>
               {projects["1"]}
             </div>
@@ -389,7 +385,11 @@ const Home = () => {
                   }
                 >
                   Read More
-                </button>
+                </button>&ensp;
+                {createHyperlink(
+                  "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
+                  <button>Read in Blog</button>
+                )}
               </h5>
               {projects["2"]}
             </div>

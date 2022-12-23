@@ -1,19 +1,5 @@
 # Rodo's Website
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
 
 <br>
 
@@ -28,6 +14,9 @@ The page will reload when you make changes.\
 - Examples:
   - https://karpathy.ai/
   - https://huyenchip.com/ 
+- DynamoDB:
+  - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/src/dynamodb_basics.js
+  - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/libs/ddbClient.js
 
 
 ### TODO:
@@ -46,13 +35,31 @@ The page will reload when you make changes.\
 - [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
 - [x] Skills section (or a way to show this)
 - [x] Achievements section
+- [ ] Build secret dating page (30%)
+    - Adminn page to add new codes (to DynamoDB or any DB that we use), maybe implement a server repo to do this
+    - Dateme page, send request to 
 - [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
 - [ ] Add Leetcode section
-- [ ] Build secret dating page (30%)
 - [ ] Crazy mode
 
 
-<!-- You may also see any lint errors in the console.
+<!-- 
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ### `npm test`
 

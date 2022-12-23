@@ -10,33 +10,40 @@ const DateMe = () => {
 
   if (code === null || code === "") {
     return <NotFound />;
-  } else if (code !== null /* && valid code */) {
+  }
+
+  if (code !== null /* && valid code */) {
     return (
-      <div className="container text-align-left">
+      <div className="container dateme text-align-left">
         <h1>
-          If you're looking at this web page, I think you're really beautiful
-          🥰!!!
+          If you're looking at this web page, I think you're really beautiful 🥰
         </h1>
-        <h5>
-          Step 1: Get to know me. Only move to step 2 if you're ready to date
-          me!
-        </h5>
+        <br></br>
+
+        <h5>Step 1: Get to know me</h5>
+
+        <p>Who am I? I'm Rodo, a software engineer, QUT graduate.</p>
         <p>
-          Who am I? I'm Rodo, QUT graduate, a software engineer. How am I like?
-          I'm 1.7m, 60kg (I'm working on gaining some weights :), Asian born and
-          raised, 5.9in, introvert. What do I like? I like my job, outdoor
-          activities: running, hiking, street coffee-ing, working-out, deep
-          conversation, basically all animals and plants, female, books. If you
-          want to know more about what I do for a living, check{" "}
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            this website
-          </a>
-          .
+          What do I like? I like coding & technology, travelling, outdoor
+          activities: running, hiking, Vietnamese street coffee-ing,
+          working-out, deep conversation, animals and plants, reading books, and
+          females.
         </p>
-        <h5>
-          Step 2: Click the button below (Be careful, it can only be clicked
-          once!)
-        </h5>
+        <p>
+          How am I like? I'm 1.7m, 60kg, Asian born and raised, 5.5+in,
+          introvert. I'm trying to gain some weights though.
+        </p>
+        <p>
+          If you want to know more about what I do for a living, check{" "}
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            the main page
+          </a>{" "}
+          and you can alway comeback here later with the exact link.
+        </p>
+        <br></br>
+
+        <h5>Step 2: So... Date or no date, Now or never.</h5>
+        <h5>Be careful, the button can only be clicked once!</h5>
         <p></p>
       </div>
     );
