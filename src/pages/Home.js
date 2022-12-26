@@ -457,7 +457,8 @@ const Home = () => {
           </li>
         </ul>
 
-        <h2>LeetCode</h2>
+        {/* Uncomment these when the rank/elo is high */}
+        {/* <h2>LeetCode</h2>
         <ul>
           <li>
             <b>Rank</b>: 1,000,000
@@ -480,7 +481,7 @@ const Home = () => {
               "rodobolo"
             )}
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       {/* Certificates section
