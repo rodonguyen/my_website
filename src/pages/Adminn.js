@@ -1,31 +1,12 @@
-// import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
-// import {
-//   PutCommand,
-//   GetCommand,
-//   UpdateCommand,
-//   BatchWriteCommand,
-//   DeleteCommand,
-//   ScanCommand,
-//   QueryCommand,
-// } from "@aws-sdk/lib-dynamodb";
-// const ddbClient = new DynamoDBClient();
-
 import CodeForm from "../components/CodeForm";
 import * as AWS from "aws-sdk";
 
-AWS.config.update({
-  region: "ap-southeast-2",
-  secretAccessKey: "BIiPJYN4HsUbSnJgl8iH5cP/77iJcpI/BxwUjdM5",
-  accessKeyId: "AKIAWHF2UCZI4VX5ILGM",
-});
-
-const docClient = new AWS.DynamoDB.DocumentClient();
 // const tableName = "datemecodes";
 const tableName = "cooler-date-2";
 
 
 // Read data on Dynamo
-const queryDynamoDB = async (username, code) => {
+const queryDynamoDB = async (docClient, username, code) => {
   const params = {
     TableName: tableName,
     Key: {
@@ -36,7 +17,7 @@ const queryDynamoDB = async (username, code) => {
   return await docClient.get(params).promise();
 };
 
-const writeDynamoDB = (username, code) => {
+const writeDynamoDB = (docClient, username, code) => {
   const params = {
     TableName: tableName,
     Item: {
@@ -55,16 +36,24 @@ const writeDynamoDB = (username, code) => {
   });
 };
 
-const handleRequestDynamoDB = (username, code) => {
-  queryDynamoDB(username, code)
+const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code) => {
+  AWS.config.update({
+    region: "ap-southeast-2",
+    secretAccessKey: secretAccessKey,
+    accessKeyId: accessKeyId,
+  });
+  
+  const docClient = new AWS.DynamoDB.DocumentClient();
+  
+  queryDynamoDB(docClient, username, code)
   .then((data) => 
     {
       if (data.Item !== undefined) {
-        console.log(`[ DUPLICATE ] This item (${username},${code}) exists. Nothing else to do. Please enter a different code/username.`)
+        console.log(`[ DUPLICATE ] This item (${username},${code}) exists in the database. Nothing else to do. Please enter a different code/username.`)
         return
       }
       console.log('[ INSERT ] Insert new item:', username, code)
-      writeDynamoDB(username, code)
+      writeDynamoDB(docClient, username, code)
     }
   )
 }
