@@ -39,16 +39,15 @@ const List100 = () => {
         <li>✗ Be 70kg and muscular</li>
         <li>✗ Cuddle lions</li>
         <li>✗ Master Vim</li>
-        {/* <li>✗ </li> */}
-        {/* <li>✗ </li> */}
-        {/* <li>✓ </li> */}
         <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
         <li>✗ Travel to Africa</li>
         <li>✗ See the Hymalayas</li>
         <li>~ Live a good life</li>
+        {/* <li>✗ </li> */}
+        {/* <li>✓ </li> */}
         {/* <li>✗ Bring a girl home from club</li> */}
-        {/* <li>✗ Have sex with 10 people (at different time)</li> */}
+        {/* <li>✗ Bodycount = 10</li> */}
       </ol>
     </div>
   );
