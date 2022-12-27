@@ -10,6 +10,7 @@
 // } from "@aws-sdk/lib-dynamodb";
 // const ddbClient = new DynamoDBClient();
 
+import CodeForm from "../components/CodeForm";
 import * as AWS from "aws-sdk";
 
 AWS.config.update({
@@ -19,29 +20,61 @@ AWS.config.update({
 });
 
 const docClient = new AWS.DynamoDB.DocumentClient();
-const tableName = "datemecodes";
+// const tableName = "datemecodes";
+const tableName = "cooler-date-2";
 
-const addDataToDynamoDB = () => {
+
+// Read data on Dynamo
+const queryDynamoDB = async (username, code) => {
+  const params = {
+    TableName: tableName,
+    Key: {
+      username: username,
+      code: code,
+    }
+  };
+  return await docClient.get(params).promise();
+};
+
+const writeDynamoDB = (username, code) => {
   const params = {
     TableName: tableName,
     Item: {
-      code: "yourebeautiful",
+      code: code,
+      username: username,
     },
   };
-
+  
   docClient.put(params, function (err, data) {
     if (err) {
       console.log("Error", err);
-    } else {
-      console.log("Success", data);
-    }
+    } 
+    // else {
+    //   console.log("Success", data);
+    // }
   });
 };
+
+const handleRequestDynamoDB = (username, code) => {
+  queryDynamoDB(username, code)
+  .then((data) => 
+    {
+      if (data.Item !== undefined) {
+        console.log(`[ DUPLICATE ] This item (${username},${code}) exists. Nothing else to do. Please enter a different code/username.`)
+        return
+      }
+      console.log('[ INSERT ] Insert new item:', username, code)
+      writeDynamoDB(username, code)
+    }
+  )
+}
+
 
 const Adminn = () => {
   return (
     <>
-      <button onClick={() => addDataToDynamoDB()}> Put </button>
+      {CodeForm({onSubmitFunction: handleRequestDynamoDB})}
+      {/* <button onClick={() => addDataToDynamoDB()}> Put </button> */}
     </>
   );
 };
