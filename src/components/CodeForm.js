@@ -23,6 +23,7 @@ export default function CodeForm({ onSubmitFunction }) {
   return (
     <>
       <Form
+        autoComplete="on"
         onSubmit={(e) => {
           e.preventDefault();
           if (isDuplicateInput()) return;
@@ -34,6 +35,7 @@ export default function CodeForm({ onSubmitFunction }) {
           Switch:
           <Input
             type="text"
+            name="Switch"
             onChange={(e) => updateInputValue(0, e.target.value)}
           />
         </Label>
@@ -43,6 +45,7 @@ export default function CodeForm({ onSubmitFunction }) {
           Case:
           <Input
             type="text"
+            name="Case"
             onChange={(e) => updateInputValue(1, e.target.value)}
           />
         </Label>
@@ -53,6 +56,7 @@ export default function CodeForm({ onSubmitFunction }) {
           <Input
             type="text"
             placeholder="rodonguyen"
+            name="Username"
             disabled  
             onChange={(e) => updateInputValue(2, e.target.value)}
           />
@@ -63,6 +67,7 @@ export default function CodeForm({ onSubmitFunction }) {
           Code:
           <Input
             type="text"
+            name="Code"
             onChange={(e) => updateInputValue(3, e.target.value)}
           />
         </Label>
