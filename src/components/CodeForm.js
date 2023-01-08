@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 export default function CodeForm({ onSubmitFunction }) {
-  const [inputValues, setInputValues] = useState(["rodonguyen", null]);
+  const [inputValues, setInputValues] = useState([null, null, "rodonguyen", null]);
   const [previousValues, setPreviousValues] = useState(inputValues);
 
   const updateInputValue = (index, value) => {
@@ -13,7 +13,7 @@ export default function CodeForm({ onSubmitFunction }) {
   };
 
   const isDuplicateInput = () => {
-    // console.log(inputValues, previousValues);
+    console.log(inputValues, previousValues);
     if (inputValues === previousValues) {
       console.log('[ DUPLICATE ] Duplicate input. Change the username/code and then click submit again.')
       return true
@@ -23,21 +23,42 @@ export default function CodeForm({ onSubmitFunction }) {
   return (
     <>
       <Form
+        autoComplete="on"
         onSubmit={(e) => {
           e.preventDefault();
           if (isDuplicateInput()) return;
-          onSubmitFunction(inputValues[0], inputValues[1]);
+          onSubmitFunction(inputValues[0], inputValues[1], inputValues[2], inputValues[3]);
           setPreviousValues(inputValues)
         }}
       >
         <Label>
+          Switch:
+          <Input
+            type="text"
+            name="Switch"
+            onChange={(e) => updateInputValue(0, e.target.value)}
+          />
+        </Label>
+        <br />
+        
+        <Label>
+          Case:
+          <Input
+            type="text"
+            name="Case"
+            onChange={(e) => updateInputValue(1, e.target.value)}
+          />
+        </Label>
+
+        <br />
+        <Label>
           Username:
           <Input
             type="text"
-            name="username"
             placeholder="rodonguyen"
+            name="Username"
             disabled  
-            onChange={(e) => updateInputValue(0, e.target.value)}
+            onChange={(e) => updateInputValue(2, e.target.value)}
           />
         </Label>
 
@@ -46,8 +67,8 @@ export default function CodeForm({ onSubmitFunction }) {
           Code:
           <Input
             type="text"
-            name="code"
-            onChange={(e) => updateInputValue(1, e.target.value)}
+            name="Code"
+            onChange={(e) => updateInputValue(3, e.target.value)}
           />
         </Label>
         <br />

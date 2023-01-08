@@ -246,14 +246,13 @@ button.hamburger-menu {
     display: block;
     border: none;
     border-radius: 0.5rem;
-    /* color: red; */
     background-color: transparent;
   }
 
 
   /* when click the hamburger-menu button */
   ul.navbar-items {
-    display: inline-block;
+    display: none;  /* Hide menu first */
     position: absolute;
     top: 50.6px;
     right: -15px;
@@ -261,13 +260,12 @@ button.hamburger-menu {
     background-color: rgb(0, 0, 0, 0.05);
     padding: 8px;
     border-radius: 0rem 0rem 0rem 0.5rem;
-    margin-right: -50%;
-    transition: all 0.05s ease-out;
+    transition: opacity .15s ease-out;
   }
-  
+
   ul.navbar-items.display-vertical-nav-items {
     transition: all 0.1s cubic-bezier(0,.28,0,.76);
-    margin-right: 0;
+    display: inline-block;   /* Display menu */
   }
   
   .dark ul.navbar-items.display-vertical-nav-items {

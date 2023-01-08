@@ -91,3 +91,10 @@ const NavBar = ({ themeMode, setThemeMode }) => {
 };
 
 export default NavBar;
+
+
+/*
+Source: 
+- CSS Theme Switcher by Reverse-Engineering Alligator.io: https://youtu.be/rXuHGLzSmSE
+- Faire une Navbar Responsive en HTML & CSS - Expliqué de A à Z avec Menu Hamburger: https://www.youtube.com/watch?v=HQopEEurQYE
+*/

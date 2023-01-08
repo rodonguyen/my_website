@@ -38,9 +38,9 @@
 - [ ] Build secret dating page (30%)
     - Adminn page to add new codes (to DynamoDB or any DB that we use), maybe implement a server repo to do this
     - Dateme page, send request to 
-- [ ] Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
-- [ ] Add Leetcode section
-- [ ] Crazy mode
+- [x] Add Leetcode section
+- [ ] Crazy mode https://www.youtube.com/watch?v=TGe3pS5LqEw
+  - Or: Use @timeframe to display funny color change https://youtu.be/rXuHGLzSmSE?list=PL0vfts4VzfNjfHKRKkMjm_xUXglH6HtL1
 
 
 <!-- 
