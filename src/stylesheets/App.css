@@ -254,7 +254,8 @@ button.hamburger-menu {
   ul.navbar-items {
     /* The hide/show part */
     opacity: 0;
-    display: none;  /*Hide menu first*/
+    /* Hide menu first */
+    display: none; 
 
     /* Position */
     position: absolute;
@@ -266,13 +267,14 @@ button.hamburger-menu {
     background-color: rgb(0, 0, 0, 0.05);
     padding: 8px;
     border-radius: 0rem 0rem 0rem 0.5rem;
-    transition: opacity 1.6s ease-out;
+    transition: all .5s ease-out;
   }
 
   ul.navbar-items.display-vertical-nav-items {
+    transition: all .5s ease-out;
     opacity: 1;
-    display: inline-block;   /* Display menu */
-    transition: opacity 1.6s ease-out;
+    /* Display menu */
+    display: inline-block;   
   }
   
   .dark ul.navbar-items.display-vertical-nav-items {
