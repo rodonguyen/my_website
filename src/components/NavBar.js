@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ClickAwayListener from '@mui/base/ClickAwayListener';
+// import ClickAwayListener from '@mui/base/ClickAwayListener';
 import { useRef } from "react";
 
 
@@ -62,9 +62,9 @@ const NavBar = ({ themeMode, setThemeMode }) => {
                 </a>
               </li>
             </ul>
-            <ClickAwayListener onClickAway={() => {
+            {/* <ClickAwayListener onClickAway={() => {
               navbarItemsRef.current.classList.remove("display-vertical-nav-items");
-            }}>
+            }}> */}
               <button
                 class="hamburger-menu navbar-item"
                 onClick={() => {
@@ -73,7 +73,7 @@ const NavBar = ({ themeMode, setThemeMode }) => {
               >
                 {hamburgerMenuSvg}
               </button>
-            </ClickAwayListener>
+            {/* </ClickAwayListener> */}
           </nav>
         </div>
       </div>
