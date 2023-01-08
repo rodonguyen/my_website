@@ -252,20 +252,29 @@ button.hamburger-menu {
 
   /* when click the hamburger-menu button */
   ul.navbar-items {
-    display: none;  /* Hide menu first */
+    /* The hide/show part */
+    opacity: 0;
+    /* Hide menu first */
+    display: none; 
+
+    /* Position */
     position: absolute;
     top: 50.6px;
     right: -15px;
+
+    /* Styling */
     backdrop-filter: blur(15px);
     background-color: rgb(0, 0, 0, 0.05);
     padding: 8px;
     border-radius: 0rem 0rem 0rem 0.5rem;
-    transition: opacity .15s ease-out;
+    transition: all .5s ease-out;
   }
 
   ul.navbar-items.display-vertical-nav-items {
-    transition: all 0.1s cubic-bezier(0,.28,0,.76);
-    display: inline-block;   /* Display menu */
+    transition: all .5s ease-out;
+    opacity: 1;
+    /* Display menu */
+    display: inline-block;   
   }
   
   .dark ul.navbar-items.display-vertical-nav-items {
