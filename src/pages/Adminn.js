@@ -1,4 +1,4 @@
-import CodeForm from "../components/CodeForm";
+import CoolerDateForm from "../components/CoolerDateForm";
 import * as AWS from "aws-sdk";
 
 // const tableName = "datemecodes";
@@ -45,13 +45,16 @@ const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code) => 
   
   const docClient = new AWS.DynamoDB.DocumentClient();
   
+
   queryDynamoDB(docClient, username, code)
   .then((data) => 
     {
+      // Stop if the code already exists in the table
       if (data.Item !== undefined) {
         console.log(`[ DUPLICATE ] This item (${username},${code}) exists in the database. Nothing else to do. Please enter a different code/username.`)
         return
       }
+      // Otherwise, write new code to the table
       console.log('[ INSERT ] Insert new item:', username, code)
       writeDynamoDB(docClient, username, code)
     }
@@ -62,7 +65,7 @@ const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code) => 
 const Adminn = () => {
   return (
     <>
-      {CodeForm({onSubmitFunction: handleRequestDynamoDB})}
+      {CoolerDateForm({onSubmitFunction: handleRequestDynamoDB})}
       {/* <button onClick={() => addDataToDynamoDB()}> Put </button> */}
     </>
   );

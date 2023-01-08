@@ -1,8 +1,10 @@
 import { Input, Button, Form, Label } from "reactstrap";
 import { useState } from 'react';
 
-
-export default function CodeForm({ onSubmitFunction }) {
+/**
+ * The form is used to write cooler-date codes to a DynamoDB table
+ */
+export default function CoolerDateForm({ onSubmitFunction }) {
   const [inputValues, setInputValues] = useState([null, null, "rodonguyen", null]);
   const [previousValues, setPreviousValues] = useState(inputValues);
 
