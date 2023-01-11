@@ -2,7 +2,7 @@ import { Input, Button, Form, Label } from "reactstrap";
 import { useState } from 'react';
 
 
-export default function CodeForm({ onSubmitFunction }) {
+export default function CodeForm({ onSubmitFunction, setResultMessage }) {
   const [inputValues, setInputValues] = useState([null, null, "rodonguyen", null]);
   const [previousValues, setPreviousValues] = useState(inputValues);
 
@@ -13,9 +13,9 @@ export default function CodeForm({ onSubmitFunction }) {
   };
 
   const isDuplicateInput = () => {
-    console.log(inputValues, previousValues);
+    // console.log(inputValues, previousValues);
     if (inputValues === previousValues) {
-      console.log('[ DUPLICATE ] Duplicate input. Change the username/code and then click submit again.')
+      setResultMessage('[ DUPLICATE ] Duplicate input. Change the username/code and then click submit again.')
       return true
     }
     return false;
@@ -27,7 +27,7 @@ export default function CodeForm({ onSubmitFunction }) {
         onSubmit={(e) => {
           e.preventDefault();
           if (isDuplicateInput()) return;
-          onSubmitFunction(inputValues[0], inputValues[1], inputValues[2], inputValues[3]);
+          onSubmitFunction(inputValues[0], inputValues[1], inputValues[2], inputValues[3], setResultMessage);
           setPreviousValues(inputValues)
         }}
       >
