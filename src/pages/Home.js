@@ -188,7 +188,7 @@ const Home = () => {
             <div className="description">
               <h5>Vacation Researcher at CSIRO's Data61</h5>
               <p>
-                I'm developing super lightweight Deep Learning models in C/C++
+                I'm developing lightweight Deep Learning models in C/C++
                 language that can be trained and deployed on Edge AI devices
                 (microprocessors).
               </p>
@@ -273,8 +273,8 @@ const Home = () => {
               </h5>
               <p>
                 I was super proud to be elected for this position. This was an
-                amazing experience as I had the opportunity to work with vibrant
-                people from different majors.
+                amazing experience as I had the opportunity to work with a
+                energetic and vibrant team.
               </p>
               <p>
                 Here I promoted Vietnamese culture as a team through our
@@ -337,7 +337,8 @@ const Home = () => {
         <div className="container">
           <h1>Pet Projects</h1>
           <div className="project">
-            {createHyperlink("https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/", 
+            {createHyperlink(
+              "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
               <div className="ppicture">
                 <img src={twitterPic} loading="lazy" alt="twitterPic" />
               </div>
@@ -369,7 +370,8 @@ const Home = () => {
           </div>
 
           <div className="project">
-            {createHyperlink("https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop", 
+            {createHyperlink(
+              "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
               <div className="ppicture">
                 <img src={bittrackerPic} loading="lazy" alt="twitterPic" />
               </div>
@@ -389,7 +391,8 @@ const Home = () => {
                   }
                 >
                   Read More
-                </button>&ensp;
+                </button>
+                &ensp;
                 {createHyperlink(
                   "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
                   <button>Read in Blog</button>
@@ -400,7 +403,8 @@ const Home = () => {
           </div>
 
           <div className="project">
-            {createHyperlink("https://github.com/rodonguyen/Twitter-E-nalyst",
+            {createHyperlink(
+              "https://github.com/rodonguyen/Twitter-E-nalyst",
               <div className="ppicture">
                 <img src={sentimentPic} loading="lazy" alt="twitterPic" />
               </div>
