@@ -17,7 +17,7 @@
 - DynamoDB:
   - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/src/dynamodb_basics.js
   - https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascriptv3/example_code/dynamodb/scenarios/dynamodb_basics/libs/ddbClient.js
-
+- Conditional Rendering: https://reactjs.org/docs/conditional-rendering.html
 
 ### TODO:
 - [x] Deploy
