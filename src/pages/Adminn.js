@@ -1,4 +1,4 @@
-import CodeForm from "../components/CodeForm";
+import CoolerDateForm from "../components/CoolerDateForm";
 import * as AWS from "aws-sdk";
 import { useState } from "react";
 
@@ -65,7 +65,7 @@ const Adminn = () => {
 
   return (
     <div className="container">
-      {CodeForm({onSubmitFunction: handleRequestDynamoDB, setResultMessage: setResultMessage})}
+      {CoolerDateForm({onSubmitFunction: handleRequestDynamoDB, setResultMessage: setResultMessage})}
       <p>{resultMessage}</p>
     </div>
   );
