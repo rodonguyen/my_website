@@ -25,16 +25,15 @@ const DateMe = () => {
         <p>Who am I? I'm Rodo, a software engineer, QUT graduate.</p>
         <p>
           What do I like? I like coding & technology, travelling, outdoor
-          activities: running, hiking, Vietnamese street coffee-ing,
-          working-out, deep conversation, animals and plants, reading books, and
-          females.
+          activities: running, hiking, Vietnamese street coffee-ing, Asian food,
+          working-out, deep conversation, animals and plants, reading books.
         </p>
         <p>
           How am I like? I'm 1.7m, 60kg, Asian born and raised, 5.5+in,
           introvert. I'm trying to gain some weights though.
         </p>
         <p>
-          If you want to know more about what I do for a living, check{" "}
+          About what I do, check{" "}
           <a href="/" target="_blank" rel="noopener noreferrer">
             the main page
           </a>{" "}

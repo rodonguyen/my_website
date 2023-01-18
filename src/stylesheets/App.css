@@ -383,7 +383,7 @@ button.hamburger-menu {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(187, 187, 187);
-  min-height: 5.5rem;
+  min-height: 8.5rem;  /* +0.5rem from ".project img" */
 }
 
 .project p {
@@ -396,8 +396,8 @@ button.hamburger-menu {
 }
 
 .project img {
-  height: 5rem;
-  width: 5rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 5px;
   border: 1px solid rgb(202, 202, 202);
 }

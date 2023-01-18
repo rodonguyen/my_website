@@ -1,5 +1,6 @@
 import CodeForm from "../components/CodeForm";
 import * as AWS from "aws-sdk";
+import { useState } from "react";
 
 // const tableName = "datemecodes";
 const tableName = "cooler-date-2";
@@ -36,7 +37,8 @@ const writeDynamoDB = (docClient, username, code) => {
   });
 };
 
-const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code) => {
+const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code, setResultMessage) => {
+
   AWS.config.update({
     region: "ap-southeast-2",
     secretAccessKey: secretAccessKey,
@@ -49,22 +51,23 @@ const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code) => 
   .then((data) => 
     {
       if (data.Item !== undefined) {
-        console.log(`[ DUPLICATE ] This item (${username},${code}) exists in the database. Nothing else to do. Please enter a different code/username.`)
+        setResultMessage(`[ DUPLICATE ] This item (${username}, ${code}) exists in the database. Nothing else to do. Please enter a different code/username.`)
         return
       }
-      console.log('[ INSERT ] Insert new item:', username, code)
+      setResultMessage(`[ INSERT ] Insert new item: (${username}, ${code})`);
       writeDynamoDB(docClient, username, code)
     }
   )
 }
 
-
 const Adminn = () => {
+  const [resultMessage, setResultMessage] = useState('...')
+
   return (
-    <>
-      {CodeForm({onSubmitFunction: handleRequestDynamoDB})}
-      {/* <button onClick={() => addDataToDynamoDB()}> Put </button> */}
-    </>
+    <div className="container">
+      {CodeForm({onSubmitFunction: handleRequestDynamoDB, setResultMessage: setResultMessage})}
+      <p>{resultMessage}</p>
+    </div>
   );
 };
 

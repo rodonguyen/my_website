@@ -87,18 +87,18 @@ const projectContents = {
 
 const projectContentHandler = (projects, setProjects, target) => {
   if (projects.expandedTarget === "-1") {
-    console.log("case 1");
+    // console.log("case 1");
     projects.expandedTarget = target;
     projects[target] = projectContents[target].long;
   } else if (projects.expandedTarget === target) {
-    console.log("case 2");
+    // console.log("case 2");
     projects.expandedTarget = "-1";
     projects[target] = projectContents[target].short;
   } else if (
     projects.expandedTarget !== "-1" &&
     projects.expandedTarget !== target
   ) {
-    console.log("case 3");
+    // console.log("case 3");
     projects[projects.expandedTarget] =
       projectContents[projects.expandedTarget].short; // Shorten the previous project
     projects[target] = projectContents[target].long; // Lengthen the clicked project
@@ -337,9 +337,11 @@ const Home = () => {
         <div className="container">
           <h1>Pet Projects</h1>
           <div className="project">
-            <div className="ppicture">
-              <img src={twitterPic} loading="lazy" alt="twitterPic" />
-            </div>
+            {createHyperlink("https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/", 
+              <div className="ppicture">
+                <img src={twitterPic} loading="lazy" alt="twitterPic" />
+              </div>
+            )}
             <div className="description text-align-left">
               <h5>
                 Spam Tweet Detector &ensp;{" "}
@@ -367,9 +369,11 @@ const Home = () => {
           </div>
 
           <div className="project">
-            <div className="ppicture">
-              <img src={bittrackerPic} loading="lazy" alt="twitterPic" />
-            </div>
+            {createHyperlink("https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop", 
+              <div className="ppicture">
+                <img src={bittrackerPic} loading="lazy" alt="twitterPic" />
+              </div>
+            )}
             <div className="description text-align-left">
               <h5>
                 BitTracker &ensp;{" "}
@@ -396,9 +400,11 @@ const Home = () => {
           </div>
 
           <div className="project">
-            <div className="ppicture">
-              <img src={sentimentPic} loading="lazy" alt="twitterPic" />
-            </div>
+            {createHyperlink("https://github.com/rodonguyen/Twitter-E-nalyst",
+              <div className="ppicture">
+                <img src={sentimentPic} loading="lazy" alt="twitterPic" />
+              </div>
+            )}
             <div className="description text-align-left">
               <h5>
                 Twitter E-nalyst &ensp;{" "}
