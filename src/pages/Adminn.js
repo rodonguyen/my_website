@@ -62,7 +62,7 @@ const handleRequestDynamoDB = (secretAccessKey, accessKeyId, username, code, set
 
 const Adminn = () => {
   const [resultMessage, setResultMessage] = useState('...')
-
+  
   return (
     <div className="container">
       {CoolerDateForm({onSubmitFunction: handleRequestDynamoDB, setResultMessage: setResultMessage})}
