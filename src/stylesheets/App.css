@@ -453,6 +453,10 @@ svg.leetcode-icon {
   height: 1.5rem;
 }
 
+.dark svg path.leetcode-icon-path-1 {
+  fill: #b1d5f1
+}
+
 
 /**************************************************************************
   CARD                                                                    */
