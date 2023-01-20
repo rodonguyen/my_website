@@ -448,6 +448,10 @@ button.hamburger-menu {
   font-weight: normal;
 }
 
+svg.leetcode-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
 
 /**************************************************************************
