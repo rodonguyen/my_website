@@ -13,7 +13,7 @@ const DateMe = () => {
   let [isLoading, setIsLoading] = useState(true);
   // let [profileCode, setProfileCode] = useState(false);
   let [profileContent, setProfileContent] = useState(['p1_asjhfasi', 'p2_josaijfd', 'p3_ash']);
-
+  setProfileContent(['p1_asjhfasi', 'p2_josaijfd', 'p3_ash'])
   
 
 
