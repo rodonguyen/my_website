@@ -3,6 +3,7 @@ import rodoImage from "../media/Rodo.jpg";
 import twitterPic from "../media/twitterPic.png";
 import bittrackerPic from "../media/bittrackerPic.png";
 import sentimentPic from "../media/sentimentPic.png";
+import dvdsystemPic from "../media/dvd_management_system.png";
 import qutguildLogo from "../media/qutguild_logo.png";
 import vietqLogo from "../media/vietq_logo.jpg";
 import qutLogo from "../media/qut_logo.jpeg";
@@ -105,6 +106,33 @@ const projectContents = {
             <li>
               Reduced latency <b>by 10 times</b> by integrating
               <b>persistence services</b> (S3, Redis and ElastiCache).
+            </li>
+          </ul>
+        </p>
+      </>
+    ),
+  },
+  4: {
+    short: (
+      <p>
+        A console application used to manage DVDs. It applys Object-Oriented
+        Programming and various Search Algorithms, Data Structures to interact
+        with the database.
+      </p>
+    ),
+    long: (
+      <>
+        <p>
+          <ul>
+            <li>A console application used to manage DVDs using C#.</li>
+            <li>
+              It applys Object-Oriented Programming and various Search
+              Algorithms (binary search), Data Structures (binary tree, array)
+              to interact with the database.
+            </li>
+            <li>
+              Followed common coding conventions (var names, space, indentation)
+              and implemented maintainable, scalable code.
             </li>
           </ul>
         </p>
@@ -457,6 +485,38 @@ const Home = () => {
                 </button>
               </h5>
               {projects["3"]}
+            </div>
+          </div>
+
+          <div className="project">
+            {createHyperlink(
+              "https://github.com/rodonguyen/DVD_management_system",
+              <div className="ppicture">
+                <img src={dvdsystemPic} loading="lazy" alt="twitterPic" />
+              </div>
+            )}
+            <div className="description text-align-left">
+              <h5>
+                DVD Management System &ensp;{" "}
+                {createHyperlink(
+                  "https://github.com/rodonguyen/DVD_management_system",
+                  githubIconSvg
+                )}{" "}
+                &ensp;
+                <button
+                  value="4"
+                  onClick={(e) => {
+                    projectContentHandler(
+                      projects,
+                      setProjects,
+                      e.target.value
+                    );
+                  }}
+                >
+                  Read More
+                </button>
+              </h5>
+              {projects["4"]}
             </div>
           </div>
         </div>
