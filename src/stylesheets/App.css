@@ -416,9 +416,25 @@ button.hamburger-menu {
   text-align: justify;
 }
 
+.project ul {
+  margin: 0.2rem 0;
+}
+
+.project li {
+  padding-left: 0.5rem;
+  margin-left: 8rem;
+}
+
+
 @media (max-width: 500px) {
-  .project .description p {
+  /* .project .description p {
     text-align: left;
+  } */
+
+  .project li {
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    list-style: none;
   }
 }
 
