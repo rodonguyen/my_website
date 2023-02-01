@@ -1,7 +1,7 @@
 // 
 import rodoImage from "../media/Rodo.jpg";
-import Projects from "../components/Projects";
-import History from "../components/History";
+import Projects from "../components/Home/Projects";
+import History from "../components/Home/History";
 
 import createHyperlink from "../components/utils";
 

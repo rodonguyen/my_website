@@ -1,10 +1,10 @@
-import twitterPic from "../media/twitterPic.png";
-import bittrackerPic from "../media/bittrackerPic.png";
-import sentimentPic from "../media/sentimentPic.png";
-import dvdsystemPic from "../media/dvd_management_system.png";
+import twitterPic from "../../media/twitterPic.png";
+import bittrackerPic from "../../media/bittrackerPic.png";
+import sentimentPic from "../../media/sentimentPic.png";
+import dvdsystemPic from "../../media/dvd_management_system.png";
 
 import { useState } from "react";
-import createHyperlink from "./utils";
+import createHyperlink from "../utils";
 
 
 const projectContents = {
