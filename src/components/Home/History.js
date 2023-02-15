@@ -36,12 +36,12 @@ export default function History() {
             My advisors are{" "}
             {createHyperlink(
               "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
-              "Dr. Gowri Ramachandran"
+              "Dr Gowri Ramachandran"
             )}{" "}
             and{" "}
             {createHyperlink(
               "https://www.linkedin.com/in/sara-khalifa-3618bb94/",
-              "Dr. Sara Khalifa"
+              "Dr Sara Khalifa"
             )}{" "}
             whom I have the pleasure to work with.
           </p>
@@ -85,7 +85,7 @@ export default function History() {
             Also another Vacation Research Project, led by{" "}
             {createHyperlink(
               "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
-              "Dr. Gowri Ramachandran"
+              "Dr Gowri Ramachandran"
             )}
             .
           </p>
