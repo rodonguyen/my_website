@@ -1,11 +1,10 @@
-import twitterPic from "../media/twitterPic.png";
-import bittrackerPic from "../media/bittrackerPic.png";
-import sentimentPic from "../media/sentimentPic.png";
-import dvdsystemPic from "../media/dvd_management_system.png";
+import twitterPic from "../../media/twitterPic.png";
+import bittrackerPic from "../../media/bittrackerPic.png";
+import sentimentPic from "../../media/sentimentPic.png";
+import dvdsystemPic from "../../media/dvd_management_system.png";
 
 import { useState } from "react";
-import createHyperlink from "./utils";
-
+import createHyperlink from "../utils";
 
 const projectContents = {
   1: {
@@ -22,10 +21,10 @@ const projectContents = {
         <p>
           <ul>
             <li>
-              Led a team of 4 to design 4 separate 
-              Machine Learning models that can identify spam tweets with{" "}
-              <b>{">"}95% accuracy</b> (LSTM, Transformer, SVM and Naive Bayes),
-              provided insights into each model’s strengths and shortcomings.
+              Led a team of 4 to design 4 separate Machine Learning models that
+              can identify spam tweets with <b>{">"}95% accuracy</b> (LSTM,
+              Transformer, SVM and Naive Bayes), provided insights into each
+              model’s strengths and shortcomings.
             </li>
             <li>
               Evaluated the suitability for real world application and Naive
@@ -100,7 +99,7 @@ const projectContents = {
               Balancing and Auto Scaling stack to handle inconsistent usage.
             </li>
             <li>
-              Reduced latency <b>by 10 times</b> by integrating
+              Reduced latency <b>by 10 times</b> by integrating{" "}
               <b>persistence services</b> (S3, Redis and ElastiCache).
             </li>
           </ul>
@@ -195,7 +194,9 @@ export default function Projects() {
             &ensp;
             <button
               value="1"
-              onClick={(e) => projectContentHandler(projects, setProjects, e.target.value)}
+              onClick={(e) =>
+                projectContentHandler(projects, setProjects, e.target.value)
+              }
             >
               Expand
             </button>
@@ -226,7 +227,9 @@ export default function Projects() {
             &ensp;
             <button
               value="2"
-              onClick={(e) => projectContentHandler(projects, setProjects, e.target.value)}
+              onClick={(e) =>
+                projectContentHandler(projects, setProjects, e.target.value)
+              }
             >
               Expand
             </button>
@@ -259,7 +262,7 @@ export default function Projects() {
               value="3"
               onClick={(e) => {
                 projectContentHandler(projects, setProjects, e.target.value);
-              } }
+              }}
             >
               Expand
             </button>
@@ -287,7 +290,7 @@ export default function Projects() {
               value="4"
               onClick={(e) => {
                 projectContentHandler(projects, setProjects, e.target.value);
-              } }
+              }}
             >
               Expand
             </button>

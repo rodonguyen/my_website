@@ -1,9 +1,9 @@
-import qutguildLogo from "../media/qutguild_logo.png";
-import vietqLogo from "../media/vietq_logo.jpg";
-import qutLogo from "../media/qut_logo.jpeg";
-import csirodata61Logo from "../media/csirodata61_logo.jpeg";
+import qutguildLogo from "../../media/qutguild_logo.png";
+import vietqLogo from "../../media/vietq_logo.jpg";
+import qutLogo from "../../media/qut_logo.jpeg";
+import csirodata61Logo from "../../media/csirodata61_logo.jpeg";
 
-import createHyperlink from "./utils";
+import createHyperlink from "../utils";
 
 export default function History() {
   return (

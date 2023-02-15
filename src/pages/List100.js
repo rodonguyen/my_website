@@ -17,14 +17,14 @@ const List100 = () => {
         <li>✗ Walk on the moon</li>
         <li>✗ Swimming in Exosphere in a space suit</li>
         <li>✗ Found a tech company in Vietnam and it survives :)</li>
-        <li>✗ Give a talk to &gt;100 audiences (like... any talk)</li>
+        <li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>
         <li>✗ Travel to 10 countries (1/10)</li>
-        <li>✗ Get a PhD</li>
-        <li>✗ Be an Australian Permanent Resident</li>
+        <li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
+        <li>✗ Get Aussie PR</li>
         <li>✗ Give my parents a house to retire in Australia</li>
-        <li>✗ Learn to drive</li>
-        <li>✗ Learn to fly a helicopter/plane</li>
+        <li>✗ Learn to drive car</li>
+        <li>✗ Learn to fly helicopter/plane</li>
         <li>✗ Be Financial Independent</li>
         <li>✗ Read 1000 books ({readBookNum}/100)</li>
         <li>✗ Vacation on an island/a yatch</li>
@@ -41,14 +41,23 @@ const List100 = () => {
         <li>✗ Master Vim</li>
         <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
-        <li>✗ Travel to Africa</li>
         <li>✗ See the Hymalayas</li>
+        <li>✗ Travel to Africa</li>
+        <li>✗ Connect with 10 start-up founders</li>
+        <li>✗ Establish a Mentorship Program in my high school</li>
+        <li>✗ Found an Organic Modern Farm (my father's dream)</li>
         <li>~ Live a good life</li>
-        {/* <li>✗ </li> */}
         {/* <li>✓ </li> */}
         {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Bodycount = 10</li> */}
       </ol>
+
+      <h1 className="text-align-left xlarge">My Wish List</h1>
+      <p> This helps mitigate the headache of my close friends as my birthday comes. Love, Rodo{' <3'}</p>
+      <ul className="text-align-left">
+        <li>UNIQLO or other clothing brand's giftcard</li>
+        <li>Nothing else for now, I'm quite a minimalist :)</li>
+      </ul>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 // 
 import rodoImage from "../media/Rodo.jpg";
-import Projects from "../components/Projects";
-import History from "../components/History";
+import Projects from "../components/Home/Projects";
+import History from "../components/Home/History";
 
 import createHyperlink from "../components/utils";
 
@@ -153,7 +153,7 @@ const Home = () => {
         </h2>
         <ul>
           <li>
-            <b>Rank</b>: 924,500
+            <b>Rank</b>: 800,000
           </li>
           <li>
             <b>Profile</b>:{" "}
