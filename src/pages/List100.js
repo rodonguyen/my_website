@@ -32,7 +32,7 @@ const List100 = () => {
         <li>✗ Climb Great Pyramid of Giza, Egypt</li>
         <li>✗ Sky dive (without an instructor)</li>
         <li>✗ Camp and enjoy the Milky Way Galaxy</li>
-        <li>✗ Hike to Everest base camp</li>
+        <li>✗ Hike to Everest base camp + see the Hymalayas</li>
         <li>✗ Learn to play a musical instrument (guitar)</li>
         <li>✗ Ask a stranger out successfully</li>
         <li>✗ Finish a full marathon</li>
@@ -41,7 +41,7 @@ const List100 = () => {
         <li>✗ Master Vim</li>
         <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
-        <li>✗ See the Hymalayas</li>
+        {/* <li>✗ </li> */}
         <li>✗ Travel to Africa</li>
         <li>✗ Connect with 10 start-up founders</li>
         <li>✗ Establish a Mentorship Program in my high school</li>

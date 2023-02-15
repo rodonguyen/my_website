@@ -1,6 +1,7 @@
 import qutguildLogo from "../../media/qutguild_logo.png";
 import vietqLogo from "../../media/vietq_logo.jpg";
 import qutLogo from "../../media/qut_logo.jpeg";
+import s23mLogo from "../../media/s23m_logo.jpeg";
 import csirodata61Logo from "../../media/csirodata61_logo.jpeg";
 
 import createHyperlink from "../utils";
@@ -18,23 +19,53 @@ export default function History() {
         </div>
         <div className="description">
           <h5>Vacation Researcher at CSIRO's Data61</h5>
+          <p>[ Towards Training Neural Networks on Micro-controllers ]</p>
           <p>
-            I'm developing lightweight Deep Learning models in C/C++ language
-            that can be trained and deployed on Edge AI devices
-            (microprocessors).
+            Training Neural Networks on Micro-controllers (MCUs) is a
+            new-emerging area and proved to be cost-saving and beneficial in
+            many aspects. However, there are challenges to be solved. In this
+            project, I identified a framework written in C++ "MLPack" which is
+            suitable for most MCUs, analysed its resource consumption behaviours
+            and proposes some future works to achieve the final goal.{" "}
+            {createHyperlink(
+              "https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf",
+              "View my Final Presentation here"
+            )}.
           </p>
           <p>
             My advisors are{" "}
             {createHyperlink(
               "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
-              "Dr. Gowri Ramachandran"
+              "Dr Gowri Ramachandran"
             )}{" "}
             and{" "}
             {createHyperlink(
               "https://www.linkedin.com/in/sara-khalifa-3618bb94/",
-              "Dr. Sara Khalifa"
+              "Dr Sara Khalifa"
             )}{" "}
             whom I have the pleasure to work with.
+          </p>
+        </div>
+      </div>
+      <div className="row entry history">
+        <div className="time">2022</div>
+        <div className="company-logo">
+          <div class="entry-dot"></div>
+          <img src={s23mLogo} alt="S23M logo" />
+        </div>
+        <div className="description">
+          <h5>Software Engineer at S23M</h5>
+          <p>
+            I programmed a minimal and yet modern User Interface of an{" "}
+            {createHyperlink("https://github.com/s23m/roma", "App")}{" "}
+            used to interact with S23M's Health Data Server (CRUD operations).
+            It included features that allow querying and editing data through
+            RestAPI and presenting queried results intuitively on the app.
+          </p>
+          <p>
+            The main tools used are React, NodeJS, and AgGrid, Bootstrap
+            frameworks. I also constructed detailed documentation and tutorials
+            for users / future developers
           </p>
         </div>
       </div>
@@ -45,15 +76,16 @@ export default function History() {
           <img src={qutLogo} alt="qutguild logo" />
         </div>
         <div className="description">
-          <h5>Vacation Researcher at QUT</h5>
+          <h5>Research Intern at QUT</h5>
           <p>
-            Also another Vacation Researcher role! I was delighted to work as a
-            Vacation Researcher for project "Analysing the Effectiveness of
-            Verifiable Python (a Python variant) for Software Cybersecurity" led
-            by{" "}
+            [ Analysing the Effectiveness of Verifiable Python (a Python
+            variant) for Software Cybersecurity ]
+          </p>
+          <p>
+            Also another Vacation Research Project, led by{" "}
             {createHyperlink(
               "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
-              "Dr. Gowri Ramachandran"
+              "Dr Gowri Ramachandran"
             )}
             .
           </p>
