@@ -110,7 +110,7 @@ const projectContents = {
   4: {
     short: (
       <p>
-        A console application used to manage DVDs. It applys Object-Oriented
+        A console application used to manage DVDs. It applies Object-Oriented
         Programming and various Search Algorithms, Data Structures to interact
         with the database.
       </p>
@@ -119,9 +119,9 @@ const projectContents = {
       <>
         <p>
           <ul>
-            <li>A console application used to manage DVDs using C#.</li>
+            <li>A console application used to manage DVDs built with C#.</li>
             <li>
-              It applys Object-Oriented Programming and various Search
+              It applies Object-Oriented Programming and various Search
               Algorithms (binary search), Data Structures (binary tree, array)
               to interact with the database.
             </li>
