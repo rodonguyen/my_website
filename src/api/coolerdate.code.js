@@ -2,15 +2,6 @@ import axios from "axios";
 
 const apiUrl = process.env.REACT_APP_CODE_API;
 
-// function checkExpiration(time) {
-//   const startTime = new Date(time)
-//   const now = Date.now()
-//   console(now-startTime)
-// }
-
-// export const logFirstAccessTime = async (code, username='rodonguyen') => {}
-
-
 
 export const checkCode = async (code, username = 'rodonguyen') => {
 
