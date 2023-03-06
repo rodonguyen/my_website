@@ -47,7 +47,7 @@ const Home = () => {
             During my free time, I like to build pet projects where I put my
             skills or my recently acquired knowledge to practice. Don't forget
             to pay a visit to my{" "}
-            {createHyperlink("https://github.com/rodonguyen", "GitHub")}
+            {createHyperlink("https://github.com/rodonguyen", "GitHub")}{' '}
             :)
           </p>
           <p>
