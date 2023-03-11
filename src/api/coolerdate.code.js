@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_CODE_API;
+const apiUrl = process.env.REACT_APP_CODE_URL;
 
 
 export const checkCode = async (code, username = 'rodonguyen') => {
