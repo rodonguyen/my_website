@@ -34,21 +34,6 @@ const DateMe = () => {
     setProfileContent(profileResponse.data.entry.content)
   }, [code]);
 
-
-
-  // Fetch profile content
-  // useEffect(() => {
-  //   getProfileContent(profileCode).then((response) => {
-  //     // console.log('checkCode response:', response.data); // for debugging
-  //     // if (response.data.isValid === false)  {
-  //     //   setIsValid(false)
-  //     //   setIsLoading(false)
-  //     // }
-  //     // setProfileCode(response.data.profileCode)
-  //   });
-  // }, [profileCode]);
-
-
   
   if (isLoading) 
     return <Spinner/> 
@@ -56,17 +41,22 @@ const DateMe = () => {
     return <NotFound/>
   else if (isValid) {
     return (<>
+
+      
       <div className="container dateme text-align-left">
-      {profileContent.map(element => {
-        return (<p>{element}</p>)
-      })}
 
-      <h1>
-        If you're seeing this, I think you're absolutely beautiful 🥰
-      </h1>
-      <br></br>
+        <h1>
+          If you're seeing this, I think you are absolutely beautiful 🥰
+        </h1>
 
-      <h5>Step 1: Get to know me</h5>
+        {/* Button 'May I introduce myself?' and render profile if clicked*/}
+        {profileContent.map(element => {
+          return (<p>{element}</p>)
+        })}
+
+        <br></br>
+
+      {/* <h5>Step 1: Get to know me</h5>
 
       <p>Who am I? I'm Rodo, a software engineer, QUT graduate.</p>
       <p>
@@ -76,17 +66,17 @@ const DateMe = () => {
       </p>
       <p>
         How am I like? I'm 1.7m, 60kg, Asian born and raised, 5.5+in,
-        introvert. 
+        introvert.
       </p>
       <p>
-        About what I do, check 
+        Feel free to view my website's homepage / LinkedIn
         and you can alway comeback here later with the exact link.
       </p>
       <br></br>
 
       <h5>Step 2: So... Date or no date, Now or never.</h5>
       <h5>Be careful, the button can only be clicked once!</h5>
-      <p></p>
+      <p></p> */}
       </div>
     </>);
   } 
