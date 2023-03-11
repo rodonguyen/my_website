@@ -3,7 +3,7 @@ import axios from "axios";
 const apiUrl = process.env.REACT_APP_PROFILE_URL;
 
 
-export const getProfile = async (username = 'rodonguyen', profile = null) => {
+export const getProfile = async (username, profile) => {
 
   if (profile === null || username === null) return false
 

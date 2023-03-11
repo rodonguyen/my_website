@@ -4,6 +4,7 @@ import NotFound from "./NotFound";
 import { checkCode } from "../api/coolerdate.code";
 import { useEffect, useState } from "react";
 import { Spinner } from 'reactstrap';
+import { getProfile } from "../api/coolerdate.profile";
 
 const DateMe = () => {
   const [searchParams] = useSearchParams();
@@ -11,25 +12,28 @@ const DateMe = () => {
 
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [profileContent, setProfileContent] = useState(['p1', 'p2', 'p3']);
+  const [profileContent, setProfileContent] = useState([]);
 
 
   // Check code's validity
-  useEffect(() => {
-    checkCode(code).then((response) => {
-      setIsLoading(false)
-      console.log('checkCode response:', response.data); 
-      if (response.data.isValid === false) return;
-      
-      // Unlock Dateme Page
-      setIsValid(true) 
-      // Render my profile description
-      // get 'profile' code first
-      // call getProfile
-      // update profileContent using useState
+  useEffect(async function() {
+    const checkResponse = await checkCode(code);
+    setIsLoading(false)
+    console.log('checkResult', checkResponse.data)
+    if (checkResponse.data.isValid === false) return;
 
-    });
+    // Unlock Dateme Page
+    setIsValid(true) 
+
+    // Render my profile description
+    const profileResponse = await getProfile(
+      checkResponse.data.entry.username,
+      checkResponse.data.entry.profile)
+
+    // Update profileContent using useState
+    setProfileContent(profileResponse.data.entry.content)
   }, [code]);
+
 
 
   // Fetch profile content

@@ -545,7 +545,7 @@ svg.leetcode-icon {
 /**************************************************************************
   NOT FOUND                                                               */
 
-.notfound h1 {
+.notfound h1, .notfound p {
   text-align: center;
   margin: 3rem auto;
 }
