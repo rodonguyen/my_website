@@ -16,7 +16,7 @@ export const getProfile = async (username, profile) => {
   const response = await axios
     .post(fullUrl, data)
     .then((res) => {
-      console.log(res)
+      // console.log(res)
       return res
     })
     .catch((err) => console.log(err));

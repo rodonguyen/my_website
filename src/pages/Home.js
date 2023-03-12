@@ -2,17 +2,11 @@
 import rodoImage from "../media/Rodo.jpg";
 import Projects from "../components/Home/Projects";
 import History from "../components/Home/History";
-
 import createHyperlink from "../components/utils";
 
 
 
 const Home = () => {
-  // const mode = "light";   // For future dark/light mode
-  // useEffect(() => {
-  //   console.log("state changes");
-  // }, []);
-
   return (
     <>
       {/* content block 1: A little introduction */}

@@ -119,6 +119,12 @@ a:visited {
   background: #323d4b;
 }
 
+.dark button:disabled {
+  border: 1px solid #999999;
+  background-color: #2d2d2d;
+  color: #8d8d8d;
+}
+
 .App,
 a,
 a:visited,

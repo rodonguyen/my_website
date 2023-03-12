@@ -5,10 +5,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.226.0",
     "@aws-sdk/lib-dynamodb": "^3.226.0",
-    "@coreui/react": "^4.4.0",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
+    "@coreui/coreui": "^4.2.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
