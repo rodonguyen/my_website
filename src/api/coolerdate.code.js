@@ -3,7 +3,7 @@ import axios from "axios";
 const apiUrl = process.env.REACT_APP_CODE_URL;
 
 
-export const checkCode = async (code, username = 'rodonguyen') => {
+export const checkCode = async (code, username = 'rodonguyen', setResponse) => {
 
   if (code === null || code === "") return false
 
@@ -13,13 +13,12 @@ export const checkCode = async (code, username = 'rodonguyen') => {
     code: code
   };
 
-  const response = await axios
+  await axios
     .post(fullUrl, data)
     .then((res) => {
-      // console.log(res)
-      return res
+      console.log('checkcoderes', res)
+      setResponse(res);
     })
     .catch((err) => console.log(err));
 
-  return response
 };

@@ -12,36 +12,62 @@ const DateMe = () => {
   const [searchParams] = useSearchParams();
   const code = searchParams.get("code");
 
+  const [myCheckResult, setMyCheckResult] = useState(null);
+  const [myProfile, setMyProfile] = useState(null);
+
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [profileContent, setProfileContent] = useState([]);
 
-  let CDProgressFromLS = localStorage.getItem("CDProgress");
+  let CDProgressFromLS = localStorage.getItem("CoolerDateProgress");
   const [CDProgress, setCDProgress] = useState(CDProgressFromLS || 0);
   const threshold01 = 1,
     threshold02 = 2;
 
   // Check code's validity
   useEffect(
-    async function () {
-      const checkResponse = await checkCode(code);
-      setIsLoading(false);
-      console.log("checkResult", checkResponse.data);
-      if (checkResponse.data.isValid === false) return;
+    function () {
+      // Check the code from url
+      checkCode(code, "rodonguyen", setMyCheckResult);
+    },
+    [code]
+  );
+
+  // Get profile content
+  useEffect(
+    function () {
+      // console.log(myResponse)
+      console.log("myCheckResult", myCheckResult);
+      
+      if (!myCheckResult) return;
+
+      // Blocking point if code is invalid
+      if (myCheckResult.data.isValid === false) {
+        setIsLoading(false);
+        return;
+      }
 
       // Unlock Dateme Page
       setIsValid(true);
+      setIsLoading(false);
 
-      // Render my profile description
-      const profileResponse = await getProfile(
-        checkResponse.data.entry.username,
-        checkResponse.data.entry.profile
+      // Get profile information
+      getProfile(
+        myCheckResult.data.entry.username,
+        myCheckResult.data.entry.profile,
+        setMyProfile
       );
-
-      // Update profileContent using useState
-      setProfileContent(profileResponse.data.entry.content);
     },
-    [code]
+    [myCheckResult]
+  );
+
+  // Update profile content
+  useEffect(
+    function () {
+      if (!myProfile) return;
+      setProfileContent(myProfile.data.entry.content);
+    },
+    [myProfile]
   );
 
   if (isLoading) return <Spinner />;
@@ -54,12 +80,11 @@ const DateMe = () => {
             If you're seeing this, I think you are absolutely beautiful 🥰
           </h1>
 
-
           {/* Section 1: Introduce myself */}
           <button
             onClick={function () {
               setCDProgress(threshold01);
-              localStorage.setItem("CDProgress", "1");
+              localStorage.setItem("CoolerDateProgress", "1");
             }}
             disabled={CDProgress >= threshold01}
           >
@@ -73,31 +98,64 @@ const DateMe = () => {
               {profileContent.map((element) => {
                 return <p>{element}</p>;
               })}
+
+              {/* Next button for Section 2 */}
+              <button
+                onClick={function () {
+                  setCDProgress(threshold02);
+                  localStorage.setItem("CoolerDateProgress", "2");
+                }}
+                disabled={CDProgress >= threshold02}
+              >
+                Do you think we can have a date? &ensp; [ Yes ]
+              </button>
             </>
           ) : null}
-
-
 
           {/* Section 2: Asking for dating information */}
-          <button
-            onClick={function () {
-              setCDProgress(threshold01);
-              localStorage.setItem("CDProgress", "1");
-            }}
-            disabled={CDProgress >= threshold01}
-          >
-            Do you think we can have a date together? &ensp; [ Yes ]
-          </button>
 
-          {/* <Button> May I introduce myself? [ Yes ]</Button> */}
-
-          {CDProgress >= threshold01 ? (
+          {CDProgress >= threshold02 ? (
             <>
-              {profileContent.map((element) => {
-                return <p>{element}</p>;
-              })}
+              <br></br>
+              <br></br>
+              <form action={null}>
+                <label for="name" required autofocus>Your name</label><br></br>
+                <input type="text" id="coolerdate" name="name"></input><br></br>
+
+                <label for="contact" required>Your contact </label><br></br>
+                <input type="text" id="coolerdate" name="contact" placeholder="I'm happy with personal work email :)"></input><br></br>
+
+                <label for="bio" required>Something about you</label><br></br>
+                <input type="text" id="coolerdate" name="bio"></input><br></br>
+
+                <label for="ifact" >Interesting fact about you that you don't usually tell people</label><br></br>
+                <input type="text" id="coolerdate" name="ifact" placeholder="optional"></input><br></br>
+
+                <label for="place" required>An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?</label><br></br>
+                <input type="text" id="coolerdate" name="place"></input><br></br>
+
+                <label for="dressing" >How do you want me to dress in our first date</label><br></br>
+                <input type="text" id="coolerdate" name="dressing" placeholder="optional"></input><br></br>
+
+                <label for="boyfriend" required>3 words to describe your desired boyfriend?</label><br></br>
+                <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
+
+                <input type="submit" value="Wow, thanksss... You make my day!"></input>
+              </form> 
             </>
           ) : null}
+
+          {/* 
+          Your name?
+          Your contact? I'm happy with personal work email :)
+          Something about you
+          Interesting fact about you that you don't usually tell people (optional)
+          An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?
+          How do you want me to dress in our first date? (optional) 
+
+          Button
+          */}
+
           <br></br>
 
           {/* <h5>Step 1: Get to know me</h5>

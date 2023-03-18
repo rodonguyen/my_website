@@ -541,11 +541,15 @@ svg.leetcode-icon {
 
 
 /**************************************************************************
-  DATEME                                                                  */
+  COOLER DATE                                                             */
 
 .container.dateme {
   padding-top: 3rem;
   max-width: 700px;
+}
+
+input#coolerdate {
+  width: 400px;
 }
 
 /**************************************************************************

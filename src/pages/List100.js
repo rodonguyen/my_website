@@ -16,7 +16,7 @@ const List100 = () => {
         <li>✓ Teach a course in university</li>
         <li>✗ Pay and have a 14-day holiday with my family</li>
         <li>✗ Walk on the moon</li>
-        <li>✗ Swimming in Exosphere in a space suit</li>
+        <li>✗ Swim in Exosphere in a space suit</li>
         <li>✗ Found a tech company in Vietnam and it survives :)</li>
         <li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>
