@@ -27,6 +27,13 @@ const DateMe = () => {
   // Check code's validity
   useEffect(
     function () {
+      // Invalidate if code is empty string / null
+      // console.log(code);
+      if (!code) {
+        setIsValid(false);
+        setIsLoading(false);
+        return
+      }
       // Check the code from url
       checkCode(code, "rodonguyen", setMyCheckResult);
     },
@@ -37,7 +44,7 @@ const DateMe = () => {
   useEffect(
     function () {
       // console.log(myResponse)
-      console.log("myCheckResult", myCheckResult);
+      // console.log("myCheckResult", myCheckResult);
       
       if (!myCheckResult) return;
 
