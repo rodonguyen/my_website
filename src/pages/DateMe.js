@@ -46,8 +46,11 @@ const DateMe = () => {
       // console.log(myResponse)
       // console.log("myCheckResult", myCheckResult);
       
-      if (!myCheckResult) return;
-
+      if (!myCheckResult) {
+        setIsValid(false);
+        setIsLoading(false);
+        return;
+      }
       // Blocking point if code is invalid
       if (myCheckResult.data.isValid === false) {
         setIsLoading(false);
