@@ -13,23 +13,23 @@ const List100 = () => {
         <li>✗ See Auroras</li>
         <li>✗ Conquer Fansipan Mountain</li>
         <li>✗ 10-day Vipassana Meditation Retreat</li>
-        <li>✗ Meditate 30 minutes/day</li>
-        <li>✗ Teach a course in university</li>
+        <li>✓ Teach a course in university</li>
         <li>✗ Pay and have a 14-day holiday with my family</li>
         <li>✗ Walk on the moon</li>
-        <li>✗ Swimming in Exosphere in a space suit</li>
+        <li>✗ Swim in Exosphere in a space suit</li>
         <li>✗ Found a tech company in Vietnam and it survives :)</li>
         <li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>
         <li>✗ Travel to 10 countries (1/10)</li>
+        <li>✗ Travel to 20 Vietnamese cities (3/20)</li>   {/* HCM, Danang, Hue */}
         <li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
         <li>✗ Get Aussie PR</li>
-        <li>✗ Give my parents a house to retire in Australia</li>
-        <li>✗ Learn to drive car</li>
+        <li>✗ Buy a house for my parents to retire in Australia</li>
+        <li>✗ Get a driver license</li>
         <li>✗ Learn to fly helicopter/plane</li>
         <li>✗ Be Financial Independent</li>
-        <li>✗ Read 1000 books ({readBookNum}/100)</li>
-        <li>✗ Vacation on an island/a yatch</li>
+        <li>✗ Read 1000 books ({readBookNum}/1000)</li>
+        <li>✗ Have a vacation on an island/a yatch</li>
         <li>✗ Work in a big financial insitution</li>
         <li>✗ Climb Great Pyramid of Giza, Egypt</li>
         <li>✗ Sky dive (without an instructor)</li>
@@ -40,15 +40,15 @@ const List100 = () => {
         <li>✗ Finish a full marathon</li>
         <li>✗ Be 70kg and muscular</li>
         <li>✗ Cuddle lions</li>
-        <li>✗ Master Vim</li>
+        <li>✗ Master NeoVim</li>
         <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
         {/* <li>✗ </li> */}
         <li>✗ Travel to Africa</li>
         <li>✗ Connect with 10 start-up founders</li>
         <li>✗ Establish a Mentorship Program in my high school</li>
-        <li>✗ Found an Organic Modern Farm (my father's dream)</li>
-        <li>~ Live a good life</li>
+        <li>✗ Found an organic modern farm (my father's dream)</li>
+        <li>~ Live a great life</li>
         {/* <li>✓ </li> */}
         {/* <li>✗ Bring a girl home from club</li> */}
         {/* <li>✗ Bodycount = 10</li> */}

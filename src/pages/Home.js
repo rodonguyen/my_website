@@ -2,17 +2,11 @@
 import rodoImage from "../media/Rodo.jpg";
 import Projects from "../components/Home/Projects";
 import History from "../components/Home/History";
-
 import createHyperlink from "../components/utils";
 
 
 
 const Home = () => {
-  // const mode = "light";   // For future dark/light mode
-  // useEffect(() => {
-  //   console.log("state changes");
-  // }, []);
-
   return (
     <>
       {/* content block 1: A little introduction */}
@@ -47,7 +41,7 @@ const Home = () => {
             During my free time, I like to build pet projects where I put my
             skills or my recently acquired knowledge to practice. Don't forget
             to pay a visit to my{" "}
-            {createHyperlink("https://github.com/rodonguyen", "GitHub")}
+            {createHyperlink("https://github.com/rodonguyen", "GitHub")}{' '}
             :)
           </p>
           <p>

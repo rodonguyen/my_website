@@ -119,6 +119,12 @@ a:visited {
   background: #323d4b;
 }
 
+.dark button:disabled {
+  border: 1px solid #999999;
+  background-color: #2d2d2d;
+  color: #8d8d8d;
+}
+
 .App,
 a,
 a:visited,
@@ -535,17 +541,21 @@ svg.leetcode-icon {
 
 
 /**************************************************************************
-  DATEME                                                                  */
+  COOLER DATE                                                             */
 
 .container.dateme {
   padding-top: 3rem;
   max-width: 700px;
 }
 
+input#coolerdate {
+  width: 400px;
+}
+
 /**************************************************************************
   NOT FOUND                                                               */
 
-.notfound h1 {
+.notfound h1, .notfound p {
   text-align: center;
   margin: 3rem auto;
 }

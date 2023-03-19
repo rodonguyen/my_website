@@ -13,7 +13,8 @@ import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
-  let themeModeFromLS = localStorage.getItem("themeMode");
+  // Utilise cache/local storage to store themeMode, keep it consistent throughout the session
+  let themeModeFromLS = localStorage.getItem("themeMode"); 
   const [themeMode, setThemeMode] = useState(themeModeFromLS || 'Light');
 
   useEffect(() => {
