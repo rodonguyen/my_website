@@ -16,9 +16,11 @@ export const checkCode = async (code, username = 'rodonguyen', setResponse) => {
   await axios
     .post(fullUrl, data)
     .then((res) => {
-      console.log('checkcoderes', res)
       setResponse(res);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      setResponse(false);
+      // console.log(err);
+    });
 
 };
