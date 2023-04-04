@@ -5,6 +5,7 @@ import { checkCode } from "../api/coolerdate.code";
 import { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
 import { getProfile } from "../api/coolerdate.profile";
+import { addRespondentFormToDatabase } from "../api/coolerdate.respondant";
 
 // import { Input, Button, Form, Label } from "reactstrap";
 
@@ -19,8 +20,8 @@ const DateMe = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [profileContent, setProfileContent] = useState([]);
 
-  let CDProgressFromLS = localStorage.getItem("CoolerDateProgress");
-  const [CDProgress, setCDProgress] = useState(CDProgressFromLS || 0);
+  let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
+  const [CoolerDateProgress, setCoolerDateProgress] = useState(CDProgressFromLocalStorage || 0);
   const threshold01 = 1,
     threshold02 = 2;
 
@@ -93,17 +94,17 @@ const DateMe = () => {
           {/* Section 1: Introduce myself */}
           <button
             onClick={function () {
-              setCDProgress(threshold01);
+              setCoolerDateProgress(threshold01);
               localStorage.setItem("CoolerDateProgress", "1");
             }}
-            disabled={CDProgress >= threshold01}
+            disabled={CoolerDateProgress >= threshold01}
           >
             May I introduce myself? &ensp; [ Yes ]
           </button>
 
           {/* <Button> May I introduce myself? [ Yes ]</Button> */}
 
-          {CDProgress >= threshold01 ? (
+          {CoolerDateProgress >= threshold01 ? (
             <>
               {profileContent.map((element) => {
                 return <p>{element}</p>;
@@ -112,10 +113,10 @@ const DateMe = () => {
               {/* Next button for Section 2 */}
               <button
                 onClick={function () {
-                  setCDProgress(threshold02);
+                  setCoolerDateProgress(threshold02);
                   localStorage.setItem("CoolerDateProgress", "2");
                 }}
-                disabled={CDProgress >= threshold02}
+                disabled={CoolerDateProgress >= threshold02}
               >
                 Do you think we can have a date? &ensp; [ Yes ]
               </button>
@@ -124,11 +125,11 @@ const DateMe = () => {
 
           {/* Section 2: Asking for dating information */}
 
-          {CDProgress >= threshold02 ? (
+          {CoolerDateProgress >= threshold02 ? (
             <>
               <br></br>
               <br></br>
-              <form action={null}>
+              <form onSubmit={addRespondentFormToDatabase} action={null}>
                 <label for="name" required autofocus>Your name</label><br></br>
                 <input type="text" id="coolerdate" name="name"></input><br></br>
 
@@ -150,7 +151,9 @@ const DateMe = () => {
                 <label for="boyfriend" required>3 words to describe your desired boyfriend?</label><br></br>
                 <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
 
-                <input type="submit" value="Wow, thanksss... You make my day!"></input>
+                <input type="submit" value="Send"></input>
+                
+                {/* Display "Wow, thanksss... You make my day!" after the form is sent */}
               </form> 
             </>
           ) : null}
