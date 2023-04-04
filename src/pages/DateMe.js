@@ -31,7 +31,6 @@ const DateMe = () => {
       // Invalidate if code is empty string / null
       // console.log(code);
       if (!code) {
-        setIsValid(false);
         setIsLoading(false);
         return
       }
@@ -47,11 +46,11 @@ const DateMe = () => {
       // console.log(myResponse)
       // console.log("myCheckResult", myCheckResult);
       
+      // Blocking point if myCheckResult is not received
       if (!myCheckResult) {
-        setIsValid(false);
-        setIsLoading(false);
         return;
       }
+
       // Blocking point if code is invalid
       if (myCheckResult.data.isValid === false) {
         setIsLoading(false);
@@ -134,7 +133,7 @@ const DateMe = () => {
                 <input type="text" id="coolerdate" name="name"></input><br></br>
 
                 <label for="contact" required>Your contact </label><br></br>
-                <input type="text" id="coolerdate" name="contact" placeholder="I'm happy with personal work email :)"></input><br></br>
+                <input type="text" id="coolerdate" name="contact" placeholder="Email is fine :)"></input><br></br>
 
                 <label for="bio" required>Something about you</label><br></br>
                 <input type="text" id="coolerdate" name="bio"></input><br></br>
