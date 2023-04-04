@@ -5,7 +5,7 @@ import { checkCode } from "../api/coolerdate.code";
 import { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
 import { getProfile } from "../api/coolerdate.profile";
-import { addRespondentFormToDatabase } from "../api/coolerdate.respondant";
+import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
 // import { Input, Button, Form, Label } from "reactstrap";
 
