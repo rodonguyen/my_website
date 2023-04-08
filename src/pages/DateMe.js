@@ -138,16 +138,16 @@ const DateMe = () => {
                 <label for="bio" required>Something about you</label><br></br>
                 <input type="text" id="coolerdate" name="bio"></input><br></br>
 
-                <label for="ifact" >Interesting fact about you that you don't usually tell people</label><br></br>
-                <input type="text" id="coolerdate" name="ifact" placeholder="optional"></input><br></br>
+                <label for="ifact">Interesting facts not many people know about you</label><br></br>
+                <input type="text" id="coolerdate" name="ifact"></input><br></br>
 
-                <label for="place" required>An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?</label><br></br>
+                <label for="place">An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?</label><br></br>
                 <input type="text" id="coolerdate" name="place"></input><br></br>
 
                 <label for="dressing" >How do you want me to dress in our first date</label><br></br>
-                <input type="text" id="coolerdate" name="dressing" placeholder="optional"></input><br></br>
+                <input type="text" id="coolerdate" name="dressing"></input><br></br>
 
-                <label for="boyfriend" required>3 words to describe your desired boyfriend?</label><br></br>
+                <label for="boyfriend">3 words to describe your desired boyfriend?</label><br></br>
                 <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
 
                 <input type="submit" value="Send"></input>

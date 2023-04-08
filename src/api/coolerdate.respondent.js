@@ -6,11 +6,18 @@ const apiUrl = process.env.REACT_APP_RESPONDENT;
 export const addRespondentFormToDatabase = async (event) => {
    event.preventDefault();
    
-   console.log(event.target.ifact.value);
+   // console.log(event.target.ifact.value);
+   // Use /add to add respondent data 
+   // Destroy page when received successful response
 
 
 
 
+
+
+
+
+   
 //   if (profile === null || username === null) return false
 
 //   const fullUrl = `${apiUrl}find`;
