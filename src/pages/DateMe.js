@@ -19,6 +19,7 @@ const DateMe = () => {
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [profileContent, setProfileContent] = useState([]);
+  const [first3SectionsFilled, setFirst3SectionsFilled] = useState(true)
 
   let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
   const [CoolerDateProgress, setCoolerDateProgress] = useState(CDProgressFromLocalStorage || 0);
@@ -128,15 +129,15 @@ const DateMe = () => {
             <>
               <br></br>
               <br></br>
-              <form onSubmit={addRespondentFormToDatabase} action={null}>
-                <label for="name" required autofocus>Your name</label><br></br>
-                <input type="text" id="coolerdate" name="name"></input><br></br>
+              <form onSubmit={(event) => {addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)}}>
+                <label for="name" required autofocus>Your name *</label><br></br>
+                <input type="text" id="coolerdate" name="name" ></input><br></br>
 
-                <label for="contact" required>Your contact </label><br></br>
-                <input type="text" id="coolerdate" name="contact" placeholder="Email is fine :)"></input><br></br>
+                <label for="contact" required>Your contact *</label><br></br>
+                <input type="text" id="coolerdate" name="contact" placeholder="Email is fine :)" ></input><br></br>
 
-                <label for="bio" required>Something about you</label><br></br>
-                <input type="text" id="coolerdate" name="bio"></input><br></br>
+                <label for="bio" required>Something about you *</label><br></br>
+                <input type="text" id="coolerdate" name="bio" ></input><br></br>
 
                 <label for="ifact">Interesting facts not many people know about you</label><br></br>
                 <input type="text" id="coolerdate" name="ifact"></input><br></br>
@@ -150,9 +151,12 @@ const DateMe = () => {
                 <label for="boyfriend">3 words to describe your desired boyfriend?</label><br></br>
                 <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
 
-                <input type="submit" value="Send"></input>
-                
-                {/* Display "Wow, thanksss... You make my day!" after the form is sent */}
+                <input type="submit" value="Send" ></input><br></br>
+
+                {!first3SectionsFilled && 
+                  <label className="fade">
+                    Please fill the required sections (*) before sending
+                  </label>}
               </form> 
             </>
           ) : null}
