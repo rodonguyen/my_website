@@ -149,6 +149,7 @@ const DateMe = () => {
             <>
               <br></br>
               <br></br>
+              <p>[ The code will be destroyed in 70h:01m:33s ]</p>
               <form onSubmit={(event) => {sendHandler(event)}}>
                 <label for="name" required autofocus>Your name *</label><br></br>
                 <input type="text" id="coolerdate" name="name" ></input><br></br>

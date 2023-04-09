@@ -11,7 +11,8 @@ export default function CoolerDateEndPage() {
     clearInterval(interval);
   }
 
-  const interval = setTimeout(redirect, 5000);
+  const timeout = 10000; // ms
+  const interval = setTimeout(redirect, timeout);
   const [secondsLeft, setSecondsLeft] = useState(5);
 
   // Update and Re-render seconds left each second
@@ -22,7 +23,7 @@ export default function CoolerDateEndPage() {
       <div className="container dateme text-align-left">
         <h1>Thank you! You just make my day 💙</h1>
         <p>Hope to see you soon!</p>
-        <p>the code has been destroyed, direct to homepage in {secondsLeft} seconds.</p>
+        <p>-- the code has been destroyed, direct to homepage in {secondsLeft} seconds. --</p>
       </div>
     </>
   );
