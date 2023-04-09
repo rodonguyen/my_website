@@ -2,7 +2,7 @@ import { Input, Button, Form, Label } from "reactstrap";
 import { useState } from 'react';
 
 
-export default function CodeForm({ onSubmitFunction, setResultMessage }) {
+export default function CoolerDateForm({ onSendFunction, setResultMessage }) {
   const [inputValues, setInputValues] = useState([null, null, "rodonguyen", null]);
   const [previousValues, setPreviousValues] = useState(inputValues);
 
@@ -27,7 +27,7 @@ export default function CodeForm({ onSubmitFunction, setResultMessage }) {
         onSubmit={(e) => {
           e.preventDefault();
           if (isDuplicateInput()) return;
-          onSubmitFunction(inputValues[0], inputValues[1], inputValues[2], inputValues[3], setResultMessage);
+          onSendFunction(inputValues[0], inputValues[1], inputValues[2], inputValues[3], setResultMessage);
           setPreviousValues(inputValues)
         }}
       >

@@ -10,15 +10,14 @@ export const addRespondentFormToDatabase = async (
 ) => {
   event.preventDefault();
 
-  console.log("Clicked send");
-
   if (
     event.target.name.value === "" ||
     event.target.contact.value === "" ||
     event.target.bio.value === ""
   ) {
     setFirst3SectionsFilled(false);
-    return false;
+    console.log('first 3 not all filled.')
+    return {result: false};
   }
   // Use /add to add respondent data
   // Destroy page when received successful response
@@ -38,11 +37,11 @@ export const addRespondentFormToDatabase = async (
   await axios
     .post(fullUrl, data)
     .then(() => {
-      console.log("Add respondent successfully");
-      return true;
+      console.log("Add respondent successfully.");
+      return {result: true};
     })
     .catch((err) => {
       console.log("Error", err);
-      return false;
+      return {result: false};
     });
 };

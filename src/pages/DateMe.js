@@ -1,12 +1,14 @@
 // import { useParams } from 'react-router-dom';
 import { useSearchParams } from "react-router-dom";
-import NotFound from "./NotFound";
 import { checkCode } from "../api/coolerdate.code";
 import { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
 import { getProfile } from "../api/coolerdate.profile";
 import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
+import NotFound from "./NotFound";
+import CoolerDateEndPage from "../components/CoolerDate/CoolerDateEndPage";
+// import CoolerDateForm from "../components/CoolerDate/CoolerDateForm";
 // import { Input, Button, Form, Label } from "reactstrap";
 
 const DateMe = () => {
@@ -23,8 +25,22 @@ const DateMe = () => {
 
   let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
   const [CoolerDateProgress, setCoolerDateProgress] = useState(CDProgressFromLocalStorage || 0);
-  const threshold01 = 1,
-    threshold02 = 2;
+  const stage01 = 1, stage02 = 2, stage03 = 3;
+
+  // Handle sending new Respondent request and next actions with the page
+  async function sendHandler(event) {
+    const sendResponse = addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)
+    
+    // // Block the next step if sending the respondent form is unsuccessful
+    // if (!sendResponse.result) {
+    //   // TODO: Display prompt to send again
+    //   console.log('send unsuccessfully.')
+    //   return
+    // }
+
+    setCoolerDateProgress(stage03)
+  }
+
 
   // Check code's validity
   useEffect(
@@ -83,6 +99,7 @@ const DateMe = () => {
 
   if (isLoading) return <Spinner />;
   else if (!isValid) return <NotFound />;
+  else if (CoolerDateProgress === 3) return <CoolerDateEndPage />;
   else if (isValid) {
     return (
       <>
@@ -94,17 +111,17 @@ const DateMe = () => {
           {/* Section 1: Introduce myself */}
           <button
             onClick={function () {
-              setCoolerDateProgress(threshold01);
+              setCoolerDateProgress(stage01);
               localStorage.setItem("CoolerDateProgress", "1");
             }}
-            disabled={CoolerDateProgress >= threshold01}
+            disabled={CoolerDateProgress >= stage01}
           >
             May I introduce myself? &ensp; [ Yes ]
           </button>
 
           {/* <Button> May I introduce myself? [ Yes ]</Button> */}
 
-          {CoolerDateProgress >= threshold01 ? (
+          {CoolerDateProgress >= stage01 ? (
             <>
               {profileContent.map((element) => {
                 return <p>{element}</p>;
@@ -113,10 +130,10 @@ const DateMe = () => {
               {/* Next button for Section 2 */}
               <button
                 onClick={function () {
-                  setCoolerDateProgress(threshold02);
+                  setCoolerDateProgress(stage02);
                   localStorage.setItem("CoolerDateProgress", "2");
                 }}
-                disabled={CoolerDateProgress >= threshold02}
+                disabled={CoolerDateProgress >= stage02}
               >
                 Do you think we can have a date? &ensp; [ Yes ]
               </button>
@@ -125,11 +142,11 @@ const DateMe = () => {
 
           {/* Section 2: Asking for dating information */}
 
-          {CoolerDateProgress >= threshold02 ? (
+          {CoolerDateProgress >= stage02 ? (
             <>
               <br></br>
               <br></br>
-              <form onSubmit={(event) => {addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)}}>
+              <form onSubmit={(event) => {sendHandler(event)}}>
                 <label for="name" required autofocus>Your name *</label><br></br>
                 <input type="text" id="coolerdate" name="name" ></input><br></br>
 
@@ -142,7 +159,9 @@ const DateMe = () => {
                 <label for="ifact">Interesting facts not many people know about you</label><br></br>
                 <input type="text" id="coolerdate" name="ifact"></input><br></br>
 
-                <label for="place">An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?</label><br></br>
+                <label for="place">An ideal first-date place? It can be general 
+                  (e.g. cafe, dinner, river view, romantic atmosphere) or specific 
+                  (e.g. ABC Restaurant)?</label><br></br>
                 <input type="text" id="coolerdate" name="place"></input><br></br>
 
                 <label for="dressing" >How do you want me to dress in our first date</label><br></br>
@@ -160,18 +179,6 @@ const DateMe = () => {
               </form> 
             </>
           ) : null}
-
-          {/* 
-          Your name?
-          Your contact? I'm happy with personal work email :)
-          Something about you
-          Interesting fact about you that you don't usually tell people (optional)
-          An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?
-          How do you want me to dress in our first date? (optional) 
-
-          Button
-          */}
-
           <br></br>
 
           {/* <h5>Step 1: Get to know me</h5>
