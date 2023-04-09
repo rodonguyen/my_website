@@ -1,10 +1,8 @@
-// 
+//
 import rodoImage from "../media/Rodo.jpg";
 import Projects from "../components/Home/Projects";
 import History from "../components/Home/History";
 import createHyperlink from "../components/utils";
-
-
 
 const Home = () => {
   return (
@@ -41,8 +39,7 @@ const Home = () => {
             During my free time, I like to build pet projects where I put my
             skills or my recently acquired knowledge to practice. Don't forget
             to pay a visit to my{" "}
-            {createHyperlink("https://github.com/rodonguyen", "GitHub")}{' '}
-            :)
+            {createHyperlink("https://github.com/rodonguyen", "GitHub")} :)
           </p>
           <p>
             Besides doing hands-on work, I'm also a future-focus person who pays
@@ -66,7 +63,10 @@ const Home = () => {
         <ul>
           <li className="no-list-style">[ 2022 ]</li>
           <li>Graduated with the Bachelor of Information Technology!</li>
-          <li>Completed Ravi's Study Program: A 3-month Intensive Programming Bootcamp</li>
+          <li>
+            Completed Ravi's Study Program: A 3-month Intensive Programming
+            Bootcamp
+          </li>
           <li>
             Received the Dean's List of Students with Excellent Academic
             Performance Certificate{" "}
@@ -169,6 +169,17 @@ const Home = () => {
           </li>
         </ul>
       </div>
+
+
+      {/* content block: Postscript */}
+      <div className="background-color-2">
+        <div className="container">
+          <p>p.s. </p>
+          <p>This website is made with bare HTML/CSS, ReactJS and no special styling frameworks :) </p>
+          <p>Frameworks come and go. Only the code we write stays.</p>
+        </div>
+      </div>
+
 
       {/* Certificates section
       <div className="background-color-2">
