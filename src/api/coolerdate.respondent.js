@@ -10,15 +10,17 @@ export const addRespondentFormToDatabase = async (
 ) => {
   event.preventDefault();
 
+  // Block if required sections are not filled
   if (
     event.target.name.value === "" ||
     event.target.contact.value === "" ||
     event.target.bio.value === ""
   ) {
     setFirst3SectionsFilled(false);
-    console.log('first 3 not all filled.')
-    return {result: false};
+    console.log('First 3 are not all filled.')
+    return {successful: false};
   }
+
   // Use /add to add respondent data
   // Destroy page when received successful response
   const fullUrl = `${apiUrl}add`;
@@ -34,14 +36,15 @@ export const addRespondentFormToDatabase = async (
     boyfriend: event.target.boyfriend.value,
   };
 
-  await axios
-    .post(fullUrl, data)
-    .then(() => {
-      console.log("Add respondent successfully.");
-      return {result: true};
-    })
-    .catch((err) => {
-      console.log("Error", err);
-      return {result: false};
-    });
+  const response = await axios
+                  .post(fullUrl, data)
+                  .then(() => {
+                    console.log("Add respondent successfully.");
+                    return {successful: true};
+                  })
+                  .catch((err) => {
+                    console.log("Error", err);
+                    return {successful: false};
+                  });
+  return response;
 };

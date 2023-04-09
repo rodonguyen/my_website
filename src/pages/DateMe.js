@@ -29,15 +29,18 @@ const DateMe = () => {
 
   // Handle sending new Respondent request and next actions with the page
   async function sendHandler(event) {
-    const sendResponse = addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)
-    
-    // // Block the next step if sending the respondent form is unsuccessful
-    // if (!sendResponse.result) {
-    //   // TODO: Display prompt to send again
-    //   console.log('send unsuccessfully.')
-    //   return
-    // }
+    const sendResponse = await addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)
+    console.log(sendResponse)
 
+    // Block the next step if sending the respondent form is unsuccessful
+    if (!sendResponse.successful) {
+      // TODO: Display prompt to send again
+      console.log('Send unsuccessfully.')
+      return
+    }
+
+    // Update to stage 3: End Page
+    // console.log('update to 3')
     setCoolerDateProgress(stage03)
   }
 
@@ -46,7 +49,6 @@ const DateMe = () => {
   useEffect(
     function () {
       // Invalidate if code is empty string / null
-      // console.log(code);
       if (!code) {
         setIsLoading(false);
         return
@@ -60,20 +62,20 @@ const DateMe = () => {
   // Get profile content
   useEffect(
     function () {
-      // console.log(myResponse)
-      // console.log("myCheckResult", myCheckResult);
-      
-      // Blocking point if myCheckResult is not received
+      // console.log('myCheckResult:', myCheckResult.data)
+
+      // Stop if myCheckResult is not received
       if (!myCheckResult) {
         return;
       }
 
-      // Blocking point if code is invalid
+      // Stop if code is invalid
       if (myCheckResult.data.isValid === false) {
         setIsLoading(false);
         return;
       }
 
+      // Else, 
       // Unlock Dateme Page
       setIsValid(true);
       setIsLoading(false);
@@ -92,6 +94,7 @@ const DateMe = () => {
   useEffect(
     function () {
       if (!myProfile) return;
+      // console.log(myProfile.data)
       setProfileContent(myProfile.data.entry.content);
     },
     [myProfile]
@@ -99,7 +102,7 @@ const DateMe = () => {
 
   if (isLoading) return <Spinner />;
   else if (!isValid) return <NotFound />;
-  else if (CoolerDateProgress === 3) return <CoolerDateEndPage />;
+  else if (CoolerDateProgress === stage03) return <CoolerDateEndPage />;
   else if (isValid) {
     return (
       <>
@@ -142,7 +145,7 @@ const DateMe = () => {
 
           {/* Section 2: Asking for dating information */}
 
-          {CoolerDateProgress >= stage02 ? (
+          {CoolerDateProgress === stage02 ? (
             <>
               <br></br>
               <br></br>
