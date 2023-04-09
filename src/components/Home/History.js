@@ -10,7 +10,26 @@ export default function History() {
   return (
     <>
       <h1>Experience</h1>
-      {/* <h1 className="xlarge text-align-left">Experience</h1> */}
+      <div className="row entry history">
+        <div className="time">2023</div>
+        <div className="company-logo">
+          <div class="entry-dot"></div>
+          <img src={qutLogo} alt="qut logo" />
+        </div>
+        <div className="description">
+          <h5>Sessional Academic aka. Tutor at QUT</h5>
+          <p>
+            As a IFB102 Tutor, I managed 2 classes of 25 students each,
+            delivered the knowledge of IFB102, engaged with young & motivating
+            students and made the classes as not uninteresting as possible.
+          </p>
+          <p>
+            IFB102 - Introduction to Computer Systems - covers all the
+            fundamentals from Hardware, Operating Systems to Cloud, Security and
+            allows students to discover and build their own projects with Raspberry Pi at the end.{" "}
+          </p>
+        </div>
+      </div>
       <div className="row entry history">
         <div className="time">2022 - 2023</div>
         <div className="company-logo">
@@ -24,13 +43,14 @@ export default function History() {
             Training Neural Networks on Micro-controllers (MCUs) is a
             new-emerging area and proved to be cost-saving and beneficial in
             many aspects. However, there are challenges to be solved. In this
-            project, I identified a framework written in C++ "MLPack" which is
-            suitable for most MCUs, analysed its resource consumption behaviours
-            and proposes some future works to achieve the final goal.{" "}
+            project, I identified a framework written in C++ -- MLPack -- which
+            is suitable for most MCUs, analysed its resource consumption
+            behaviours and proposes some future works to achieve the final goal.{" "}
             {createHyperlink(
               "https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf",
               "View my Final Presentation here"
-            )}.
+            )}
+            .
           </p>
           <p>
             My advisors are{" "}
@@ -57,15 +77,15 @@ export default function History() {
           <h5>Software Engineer at S23M</h5>
           <p>
             I programmed a minimal and yet modern User Interface of an{" "}
-            {createHyperlink("https://github.com/s23m/roma", "App")}{" "}
-            used to interact with S23M's Health Data Server (CRUD operations).
-            It included features that allow querying and editing data through
+            {createHyperlink("https://github.com/rodonguyen/roma", "App")} used to
+            interact with S23M's Health Data Server (CRUD operations). It
+            included features that allow querying and editing data through
             RestAPI and presenting queried results intuitively on the app.
           </p>
           <p>
             The main tools used are React, NodeJS, and AgGrid, Bootstrap
             frameworks. I also constructed detailed documentation and tutorials
-            for users / future developers
+            for users / future developers.
           </p>
         </div>
       </div>
