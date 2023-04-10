@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /** Landing page after respondents send their answers
  *  Includes a thankyou note and a timer to redirect to homepage
@@ -16,9 +16,14 @@ export default function CoolerDateEndPage() {
   const [secondsLeft, setSecondsLeft] = useState(timeout/1000);
 
   // Update and Re-render seconds left each second
-  setInterval(() => {
-    setSecondsLeft(secondsLeft - 1)
-  }, 1000)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSecondsLeft(secondsLeft - 1)
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  })
 
   return (
     <>

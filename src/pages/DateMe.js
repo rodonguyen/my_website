@@ -20,6 +20,9 @@ const DateMe = () => {
   const [timeLeft, setTimeLeft] = useState("");
   const secondsLeftUntilCodeExpires = {value: 1}; // TODO: Timer does not work properly if I use an integer... Improve this later I guess
 
+  // localStorage.setItem("currentDateTime", new Date())
+  const currentDateTime = new Date();  // TODO: Need to store Date() somewhere useEffect cannot change it
+
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [profileContentArray, setProfileContent] = useState([]);
@@ -33,7 +36,7 @@ const DateMe = () => {
   const stage01 = 1,
     stage02 = 2,
     stage03 = 3;
-  const milisecondsGivenTillExpiration = 72 * 60 * 60 * 1000; // 72 hours
+  const milisecondsGivenTillExpiration = 72 * 3600000; // 72 hours
 
 
   /** Handle sending new Respondent request and next actions with the page */
@@ -141,8 +144,8 @@ const DateMe = () => {
 
     /** Calculate 'timeLeft' for the 'code' */ 
     function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration){
-      console.log(firstAccessTime)
       const startDatetime = new Date(firstAccessTime).getTime();
+      // console.log(startDatetime)
       const now = new Date().getTime();
       const difference = startDatetime + milisecondsGivenTillExpiration - now
 
@@ -160,11 +163,16 @@ const DateMe = () => {
     
     // Assign firstAccessTime a `Date` of 'now' if this is the first access time 
     // (i.e. myCheckResult.data.entry.firstAccessTime is `null`) 
-    // const firstAccessTime = new Date()
-    const firstAccessTime = myCheckResult.data.entry.firstAccessTime || new Date()
+    // const firstAccessTime = new Date('2023-04-10T12:49:23.771Z')
+    const firstAccessTime = myCheckResult.data.entry.firstAccessTime || currentDateTime;
+    console.log(currentDateTime)
+    console.log(firstAccessTime)
 
-    secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration)
-    const timeLeftInString = formatTimeLeft(secondsLeftUntilCodeExpires.value)
+    secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(
+      firstAccessTime,
+      milisecondsGivenTillExpiration
+    );
+    const timeLeftInString = formatTimeLeft(secondsLeftUntilCodeExpires.value);
     
     const timer = setTimeout(() => {
       setTimeLeft(timeLeftInString);
@@ -172,6 +180,16 @@ const DateMe = () => {
     
     return () => clearTimeout(timer);
   }, [secondsLeftUntilCodeExpires, myCheckResult]);
+
+
+
+
+
+  /** ####################################################
+   *  ####################################################
+   *  ##                     RETURN                     ##
+   *  ####################################################
+   *  #################################################### */
 
   if (isLoading) return <Spinner/>;
   else if (!isValid) return <NotFound/>;
@@ -189,9 +207,7 @@ const DateMe = () => {
             onClick={function () {
               setCoolerDateProgress(stage01);
               // localStorage.setItem("CoolerDateProgress", "1");
-            }}
-            disabled={CoolerDateProgress >= stage01}
-          >
+            }} disabled={CoolerDateProgress >= stage01}>
             May I introduce myself? &ensp; [ Yes ]
           </button>
 
