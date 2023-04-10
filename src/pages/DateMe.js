@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { checkCode } from "../api/coolerdate.code";
 import { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
-import { getProfile } from "../api/coolerdate.profile";
+import { getAndSetProfile } from "../api/coolerdate.profile";
 import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
 import NotFound from "./NotFound";
@@ -17,33 +17,58 @@ const DateMe = () => {
 
   const [myCheckResult, setMyCheckResult] = useState(null);
   const [myProfile, setMyProfile] = useState(null);
+  const [timeLeft, setTimeLeft] = useState("");
+  const timeLeftArray = {secondsLeft: 0, hours: 0, minutes: 0, seconds:0};
 
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [profileContent, setProfileContent] = useState([]);
-  const [first3SectionsFilled, setFirst3SectionsFilled] = useState(true)
+  const [first3SectionsFilled, setFirst3SectionsFilled] = useState(true);
 
-  let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
-  const [CoolerDateProgress, setCoolerDateProgress] = useState(CDProgressFromLocalStorage || 0);
-  const stage01 = 1, stage02 = 2, stage03 = 3;
+  // let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
+  const CDProgressFromLocalStorage = 0;
+  const [CoolerDateProgress, setCoolerDateProgress] = useState(
+    CDProgressFromLocalStorage || 0
+  );
+  const stage01 = 1,
+    stage02 = 2,
+    stage03 = 3;
+  const milisecondsGivenTillExpiration = 72 * 60 * 60 * 1000; // 72 hours
 
-  // Handle sending new Respondent request and next actions with the page
+  // Update and Re-render timeLeft each second
+  // TODO: Block this from running if code is invalid
+  // setInterval(() => {
+  //   timeLeftArray[0] = timeLeftArray[0] - 1;
+  //   timeLeftArray[1] = Math.floor(timeLeftArray[0] / (60 * 60));
+  //   timeLeftArray[2] = Math.floor(timeLeftArray[0] / 60) % 60;
+  //   timeLeftArray[3] = timeLeftArray[0] % 60;
+
+  //   console.log(timeLeftArray);
+
+  //   calculateAndFormatTimeLeft(setTimeLeft, timeLeftArray);
+  // }, 1000);
+
+  /** Handle sending new Respondent request and next actions with the page */
   async function sendHandler(event) {
-    const sendResponse = await addRespondentFormToDatabase('rodonguyen', code, event, setFirst3SectionsFilled)
-    console.log(sendResponse)
+    const sendResponse = await addRespondentFormToDatabase(
+      "rodonguyen",
+      code,
+      event,
+      setFirst3SectionsFilled
+    );
+    console.log(sendResponse);
 
     // Block the next step if sending the respondent form is unsuccessful
     if (!sendResponse.successful) {
       // TODO: Display prompt to send again
-      console.log('Send unsuccessfully.')
-      return
+      console.log("Send unsuccessfully.");
+      return;
     }
 
     // Update to stage 3: End Page
     // console.log('update to 3')
-    setCoolerDateProgress(stage03)
+    setCoolerDateProgress(stage03);
   }
-
 
   // Check code's validity
   useEffect(
@@ -51,7 +76,7 @@ const DateMe = () => {
       // Invalidate if code is empty string / null
       if (!code) {
         setIsLoading(false);
-        return
+        return;
       }
       // Check the code from url
       checkCode(code, "rodonguyen", setMyCheckResult);
@@ -75,13 +100,13 @@ const DateMe = () => {
         return;
       }
 
-      // Else, 
+      // Else,
       // Unlock Dateme Page
       setIsValid(true);
       setIsLoading(false);
 
       // Get profile information
-      getProfile(
+      getAndSetProfile(
         myCheckResult.data.entry.username,
         myCheckResult.data.entry.profile,
         setMyProfile
@@ -100,6 +125,57 @@ const DateMe = () => {
     [myProfile]
   );
 
+  
+  // Update timeLeft
+  useEffect(function () {
+      /** Format and Update timeLeft */
+      function calculateAndFormatTimeLeft(timeLeftArray) {
+        console.log(timeLeftArray)
+        timeLeftArray.secondsLeft = timeLeftArray.secondsLeft - 1;
+        timeLeftArray.hours = Math.floor(timeLeftArray.secondsLeft / (60 * 60));
+        timeLeftArray.minutes = Math.floor(timeLeftArray.secondsLeft / 60) % 60;
+        timeLeftArray.seconds = timeLeftArray.secondsLeft % 60;
+        const timeLeftInString = `${timeLeftArray.hours}h:${timeLeftArray.minutes}m:${timeLeftArray.seconds}s`;
+        return timeLeftInString;
+      }
+
+      // // Calculate and update 'timeLeft' for the 'code'
+      // function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration){
+      //   const now = new Date().getTime();
+      //   // TODO: add if time diff is > 0
+      //   const timeLeftInSeconds = Math.floor(new Date().setTime(
+      //     firstAccessTime + milisecondsGivenTillExpiration - now
+      //     ) / 1000);
+      //   console.log('Just calculateTimeLeftInSeconds:', timeLeftInSeconds)
+      //   return timeLeftInSeconds;
+      // }
+      // if (myCheckResult) 
+      //   timeLeftArray.secondsLeft = calculateTimeLeftInSeconds(myCheckResult.data.entry.firstAccessTime, milisecondsGivenTillExpiration)
+        
+      // console.log('check if [0] is updated:', timeLeftArray.secondsLeft)
+
+
+      if (!myCheckResult) return
+
+      console.log('myCheckResult =>', myCheckResult)
+      const firstAccessTime = new Date(
+        myCheckResult.data.entry.firstAccessTime
+      ).getTime();
+      const now = new Date().getTime();
+
+      timeLeftArray.secondsLeft = Math.floor(new Date().setTime(
+          firstAccessTime + milisecondsGivenTillExpiration - now
+        ) / 1000);
+      
+
+      const timer = setTimeout(() => {
+        setTimeLeft(calculateAndFormatTimeLeft(timeLeftArray));
+      }, 1000);
+      return () => clearTimeout(timer);
+    },
+    [timeLeftArray, myCheckResult]
+  );
+
   if (isLoading) return <Spinner />;
   else if (!isValid) return <NotFound />;
   else if (CoolerDateProgress === stage03) return <CoolerDateEndPage />;
@@ -115,7 +191,7 @@ const DateMe = () => {
           <button
             onClick={function () {
               setCoolerDateProgress(stage01);
-              localStorage.setItem("CoolerDateProgress", "1");
+              // localStorage.setItem("CoolerDateProgress", "1");
             }}
             disabled={CoolerDateProgress >= stage01}
           >
@@ -134,7 +210,7 @@ const DateMe = () => {
               <button
                 onClick={function () {
                   setCoolerDateProgress(stage02);
-                  localStorage.setItem("CoolerDateProgress", "2");
+                  // localStorage.setItem("CoolerDateProgress", "2");
                 }}
                 disabled={CoolerDateProgress >= stage02}
               >
@@ -149,7 +225,7 @@ const DateMe = () => {
             <>
               <br></br>
               <br></br>
-              <p>[ The code will be destroyed in 70h:01m:33s ]</p>
+              <p>[ The code will be destroyed in {timeLeft} ]</p>
               <form onSubmit={(event) => {sendHandler(event)}}>
                 <label for="name" required autofocus>Your name *</label><br></br>
                 <input type="text" id="coolerdate" name="name" ></input><br></br>
@@ -176,11 +252,12 @@ const DateMe = () => {
 
                 <input type="submit" value="Send" ></input><br></br>
 
-                {!first3SectionsFilled && 
+                {!first3SectionsFilled && (
                   <label className="fade">
                     Please fill the required sections (*) before sending
-                  </label>}
-              </form> 
+                  </label>
+                )}
+              </form>
             </>
           ) : null}
           <br></br>

@@ -19,14 +19,14 @@ export default function History() {
         <div className="description">
           <h5>Sessional Academic aka. Tutor at QUT</h5>
           <p>
-            As a IFB102 Tutor, I managed 2 classes of 25 students each,
+            As an IFB102 Tutor, I managed 2 classes of 25 students each,
             delivered the knowledge of IFB102, engaged with young & motivating
             students and made the classes as not uninteresting as possible.
           </p>
           <p>
             IFB102 - Introduction to Computer Systems - covers all the
             fundamentals from Hardware, Operating Systems to Cloud, Security and
-            allows students to discover and build their own projects with Raspberry Pi at the end.{" "}
+            allows students to discover and build their own projects with Raspberry Pi at the end.
           </p>
         </div>
       </div>
