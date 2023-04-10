@@ -13,10 +13,12 @@ export default function CoolerDateEndPage() {
 
   const timeout = 10000; // ms
   const interval = setTimeout(redirect, timeout);
-  const [secondsLeft, setSecondsLeft] = useState(5);
+  const [secondsLeft, setSecondsLeft] = useState(timeout/1000);
 
   // Update and Re-render seconds left each second
-  setInterval(() => {setSecondsLeft(secondsLeft - 1)}, 1000)
+  setInterval(() => {
+    setSecondsLeft(secondsLeft - 1)
+  }, 1000)
 
   return (
     <>

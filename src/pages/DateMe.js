@@ -18,11 +18,11 @@ const DateMe = () => {
   const [myCheckResult, setMyCheckResult] = useState(null);
   const [myProfile, setMyProfile] = useState(null);
   const [timeLeft, setTimeLeft] = useState("");
-  const timeLeftArray = {secondsLeft: 0, hours: 0, minutes: 0, seconds:0};
+  const secondsLeftUntilCodeExpires = {value: 1}; // TODO: Timer does not work properly if I use an integer... Improve this later I guess
 
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [profileContent, setProfileContent] = useState([]);
+  const [profileContentArray, setProfileContent] = useState([]);
   const [first3SectionsFilled, setFirst3SectionsFilled] = useState(true);
 
   // let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
@@ -35,18 +35,6 @@ const DateMe = () => {
     stage03 = 3;
   const milisecondsGivenTillExpiration = 72 * 60 * 60 * 1000; // 72 hours
 
-  // Update and Re-render timeLeft each second
-  // TODO: Block this from running if code is invalid
-  // setInterval(() => {
-  //   timeLeftArray[0] = timeLeftArray[0] - 1;
-  //   timeLeftArray[1] = Math.floor(timeLeftArray[0] / (60 * 60));
-  //   timeLeftArray[2] = Math.floor(timeLeftArray[0] / 60) % 60;
-  //   timeLeftArray[3] = timeLeftArray[0] % 60;
-
-  //   console.log(timeLeftArray);
-
-  //   calculateAndFormatTimeLeft(setTimeLeft, timeLeftArray);
-  // }, 1000);
 
   /** Handle sending new Respondent request and next actions with the page */
   async function sendHandler(event) {
@@ -116,8 +104,7 @@ const DateMe = () => {
   );
 
   // Update profile content
-  useEffect(
-    function () {
+  useEffect(function () {
       if (!myProfile) return;
       // console.log(myProfile.data)
       setProfileContent(myProfile.data.entry.content);
@@ -126,54 +113,69 @@ const DateMe = () => {
   );
 
 
-
   // Update timeLeft
   useEffect(function () {
     // Block if myCheckResult has not been received and updated
-    if (!myCheckResult) return
+    if (!myCheckResult || myCheckResult.data.isValid === false) {
+      console.log('Block update timeLeft.')
+      return
+    }
 
-    /** Format and Update timeLeft */
-    function calculateAndFormatTimeLeft(timeLeftArray) {
-      console.log(timeLeftArray)
-      timeLeftArray.secondsLeft = timeLeftArray.secondsLeft - 1;
-      const hours = Math.floor(timeLeftArray.secondsLeft / (60 * 60));
-      const minutes = Math.floor(timeLeftArray.secondsLeft / 60) % 60;
-      const seconds = timeLeftArray.secondsLeft % 60;
+    /** Add leading zeros to a number*/
+    function addLeadingZeros(number, size = 2) {
+      number = number.toString();
+      while (number.length < size) number = "0" + number;
+      return number;
+    }
+
+    /** Format timeLeft */
+    function formatTimeLeft(timeLeftInSeconds) {
+      timeLeftInSeconds = timeLeftInSeconds - 1;
+      const hours = addLeadingZeros(Math.floor(timeLeftInSeconds / (60 * 60)));
+      const minutes = addLeadingZeros(Math.floor(timeLeftInSeconds / 60) % 60);
+      const seconds = addLeadingZeros(timeLeftInSeconds % 60);
+
       const timeLeftInString = `${hours}h:${minutes}m:${seconds}s`;
       return timeLeftInString;
     }
 
     /** Calculate 'timeLeft' for the 'code' */ 
     function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration){
+      console.log(firstAccessTime)
       const startDatetime = new Date(firstAccessTime).getTime();
       const now = new Date().getTime();
-      // TODO: add if time diff is > 0
       const difference = startDatetime + milisecondsGivenTillExpiration - now
+
+      // Stop calculating if time out
       if (difference <= 0) {
         // Could add code to direct to homepage immediately after code is expired but  
         // user are allowed send their response if they keep staying in the webpage.
         // The server does not have the logic to block expired code from sending response anyway.
+        console.log('difference <= 0')
         return 0
       }
-      const timeLeftInSeconds = Math.floor(new Date().setTime(difference) / 1000);
+      const timeLeftInSeconds = Math.floor(new Date().setTime(difference) / 1000);     
       return timeLeftInSeconds;
     }
-
-    timeLeftArray.secondsLeft = calculateTimeLeftInSeconds(myCheckResult.data.entry.firstAccessTime, milisecondsGivenTillExpiration)
     
+    // Assign firstAccessTime a `Date` of 'now' if this is the first access time 
+    // (i.e. myCheckResult.data.entry.firstAccessTime is `null`) 
+    // const firstAccessTime = new Date()
+    const firstAccessTime = myCheckResult.data.entry.firstAccessTime || new Date()
+
+    secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration)
+    const timeLeftInString = formatTimeLeft(secondsLeftUntilCodeExpires.value)
     
     const timer = setTimeout(() => {
-      setTimeLeft(calculateAndFormatTimeLeft(timeLeftArray));
+      setTimeLeft(timeLeftInString);
     }, 1000);
     
-    
-    console.log('repeat a useEffect')
     return () => clearTimeout(timer);
-  }, [timeLeftArray,myCheckResult]);
+  }, [secondsLeftUntilCodeExpires, myCheckResult]);
 
-  if (isLoading) return <Spinner />;
-  else if (!isValid) return <NotFound />;
-  else if (CoolerDateProgress === stage03) return <CoolerDateEndPage />;
+  if (isLoading) return <Spinner/>;
+  else if (!isValid) return <NotFound/>;
+  else if (CoolerDateProgress === stage03) return <CoolerDateEndPage/>;
   else if (isValid) {
     return (
       <>
@@ -195,28 +197,24 @@ const DateMe = () => {
 
           {/* <Button> May I introduce myself? [ Yes ]</Button> */}
 
-          {CoolerDateProgress >= stage01 ? (
+          {CoolerDateProgress >= stage01 &&
             <>
-              {profileContent.map((element) => {
+              {profileContentArray.map((element) => {
                 return <p>{element}</p>;
               })}
 
               {/* Next button for Section 2 */}
-              <button
-                onClick={function () {
+              <button onClick={function () {
                   setCoolerDateProgress(stage02);
                   // localStorage.setItem("CoolerDateProgress", "2");
-                }}
-                disabled={CoolerDateProgress >= stage02}
-              >
+                }} disabled={CoolerDateProgress >= stage02}>
                 Do you think we can have a date? &ensp; [ Yes ]
               </button>
-            </>
-          ) : null}
+            </>}
 
           {/* Section 2: Asking for dating information */}
 
-          {CoolerDateProgress === stage02 ? (
+          {CoolerDateProgress === stage02 &&
             <>
               <br></br>
               <br></br>
@@ -253,31 +251,8 @@ const DateMe = () => {
                   </label>
                 )}
               </form>
-            </>
-          ) : null}
+            </>}
           <br></br>
-
-          {/* <h5>Step 1: Get to know me</h5>
-
-      <p>Who am I? I'm Rodo, a software engineer, QUT graduate.</p>
-      <p>
-        What do I like? I like coding & technology, travelling, outdoor
-        activities: running, hiking, Vietnamese street coffee-ing, Asian food,
-        working-out, deep conversation, animals and plants, reading books.
-      </p>
-      <p>
-        How am I like? I'm 1.7m, 60kg, Asian born and raised, 5.5+in,
-        introvert.
-      </p>
-      <p>
-        Feel free to view my website's homepage / LinkedIn
-        and you can alway comeback here later with the exact link.
-      </p>
-      <br></br>
-
-      <h5>Step 2: So... Date or no date, Now or never.</h5>
-      <h5>Be careful, the button can only be clicked once!</h5>
-      <p></p> */}
         </div>
       </>
     );
