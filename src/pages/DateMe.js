@@ -125,56 +125,51 @@ const DateMe = () => {
     [myProfile]
   );
 
-  
+
+
   // Update timeLeft
   useEffect(function () {
-      /** Format and Update timeLeft */
-      function calculateAndFormatTimeLeft(timeLeftArray) {
-        console.log(timeLeftArray)
-        timeLeftArray.secondsLeft = timeLeftArray.secondsLeft - 1;
-        timeLeftArray.hours = Math.floor(timeLeftArray.secondsLeft / (60 * 60));
-        timeLeftArray.minutes = Math.floor(timeLeftArray.secondsLeft / 60) % 60;
-        timeLeftArray.seconds = timeLeftArray.secondsLeft % 60;
-        const timeLeftInString = `${timeLeftArray.hours}h:${timeLeftArray.minutes}m:${timeLeftArray.seconds}s`;
-        return timeLeftInString;
-      }
+    // Block if myCheckResult has not been received and updated
+    if (!myCheckResult) return
 
-      // // Calculate and update 'timeLeft' for the 'code'
-      // function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration){
-      //   const now = new Date().getTime();
-      //   // TODO: add if time diff is > 0
-      //   const timeLeftInSeconds = Math.floor(new Date().setTime(
-      //     firstAccessTime + milisecondsGivenTillExpiration - now
-      //     ) / 1000);
-      //   console.log('Just calculateTimeLeftInSeconds:', timeLeftInSeconds)
-      //   return timeLeftInSeconds;
-      // }
-      // if (myCheckResult) 
-      //   timeLeftArray.secondsLeft = calculateTimeLeftInSeconds(myCheckResult.data.entry.firstAccessTime, milisecondsGivenTillExpiration)
-        
-      // console.log('check if [0] is updated:', timeLeftArray.secondsLeft)
+    /** Format and Update timeLeft */
+    function calculateAndFormatTimeLeft(timeLeftArray) {
+      console.log(timeLeftArray)
+      timeLeftArray.secondsLeft = timeLeftArray.secondsLeft - 1;
+      const hours = Math.floor(timeLeftArray.secondsLeft / (60 * 60));
+      const minutes = Math.floor(timeLeftArray.secondsLeft / 60) % 60;
+      const seconds = timeLeftArray.secondsLeft % 60;
+      const timeLeftInString = `${hours}h:${minutes}m:${seconds}s`;
+      return timeLeftInString;
+    }
 
-
-      if (!myCheckResult) return
-
-      console.log('myCheckResult =>', myCheckResult)
-      const firstAccessTime = new Date(
-        myCheckResult.data.entry.firstAccessTime
-      ).getTime();
+    /** Calculate 'timeLeft' for the 'code' */ 
+    function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration){
+      const startDatetime = new Date(firstAccessTime).getTime();
       const now = new Date().getTime();
+      // TODO: add if time diff is > 0
+      const difference = startDatetime + milisecondsGivenTillExpiration - now
+      if (difference <= 0) {
+        // Could add code to direct to homepage immediately after code is expired but  
+        // user are allowed send their response if they keep staying in the webpage.
+        // The server does not have the logic to block expired code from sending response anyway.
+        return 0
+      }
+      const timeLeftInSeconds = Math.floor(new Date().setTime(difference) / 1000);
+      return timeLeftInSeconds;
+    }
 
-      timeLeftArray.secondsLeft = Math.floor(new Date().setTime(
-          firstAccessTime + milisecondsGivenTillExpiration - now
-        ) / 1000);
-      
-
-      const timer = setTimeout(() => {
-        setTimeLeft(calculateAndFormatTimeLeft(timeLeftArray));
-      }, 1000);
-      return () => clearTimeout(timer);
-    },
-    [timeLeftArray, myCheckResult]
-  );
+    timeLeftArray.secondsLeft = calculateTimeLeftInSeconds(myCheckResult.data.entry.firstAccessTime, milisecondsGivenTillExpiration)
+    
+    
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateAndFormatTimeLeft(timeLeftArray));
+    }, 1000);
+    
+    
+    console.log('repeat a useEffect')
+    return () => clearTimeout(timer);
+  }, [timeLeftArray,myCheckResult]);
 
   if (isLoading) return <Spinner />;
   else if (!isValid) return <NotFound />;
