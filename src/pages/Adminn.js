@@ -1,4 +1,4 @@
-import CoolerDateForm from "../components/CoolerDate/CoolerDateForm";
+import CoolerDateForm from "../components/DateMe/CoolerDateForm";
 import * as AWS from "aws-sdk";
 import { useState } from "react";
 

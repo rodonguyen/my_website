@@ -7,8 +7,8 @@ import { getAndSetProfile } from "../api/coolerdate.profile";
 import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
 import NotFound from "./NotFound";
-import CoolerDateEndPage from "../components/CoolerDate/CoolerDateEndPage";
-import { calculateTimeLeftInSeconds, formatTimeLeft } from "../components/DateMe.utils";
+import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage";
+import { calculateTimeLeftInSeconds, formatTimeLeft } from "../components/DateMe/DateMe.utils";
 // import CoolerDateForm from "../components/CoolerDate/CoolerDateForm";
 // import { Input, Button, Form, Label } from "reactstrap";
 
@@ -80,8 +80,8 @@ const DateMe = () => {
     function () {
       // console.log('myCheckResult:', myCheckResult.data)
 
-      // Stop if myCheckResult is not received
-      if (!myCheckResult) {
+      // Stop if myCheckResult is null
+      if (myCheckResult === null) {
         return;
       }
 
