@@ -1,7 +1,7 @@
 // import { useParams } from 'react-router-dom';
 import { useSearchParams } from "react-router-dom";
 import { checkCode } from "../api/coolerdate.code";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Spinner } from "reactstrap";
 import { getAndSetProfile } from "../api/coolerdate.profile";
 import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
@@ -20,9 +20,8 @@ const DateMe = () => {
   const [timeLeft, setTimeLeft] = useState("");
   const secondsLeftUntilCodeExpires = {value: 1}; // TODO: Timer does not work properly if I use an integer... Improve this later I guess
 
-  // localStorage.setItem("currentDateTime", new Date())
-  const currentDateTime = new Date();  // TODO: Need to store Date() somewhere useEffect cannot change it
-
+  const currentDateTime = useMemo(() => new Date(), []);
+  
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [profileContentArray, setProfileContent] = useState([]);
@@ -179,7 +178,8 @@ const DateMe = () => {
     }, 1000);
     
     return () => clearTimeout(timer);
-  }, [secondsLeftUntilCodeExpires, myCheckResult]);
+  // eslint-disable-next-line
+  }, [secondsLeftUntilCodeExpires, myCheckResult, currentDateTime]);
 
 
 
@@ -218,6 +218,7 @@ const DateMe = () => {
               {profileContentArray.map((element) => {
                 return <p>{element}</p>;
               })}
+              <br></br>
 
               {/* Next button for Section 2 */}
               <button onClick={function () {
@@ -232,7 +233,6 @@ const DateMe = () => {
 
           {CoolerDateProgress === stage02 &&
             <>
-              <br></br>
               <br></br>
               <p>[ The code will be destroyed in {timeLeft} ]</p>
               <form onSubmit={(event) => {sendHandler(event)}}>

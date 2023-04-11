@@ -28,8 +28,8 @@ export default function CoolerDateEndPage() {
   return (
     <>
       <div className="container dateme text-align-left">
-        <h1>Thank you! You just make my day 💙</h1>
-        <p>Hope to see you soon!</p>
+        <h1>Thanks! You just make my day 💙</h1>
+        <p>I'll contact you soon!</p>
         <p>-- the code has been destroyed, direct to homepage in {secondsLeft} seconds. --</p>
       </div>
     </>
