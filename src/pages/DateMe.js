@@ -160,13 +160,9 @@ const DateMe = () => {
       return timeLeftInSeconds;
     }
     
-    // Assign firstAccessTime a `Date` of 'now' if this is the first access time 
+    // Assign firstAccessTime a `Date` of 'currentDateTime' if this is the first time accessing 
     // (i.e. myCheckResult.data.entry.firstAccessTime is `null`) 
-    // const firstAccessTime = new Date('2023-04-10T12:49:23.771Z')
     const firstAccessTime = myCheckResult.data.entry.firstAccessTime || currentDateTime;
-    console.log(currentDateTime)
-    console.log(firstAccessTime)
-
     secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(
       firstAccessTime,
       milisecondsGivenTillExpiration
