@@ -9,12 +9,36 @@ import createHyperlink from "../utils";
 export default function History() {
   return (
     <>
+      <h1>Career Summary</h1>
+      <p>
+        <ul>
+          <li>
+            A Computer Science Graduate with extensive experience in Software
+            Engineering and aspiration for Machine Learning.
+          </li>
+          <li>
+            Worked in top research organisations in Australia, a software
+            consulting company and customer-facing roles.
+          </li>
+          <li>
+            Problem-solver and Fast learner with project management skills and
+            the ability to excel under pressure.
+          </li>
+          <li>
+            Champion of writing clean and maintainable code. Security at heart.
+          </li>
+        </ul>
+      </p>
+
       <h1>Experience</h1>
       <div className="row entry history">
         <div className="time">2023</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={qutLogo} alt="qut logo" />
+          {createHyperlink(
+            "https://www.qut.edu.au/",
+            <img src={qutLogo} alt="qut logo" />
+          )}
         </div>
         <div className="description">
           <h5>Sessional Academic aka. Tutor at QUT</h5>
@@ -26,26 +50,43 @@ export default function History() {
           <p>
             IFB102 - Introduction to Computer Systems - covers all the
             fundamentals from Hardware, Operating Systems to Cloud, Security and
-            allows students to discover and build their own projects with Raspberry Pi at the end.
+            allows students to discover and build their own projects with
+            Raspberry Pi at the end.
           </p>
         </div>
       </div>
+
       <div className="row entry history">
         <div className="time">2022 - 2023</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={csirodata61Logo} alt="qutguild logo" />
+          {createHyperlink(
+            "https://www.csiro.au/",
+            <img src={csirodata61Logo} alt="csiro-data61 logo" />
+          )}
         </div>
+
         <div className="description">
           <h5>Vacation Researcher at CSIRO's Data61</h5>
           <p>[ Towards Training Neural Networks on Micro-controllers ]</p>
           <p>
             Training Neural Networks on Micro-controllers (MCUs) is a
             new-emerging area and proved to be cost-saving and beneficial in
-            many aspects. However, there are challenges to be solved. In this
-            project, I identified a framework written in C++ -- MLPack -- which
-            is suitable for most MCUs, analysed its resource consumption
-            behaviours and proposes some future works to achieve the final goal.{" "}
+            many aspects. However, there are challenges to be solved.
+          </p>
+          <p>
+            In this project, I single-handedly explored and evaluated suitable
+            C++ machine learning libraries for a new EdgeAI & Computer Vision
+            project, found an open-source one - MLPack - and implemented some
+            prototypes to demonstrate to supervisors.
+          </p>
+          <p>
+            I conducted multiple experiments on multiple devices which provide
+            insights into the library’s resource consumption (memory, runtime),
+            ensuring the stability of the library. In the end, revised the
+            outcome and drew a viable “Deployment Phase” plan for the future
+            team which is to utilise this library to run on-device ML training
+            on Raspberry Pi Zero W.{" "}
             {createHyperlink(
               "https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf",
               "View my Final Presentation here"
@@ -67,60 +108,77 @@ export default function History() {
           </p>
         </div>
       </div>
+
       <div className="row entry history">
         <div className="time">2022</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={s23mLogo} alt="S23M logo" />
+          {createHyperlink(
+            "http://www.s23m.com/about/index.html",
+            <img src={s23mLogo} alt="S23M logo" />
+          )}
         </div>
         <div className="description">
           <h5>Software Engineer at S23M</h5>
           <p>
-            I programmed a minimal and yet modern User Interface of an{" "}
-            {createHyperlink("https://github.com/rodonguyen/roma", "App")} used to
-            interact with S23M's Health Data Server (CRUD operations). It
-            included features that allow querying and editing data through
-            RestAPI and presenting queried results intuitively on the app.
+            I built an{" "}
+            {createHyperlink("https://github.com/rodonguyen/roma", "App")} with
+            a minimal yet, modern User Interface to interact with a Health Data
+            Server (CRUD) as a trial model for an international health
+            organisation. Specifically, I implemented core features of the app,
+            allowing querying and editing data through RestAPI and presenting
+            queried results intuitively on the Client-side, using React, NodeJS,
+            AgGrid, Bootstrap.
           </p>
           <p>
-            The main tools used are React, NodeJS, and AgGrid, Bootstrap
-            frameworks. I also constructed detailed documentation and tutorials
-            for users / future developers.
+            During this time, I led the team for a period, ensured progress is
+            on-track with the sprint plan, and communicated clearly with the
+            product owner to meet their expectation. Finally, I constructed
+            detailed onboarding documentation and tutorials for users / future
+            developers.
           </p>
         </div>
       </div>
+
       <div className="row entry history">
         <div className="time">2021 - 2022</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={qutLogo} alt="qutguild logo" />
+          {createHyperlink(
+            "https://www.qut.edu.au/",
+            <img src={qutLogo} alt="qut logo" />
+          )}
         </div>
         <div className="description">
-          <h5>Research Intern at QUT</h5>
+          <h5>Software Engineer Intern at QUT</h5>
           <p>
             [ Analysing the Effectiveness of Verifiable Python (a Python
             variant) for Software Cybersecurity ]
           </p>
           <p>
-            Also another Vacation Research Project, led by{" "}
+            I evaluated the effectiveness of Verifiable Python (vPython) for
+            software cybersecurity by testing, improving it in the development
+            environment and ensuring output consistency. I developed a
+            completely new automated analysis pipeline (Bash Script and Python)
+            that eliminated ~95% of manual work: executing the programs,
+            analysing output, and recording results.
+          </p>
+          <p>
+            And at the end, I won the{" "}
+            {createHyperlink(
+              "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
+              "Outstanding Achievement Award"
+            )}{" "}
+            at the end of the program.
+          </p>
+
+          <p>
+            Project supervised by{" "}
             {createHyperlink(
               "https://www.qut.edu.au/about/our-people/academic-profiles/g.ramachandran",
               "Dr Gowri Ramachandran"
             )}
             .
-          </p>
-          <p>
-            For the final result, I managed to identify a 90% Confidence
-            Interval that covers 75% of the spotted memory trace variations,
-            which was important finding of vPython's characteristics. I
-            eliminated ~95% of manual work by developing an automated analysis
-            pipeline that executes the programs, analyses and records results
-            with Bash Script and Python. I won the{" "}
-            {createHyperlink(
-              "https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
-              "best research poster award"
-            )}{" "}
-            in the end!
           </p>
         </div>
       </div>
@@ -128,31 +186,36 @@ export default function History() {
         <div className="time">2021</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={qutLogo} alt="qutguild logo" />
+          {createHyperlink(
+            "https://www.qut.edu.au/",
+            <img src={qutLogo} alt="qut logo" />
+          )}
         </div>
         <div className="description">
           <h5>HiQ Concierge at QUT</h5>
           <p>
-            I worked collaboratively to service our students and the public for
-            all of their university-related queries, and communicated
-            effectively with clients and guided them through the resources.
+            I advocated for international students on a university-wide scale:
+            Provided them with additional assistance and services to thrive:
+            foodbank, social activities, counseling, etc.; Liaised with a wide
+            range of external stakeholders: university admins, not-for-profit
+            organisation, and businesses to utilise resources more efficiently.
           </p>
         </div>
       </div>
+
       <div className="row entry history">
-        <div className="time">2020 - 2021</div>
+        <div className="time">2021</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={vietqLogo} alt="qutguild logo" />
+          {createHyperlink(
+            "https://www.facebook.com/vietqbrisbane/",
+            <img src={vietqLogo} alt="VietQ logo" />
+          )}
         </div>
         <div className="description">
           <h5>
-            Secretary at{" "}
-            {createHyperlink(
-              "https://www.facebook.com/vietqbrisbane/",
-              "VietQ"
-            )}{" "}
-            - Vietnamese Students Association (QUT)
+            Secretary at VietQ
+            - QUT Vietnamese Students Association 
           </h5>
           <p>
             I was super proud to be elected for this position. This was an
@@ -168,11 +231,15 @@ export default function History() {
           </p>
         </div>
       </div>
+
       <div className="row entry history">
-        <div className="time">2020 - 2021</div>
+        <div className="time">2021</div>
         <div className="company-logo">
           <div class="entry-dot"></div>
-          <img src={qutguildLogo} alt="qutguild logo" />
+          {createHyperlink(
+            "https://qutguild.com/about/qut-guild/",
+            <img src={qutguildLogo} alt="qutguild logo" />
+          )}
         </div>
         <div className="description">
           <h5>International Students Officer at QUT Guild</h5>

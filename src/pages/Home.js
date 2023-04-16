@@ -21,32 +21,32 @@ const Home = () => {
         <div className="bio">
           <h1 className="xlarge text-align-left">Hello World!</h1>
           <p>
-            I’m a motivated machine learning engineer who loves to create
-            data-driven, AI-integrated products that bring value to users at
-            scale. Equipped with a diverse skill set, from software development,
-            data analysis to deep learning model design, I’m excited to take on
-            new challenges.
+            I’m a motivated Sofware / Machine Learning Engineer who loves to
+            work on impactful, interesting, data-driven, AI-integrated products
+            that bring value to users at scale. Equipped with a diverse skill
+            set, from software development, data analysis to deep learning model
+            design, I’m excited to take on new challenges.
           </p>
           <p>
             Around age 8, I had the chance to play around with computer (which
-            is very lucky of me) and never stopped since. I loved the Iron Man
-            movies so much that I decided to pursue Artificial Inteligence to
-            make a J.A.R.V.I.S for my own. And yes, to this date I'm still
-            working on things closely relating to Artificial Intelligence and
-            Machine Learning.
+            is very lucky of me) and never stopped since. I first coded "Hello
+            world" in grade 10 and have never stopped tinkering with what I can
+            do with programming.
+          </p>
+          <p>
+            My favorite movie of all time is Iron Man. And yes, to this date I'm
+            still working on things closely relating to Artificial Intelligence
+            / Machine Learning with the goal of creating a J.A.R.V.I.S for me
+            one day.
           </p>
           <p>
             During my free time, I like to build pet projects where I put my
-            skills or my recently acquired knowledge to practice. Don't forget
-            to pay a visit to my{" "}
-            {createHyperlink("https://github.com/rodonguyen", "GitHub")} :)
+            skills or my recently acquired knowledge to practice. On this note,
+            don't forget to pay a visit to my{" "}
+            {createHyperlink("https://github.com/rodonguyen", "GitHub")}, read
+            about my projects below or in Resume tab :)
           </p>
-          <p>
-            Besides doing hands-on work, I'm also a future-focus person who pays
-            attention to the long-term plan. I have a strong analytical thinking
-            mentality from working in research environments (QUT and CSIRO).
-          </p>
-          <p>#data #artificial_intelligence #software #blockchain</p>
+          <p>#software #data #machinelearning #blockchain</p>
         </div>
       </div>
 
@@ -170,16 +170,17 @@ const Home = () => {
         </ul>
       </div>
 
-
       {/* content block: Postscript */}
       <div className="background-color-2">
         <div className="container">
           <p>p.s. </p>
-          <p>This website is made with bare HTML/CSS, ReactJS and no special styling frameworks :) </p>
+          <p>
+            This website is made with bare HTML/CSS, ReactJS and no special
+            styling frameworks :){" "}
+          </p>
           <p>Frameworks come and go. Only the code we write stays.</p>
         </div>
       </div>
-
 
       {/* Certificates section
       <div className="background-color-2">
