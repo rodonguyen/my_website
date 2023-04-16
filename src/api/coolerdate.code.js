@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_CODE_URL;
+const apiUrl = process.env.REACT_APP_SERVER_CODE_ENDPOINT;
 
 export const checkCode = async (code, username = "rodonguyen", setResponse) => {
   if (code === null || code === "") return false;
