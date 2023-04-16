@@ -1,11 +1,15 @@
 // import { useParams } from 'react-router-dom';
 import { useSearchParams } from "react-router-dom";
-import NotFound from "./NotFound";
 import { checkCode } from "../api/coolerdate.code";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Spinner } from "reactstrap";
-import { getProfile } from "../api/coolerdate.profile";
+import { getAndSetProfile } from "../api/coolerdate.profile";
+import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
+import NotFound from "./NotFound";
+import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage";
+import { calculateTimeLeftInSeconds, formatTimeLeft } from "../components/DateMe/DateMe.utils";
+// import CoolerDateForm from "../components/CoolerDate/CoolerDateForm";
 // import { Input, Button, Form, Label } from "reactstrap";
 
 const DateMe = () => {
@@ -14,25 +18,56 @@ const DateMe = () => {
 
   const [myCheckResult, setMyCheckResult] = useState(null);
   const [myProfile, setMyProfile] = useState(null);
+  const [timeLeft, setTimeLeft] = useState("");
+  const secondsLeftUntilCodeExpires = {value: 1}; // TODO: Timer does not work properly if I use an integer... Improve this later I guess
 
+  const currentDateTime = useMemo(() => new Date(), []);
+  
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [profileContent, setProfileContent] = useState([]);
+  const [profileContentArray, setProfileContent] = useState([]);
+  const [first3SectionsFilled, setFirst3SectionsFilled] = useState(true);
 
-  let CDProgressFromLS = localStorage.getItem("CoolerDateProgress");
-  const [CDProgress, setCDProgress] = useState(CDProgressFromLS || 0);
-  const threshold01 = 1,
-    threshold02 = 2;
+  // let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
+  const CDProgressFromLocalStorage = 0;
+  const [CoolerDateProgress, setCoolerDateProgress] = useState(
+    CDProgressFromLocalStorage || 0
+  );
+  const stage01 = 1,
+    stage02 = 2,
+    stage03 = 3;
+  const milisecondsGivenTillExpiration = 72 * 3600000; // 72 hours
+
+
+  /** Handle sending new Respondent request and next actions with the page */
+  async function sendHandler(event) {
+    const sendResponse = await addRespondentFormToDatabase(
+      "rodonguyen",
+      code,
+      event,
+      setFirst3SectionsFilled
+    );
+    console.log(sendResponse);
+
+    // Block the next step if sending the respondent form is unsuccessful
+    if (!sendResponse.successful) {
+      // TODO: Display prompt to send again
+      console.log("Send unsuccessfully.");
+      return;
+    }
+
+    // Update to stage 3: End Page
+    // console.log('update to 3')
+    setCoolerDateProgress(stage03);
+  }
 
   // Check code's validity
   useEffect(
     function () {
       // Invalidate if code is empty string / null
-      // console.log(code);
       if (!code) {
-        setIsValid(false);
         setIsLoading(false);
-        return
+        return;
       }
       // Check the code from url
       checkCode(code, "rodonguyen", setMyCheckResult);
@@ -43,26 +78,26 @@ const DateMe = () => {
   // Get profile content
   useEffect(
     function () {
-      // console.log(myResponse)
-      // console.log("myCheckResult", myCheckResult);
-      
-      if (!myCheckResult) {
-        setIsValid(false);
-        setIsLoading(false);
+      // console.log('myCheckResult:', myCheckResult.data)
+
+      // Stop if myCheckResult is null
+      if (myCheckResult === null) {
         return;
       }
-      // Blocking point if code is invalid
+
+      // Stop if code is invalid
       if (myCheckResult.data.isValid === false) {
         setIsLoading(false);
         return;
       }
 
+      // Else,
       // Unlock Dateme Page
       setIsValid(true);
       setIsLoading(false);
 
       // Get profile information
-      getProfile(
+      getAndSetProfile(
         myCheckResult.data.entry.username,
         myCheckResult.data.entry.profile,
         setMyProfile
@@ -72,16 +107,48 @@ const DateMe = () => {
   );
 
   // Update profile content
-  useEffect(
-    function () {
+  useEffect(function () {
       if (!myProfile) return;
+      // console.log(myProfile.data)
       setProfileContent(myProfile.data.entry.content);
     },
     [myProfile]
   );
 
-  if (isLoading) return <Spinner />;
-  else if (!isValid) return <NotFound />;
+
+  // Update timeLeft
+  useEffect(function () {
+    // Block if myCheckResult has not been received and updated
+    if (!myCheckResult || myCheckResult.data.isValid === false) return
+    
+    // Assign firstAccessTime a `Date` of 'currentDateTime' if this is the first time accessing 
+    // (i.e. myCheckResult.data.entry.firstAccessTime is `null`) 
+    const firstAccessTime = myCheckResult.data.entry.firstAccessTime || currentDateTime;
+    secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(
+      firstAccessTime,
+      milisecondsGivenTillExpiration
+    );
+    const timeLeftInString = formatTimeLeft(secondsLeftUntilCodeExpires.value);
+    
+    const timer = setTimeout(() => {
+      setTimeLeft(timeLeftInString);
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  // eslint-disable-next-line
+  }, [secondsLeftUntilCodeExpires, myCheckResult, currentDateTime]);
+
+
+
+  /** ####################################################
+   *  ####################################################
+   *  ##                     RETURN                     ##
+   *  ####################################################
+   *  #################################################### */
+
+  if (isLoading) return <Spinner/>;
+  else if (!isValid) return <NotFound/>;
+  else if (CoolerDateProgress === stage03) return <CoolerDateEndPage/>;
   else if (isValid) {
     return (
       <>
@@ -93,102 +160,70 @@ const DateMe = () => {
           {/* Section 1: Introduce myself */}
           <button
             onClick={function () {
-              setCDProgress(threshold01);
-              localStorage.setItem("CoolerDateProgress", "1");
-            }}
-            disabled={CDProgress >= threshold01}
-          >
+              setCoolerDateProgress(stage01);
+              // localStorage.setItem("CoolerDateProgress", "1");
+            }} disabled={CoolerDateProgress >= stage01}>
             May I introduce myself? &ensp; [ Yes ]
           </button>
 
           {/* <Button> May I introduce myself? [ Yes ]</Button> */}
 
-          {CDProgress >= threshold01 ? (
+          {CoolerDateProgress >= stage01 &&
             <>
-              {profileContent.map((element) => {
+              {profileContentArray.map((element) => {
                 return <p>{element}</p>;
               })}
+              <br></br>
 
               {/* Next button for Section 2 */}
-              <button
-                onClick={function () {
-                  setCDProgress(threshold02);
-                  localStorage.setItem("CoolerDateProgress", "2");
-                }}
-                disabled={CDProgress >= threshold02}
-              >
+              <button onClick={function () {
+                  setCoolerDateProgress(stage02);
+                  // localStorage.setItem("CoolerDateProgress", "2");
+                }} disabled={CoolerDateProgress >= stage02}>
                 Do you think we can have a date? &ensp; [ Yes ]
               </button>
-            </>
-          ) : null}
+            </>}
 
           {/* Section 2: Asking for dating information */}
 
-          {CDProgress >= threshold02 ? (
+          {CoolerDateProgress === stage02 &&
             <>
               <br></br>
-              <br></br>
-              <form action={null}>
-                <label for="name" required autofocus>Your name</label><br></br>
-                <input type="text" id="coolerdate" name="name"></input><br></br>
+              <p>[ The code will be destroyed in {timeLeft} ]</p>
+              <form onSubmit={(event) => {sendHandler(event)}}>
+                <label for="name" required autofocus>Your name *</label><br></br>
+                <input type="text" id="coolerdate" name="name" ></input><br></br>
 
-                <label for="contact" required>Your contact </label><br></br>
-                <input type="text" id="coolerdate" name="contact" placeholder="I'm happy with personal work email :)"></input><br></br>
+                <label for="contact" required>Your contact *</label><br></br>
+                <input type="text" id="coolerdate" name="contact" placeholder="Email is fine :)" ></input><br></br>
 
-                <label for="bio" required>Something about you</label><br></br>
-                <input type="text" id="coolerdate" name="bio"></input><br></br>
+                <label for="bio" required>Something about you *</label><br></br>
+                <input type="text" id="coolerdate" name="bio" ></input><br></br>
 
-                <label for="ifact" >Interesting fact about you that you don't usually tell people</label><br></br>
-                <input type="text" id="coolerdate" name="ifact" placeholder="optional"></input><br></br>
+                <label for="ifact">Interesting facts not many people know about you</label><br></br>
+                <input type="text" id="coolerdate" name="ifact"></input><br></br>
 
-                <label for="place" required>An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?</label><br></br>
+                <label for="place">An ideal first-date place? It can be general 
+                  (e.g. cafe, dinner, river view, romantic atmosphere) or specific 
+                  (e.g. ABC Restaurant)?</label><br></br>
                 <input type="text" id="coolerdate" name="place"></input><br></br>
 
                 <label for="dressing" >How do you want me to dress in our first date</label><br></br>
-                <input type="text" id="coolerdate" name="dressing" placeholder="optional"></input><br></br>
+                <input type="text" id="coolerdate" name="dressing"></input><br></br>
 
-                <label for="boyfriend" required>3 words to describe your desired boyfriend?</label><br></br>
+                <label for="boyfriend">3 words to describe your desired boyfriend?</label><br></br>
                 <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
 
-                <input type="submit" value="Wow, thanksss... You make my day!"></input>
-              </form> 
-            </>
-          ) : null}
+                <input type="submit" value="Send" ></input><br></br>
 
-          {/* 
-          Your name?
-          Your contact? I'm happy with personal work email :)
-          Something about you
-          Interesting fact about you that you don't usually tell people (optional)
-          An ideal first-date place? It can be general (e.g. cafe, dinner, river view, romantic atmosphere) or specific (e.g. ABC Restaurant)?
-          How do you want me to dress in our first date? (optional) 
-
-          Button
-          */}
-
+                {!first3SectionsFilled && (
+                  <label className="fade">
+                    Please fill the required sections (*) before sending
+                  </label>
+                )}
+              </form>
+            </>}
           <br></br>
-
-          {/* <h5>Step 1: Get to know me</h5>
-
-      <p>Who am I? I'm Rodo, a software engineer, QUT graduate.</p>
-      <p>
-        What do I like? I like coding & technology, travelling, outdoor
-        activities: running, hiking, Vietnamese street coffee-ing, Asian food,
-        working-out, deep conversation, animals and plants, reading books.
-      </p>
-      <p>
-        How am I like? I'm 1.7m, 60kg, Asian born and raised, 5.5+in,
-        introvert.
-      </p>
-      <p>
-        Feel free to view my website's homepage / LinkedIn
-        and you can alway comeback here later with the exact link.
-      </p>
-      <br></br>
-
-      <h5>Step 2: So... Date or no date, Now or never.</h5>
-      <h5>Be careful, the button can only be clicked once!</h5>
-      <p></p> */}
         </div>
       </>
     );

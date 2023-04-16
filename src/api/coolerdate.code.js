@@ -1,26 +1,31 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_CODE_URL;
+const apiUrl = process.env.REACT_APP_SERVER_CODE_ENDPOINT;
 
-
-export const checkCode = async (code, username = 'rodonguyen', setResponse) => {
-
-  if (code === null || code === "") return false
+export const checkCode = async (code, username = "rodonguyen", setResponse) => {
+  if (code === null || code === "") return false;
 
   const fullUrl = `${apiUrl}check`;
   const data = {
     username: username,
-    code: code
+    code: code,
   };
 
-  await axios
-    .post(fullUrl, data)
+  await 
+    axios({
+      method: "post",
+      url: fullUrl,
+      data: data,
+      timeout: 6000,
+    })
     .then((res) => {
       setResponse(res);
     })
-    .catch((err) => {
-      setResponse(false);
-      // console.log(err);
+    .catch((error) => {
+      if (error.code === 'ECONNABORTED') {
+        console.error('Request timed out');
+      } 
+      setResponse({data: {isValid: false}});
+      // console.log(error);
     });
-
 };
