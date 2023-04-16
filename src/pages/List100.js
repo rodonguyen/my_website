@@ -57,7 +57,7 @@ const List100 = () => {
       <h1 className="text-align-left xlarge">My Wish List</h1>
       <p> This helps mitigate the headache of my close friends as my birthday comes. Love, Rodo{' <3'}</p>
       <ul className="text-align-left">
-        <li>UNIQLO or other brand's giftcard</li>
+        <li>UNIQLO or any giftcard</li>
         <li>UltraBoost shoes (in a color that's suitable for both casual and formal, size 10.5)</li>
         <li>Clothes: {createHyperlink('https://au.shop.gymshark.com/collections/tanks/mens', 'tank top for gym')}, etc. </li>
         <li>Nothing else for now, I'm quite a minimalist :)</li>
