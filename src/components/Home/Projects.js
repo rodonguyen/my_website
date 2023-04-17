@@ -187,11 +187,11 @@ const projectContents = {
             date” simpler and even more special.
           </li>
           <li>
-            Applied MERN architecture (MongoDB, ExpressJS, React, NodeJS),
-            implemented multi-step forms and a multitude of API endpoints, and
-            utilised React Hooks (e.g., useMemo), all of which broaden my
-            experience in Full-stack development, System Design, and Database
-            Modeling.
+            Applied MERN architecture (MongoDB, ExpressJS, React,
+            NodeJS),designed suitable database schemas, implemented multi-step
+            forms and a multitude of API endpoints, and utilised React Hooks
+            (e.g., useMemo), all of which broaden my experience in Full-stack
+            development, System Design, and Database Modeling.
           </li>
           <li>
             Fully automated server testing process by using Chai framework due
@@ -204,19 +204,21 @@ const projectContents = {
 };
 
 const projectContentHandler = (projects, setProjects, target) => {
+  // If no section is being expanded
   if (projects.expandedTarget === "-1") {
-    // console.log("case 1");
     projects.expandedTarget = target;
     projects[target] = projectContents[target].long;
+
+  // If the section being expanded is clicked again
   } else if (projects.expandedTarget === target) {
-    // console.log("case 2");
     projects.expandedTarget = "-1";
     projects[target] = projectContents[target].short;
+    
+  // If the section being clicked is not the current expanded one
   } else if (
     projects.expandedTarget !== "-1" &&
     projects.expandedTarget !== target
-  ) {
-    // console.log("case 3");
+    ) {
     projects[projects.expandedTarget] =
       projectContents[projects.expandedTarget].short; // Shorten the previous project
     projects[target] = projectContents[target].long; // Lengthen the clicked project
@@ -324,7 +326,7 @@ export default function Projects() {
           <button>Read in Blog</button>
         )
       )}
-      
+
       {createProjectEntry(
         "DVD Management System",
         project04Index,
