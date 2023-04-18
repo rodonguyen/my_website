@@ -1,9 +1,5 @@
 # Rodo's Website
 
-
-<br>
-
-
 ### TODO:
 - [x] Deploy
 - [x] Check SSL
@@ -20,9 +16,6 @@
 - [x] Dark mode https://www.code-boost.com/dark-mode-in-react/ 
 - [x] Skills section (or a way to show this)
 - [x] Achievements section
-- [ ] Build secret dating page (30%)
-    - Adminn page to add new codes (to DynamoDB or any DB that we use), maybe implement a server repo to do this
-    - Dateme page, send request to 
 - [x] Add Leetcode section
 - Continue in Notion: https://www.notion.so/c98/Dating-website-a-new-level-of-asking-out-52797486e0d44e9ab1ef81d2b9fb3958
 

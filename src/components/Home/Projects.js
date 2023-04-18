@@ -1,10 +1,19 @@
-import twitterPic from "../../media/twitterPic.png";
-import bittrackerPic from "../../media/bittrackerPic.png";
-import sentimentPic from "../../media/sentimentPic.png";
-import dvdsystemPic from "../../media/dvd_management_system.png";
+import twitterImage from "../../media/project_twitterspam.png";
+import bittrackerImage from "../../media/project_bittracker.png";
+import sentimentImage from "../../media/project_sentiment.png";
+import dvdsystemImage from "../../media/project_dvd_management_system.png";
+import websiteImage from "../../media/project_website.png";
+import coolerdateImage from "../../media/project_coolerdate.jpeg";
 
 import { useState } from "react";
 import createHyperlink from "../utils";
+
+const project01Index = "1",
+  project02Index = "2",
+  project03Index = "3",
+  project04Index = "4",
+  project05Index = "5",
+  project06Index = "6";
 
 const projectContents = {
   1: {
@@ -27,14 +36,14 @@ const projectContents = {
               model’s strengths and shortcomings.
             </li>
             <li>
-              Evaluated the suitability for real world application and Naive
-              Bayes was the winner due to its low training & inference time and
-              high weighted-F1 score.
+              Analysed each model’s strengths and shortcomings and evaluated the
+              suitability for real-world application: Naive Bayes won due to its
+              low training, inference time, and high weighted-F1.
             </li>
             <li>
-              Further reduced the computation consumption by deeply analysing
-              the dataset and removing uninformative features without impacting
-              the accuracy.
+              Further minimised the computation consumption and sped up training
+              time by removing uninformative features while keeping the accuracy
+              unaffected.
             </li>
           </ul>
         </p>
@@ -44,9 +53,9 @@ const projectContents = {
   2: {
     short: (
       <p>
-        A cryptocurrency <b>trading bot</b> programmed in Python that
-        theoretically brings +110% profit annually on average in a market cycle
-        by utilising SuperTrend indicator.{" "}
+        A cryptocurrency <b>trading bot</b> that can auto-trade efficiently
+        while guaranteeing minimal risk. Backtest results showed +110% profit
+        annually on average utilising SuperTrend indicator.{" "}
         {createHyperlink(
           "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
           "Read more in this blog"
@@ -59,15 +68,17 @@ const projectContents = {
           <ul>
             <li>
               Programmed a <b>cryptocurrency trading bot</b> in Python that can
-              guide retail investors to trade efficiently.
+              auto-trade efficiently while guaranteeing minimal risk.
             </li>
             <li>
-              BitTracker can theoretically bring +110% profit annually on
-              average by utilising SuperTrend indicator.
+              Backtest results showed +110% profit annually on average by
+              utilising SuperTrend algorithm. This is made possible by
+              programmatically and analytically assessing each configuration’s
+              risk-adjusted return and profit/loss distribution.
             </li>
             <li>
-              Intensively tested BitTracker to select the best configuration and
-              maximise potential risk-adjusted return.
+              Applied OOP to facilitate maintainability and extensibility as a
+              large number of features were integrated into the bot.
             </li>
             <li>
               Planning to incorporate Deep Learning for smarter trading strategy
@@ -92,11 +103,12 @@ const projectContents = {
           <ul>
             <li>
               Built a React web application with a modern user interface that
-              analyses per-keyword sentiment on Twitter using Twitter REST API.
+              generates keyword sentiment analysis on Twitter.
             </li>
             <li>
-              Implemented <b>auto-scaling server</b> using AWS EC2, Elastic Load
-              Balancing and Auto Scaling stack to handle inconsistent usage.
+              Implemented scalable server using AWS EC2, Elastic Load Balancing
+              and Auto Scaling stack to handle inconsistent usage, data were
+              queried via Twitter API.
             </li>
             <li>
               Reduced latency <b>by 10 times</b> by integrating{" "}
@@ -134,22 +146,79 @@ const projectContents = {
       </>
     ),
   },
+  5: {
+    short: (
+      <p>
+        Programmed from scratch with React. Cutomised CSS to obtain
+        responsiveness on any device (no Bootstrap). Of course, integrated Dark
+        Mode to accommodate users with photophobia or simply prefer dark theme.
+      </p>
+    ),
+    long: (
+      <p>
+        <ul>
+          <li>
+            Programmed and deployed my personal website from scratch with React.
+          </li>
+          <li>
+            Cutomised CSS to obtain responsiveness on any device (no Bootstrap).
+            Of course, integrated Dark Mode to accommodate users with
+            photophobia or simply prefer dark theme.
+          </li>
+          <li>This project has broadened my knowledge of UI Design a lot.</li>
+        </ul>
+      </p>
+    ),
+  },
+  6: {
+    short: (
+      <p>
+        A full-stack application built to make “Asking someone out for a date”
+        simpler and even more special. I applied MERN architecture, designed
+        suitable database schemas, implemented a multitude of API endpoints and
+        written fully automated unit tests.
+      </p>
+    ),
+    long: (
+      <p>
+        <ul>
+          <li>
+            A unique full-stack app built to make “Asking someone out for a
+            date” simpler and even more special.
+          </li>
+          <li>
+            Applied MERN architecture (MongoDB, ExpressJS, React,
+            NodeJS),designed suitable database schemas, implemented multi-step
+            forms and a multitude of API endpoints, and utilised React Hooks
+            (e.g., useMemo), all of which broaden my experience in Full-stack
+            development, System Design, and Database Modeling.
+          </li>
+          <li>
+            Fully automated server testing process by using Chai framework due
+            to high level of complexity.
+          </li>
+        </ul>
+      </p>
+    ),
+  },
 };
 
 const projectContentHandler = (projects, setProjects, target) => {
+  // If no section is being expanded
   if (projects.expandedTarget === "-1") {
-    // console.log("case 1");
     projects.expandedTarget = target;
     projects[target] = projectContents[target].long;
+
+  // If the section being expanded is clicked again
   } else if (projects.expandedTarget === target) {
-    // console.log("case 2");
     projects.expandedTarget = "-1";
     projects[target] = projectContents[target].short;
+    
+  // If the section being clicked is not the current expanded one
   } else if (
     projects.expandedTarget !== "-1" &&
     projects.expandedTarget !== target
-  ) {
-    // console.log("case 3");
+    ) {
     projects[projects.expandedTarget] =
       projectContents[projects.expandedTarget].short; // Shorten the previous project
     projects[target] = projectContents[target].long; // Lengthen the clicked project
@@ -172,132 +241,98 @@ export default function Projects() {
     2: projectContents["2"].short,
     3: projectContents["3"].short,
     4: projectContents["4"].short,
+    5: projectContents["5"].short,
+    6: projectContents["6"].short,
   });
+
+  function createProjectEntry(
+    name,
+    projectIndex,
+    githubURL,
+    projectImage,
+    extraButton = null
+  ) {
+    return (
+      <div className="project">
+        {createHyperlink(
+          githubURL,
+          <div className="ppicture">
+            <img src={projectImage} loading="lazy" alt="sentiment" />
+          </div>
+        )}
+        <div className="description text-align-left">
+          <h5>
+            {name} &ensp; {createHyperlink(githubURL, githubIconSvg)} &ensp;
+            <button
+              value={projectIndex}
+              onClick={(e) => {
+                projectContentHandler(projects, setProjects, e.target.value);
+              }}
+            >
+              Expand
+            </button>
+            &ensp;
+            {extraButton}
+          </h5>
+          {projects[projectIndex]}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
       <h1>Pet Projects</h1>
-      <div className="project">
-        {createHyperlink(
+
+      {createProjectEntry(
+        "Twitter E-nalyst",
+        project03Index,
+        "https://github.com/rodonguyen/Twitter-E-nalyst",
+        sentimentImage
+      )}
+
+      {createProjectEntry(
+        "CoolerDate",
+        project06Index,
+        "https://github.com/rodonguyen/CoolerDate",
+        coolerdateImage
+      )}
+
+      {createProjectEntry(
+        "Personal Website",
+        project05Index,
+        "https://github.com/rodonguyen/my_website",
+        websiteImage
+      )}
+
+      {createProjectEntry(
+        "Spam Tweet Detector",
+        project01Index,
+        "https://github.com/rodonguyen/showcase_AI_ML",
+        twitterImage,
+        createHyperlink(
           "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
-          <div className="ppicture">
-            <img src={twitterPic} loading="lazy" alt="twitterPic" />
-          </div>
-        )}
-        <div className="description text-align-left">
-          <h5>
-            Spam Tweet Detector &ensp;{" "}
-            {createHyperlink(
-              "https://github.com/rodonguyen/showcase_AI_ML",
-              githubIconSvg
-            )}{" "}
-            &ensp;
-            <button
-              value="1"
-              onClick={(e) =>
-                projectContentHandler(projects, setProjects, e.target.value)
-              }
-            >
-              Expand
-            </button>
-            &ensp;
-            {createHyperlink(
-              "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
-              <button>Demo App</button>
-            )}
-          </h5>
-          {projects["1"]}
-        </div>
-      </div>
+          <button>Demo App</button>
+        )
+      )}
 
-      <div className="project">
-        {createHyperlink(
+      {createProjectEntry(
+        "BitTracker",
+        project02Index,
+        "https://github.com/rodonguyen/BitTracker",
+        bittrackerImage,
+        createHyperlink(
           "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
-          <div className="ppicture">
-            <img src={bittrackerPic} loading="lazy" alt="twitterPic" />
-          </div>
-        )}
-        <div className="description text-align-left">
-          <h5>
-            BitTracker &ensp;{" "}
-            {createHyperlink(
-              "https://github.com/rodonguyen/BitTracker",
-              githubIconSvg
-            )}{" "}
-            &ensp;
-            <button
-              value="2"
-              onClick={(e) =>
-                projectContentHandler(projects, setProjects, e.target.value)
-              }
-            >
-              Expand
-            </button>
-            &ensp;
-            {createHyperlink(
-              "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
-              <button>Read in Blog</button>
-            )}
-          </h5>
-          {projects["2"]}
-        </div>
-      </div>
+          <button>Read in Blog</button>
+        )
+      )}
 
-      <div className="project">
-        {createHyperlink(
-          "https://github.com/rodonguyen/Twitter-E-nalyst",
-          <div className="ppicture">
-            <img src={sentimentPic} loading="lazy" alt="twitterPic" />
-          </div>
-        )}
-        <div className="description text-align-left">
-          <h5>
-            Twitter E-nalyst &ensp;{" "}
-            {createHyperlink(
-              "https://github.com/rodonguyen/Twitter-E-nalyst",
-              githubIconSvg
-            )}{" "}
-            &ensp;
-            <button
-              value="3"
-              onClick={(e) => {
-                projectContentHandler(projects, setProjects, e.target.value);
-              }}
-            >
-              Expand
-            </button>
-          </h5>
-          {projects["3"]}
-        </div>
-      </div>
-
-      <div className="project">
-        {createHyperlink(
-          "https://github.com/rodonguyen/DVD_management_system",
-          <div className="ppicture">
-            <img src={dvdsystemPic} loading="lazy" alt="twitterPic" />
-          </div>
-        )}
-        <div className="description text-align-left">
-          <h5>
-            DVD Management System &ensp;{" "}
-            {createHyperlink(
-              "https://github.com/rodonguyen/DVD_management_system",
-              githubIconSvg
-            )}{" "}
-            &ensp;
-            <button
-              value="4"
-              onClick={(e) => {
-                projectContentHandler(projects, setProjects, e.target.value);
-              }}
-            >
-              Expand
-            </button>
-          </h5>
-          {projects["4"]}
-        </div>
-      </div>
+      {createProjectEntry(
+        "DVD Management System",
+        project04Index,
+        "https://github.com/rodonguyen/DVD_management_system",
+        dvdsystemImage
+      )}
     </>
   );
 }

@@ -1,6 +1,5 @@
 import NavBar from "../components/NavBar";
 import ContactMe from "./ContactMe";
-import Project from "./Project";
 import List100 from "./List100";
 import Resume from "./Resume";
 import Home from "./Home";
@@ -40,7 +39,6 @@ function App() {
         <Routes>
           <Route path="/" element={AppConstantElements}>
             <Route path="contactme" element={<ContactMe />} />
-            <Route path="projects" element={<Project />} />
             <Route path="resume" element={<Resume />} />
             <Route path="list-100" element={<List100 />} />
             <Route path="dateme" element={<DateMe />} />
