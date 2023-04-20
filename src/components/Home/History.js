@@ -131,11 +131,11 @@ export default function History() {
             AgGrid, Bootstrap.
           </p>
           <p>
-            During this time, I led the team for a period, ensured progress is
-            on-track with the sprint plan, and communicated clearly with the
-            product owner to meet their expectation. Finally, I constructed
-            detailed onboarding documentation and tutorials for users / future
-            developers.
+            During this time, I led a team of 4 for a period, ensured progress
+            is on-track with the sprint plan, and communicated clearly with the
+            product owner to build a product that meets their expectation.
+            Finally, I constructed detailed onboarding documentation and
+            tutorials for users / future developers.
           </p>
         </div>
       </div>
@@ -213,10 +213,7 @@ export default function History() {
           )}
         </div>
         <div className="description">
-          <h5>
-            Secretary at VietQ
-            - QUT Vietnamese Students Association 
-          </h5>
+          <h5>Secretary at VietQ - QUT Vietnamese Students Association</h5>
           <p>
             I was super proud to be elected for this position. This was an
             amazing experience as I had the opportunity to work with a energetic
