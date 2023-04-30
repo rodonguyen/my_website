@@ -1,7 +1,7 @@
 import twitterImage from "../../media/project_twitterspam.png";
 import bittrackerImage from "../../media/project_bittracker.png";
 import sentimentImage from "../../media/project_sentiment.png";
-import dvdsystemImage from "../../media/project_dvd_management_system.png";
+// import dvdsystemImage from "../../media/project_dvd_management_system.png";
 import websiteImage from "../../media/project_website.png";
 import coolerdateImage from "../../media/project_coolerdate.jpeg";
 
@@ -11,7 +11,7 @@ import createHyperlink from "../utils";
 const project01Index = "1",
   project02Index = "2",
   project03Index = "3",
-  project04Index = "4",
+  // project04Index = "4",
   project05Index = "5",
   project06Index = "6";
 
@@ -119,33 +119,6 @@ const projectContents = {
       </>
     ),
   },
-  4: {
-    short: (
-      <p>
-        A console application used to manage DVDs. It applies Object-Oriented
-        Programming and various Search Algorithms, Data Structures to interact
-        with the database.
-      </p>
-    ),
-    long: (
-      <>
-        <p>
-          <ul>
-            <li>A console application used to manage DVDs built with C#.</li>
-            <li>
-              It applies Object-Oriented Programming and various Search
-              Algorithms (binary search), Data Structures (binary tree, array)
-              to interact with the database.
-            </li>
-            <li>
-              Followed common coding conventions (var names, space, indentation)
-              and implemented maintainable, scalable code.
-            </li>
-          </ul>
-        </p>
-      </>
-    ),
-  },
   5: {
     short: (
       <p>
@@ -240,7 +213,6 @@ export default function Projects() {
     1: projectContents["1"].short,
     2: projectContents["2"].short,
     3: projectContents["3"].short,
-    4: projectContents["4"].short,
     5: projectContents["5"].short,
     6: projectContents["6"].short,
   });
@@ -325,13 +297,6 @@ export default function Projects() {
           "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
           <button>Read in Blog</button>
         )
-      )}
-
-      {createProjectEntry(
-        "DVD Management System",
-        project04Index,
-        "https://github.com/rodonguyen/DVD_management_system",
-        dvdsystemImage
       )}
     </>
   );
