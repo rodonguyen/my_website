@@ -161,7 +161,7 @@ const projectContents = {
           </li>
           <li>
             Applied MERN architecture (MongoDB, ExpressJS, React,
-            NodeJS),designed suitable database schemas, implemented multi-step
+            NodeJS), designed suitable database schemas, implemented multi-step
             forms and a multitude of API endpoints, and utilised React Hooks
             (e.g., useMemo), all of which broaden my experience in Full-stack
             development, System Design, and Database Modeling.
@@ -217,6 +217,7 @@ export default function Projects() {
     6: projectContents["6"].short,
   });
 
+  /** Create a row of project including its thumbnail image, urls, description and buttons */
   function createProjectEntry(
     name,
     projectIndex,
