@@ -7,7 +7,7 @@ export const getAndSetProfile = async (username, profile, setResponse) => {
 
   if (profile === null || username === null) return false
 
-  const fullUrl = `${apiUrl}find`;
+  const fullUrl = `${apiUrl}findOne`;
   const data = {
     username: username,
     profile: profile
