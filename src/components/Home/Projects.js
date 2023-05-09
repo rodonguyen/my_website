@@ -160,10 +160,10 @@ const projectContents = {
             date” simpler and even more special.
           </li>
           <li>
-            Applied MERN architecture (MongoDB, ExpressJS, React,
-            NodeJS), designed suitable database schemas, implemented multi-step
-            forms and a multitude of API endpoints, and utilised React Hooks
-            (e.g., useMemo), all of which broaden my experience in Full-stack
+            Applied MERN architecture (MongoDB, ExpressJS, React, NodeJS),
+            designed suitable database schemas, implemented multi-step forms and
+            a multitude of API endpoints, and utilised React Hooks (e.g.,
+            useMemo), all of which broaden my experience in Full-stack
             development, System Design, and Database Modeling.
           </li>
           <li>
@@ -182,16 +182,16 @@ const projectContentHandler = (projects, setProjects, target) => {
     projects.expandedTarget = target;
     projects[target] = projectContents[target].long;
 
-  // If the section being expanded is clicked again
+    // If the section being expanded is clicked again
   } else if (projects.expandedTarget === target) {
     projects.expandedTarget = "-1";
     projects[target] = projectContents[target].short;
-    
-  // If the section being clicked is not the current expanded one
+
+    // If the section being clicked is not the current expanded one
   } else if (
     projects.expandedTarget !== "-1" &&
     projects.expandedTarget !== target
-    ) {
+  ) {
     projects[projects.expandedTarget] =
       projectContents[projects.expandedTarget].short; // Shorten the previous project
     projects[target] = projectContents[target].long; // Lengthen the clicked project
@@ -258,35 +258,10 @@ export default function Projects() {
       <h1>Pet Projects</h1>
 
       {createProjectEntry(
-        "Twitter E-nalyst",
-        project03Index,
-        "https://github.com/rodonguyen/Twitter-E-nalyst",
-        sentimentImage
-      )}
-
-      {createProjectEntry(
         "CoolerDate",
         project06Index,
         "https://github.com/rodonguyen/CoolerDate",
         coolerdateImage
-      )}
-
-      {createProjectEntry(
-        "Personal Website",
-        project05Index,
-        "https://github.com/rodonguyen/my_website",
-        websiteImage
-      )}
-
-      {createProjectEntry(
-        "Spam Tweet Detector",
-        project01Index,
-        "https://github.com/rodonguyen/showcase_AI_ML",
-        twitterImage,
-        createHyperlink(
-          "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
-          <button>Demo App</button>
-        )
       )}
 
       {createProjectEntry(
@@ -297,6 +272,31 @@ export default function Projects() {
         createHyperlink(
           "https://www.linkedin.com/posts/rodonguyen_programming-datascience-dataanalytics-activity-6986635066823127040-TFcs?utm_source=share&utm_medium=member_desktop",
           <button>Read in Blog</button>
+        )
+      )}
+
+      {createProjectEntry(
+        "Personal Website",
+        project05Index,
+        "https://github.com/rodonguyen/my_website",
+        websiteImage
+      )}
+
+      {createProjectEntry(
+        "Twitter E-nalyst",
+        project03Index,
+        "https://github.com/rodonguyen/Twitter-E-nalyst",
+        sentimentImage
+      )}
+
+      {createProjectEntry(
+        "Spam Tweet Detector",
+        project01Index,
+        "https://github.com/rodonguyen/showcase_AI_ML",
+        twitterImage,
+        createHyperlink(
+          "https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/",
+          <button>Demo App</button>
         )
       )}
     </>
