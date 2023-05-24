@@ -345,14 +345,20 @@ button.hamburger-menu {
 
 @media (max-width: 800px) {
   .portrait {
-    grid-column: span 12;
+    grid-column: span 4;
     text-align: center;
   }
 
   .bio {
-    grid-column: span 12;
-    padding-top: 20px;
+    grid-column: span 8;
     text-align: center;
+  }
+
+  .portrait img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: 0 0;
   }
 }
 
