@@ -21,7 +21,7 @@ const Home = () => {
         <div className="bio">
           <h1 className="xlarge text-align-left">Hello World!</h1>
           <p>
-            I’m a motivated Sofware / Machine Learning Engineer who loves to
+            I’m a motivated Sofware Engineer / Machine Learning Engineer who loves to
             work on impactful, interesting, data-driven, AI-integrated products
             that bring value to users at scale. Equipped with a diverse skill
             set, from software development, data analysis to deep learning model

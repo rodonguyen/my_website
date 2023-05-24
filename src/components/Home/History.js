@@ -9,20 +9,19 @@ import createHyperlink from "../utils";
 export default function History() {
   return (
     <>
+      <p>If you are looking to recruit me, the Resume in the {createHyperlink('/resume', 'Resume tab')} is more compact and suitable.</p>
+
       <h1>Career Summary</h1>
       <p>
         <ul>
           <li>
-            A Computer Science Graduate with extensive experience in Software
-            Engineering and aspiration for Machine Learning.
+            A Computer Science Graduate passionate about top-notch technology, Machine Learning (ML) and building awesome software.
           </li>
           <li>
-            Worked in top research organisations in Australia, a software
-            consulting company and customer-facing roles.
+            Possess 2+ years of experience in software development, data and ML.
           </li>
           <li>
-            Problem-solver and Fast learner with project management skills and
-            the ability to excel under pressure.
+            Strong programming fundamentals. A fast learner with project management skills.
           </li>
           <li>
             Champion of writing clean and maintainable code. Security at heart.
@@ -43,15 +42,13 @@ export default function History() {
         <div className="description">
           <h5>Sessional Academic aka. Tutor at QUT</h5>
           <p>
-            As an IFB102 Tutor, I managed 2 classes of 25 students each,
-            delivered the knowledge of IFB102, engaged with young & motivating
-            students and made the classes as not uninteresting as possible.
+            Delivered comprehensive knowledge of IFB102 – Intro to 
+            Computer Systems – to 2 classes of 25 students
+            each, covering Hardware, Operating Systems, 
+            Cloud, Security, Raspberry Pi OS, etc.
           </p>
           <p>
-            IFB102 - Introduction to Computer Systems - covers all the
-            fundamentals from Hardware, Operating Systems to Cloud, Security and
-            allows students to discover and build their own projects with
-            Raspberry Pi at the end.
+            Made the class as interesting and practical as possible.
           </p>
         </div>
       </div>
@@ -81,12 +78,12 @@ export default function History() {
             prototypes to demonstrate to supervisors.
           </p>
           <p>
+            I optimised ML model’s memory consumption by x8 times by utilising smaller loads of training dataset.   
             I conducted multiple experiments on multiple devices which provide
             insights into the library’s resource consumption (memory, runtime),
-            ensuring the stability of the library. In the end, revised the
-            outcome and drew a viable “Deployment Phase” plan for the future
-            team which is to utilise this library to run on-device ML training
-            on Raspberry Pi Zero W.{" "}
+            ensuring inter-device stability of the library. revised the progress and drew 
+            a viable “Deployment" plan for the future team which is to 
+            utilise this library to run on-device ML training on Raspberry Pi Zero W.{" "}
             {createHyperlink(
               "https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf",
               "View my Final Presentation here"
@@ -122,16 +119,14 @@ export default function History() {
           <h5>Software Engineer at S23M</h5>
           <p>
             I built an{" "}
-            {createHyperlink("https://github.com/rodonguyen/roma", "App")} with
-            a minimal yet, modern User Interface to interact with a Health Data
-            Server (CRUD) as a trial model for an international health
-            organisation. Specifically, I implemented core features of the app,
-            allowing querying and editing data through RestAPI and presenting
-            queried results intuitively on the Client-side, using React, NodeJS,
-            AgGrid, Bootstrap.
+            {createHyperlink("https://github.com/rodonguyen/roma", "App")} with a minimal yet, 
+            modern User Interface for an international health organisation to interact with 
+            its health data server (Create-Read-Update-Delete). Utilised React, NodeJS, AgGrid, Bootstrap.
+            Specifically, I programmed many core features of the app: data query/edit through RestAPI, 
+            multi-parameter query, and presenting queried results intuitively on the client-side.
           </p>
           <p>
-            During this time, I led a team of 4 for a period, ensured progress
+            During this time, I led a 4-person team, ensured progress
             is on-track with the sprint plan, and communicated clearly with the
             product owner to build a product that meets their expectation.
             Finally, I constructed detailed onboarding documentation and
