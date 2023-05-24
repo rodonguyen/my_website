@@ -21,7 +21,7 @@ export default function History() {
             Possess 2+ years of experience in software development, data and ML.
           </li>
           <li>
-            Strong programming fundamentals. A fast learner with project management skills.
+            A fast learner with strong programming fundamentals and project management skills.
           </li>
           <li>
             Champion of writing clean and maintainable code. Security at heart.
