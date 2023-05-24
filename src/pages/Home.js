@@ -10,13 +10,13 @@ const Home = () => {
       {/* content block 1: A little introduction */}
       <div className="container row introduction">
         <div className="portrait">
-          <img
-            src={rodoImage}
-            width="291"
-            height="387"
-            loading="lazy"
-            alt="Rodo"
-          />
+          <div className="img-container">
+            <img
+              src={rodoImage}
+              loading="lazy"
+              alt="Rodo"
+            />
+          </div>
         </div>
         <div className="bio">
           <h1 className="xlarge text-align-left">Hello World!</h1>
