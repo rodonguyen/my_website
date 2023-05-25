@@ -9,14 +9,12 @@ const List100 = () => {
       <p>We all have 1 life. Why not making the most of it and do exciting things? These are the things that keep me excitedly waking up every morning and that I plan to do before I die. Inspired by Chip Huyen's.</p>
       <ol className="text-align-left">
         <li>✗ Read 100 books ({readBookNum}/100)</li>
-        <li>✗ Annual income before tax AU$65,000</li>
         <li>✗ See Auroras</li>
         <li>✗ Conquer Fansipan Mountain</li>
         <li>✗ 10-day Vipassana Meditation Retreat</li>
         <li>✓ Teach a course in university</li>
         <li>✗ Pay and have a 14-day holiday with my family</li>
-        <li>✗ Walk on the moon</li>
-        <li>✗ Swim in Exosphere in a space suit</li>
+        <li>✗ Annual income before tax AU$65,000</li>
         <li>✗ Found a tech company in Vietnam and it survives :)</li>
         <li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>
@@ -42,6 +40,8 @@ const List100 = () => {
         <li>✗ Be 70kg and muscular</li>
         <li>✗ Cuddle lions</li>
         <li>✗ Master NeoVim</li>
+        <li>✗ Walk on the moon</li>
+        <li>✗ Swim in Exosphere in a space suit</li>
         <li>✗ Date a model</li>
         <li>✗ Swim with whales/dolphins</li>
         {/* <li>✗ </li> */}
