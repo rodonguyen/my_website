@@ -147,7 +147,7 @@ const Home = () => {
         </h2>
         <ul>
           <li>
-            <b>Rank</b>: 722,000
+            <b>Rank</b>: 678,000
           </li>
           <li>
             <b>Profile</b>:{" "}

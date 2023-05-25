@@ -248,20 +248,6 @@ button.hamburger-menu {
 
 
 @media (max-width: 700px) {
-  /* .navbar-container ul {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .navbar-container li {
-    grid-column: span 6;
-  }
-
-  a.navbar-item {
-    padding: 0.2rem 0.3rem;
-    display: inline-block;
-    font-size: var(--font-size-small);
-  } */
 
   ul.navbar-items {
     display: none;
@@ -365,7 +351,7 @@ button.hamburger-menu {
   }
 
   .portrait .img-container {
-    /* Use div with className=portrait to contain zoomed img inside */
+    /* Use <div className=img-container> to contain zoomed <img> inside */
     width: 120px;
     height: 120px;
     border-radius: 10px;
@@ -435,6 +421,14 @@ button.hamburger-menu {
   margin-top: 0;
 }
 
+@media (max-width: 800px) {
+  .history .time {
+    font-size: var(--font-size-small);
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+}
+
 /* ################################################### */
 /* ################################################### */
 /* ##                MY PET PROJECTS                ## */
@@ -489,14 +483,9 @@ button.hamburger-menu {
 
 
 @media (max-width: 500px) {
-  /* .project .description p {
-    text-align: left;
-  } */
-
-  .project li {
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
-    list-style: none;
+  .project .ppicture img {
+    height: 4rem;
+    width: 4rem;
   }
 }
 
@@ -684,7 +673,7 @@ input#coolerdate {
   --nav-link-padding: 0.5rem;
   --nav-link-padding-side: 1rem;
 
-  --font-size-small: 15px;
+  --font-size-small: 13px;
   --font-size-normal: 16px;
   --font-size-large: 24px;
   --font-size-xlarge: 30px;
