@@ -191,14 +191,14 @@ const DateMe = () => {
               <br></br>
               <p>[ The code will be destroyed in {timeLeft} ]</p>
               <form onSubmit={(event) => {sendHandler(event)}}>
-                <label for="name" required autofocus>Your name *</label><br></br>
-                <input type="text" id="coolerdate" name="name" ></input><br></br>
+                <label for="name" autofocus>Your name *</label><br></br>
+                <input type="text" id="coolerdate" name="name" required></input><br></br>
 
-                <label for="contact" required>Your contact *</label><br></br>
-                <input type="text" id="coolerdate" name="contact" placeholder="Email is fine :)" ></input><br></br>
+                <label for="contact">Your contact *</label><br></br>
+                <input type="text" id="coolerdate" name="contact" required placeholder="Email is fine :)" ></input><br></br>
 
-                <label for="bio" required>Something about you *</label><br></br>
-                <input type="text" id="coolerdate" name="bio" ></input><br></br>
+                <label for="bio">Something about you *</label><br></br>
+                <input type="text" id="coolerdate" name="bio" required></input><br></br>
 
                 <label for="ifact">Interesting facts not many people know about you</label><br></br>
                 <input type="text" id="coolerdate" name="ifact"></input><br></br>
@@ -214,7 +214,7 @@ const DateMe = () => {
                 <label for="boyfriend">3 words to describe your desired boyfriend?</label><br></br>
                 <input type="text" id="coolerdate" name="boyfriend"></input><br></br>
 
-                <input type="submit" value="Send" ></input><br></br>
+                <input type="submit" value="Send"></input><br></br>
 
                 {!first3SectionsFilled && (
                   <label className="fade">
