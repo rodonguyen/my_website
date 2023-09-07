@@ -10,18 +10,18 @@ const Home = () => {
       {/* content block 1: A little introduction */}
       <div className="container row introduction">
         <div className="portrait">
-          <img
-            src={rodoImage}
-            width="291"
-            height="387"
-            loading="lazy"
-            alt="Rodo"
-          />
+          <div className="img-container">
+            <img
+              src={rodoImage}
+              loading="lazy"
+              alt="Rodo"
+            />
+          </div>
         </div>
         <div className="bio">
           <h1 className="xlarge text-align-left">Hello World!</h1>
           <p>
-            I’m a motivated Sofware / Machine Learning Engineer who loves to
+            I’m a motivated Sofware Engineer / Machine Learning Engineer who loves to
             work on impactful, interesting, data-driven, AI-integrated products
             that bring value to users at scale. Equipped with a diverse skill
             set, from software development, data analysis to deep learning model
@@ -147,7 +147,7 @@ const Home = () => {
         </h2>
         <ul>
           <li>
-            <b>Rank</b>: 722,000
+            <b>Rank</b>: 678,000
           </li>
           <li>
             <b>Profile</b>:{" "}

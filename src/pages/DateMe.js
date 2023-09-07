@@ -9,8 +9,6 @@ import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 import NotFound from "./NotFound";
 import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage";
 import { calculateTimeLeftInSeconds, formatTimeLeft } from "../components/DateMe/DateMe.utils";
-// import CoolerDateForm from "../components/CoolerDate/CoolerDateForm";
-// import { Input, Button, Form, Label } from "reactstrap";
 
 const DateMe = () => {
   const [searchParams] = useSearchParams();
