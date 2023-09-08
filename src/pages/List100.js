@@ -27,7 +27,7 @@ const List100 = () => {
         <li>✗ Learn to fly helicopter/plane</li>
         <li>✗ Be Financial Independent</li>
         <li>✗ Read 1000 books ({readBookNum}/1000)</li>
-        <li>✗ Net worth AU$1,000,000</li>
+        <li>✗ Invest AU$1,000,000</li>
         <li>✗ Have a vacation on an island/a yatch</li>
         <li>✗ Work in a big financial insitution</li>
         <li>✗ Climb Great Pyramid of Giza, Egypt</li>

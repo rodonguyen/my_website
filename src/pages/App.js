@@ -4,7 +4,7 @@ import List100 from "./List100";
 import Resume from "./Resume";
 import Home from "./Home";
 import DateMe from "./DateMe";
-import TimeIHaveLeft from "./TimeIHaveLeft";
+import TimeIHaveLeft from "./TimeIHaveLeft.tsx";
 import NotFound from "./NotFound";
 import "../stylesheets/App.css";
 
