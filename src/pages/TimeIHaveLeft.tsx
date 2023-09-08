@@ -41,7 +41,7 @@ const TimeIHaveLeft: React.FC = () => {
         <p>Days left: {daysLeft}</p>
 
       </div>
-      </>
+    </>
     );
   };
 
