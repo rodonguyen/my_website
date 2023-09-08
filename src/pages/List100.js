@@ -19,7 +19,7 @@ const List100 = () => {
         <li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
         <li>✗ Visit Norway's mountains</li>
         <li>✗ Travel to 10 countries (1/10)</li>
-        <li>✗ Travel to 20 Vietnamese cities (3/20)</li>   {/* HCM, Danang, Hue */}
+        <li>✗ Travel to 20 Vietnamese cities (5/20)</li>   {/* HCM, Danang, Hue, Phu Quoc, Kon Tum,  */}
         <li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
         <li>✗ Get Aussie PR</li>
         <li>✗ Buy a house for my parents to retire in Australia</li>
