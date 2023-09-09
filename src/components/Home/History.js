@@ -12,7 +12,8 @@ export default function History() {
 		<>
 			<p>
 				If you are looking to recruit me, the Resume in the{' '}
-				{createHyperlink('/resume', 'Resume tab')} is more compact and suitable. Last updated 9/2023.
+				{createHyperlink('/resume', 'Resume tab')} is more compact and suitable. Last
+				updated 9/2023.
 			</p>
 
 			<h1>Career Summary</h1>
@@ -216,11 +217,8 @@ export default function History() {
 				<div className='description'>
 					<h5>HiQ Concierge at QUT</h5>
 					<p>
-						I advocated for international students on a university-wide scale: Provided
-						them with additional assistance and services to thrive: foodbank, social
-						activities, counseling, etc.; Liaised with a wide range of external
-						stakeholders: university admins, not-for-profit organisation, and businesses
-						to utilise resources more efficiently.
+						I worked collaboratively to service our QUT students and the public for all
+						of their university-related queries.
 					</p>
 				</div>
 			</div>
@@ -237,15 +235,8 @@ export default function History() {
 				<div className='description'>
 					<h5>Secretary at VietQ - QUT Vietnamese Students Association</h5>
 					<p>
-						I was super proud to be elected for this position. This was an amazing
-						experience as I had the opportunity to work with a energetic and vibrant
-						team.
-					</p>
-					<p>
-						Here I promoted Vietnamese culture as a team through our exciting events,
-						managed intermediate & long-term operations of the organisation like
-						assisting other sub-teams/President/VP where applicable, organising
-						documents, communicating with external stakeholders, and so on.
+						I promoted Vietnamese culture as a team through our exciting events, managed
+						intermediate & long-term operations of the organisation
 					</p>
 				</div>
 			</div>
@@ -263,9 +254,7 @@ export default function History() {
 					<h5>International Students Officer at QUT Guild</h5>
 					<p>
 						I advocated for and assisted international students on a university-wide
-						scale to ensure they have adequate conditions to thrive. My work in summary:
-						liasing with a wide range of stakeholders, taking part in planning campaigns
-						and initiatives that benefit and represent international students, etc.
+						scale to ensure they have adequate conditions to thrive.
 					</p>
 				</div>
 			</div>
