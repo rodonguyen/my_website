@@ -2,7 +2,7 @@ import qutguildLogo from '../../media/history_qutguild_logo.png';
 import vietqLogo from '../../media/history_vietq_logo.jpg';
 import qutLogo from '../../media/history_qut_logo.jpeg';
 import s23mLogo from '../../media/history_s23m_logo.jpeg';
-import aervisionLogo from '../../media/history_aervision_logo2.png';
+import aervisionLogo from '../../media/history_aervision_logo.png';
 import csirodata61Logo from '../../media/history_csirodata61_logo.jpeg';
 
 import createHyperlink from '../utils';
