@@ -65,7 +65,7 @@ export default function History() {
 				</div>
 				<div className='description'>
 					<h5>Research Assistant at QUT</h5>
-					<p>Researched and applied Machine Learning in Sport settings. NDA signed :)</p>
+					<p>(NDA signed) Researched and applied Machine Learning in Sport settings.</p>
 				</div>
 			</div>
 
@@ -103,27 +103,15 @@ export default function History() {
 					<h5>Vacation Researcher at CSIRO's Data61</h5>
 					<p>[ Towards Training Neural Networks on Micro-controllers ]</p>
 					<p>
-						Training Neural Networks on Micro-controllers (MCUs) is a new-emerging area
-						and proved to be cost-saving and beneficial in many aspects. However, there
-						are challenges to be solved.
-					</p>
-					<p>
-						In this project, I single-handedly explored and evaluated suitable C++
-						machine learning libraries for a new EdgeAI & Computer Vision project, found
-						an open-source one - MLPack - and implemented some prototypes to demonstrate
-						to supervisors.
-					</p>
-					<p>
-						I optimised ML model’s memory consumption by x8 times by utilising smaller
-						loads of training dataset. I conducted multiple experiments on multiple
-						devices which provide insights into the library’s resource consumption
-						(memory, runtime), ensuring inter-device stability of the library. drew a
-						viable “Deployment" plan for the future team.{' '}
+						I single-handedly explored and evaluated suitable C++ machine learning
+						libraries for a new EdgeAI & Computer Vision project, and implemented some
+						prototypes to demonstrate to my supervisors. I optimised ML model’s memory
+						consumption by x8 times by utilising smaller loads of training dataset. Drew
+						a viable “Deployment" plan for the future team.{' '}
 						{createHyperlink(
 							'https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf',
 							'View my Final Presentation here'
-						)}
-						.
+						)}.
 					</p>
 					<p>
 						My advisors were{' '}
@@ -182,15 +170,12 @@ export default function History() {
 					<p>
 						I evaluated the effectiveness of Verifiable Python (vPython) for software
 						cybersecurity by testing, improving it in the development environment and
-						ensuring output consistency. I developed a completely new automated analysis
+						ensuring output consistency. Developed a completely new automated analysis
 						pipeline (Bash Script and Python) that eliminated ~95% of manual work:
-						executing the programs, analysing output, and recording results.
-					</p>
-					<p>
-						And at the end, I won the{' '}
+						executing the programs, analysing output, and recording results. Won the{' '}
 						{createHyperlink(
 							'https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022',
-							'Outstanding Achievement Award'
+							'Best Research Poster Award'
 						)}{' '}
 						at the end of the program.
 					</p>
