@@ -83,9 +83,9 @@ export default function History() {
 					<p>
 						Delivered comprehensive knowledge of IFB102 – Intro to Computer Systems – to
 						2 classes of 25 students each, covering Hardware, Operating Systems, Cloud,
-						Security, Raspberry Pi OS, etc.
+						Security, Raspberry Pi OS, etc. Did my best to delivere the content in
+						interesting and practical way.
 					</p>
-					<p>Made the class as interesting and practical as possible.</p>
 				</div>
 			</div>
 
@@ -111,7 +111,8 @@ export default function History() {
 						{createHyperlink(
 							'https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf',
 							'View my Final Presentation here'
-						)}.
+						)}
+						.
 					</p>
 					<p>
 						My advisors were{' '}
