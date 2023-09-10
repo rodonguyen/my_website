@@ -47,8 +47,9 @@ export default function History() {
 				<div className='description'>
 					<h5>Software Engineer at AerVision</h5>
 					<p>
-						Developed and maintained flagship product - AerWatch - versetile application
-						for monitoring and analysing video using Machine Learning.
+						Developed and maintained flagship product - AerWatch - a versatile
+						application for monitoring and analysing video using AerVision's customed
+						Machine Learning models.
 					</p>
 					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB</p>
 				</div>
@@ -83,7 +84,7 @@ export default function History() {
 					<p>
 						Delivered comprehensive knowledge of IFB102 – Intro to Computer Systems – to
 						2 classes of 25 students each, covering Hardware, Operating Systems, Cloud,
-						Security, Raspberry Pi OS, etc. Did my best to delivere the content in
+						Security, Raspberry Pi OS, etc. Did my best to deliver the content in
 						interesting and practical way.
 					</p>
 				</div>
