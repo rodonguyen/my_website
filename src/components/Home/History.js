@@ -11,9 +11,8 @@ export default function History() {
 	return (
 		<>
 			<p>
-				If you are looking to recruit me, the Resume in the{' '}
-				{createHyperlink('/resume', 'Resume tab')} is more compact and suitable. Last
-				updated 9/2023.
+				Interesting opportunity? My Resume is {createHyperlink('/resume', 'here')}. Last
+				updated 10/2023.
 			</p>
 
 			<h1>Career Summary</h1>
@@ -40,7 +39,7 @@ export default function History() {
 				<div className='company-logo'>
 					<div class='entry-dot'></div>
 					{createHyperlink(
-						'https://www.qut.edu.au/',
+						'https://www.aervision.com/',
 						<img src={aervisionLogo} alt='AerVision logo' />
 					)}
 				</div>
@@ -66,7 +65,10 @@ export default function History() {
 				</div>
 				<div className='description'>
 					<h5>Research Assistant at QUT</h5>
-					<p>(NDA signed) Researched and applied Machine Learning in Sport settings.</p>
+					<p>
+						(NDA signed) Implemented, benchmarked and compared performance of different
+						YOLO models in a novel sport setting.
+					</p>
 				</div>
 			</div>
 
