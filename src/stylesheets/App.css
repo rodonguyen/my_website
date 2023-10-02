@@ -86,6 +86,7 @@ button {
   background-color: var(--secondary);
   cursor: pointer;
   border: 2px solid var(--accent);
+  color: #000000;
 }
 button:hover {
   background-color: var(--accent);
