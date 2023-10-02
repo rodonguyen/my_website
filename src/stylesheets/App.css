@@ -68,7 +68,7 @@ a:visited {
 }
 
 .background-color-2 {
-  background: var(--light-2);
+  background: var(--secondary);
 }
 
 .text-align-left {
@@ -77,6 +77,18 @@ a:visited {
 
 .fade {
   color: var(--black-blue-2);
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* border-width: 1px; */
+  background-color: var(--secondary);
+  cursor: pointer;
+  border: 2px solid var(--accent);
+}
+button:hover {
+  background-color: var(--accent);
 }
 
 .container {
@@ -119,16 +131,11 @@ a:visited {
 }
 
 .dark button {
-  background: #232b36;
-  border-radius: 4px;
-  border-width: 2px solid #aaaaaa;
-  color: var(--text-color-for-dark-them-1);
+  background: var(--accent);
 }
-
 .dark button:hover {
-  background: #323d4b;
+  background: var(--secondary);
 }
-
 .dark button:disabled {
   border: 1px solid #999999;
   background-color: #2d2d2d;
@@ -203,7 +210,7 @@ a.navbar-item {
 }
 
 a.navbar-item:hover {
-  background: var(--light-2);
+  background: var(--primary);
 }
 
 a.navbar-item.brand {
@@ -435,6 +442,16 @@ button.hamburger-menu {
 /* ################################################### */
 /* ################################################### */
 
+button#amazing-webpage-button {
+  padding: 15px 50px;
+  font-size: var(--font-size-large);
+  border-radius: 6px;
+  background-color: var(--accent);
+}
+button#amazing-webpage-button:hover {
+  background-color: var(--secondary);
+}
+
 .project {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -645,19 +662,31 @@ input#coolerdate {
 :root {
   --text-color-for-light-them-1: #000000;
   --text-color-for-light-them-2: #1e2030;
-  --light-1: #e6ecf4;
+  --light-1: #f6faff;
   --light-2: #e2e2e6;
 
   --text-color-for-dark-them-1: #e6e6e6;
   --text-color-for-dark-them-2: #a7abca;
-  --dark-1: #0B1119;
-  --dark-2: #070b10;
+  --dark-1: #252424;
+  --dark-2: #0b121b;
   --dark-3: #070707;
+
+  --text-light: #050315;
+  --text-lighter: #121119;
+  --background-light: #f6faff;
+
+
+  --primary: #F07167;
+  --secondary: #fff3d3;
+  --accent: #f9b274;
+  --accent-darker: #26201d;
 
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
-  --light-blue: #A8DADC;
-  --pale-blue: #457B9D;
+  --light-blue: #a2dcf9;
+  --light-blue-darker: #7dbfe1;
+  --dark-blue: #075789;
+  --dark-blue-ligher: #0767a3;
   --purple-1: #a344a3;
   --light-pink-1: #d984d9;
   --light-pink-2: #FFAFFF;
@@ -673,8 +702,8 @@ input#coolerdate {
   --nav-link-padding: 0.5rem;
   --nav-link-padding-side: 1rem;
 
-  --font-size-small: 13px;
-  --font-size-normal: 16px;
+  --font-size-small: 14px;
+  --font-size-normal: 18px;
   --font-size-large: 24px;
   --font-size-xlarge: 30px;
 
