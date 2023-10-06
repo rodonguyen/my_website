@@ -46,9 +46,9 @@ export default function History() {
 				<div className='description'>
 					<h5>Software Engineer at AerVision</h5>
 					<p>
-						Developed and maintained flagship product - AerWatch - a versatile
-						application for monitoring and analysing video using AerVision's customed
-						Machine Learning models.
+						Worked on many different parts of the company's products, from developing and
+						maintained AerMeal app to integrating new partner products to the
+						company system.
 					</p>
 					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB</p>
 				</div>
