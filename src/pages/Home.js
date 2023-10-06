@@ -1,9 +1,11 @@
 //
 import rodoImage from '../media/Rodo.jpg';
 import History from '../components/Home/History';
-import createHyperlink from '../components/utils';
+import { changeWindowTitle, createHyperlink } from '../components/utils';
 
 const Home = () => {
+	changeWindowTitle(window.location.pathname);
+
 	return (
 		<>
 			{/* content block 1: A little introduction */}

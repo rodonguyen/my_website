@@ -1,7 +1,10 @@
 
 import rodoResumePdf from '../media/Rodo_Resume.pdf';
+import { changeWindowTitle } from '../components/utils';
 
 const Resume = () => {
+  changeWindowTitle(window.location.pathname);
+  
   return (
   <div>
     <div className="container resume">

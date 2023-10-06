@@ -28,7 +28,6 @@ export function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTill
     // Could add code to direct to homepage immediately after code is expired but  
     // user are allowed send their response if they keep staying in the webpage.
     // The server does not have the logic to block expired code from sending response anyway.
-    console.log('difference <= 0')
     return 0
   }
   const timeLeftInSeconds = Math.floor(new Date().setTime(difference) / 1000);     

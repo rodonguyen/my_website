@@ -8,9 +8,12 @@ import { addRespondentFormToDatabase } from "../api/coolerdate.respondent";
 
 import NotFound from "./NotFound";
 import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage";
+import { changeWindowTitle } from '../components/utils';
 import { calculateTimeLeftInSeconds, formatTimeLeft } from "../components/DateMe/DateMe.utils";
 
 const DateMe = () => {
+  changeWindowTitle(window.location.pathname);
+
   const [searchParams] = useSearchParams();
   const code = searchParams.get("code");
 

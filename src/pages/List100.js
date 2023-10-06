@@ -1,6 +1,7 @@
-import createHyperlink from "../components/utils";
+import { changeWindowTitle, createHyperlink } from '../components/utils';
 
 const List100 = () => {
+  changeWindowTitle(window.location.pathname);
   const readBookNum = 16;
 
   return (

@@ -1,7 +1,9 @@
-import createHyperlink from '../components/utils';
+import { createHyperlink, changeWindowTitle } from '../components/utils';
 
 
 const ContactMe = () => {
+  changeWindowTitle(window.location.pathname);
+
   return (
     <div className="container contact-list">
         <h1 className='center'>
