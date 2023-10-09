@@ -46,9 +46,10 @@ export default function History() {
 				<div className='description'>
 					<h5>Software Engineer at AerVision</h5>
 					<p>
-						Developed and maintained flagship product - AerWatch - a versatile
-						application for monitoring and analysing video using AerVision's customed
-						Machine Learning models.
+						Managed both backend and frontend development for the AerMeal Portal.
+						Conducted research, implemented, and tested new features for AerVision
+						products, including a new control panel and third-party app integration.
+						Performed onsite software installations for clients.
 					</p>
 					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB</p>
 				</div>
@@ -66,8 +67,8 @@ export default function History() {
 				<div className='description'>
 					<h5>Research Assistant at QUT</h5>
 					<p>
-						(NDA signed) Implemented, benchmarked and compared performance of different
-						YOLO models in a novel sport setting.
+						Implemented, benchmarked and analysed performance of different YOLO models
+						in a novel sport setting.
 					</p>
 				</div>
 			</div>
