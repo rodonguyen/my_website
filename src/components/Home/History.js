@@ -51,7 +51,7 @@ export default function History() {
 						products, including a new control panel and third-party app integration.
 						Performed onsite software installations for clients.
 					</p>
-					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB</p>
+					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB, VueJS</p>
 				</div>
 			</div>
 
