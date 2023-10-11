@@ -2,7 +2,7 @@ import { changeWindowTitle, createHyperlink } from '../components/utils';
 
 const List100 = () => {
   changeWindowTitle(window.location.pathname);
-  const readBookNum = 16;
+  const readBookNum = 22;
 
   return (
     <div className="container">
