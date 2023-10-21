@@ -11,16 +11,15 @@ export default function History() {
 	return (
 		<>
 			<p>
-				Interesting opportunity? My Resume is {createHyperlink('/resume', 'here')}. Last
-				updated 10/2023.
+				Interesting opportunity? 👉🏽 {createHyperlink('/resume', 'My Resume')}, last
+				updated in 10/2023.
 			</p>
 
 			<h1>Career Summary</h1>
 			<p>
 				<ul>
 					<li>
-						A Computer Science Graduate passionate about top-notch technology, Machine
-						Learning (ML) and building awesome software.
+						An engineer passionate about building impactful software products
 					</li>
 					<li>
 						Possess 1+ year of real-world experience in developing high-performance and

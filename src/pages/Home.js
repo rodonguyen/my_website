@@ -19,7 +19,7 @@ const Home = () => {
 					<h1 className='xlarge text-align-left'>Hello World!</h1>
 					<p>
 						I'm a motivated Software Engineer/Machine Learning Engineer who loves to
-						work on impactful AI products that bring value to users at scale. My
+						work on impactful products that bring value to users at scale. My
 						expertise lies in software development, data analysis, and machine learning.
 					</p>
 					<p>
@@ -32,7 +32,7 @@ const Home = () => {
 						)}
 						.
 					</p>
-					<p>#software #data #machinelearning #blockchain</p>
+					<p>Interests: #software #data #machinelearning #blockchain #banking #security #large-scale-system</p>
 				</div>
 			</div>
 
@@ -48,11 +48,10 @@ const Home = () => {
 				<h1>Skills</h1>
 				<ul>
 					<li>
-						<b>Full-stack</b>:&ensp; ReactJS, VueJS, MeterialUI / FastAPI, ExpressJS,
-						.NET
+						<b>Full-stack</b>:&ensp; ReactJS, VueJS / FastAPI, ExpressJS, .NET
 					</li>
 					<li>
-						<b>AWS for a scalable infrastructure</b>:&ensp; EC2, Redis, DynamoDB, S3,
+						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3,
 						Lambda
 					</li>
 					<li>
@@ -62,11 +61,7 @@ const Home = () => {
 						<b>Languages</b>:&ensp; Python, C#, JavaScript, HTML/CSS, SQL, Bash Script
 					</li>
 					<li>
-						<b>Project management:</b>:&ensp; Agile, Atlassian suite (Trello,
-						Confluence, etc.)
-					</li>
-					<li>
-						<b>Project Management tools</b>:&ensp; Atlassion Suite, Agile
+						<b>Project management:</b>:&ensp; Agile, Atlassian suite
 					</li>
 					<li>
 						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Test-driven
