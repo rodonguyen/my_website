@@ -34,7 +34,7 @@ export default function History() {
 
 			<h1>Experience</h1>
 			<div className='row entry history'>
-				<div className='time'>2023 - now</div>
+				<div className='time'>2023</div>
 				<div className='company-logo'>
 					<div class='entry-dot'></div>
 					{createHyperlink(
@@ -45,12 +45,11 @@ export default function History() {
 				<div className='description'>
 					<h5>Software Engineer at AerVision</h5>
 					<p>
-						Managed both backend and frontend development for the AerMeal Portal.
-						Conducted research, implemented, and tested new features for AerVision
-						products, including a new control panel and third-party app integration.
+						Extended and maintained  both backend and frontend development for AerMeal Portal (JS, Python, AWS), ensuring an error-free platform while continuously implementing new features. 
+						Led the integration and customisation of Genetec components – a video management system – to upgrade client’s operational workflow (.NET). 
 						Performed onsite software installations for clients.
 					</p>
-					<p>Technologies used: C#/.NET, Python/FastAPI, AWS/Lambda,S3,DynamoDB, VueJS</p>
+					<p>Technologies used: JavaScript/VueJS, Python/FastAPI, C#/.NET, AWS/Lambda,S3,DynamoDB</p>
 				</div>
 			</div>
 
