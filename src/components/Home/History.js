@@ -45,11 +45,11 @@ export default function History() {
 				<div className='description'>
 					<h5>Software Engineer at AerVision</h5>
 					<p>
-						Extended and maintained  both backend and frontend development for AerMeal Portal (JS, Python, AWS), ensuring an error-free platform while continuously implementing new features. 
-						Led the integration and customisation of Genetec components – a video management system – to upgrade client’s operational workflow (.NET). 
+						Extended and maintained  both backend and frontend development for AerMeal Portal, ensuring an error-free platform while continuously implementing new features. 
+						Led the integration and customisation of Genetec components – a video management system – to upgrade client’s operational workflow. 
 						Performed onsite software installations for clients.
 					</p>
-					<p>Technologies used: JavaScript/VueJS, Python/FastAPI, C#/.NET, AWS/Lambda,S3,DynamoDB</p>
+					<p>Technologies used: JavaScript/VueJS, Python/FastAPI, C#/.NET, AWS/Lambda, S3, DynamoDB</p>
 				</div>
 			</div>
 
