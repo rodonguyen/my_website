@@ -46,20 +46,17 @@ const Home = () => {
 				<h1>Skills</h1>
 				<ul>
 					<li>
+						<b>Languages</b>:&ensp; Python, Solidity, JavaScript/TypeScript, C#, HTML/CSS, SQL, Bash Script
+					</li>
+					<li>
 						<b>Full-stack</b>:&ensp; ReactJS, VueJS / FastAPI, ExpressJS, .NET
 					</li>
 					<li>
 						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3,
-						Lambda
+						Lambda, IAM, Load Balancer, Auto Scaling
 					</li>
 					<li>
 						<b>Machine Learning</b>:&ensp; PyTorch, Sklearn, Pandas, Numpy, MatplotLib
-					</li>
-					<li>
-						<b>Languages</b>:&ensp; Python, C#, JavaScript, HTML/CSS, SQL, Bash Script
-					</li>
-					<li>
-						<b>Project management:</b>:&ensp; Agile, Atlassian suite
 					</li>
 					<li>
 						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Test-driven
