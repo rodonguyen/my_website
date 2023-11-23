@@ -18,12 +18,11 @@ const Home = () => {
 				<div className='bio'>
 					<h1 className='xlarge text-align-left'>Hello World!</h1>
 					<p>
-						I'm a motivated Software Engineer/Machine Learning Engineer who loves to
-						work on impactful products that bring value to users at scale. My
-						expertise lies in software development, data analysis, and machine learning.
+						I'm a motivated Software Engineer who loves to
+						work on impactful products that bring value to users at scale.
 					</p>
 					<p>
-						I'm working on creating my own J.A.R.V.I.S :) As a side hobby, I like to
+						I like to
 						build personal projects where I put my skills or my recently acquired
 						knowledge to practice. While we're on this, check out{' '}
 						{createHyperlink(
@@ -32,7 +31,6 @@ const Home = () => {
 						)}
 						.
 					</p>
-					<p>Interests: #software #data #machinelearning #blockchain #banking #security #large-scale-system</p>
 				</div>
 			</div>
 
