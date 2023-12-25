@@ -18,13 +18,12 @@ const Home = () => {
 				<div className='bio'>
 					<h1 className='xlarge text-align-left'>Hello World!</h1>
 					<p>
-						I'm a motivated Software Engineer who loves to
-						work on impactful products that bring value to users at scale.
+						I'm a motivated Software Engineer who loves to work on impactful products
+						that bring value to users at scale.
 					</p>
 					<p>
-						I like to
-						build personal projects where I put my skills or my recently acquired
-						knowledge to practice. While we're on this, check out{' '}
+						I like to build personal projects where I put my skills or my recently
+						acquired knowledge to practice. While we're on this, check out{' '}
 						{createHyperlink(
 							'https://amazing.rodonguyen.dev/',
 							"my 'amazing' projects"
@@ -46,14 +45,15 @@ const Home = () => {
 				<h1>Skills</h1>
 				<ul>
 					<li>
-						<b>Languages</b>:&ensp; Python, Solidity, JavaScript/TypeScript, C#, HTML/CSS, SQL, Bash Script
+						<b>Languages</b>:&ensp; Python, Solidity, JavaScript/TypeScript, C#,
+						HTML/CSS, SQL, Bash Script
 					</li>
 					<li>
 						<b>Full-stack</b>:&ensp; ReactJS, VueJS / FastAPI, ExpressJS, .NET
 					</li>
 					<li>
-						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3,
-						Lambda, IAM, Load Balancer, Auto Scaling
+						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3, Lambda, IAM, Load
+						Balancer, Auto Scaling
 					</li>
 					<li>
 						<b>Machine Learning</b>:&ensp; PyTorch, Sklearn, Pandas, Numpy, MatplotLib
@@ -75,35 +75,6 @@ const Home = () => {
 					)}
 				</div>
 			</div>
-
-			{/* content block: Professional achievements */}
-			{/* <div className='container achievements'>
-				<h1>Achievements</h1>
-				<ul>
-					<li className='no-list-style'>[ 2022 ]</li>
-					<li>Graduated with the Bachelor of Information Technology!</li>
-					<li>
-						Completed Ravi's Study Program: A 3-month Intensive Programming Bootcamp
-					</li>
-					<li>
-						Received the Dean's List of Students with Excellent Academic Performance
-						Certificate{' '}
-					</li>
-					<li>
-						Deployed my very first personal website, this website (such a shame for an
-						IT student to do it this late :)
-					</li>
-					<li className='no-list-style'>[ 2021 ]</li>
-					<li>
-						GovHack Honourable Mention with project '
-						{createHyperlink(
-							'https://github.com/rodonguyen/govhack21-vietausit-brisbane/blob/main/docs/index.md',
-							'Outliers'
-						)}
-						'
-					</li>
-				</ul>
-			</div> */}
 
 			{/* Skills section */}
 

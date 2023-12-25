@@ -88,6 +88,7 @@ button {
   border: 2px solid var(--accent);
   color: #000000;
 }
+
 button:hover {
   background-color: var(--accent);
 }
@@ -134,9 +135,11 @@ button:hover {
 .dark button {
   background: var(--accent);
 }
+
 .dark button:hover {
   background: var(--secondary);
 }
+
 .dark button:disabled {
   border: 1px solid #999999;
   background-color: #2d2d2d;
@@ -192,7 +195,6 @@ a:visited,
 .navbar-container li {
   width: fit-content;
   display: flex;
-  margin-left: auto;
 }
 
 .navbar-container ul {
@@ -207,7 +209,8 @@ a.navbar-item {
   padding: 0.3rem 0.8rem;
   display: block;
   border-radius: 0.5rem;
-  transition: none; /* overwrite dark/light mode transition */
+  transition: none;
+  /* overwrite dark/light mode transition */
 }
 
 a.navbar-item:hover {
@@ -262,7 +265,6 @@ button.hamburger-menu {
   }
 
   button.hamburger-menu {
-    margin-left: auto;
     display: block;
     border: none;
     border-radius: 0.5rem;
@@ -275,7 +277,7 @@ button.hamburger-menu {
     /* The hide/show part */
     opacity: 0;
     /* Hide menu first */
-    display: none; 
+    display: none;
 
     /* Position */
     position: absolute;
@@ -294,9 +296,9 @@ button.hamburger-menu {
     transition: all .5s ease-out;
     opacity: 1;
     /* Display menu */
-    display: inline-block;   
+    display: inline-block;
   }
-  
+
   .dark ul.navbar-items.display-vertical-nav-items {
     background-color: rgba(29, 32, 47, 0.35);
   }
@@ -353,7 +355,7 @@ button.hamburger-menu {
     grid-column: span 12;
     text-align: center;
   }
-  
+
   .portrait {
     grid-column: span 12;
   }
@@ -449,6 +451,7 @@ button#amazing-webpage-button {
   border-radius: 6px;
   background-color: var(--accent);
 }
+
 button#amazing-webpage-button:hover {
   background-color: var(--secondary);
 }
@@ -457,7 +460,8 @@ button#amazing-webpage-button:hover {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(187, 187, 187);
-  min-height: 8.5rem;  /* +0.5rem from ".project img" */
+  min-height: 8.5rem;
+  /* +0.5rem from ".project img" */
 }
 
 .project p {
@@ -646,7 +650,8 @@ input#coolerdate {
 /* ################################################### */
 /* ################################################### */
 
-.notfound h1, .notfound p {
+.notfound h1,
+.notfound p {
   text-align: center;
   margin: 3rem auto;
 }
