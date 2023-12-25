@@ -1,5 +1,5 @@
 
-import rodoResumePdf from '../media/Rodo_Resume.pdf';
+import rodoResumePdf from '../media/Rodo_Nguyen.pdf';
 import { changeWindowTitle } from '../components/utils';
 
 const Resume = () => {
