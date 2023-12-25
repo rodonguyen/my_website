@@ -1,19 +1,16 @@
-import { changeWindowTitle } from '../components/utils';
-
+import { changeWindowTitle } from "../components/utils"
 
 const NotFound = () => {
-  changeWindowTitle("Not found...");
+	changeWindowTitle("Not found...")
 
-  return (
-    <div className="container notfound">
-      <h1>
-        Page Not Found...
-      </h1>
-      <p >
-        Back to <a href='../'>Home Page</a>
-      </p>
-    </div>
-  )
+	return (
+		<div className="container notfound">
+			<h1>Page Not Found...</h1>
+			<p>
+				Back to <a href="../">Home Page</a>
+			</p>
+		</div>
+	)
 }
 
-export default NotFound;
+export default NotFound
