@@ -11,7 +11,7 @@ const ThemeIcon = () => {
 	}
 
 	return (
-		<span onClick={handleThemeButton} className="flex ml-auto pr-4">
+		<span onClick={handleThemeButton} className="navigation-icon">
 			{darkThemeEnabled ? (
 				<FaMoon size="24" className="top-navigation-icon" />
 			) : (
@@ -82,7 +82,7 @@ const NavBar = () => {
               navbarItemsRef.current.classList.remove("display-vertical-nav-items");
             }}> */}
 						<button
-							class="hamburger-menu navbar-item"
+							class="hamburger-menu"
 							onClick={() => {
 								navbarItemsRef.current.classList.toggle(
 									"display-vertical-nav-items"
@@ -95,15 +95,6 @@ const NavBar = () => {
 					</nav>
 				</div>
 			</div>
-			<button
-				type="button"
-				className="theme-mode"
-				onClick={() => {
-					handleThemeButton()
-				}}
-			>
-				{darkThemeEnabled} Mode
-			</button>
 		</>
 	)
 }

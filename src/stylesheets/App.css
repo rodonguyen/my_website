@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* *************************************************** */
 /* *************************************************** */
 /*                   APP                               */
@@ -7,7 +11,7 @@
 .App {
   text-align: center;
   background: var(--light-1);
-  color: var(--text-color-for-light-them-1);
+  color: var(--text-color-for-light-theme-1);
   height: 100%;
   min-height: 100vh;
   font-size: var(--font-size-normal);
@@ -45,12 +49,13 @@ br.small {
   font-size: var(--font-size-xlarge);
 }
 
-a {
+a, a:visited {
+  text-decoration: underline;
   color: #0d1cc3;
 }
 
-a:visited {
-  color: var(--purple-1);
+.dark a, .dark a:visited {
+  color: #4955dc;
 }
 
 .left.intro {
@@ -88,10 +93,16 @@ button {
   border: 2px solid var(--accent);
   color: #000000;
 }
-
 button:hover {
   background-color: var(--accent);
 }
+.dark button {
+  background: var(--accent);
+}
+.dark button:hover {
+  background: var(--secondary);
+}
+
 
 .container {
   margin-top: 0px;
@@ -117,34 +128,14 @@ button:hover {
 .dark .App,
 .dark .navbar-container {
   background: var(--dark-1);
-  color: var(--text-color-for-dark-them-1);
+  color: var(--text-color-for-dark-theme-1);
 }
 
 .dark .background-color-2 {
   background: var(--dark-2);
 }
 
-.dark a {
-  color: var(--light-pink-1);
-}
 
-.dark a:visited {
-  color: var(--light-pink-2);
-}
-
-.dark button {
-  background: var(--accent);
-}
-
-.dark button:hover {
-  background: var(--secondary);
-}
-
-.dark button:disabled {
-  border: 1px solid #999999;
-  background-color: #2d2d2d;
-  color: #8d8d8d;
-}
 
 .dark .fade {
   color: var(--black-blue)
@@ -171,6 +162,51 @@ a:visited,
 /* ##                   NAV BAR                     ## */
 /* ################################################### */
 /* ################################################### */
+
+@layer components {
+  .navigation-icon {
+    @apply flex ml-auto mr-2 p-2 rounded-lg
+    transition duration-300 ease-in-out 
+    text-black cursor-pointer hover:bg-primary hover:text-white
+    dark:hover:bg-primary-dark dark:text-white;
+  }
+
+  nav a.navbar-item {
+    @apply no-underline p-2 mx-1 block rounded-lg
+    duration-300 ease-in-out 
+  hover:bg-primary hover:text-white text-black visited:text-black
+  dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
+  }
+
+  /* nav button.hamburger-menu {
+  } */
+  
+  nav button.hamburger-menu {
+    display: none;
+    background-color: transparent;
+  }
+
+  button.hamburger-menu path
+  {
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    fill: black;
+  }
+  
+  .dark button.hamburger-menu path,
+  button.hamburger-menu:hover path
+  {
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    fill: white;
+  }
+
+  nav button.hamburger-menu {
+    @apply duration-300 ease-in-out 
+    hover:bg-primary
+    dark:hover:bg-primary-dark
+  }
+}
 
 .navbar-container nav {
   position: relative;
@@ -204,32 +240,25 @@ a:visited,
   padding-left: 0;
 }
 
-a.navbar-item {
-  text-decoration: none;
-  padding: 0.3rem 0.8rem;
-  display: block;
-  border-radius: 0.5rem;
-  transition: none;
-  /* overwrite dark/light mode transition */
-}
 
-a.navbar-item:hover {
+
+/* a.navbar-item:hover {
   background: var(--primary);
-}
+} */
 
 a.navbar-item.brand {
   font-size: var(--font-size-large);
 }
 
-a.navbar-item,
+/* a.navbar-item,
 a.navbar-item:visited {
-  color: var(--text-color-for-light-them-2);
-}
+  color: var(--text-color-for-light-theme-2);
+} */
 
-.dark a.navbar-item,
+/* .dark a.navbar-item,
 .dark a.navbar-item:visited {
-  color: var(--text-color-for-dark-them-2);
-}
+  color: var(--text-color-for-dark-theme-2);
+} */
 
 div.navbar-container {
   margin-left: auto;
@@ -248,15 +277,6 @@ div.navbar-container {
   max-width: 982px;
 }
 
-button.theme-mode {
-  position: absolute;
-  right: 0;
-}
-
-button.hamburger-menu {
-  display: none;
-}
-
 
 @media (max-width: 700px) {
 
@@ -264,11 +284,11 @@ button.hamburger-menu {
     display: none;
   }
 
-  button.hamburger-menu {
+  nav button.hamburger-menu {
     display: block;
     border: none;
     border-radius: 0.5rem;
-    background-color: transparent;
+    /* background-color: transparent; */
   }
 
 
@@ -281,7 +301,7 @@ button.hamburger-menu {
 
     /* Position */
     position: absolute;
-    top: 50.6px;
+    top: 65px;
     right: -15px;
 
     /* Styling */
@@ -302,10 +322,6 @@ button.hamburger-menu {
   .dark ul.navbar-items.display-vertical-nav-items {
     background-color: rgba(29, 32, 47, 0.35);
   }
-}
-
-.dark .navbar-item:hover {
-  background: var(--dark-3);
 }
 
 
@@ -666,13 +682,13 @@ input#coolerdate {
 /* Check out here: https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557  */
 
 :root {
-  --text-color-for-light-them-1: #000000;
-  --text-color-for-light-them-2: #1e2030;
+  --text-color-for-light-theme-1: #000000;
+  --text-color-for-light-theme-2: #1e2030;
   --light-1: #f6faff;
   --light-2: #e2e2e6;
 
-  --text-color-for-dark-them-1: #e6e6e6;
-  --text-color-for-dark-them-2: #a7abca;
+  --text-color-for-dark-theme-1: #e6e6e6;
+  --text-color-for-dark-theme-2: #a7abca;
   --dark-1: #252424;
   --dark-2: #0b121b;
   --dark-3: #070707;
@@ -682,9 +698,9 @@ input#coolerdate {
   --background-light: #f6faff;
 
 
-  --primary: #F07167;
-  --secondary: #fff3d3;
-  --accent: #f9b274;
+  --primary: #2E51A1;
+  --secondary: #137DCE;
+  --accent: #137DCE;
   --accent-darker: #26201d;
 
   --red-vanilla: #E63946;

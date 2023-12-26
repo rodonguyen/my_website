@@ -140,8 +140,8 @@ const DateMe = () => {
 			}, 1000)
 
 			return () => clearTimeout(timer)
-			// eslint-disable-next-line
 		},
+		// eslint-disable-next-line
 		[secondsLeftUntilCodeExpires, myCheckResult, currentDateTime]
 	)
 

@@ -18,7 +18,7 @@ const ContactMe = () => {
 				</li>
 				<li>{createHyperlink("https://github.com/rodonguyen/", "Github")}</li>
 				<li>{createHyperlink("https://dev.to/rodonguyen", "Dev.to")}</li>
-				<li>{createHyperlink("https://rodonguyen.medium.com/", "Medium")}</li>
+				{/* <li>{createHyperlink("https://rodonguyen.medium.com/", "Medium")}</li> */}
 			</ul>
 		</div>
 	)
