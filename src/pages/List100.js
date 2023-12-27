@@ -1,4 +1,4 @@
-import { changeWindowTitle, createHyperlink } from "../components/utils"
+import { changeWindowTitle } from "../components/utils"
 
 const List100 = () => {
 	changeWindowTitle(window.location.pathname)
