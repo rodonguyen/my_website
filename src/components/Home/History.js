@@ -10,29 +10,6 @@ import { createHyperlink } from "../utils"
 export default function History() {
 	return (
 		<>
-			<p>
-				Interesting opportunity? 👉🏽 {createHyperlink("/resume", "My Resume")},
-				last updated in 10/2023.
-			</p>
-
-			<h1>Career Summary</h1>
-			<p>
-				<ul>
-					<li>
-						An engineer passionate about building impactful software products
-					</li>
-					<li>
-						Possess 1+ year of real-world experience in developing
-						high-performance and maintainable software, integrating data
-						analytics and ML.
-					</li>
-					<li>
-						A fast learner with strong programming fundamentals and project
-						management skills.
-					</li>
-				</ul>
-			</p>
-
 			<h1>Experience</h1>
 			<div className="row entry history">
 				<div className="time">2023</div>
@@ -44,22 +21,41 @@ export default function History() {
 					)}
 				</div>
 				<div className="description">
-					<h5>Software Engineer at AerVision</h5>
+					<h5>
+						<b>Software Engineer at AerVision</b>
+					</h5>
 					<p>
-						Extended and maintained both backend and frontend development for
-						AerMeal Portal, ensuring an error-free platform while continuously
-						implementing new features. Led the integration and customisation of
-						Genetec components – a video management system – to upgrade client’s
-						operational workflow. Performed onsite software installations for
-						clients.
+						I'm in charge of maintaining and expanding both the system's{" "}
+						<b>React</b> front-end and <b>Express.js API</b> capability while following{" "}
+						<b>OpenAPI</b> specifications to facilitate third-party integration.
 					</p>
 					<p>
-						Technologies used: JavaScript/VueJS, Python/FastAPI, C#/.NET,
-						AWS/Lambda, S3, DynamoDB
+						Carried out multiple <b>AWS deployments</b> for the production API.{" "}
+					</p>
+					<p>
+						Worked together with Senior Engineers to <b>architect</b> the flow
+						of information between the Express API and React client and to
+						implement new features.
+					</p>
+					<p>
+						Headed up <b>TypeScript and React</b> best practice documentation to
+						increase collaboration and maintainability in the codebases.{" "}
+					</p>
+					<p>
+						Ensured outcomes are at the highest quality, including collaborating
+						with Quality Assurance analysts to fix bugs and implement security
+						patches.{" "}
+					</p>
+					<p>
+						{" "}
+						Integrated <b>Jest and Mocha</b> testing suites for the API to
+						prevent new changes breaking old features, and unit tested important
+						functions and processes of the application, with a coverage goal of
+						<b>{" >"}90%</b>.
 					</p>
 				</div>
 			</div>
-
+			{/* 
 			<div className="row entry history">
 				<div className="time">2023</div>
 				<div className="company-logo">
@@ -88,13 +84,27 @@ export default function History() {
 					)}
 				</div>
 				<div className="description">
-					<h5>Sessional Academic aka. Tutor at QUT</h5>
+					<h5>Sessional Tutor at QUT</h5>
 					<p>
 						Delivered comprehensive knowledge of IFB102 – Intro to Computer
 						Systems – to 2 classes of 25 students each, covering Hardware,
 						Operating Systems, Cloud, Security, Raspberry Pi OS, etc. Did my
 						best to deliver the content in interesting and practical way.
 					</p>
+				</div>
+			</div> */}
+
+			<div className="row entry history">
+				<div className="time">2023</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.qut.edu.au/",
+						<img src={qutLogo} alt="qut logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>Sessional Tutor at QUT</h5>
 				</div>
 			</div>
 
@@ -109,18 +119,28 @@ export default function History() {
 				</div>
 
 				<div className="description">
-					<h5>Vacation Researcher at CSIRO's Data61</h5>
-					<p>[ Towards Training Neural Networks on Micro-controllers ]</p>
+					<h5>
+						<b>Vacation Researcher at CSIRO's Data61</b>
+					</h5>
+					<p></p>
 					<p>
-						I single-handedly explored and evaluated suitable C++ machine
-						learning libraries for a new EdgeAI & Computer Vision project, and
-						implemented some prototypes to demonstrate to my supervisors. I
-						optimised ML model’s memory consumption by x8 times by utilising
-						smaller loads of training dataset. Drew a viable “Deployment" plan
-						for the future team.{" "}
+						I spearheaded an independent research, evaluating and selecting
+						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.{" "}
+					</p>
+					<p>
+						Achieved an <b>8x reduction</b> in memory consumption of the ML model by
+						applying a novel training strategy that utilizes smaller loads of
+						training datasets, significantly improving resource efficiency
+						without compromising accuracy.{" "}
+					</p>
+					<p>
+						Conducted a series of <b>exhaustive tests</b> on both Ubuntu and Raspberry
+						Pi to ensure robust inter-device functionalities.
+					</p>
+					<p>
 						{createHyperlink(
 							"https://github.com/rodonguyen/examples/blob/csiro/playing/Rodo_CSIRO_Presentation.pdf",
-							"View my Final Presentation here"
+							'View my Final Presentation here - "Towards Training Neural Networks on Micro-controllers"'
 						)}
 						.
 					</p>
@@ -150,21 +170,83 @@ export default function History() {
 					)}
 				</div>
 				<div className="description">
-					<h5>Software Engineer at S23M</h5>
+					<h5>
+						<b>Software Engineer at S23M</b>
+					</h5>
 					<p>
-						I built an{" "}
-						{createHyperlink("https://github.com/rodonguyen/roma", "App")} with
-						a minimal yet, modern User Interface for an international health
-						organisation to interact with its health data server
-						(Create-Read-Update-Delete). Utilised React, NodeJS, AgGrid,
-						Bootstrap. Programmed many core features of the app. Led a 4-person
-						team and acted as a bridge between dev team and the product owner.
-						Constructed detailed onboarding documentation and tutorials,
+						In this Work-Integrated-Learning job, I efficiently developed the{" "}
+						<b>Front-End</b> with modern look for executing CRUD operations to a health
+						database using <b>React and MaterialUI</b>, resulting in a 6-sprint being
+						delivered in 4 sprints.
+					</p>
+					<p>
+						Implemented many core features which handle complicated queried data
+						(following <b>FHIR</b> standard) and display results clearly in the
+						Front-End, further enhancing the User Experience.
+					</p>
+					<p>
+						Developed a highly-intuitive custom feature for video management
+						software, resulting in <b>significantly shorter reaction time</b> for
+						Emergency Events for a public transport client.
 					</p>
 				</div>
 			</div>
 
 			<div className="row entry history">
+				<div className="time">2021 - 2022</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.qut.edu.au/",
+						<img src={qutLogo} alt="qut logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>Vacation Researcher at QUT</h5>
+				</div>
+			</div>
+			<div className="row entry history">
+				<div className="time">2021</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.qut.edu.au/",
+						<img src={qutLogo} alt="qut logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>HiQ Concierge at QUT</h5>
+				</div>
+			</div>
+
+			<div className="row entry history">
+				<div className="time">2021</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.facebook.com/vietqbrisbane/",
+						<img src={vietqLogo} alt="VietQ logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>Secretary at VietQ - QUT Vietnamese Students Association</h5>
+				</div>
+			</div>
+
+			<div className="row entry history">
+				<div className="time">2021</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://qutguild.com/about/qut-guild/",
+						<img src={qutguildLogo} alt="qutguild logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>International Students Officer at QUT Guild</h5>
+				</div>
+			</div>
+			{/* <div className="row entry history">
 				<div className="time">2021 - 2022</div>
 				<div className="company-logo">
 					<div class="entry-dot"></div>
@@ -256,7 +338,7 @@ export default function History() {
 						thrive.
 					</p>
 				</div>
-			</div>
+			</div> */}
 		</>
 	)
 }

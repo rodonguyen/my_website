@@ -37,7 +37,18 @@ const Home = () => {
 			{/* content block: History */}
 			<div className="background-color-2">
 				<div className="container">
-					<History />
+					<p>
+						Interesting opportunity? 👉🏽{" "}
+						{createHyperlink("/resume", "My Resume")}
+					</p>
+
+					<h1>Career Summary</h1>
+					<p>
+						Software Engineer with 1+ years of experience in developing
+						commercial applications. Proven expertise in debugging, coding, and
+						testing complicated software. Super familiar with Agile Methodology
+						and Software Development Life Cycle. A fast and driven learner.
+					</p>
 				</div>
 			</div>
 
@@ -46,11 +57,13 @@ const Home = () => {
 				<h1>Skills</h1>
 				<ul>
 					<li>
-						<b>Languages</b>:&ensp; Python, Solidity, JavaScript/TypeScript, C#,
-						HTML/CSS, SQL, Bash Script
+						<b>Languages</b>:&ensp; JavaScript/TypeScript, Python, Solidity,
+						SQL, C#, HTML/CSS.
 					</li>
 					<li>
-						<b>Full-stack</b>:&ensp; ReactJS, VueJS / FastAPI, ExpressJS, .NET
+						<b>Technologies</b>:&ensp; React, Vue, Express.js, PostgresSQL, AWS
+						(DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
+						Tailwind, Jest, Chai.
 					</li>
 					<li>
 						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3, Lambda, IAM, Load
@@ -61,10 +74,16 @@ const Home = () => {
 						MatplotLib
 					</li>
 					<li>
-						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Test-driven
-						development
+						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Data
+						Structures and Algorithms, Test-driven development, Agile.
 					</li>
 				</ul>
+			</div>
+
+			<div className="background-color-2">
+				<div className="container">
+					<History />
+				</div>
 			</div>
 
 			{/* content block: Projects */}
@@ -112,7 +131,7 @@ const Home = () => {
 				<p>Haven't tried but willing to: Camping, Tennis,...</p>
 			</div>
 
-			{/* content block: Postscript */}
+			{/* content block: Postscript
 			<div className="background-color-2">
 				<div className="container">
 					<p>p.s. </p>
@@ -121,7 +140,7 @@ const Home = () => {
 						styling frameworks :) KISS!
 					</p>
 				</div>
-			</div>
+			</div> */}
 
 			{/* Certificates section
 			<div className="background-color-2">

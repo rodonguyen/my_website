@@ -414,6 +414,7 @@ div.navbar-container {
   width: 100%;
   max-width: 80px;
   margin-left: 10px;
+  margin-bottom: 1rem;
 }
 
 .history .description {

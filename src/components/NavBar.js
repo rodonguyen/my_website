@@ -62,7 +62,7 @@ const NavBar = () => {
 									Contact me
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<a
 									href="https://rodonguyen.medium.com/"
 									className="navbar-item"
@@ -71,11 +71,8 @@ const NavBar = () => {
 								>
 									Blog
 								</a>
-							</li>
+							</li> */}
 						</ul>
-						{/* <ClickAwayListener onClickAway={() => {
-              navbarItemsRef.current.classList.remove("display-vertical-nav-items");
-            }}> */}
 						<button
 							class="hamburger-menu"
 							onClick={() => {
