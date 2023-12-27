@@ -42,7 +42,7 @@ const List100 = () => {
 				{/* Career */}
 				<li>✓ Annual income before tax AU$65,000</li>
 				<li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
-				<li>✗ Get Aussie PR</li>
+				{/* <li>✗ Get Aussie PR</li> */}
 				<li>✗ Buy a house for my parents to retire in Australia</li>
 				<li>✗ Get a driver license</li>
 				<li>✗ Learn to fly helicopter/plane</li>
@@ -71,17 +71,12 @@ const List100 = () => {
 				comes. {"Love, Rodo <3"}
 			</p>
 			<ul className="text-align-left">
-				<li>UNIQLO or any giftcard</li>
+				<li>Polaroid camera/printer</li>
 				<li>UltraBoost shoes (size 11)</li>
-				<li>
-					Gym clothes:{" "}
-					{createHyperlink(
-						"https://au.shop.gymshark.com/collections/tanks/mens",
-						"tank top for gym"
-					)}{" "}
-					or anything else will do.{" "}
-				</li>
-				<li>Nothing else for now, I'm quite a minimalist :)</li>
+				<li>Great time with friends and family.</li>
+				<li>Swisse watch with EOL battery</li>
+				<li>Tshirts</li>
+				<li>Gym clothes, shorts, tank tops,...</li>
 			</ul>
 		</div>
 	)
