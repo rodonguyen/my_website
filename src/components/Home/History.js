@@ -207,7 +207,7 @@ export default function History() {
 						{createHyperlink(
 							"https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
 							"Best Research Poster Award"
-						)}{" "}. #python #data_analytics #cybersecurity
+						)}. #python #data_analytics #cybersecurity
 					</p>
 				</div>
 			</div>
