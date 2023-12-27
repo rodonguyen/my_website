@@ -22,11 +22,6 @@ const ThemeIcon = () => {
 }
 
 const NavBar = () => {
-	const [darkThemeEnabled, changeTheme] = useDarkMode()
-	const handleThemeButton = () => {
-		changeTheme(!darkThemeEnabled)
-	}
-
 	const hamburgerMenuSvg = (
 		<svg
 			class="hamburger-menu"
