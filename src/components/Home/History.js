@@ -203,6 +203,12 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>Vacation Researcher at QUT</h5>
+					<p>Won the{" "}
+						{createHyperlink(
+							"https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
+							"Best Research Poster Award"
+						)}{" "}. #python #data_analytics #cybersecurity
+					</p>
 				</div>
 			</div>
 			<div className="row entry history">
