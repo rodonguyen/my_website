@@ -13,9 +13,9 @@ const ThemeIcon = () => {
 	return (
 		<span onClick={handleThemeButton} className="navigation-icon">
 			{darkThemeEnabled ? (
-				<FaMoon size="24" className="top-navigation-icon" />
+				<FaMoon size="24" />
 			) : (
-				<FaSun size="24" className="top-navigation-icon" />
+				<FaSun size="24" />
 			)}
 		</span>
 	)

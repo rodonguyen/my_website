@@ -11,7 +11,7 @@
 .App {
   text-align: center;
   background: var(--light-1);
-  color: black;
+  color: #0F0F0F;
   height: 100%;
   min-height: 100vh;
   font-size: var(--font-size-normal);
@@ -137,7 +137,7 @@ button:hover {
 .dark .App,
 .dark .navbar-container {
   background: var(--dark-1);
-  color: white;
+  color: #F0F0F0;
 }
 
 .dark .background-color-2 {
@@ -168,14 +168,14 @@ body, body.dark,
     @apply flex ml-auto mr-2 p-2 rounded-lg
     transition duration-300 ease-in-out 
     text-black cursor-pointer hover:bg-primary hover:text-white
-    dark:hover:bg-primary-dark dark:text-white;
+    dark:hover:bg-primary-dark dark:text-custom-white;
   }
 
   nav a.navbar-item {
-    @apply no-underline p-2 mx-1 block rounded-lg
+    @apply no-underline px-2 py-1 mx-1 block rounded-lg
     duration-300 ease-in-out 
   hover:bg-primary hover:text-white text-black visited:text-black
-  dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
+  dark:hover:bg-primary-dark dark:hover:text-custom-white dark:text-custom-white dark:visited:text-custom-white;
   }
 
   /* nav button.hamburger-menu {
@@ -213,7 +213,7 @@ body, body.dark,
   display: flex;
   align-items: center;
   height: auto;
-  padding: 0.4rem 0rem;
+  padding: 0.2rem 0;
 }
 
 .navbar-container {

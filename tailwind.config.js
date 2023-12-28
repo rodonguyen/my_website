@@ -7,7 +7,6 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#3fa8f9",
 				primary: {
 					DEFAULT: "#3fa8f9",
 					dark: "#0670C1",
@@ -21,12 +20,8 @@ module.exports = {
 				accent: "#294EF5",
 			},
 			textColor: {
-				"custom-black": "#0C1717",
-				"custom-white": "#e8f3f3"
-			},
-			backgroundColor: {
-				"custom-white": "#f9f9fd",
-				"custom-black": "#030308"
+				"custom-black": "#0F0F0F",
+				"custom-white": "#F0F0F0"
 			}
 		}
 	},
