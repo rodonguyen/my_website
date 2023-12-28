@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-// import ClickAwayListener from '@mui/base/ClickAwayListener';
 import { useRef } from "react"
 import { FaMoon, FaSun } from "react-icons/fa"
 import { useDarkMode } from "./utils"
@@ -83,7 +82,6 @@ const NavBar = () => {
 						>
 							{hamburgerMenuSvg}
 						</button>
-						{/* </ClickAwayListener> */}
 					</nav>
 				</div>
 			</div>

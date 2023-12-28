@@ -105,6 +105,10 @@ button:hover {
   background: var(--secondary);
 }
 
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
 .container {
   margin-top: 0px;
@@ -118,12 +122,6 @@ button:hover {
   max-width: 982px;
   text-align: left;
 }
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
 @media (max-width: 500px) {
   .container {
     padding-left: 2rem; 
@@ -177,9 +175,6 @@ body, body.dark,
   hover:bg-primary hover:text-white text-black visited:text-black
   dark:hover:bg-primary-dark dark:hover:text-custom-white dark:text-custom-white dark:visited:text-custom-white;
   }
-
-  /* nav button.hamburger-menu {
-  } */
   
   nav button.hamburger-menu {
     display: none;
@@ -265,7 +260,6 @@ div.navbar-container {
 
 
 @media (max-width: 700px) {
-
   ul.navbar-items {
     display: none;
   }
@@ -274,9 +268,7 @@ div.navbar-container {
     display: block;
     border: none;
     border-radius: 0.5rem;
-    /* background-color: transparent; */
   }
-
 
   /* when click the hamburger-menu button */
   ul.navbar-items {
@@ -287,26 +279,23 @@ div.navbar-container {
 
     /* Position */
     position: absolute;
-    top: 65px;
+    top: 50.6px;
     right: -15px;
 
     /* Styling */
-    backdrop-filter: blur(15px);
-    background-color: rgb(0, 0, 0, 0.05);
+    backdrop-filter: blur(3rem);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 8px;
     border-radius: 0rem 0rem 0rem 0.5rem;
-    transition: all .5s ease-out;
   }
 
   ul.navbar-items.display-vertical-nav-items {
-    transition: all .5s ease-out;
     opacity: 1;
-    /* Display menu */
     display: inline-block;
   }
 
   .dark ul.navbar-items.display-vertical-nav-items {
-    background-color: rgba(29, 32, 47, 0.35);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
