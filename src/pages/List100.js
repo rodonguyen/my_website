@@ -66,7 +66,6 @@ const List100 = () => {
 
 			<h1 className="text-align-left xlarge">My Wish List</h1>
 			<p>
-				{" "}
 				This helps mitigate the headache of my close friends as my birthday
 				comes. {"Love, Rodo <3"}
 			</p>

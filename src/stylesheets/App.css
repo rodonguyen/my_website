@@ -162,18 +162,20 @@ body, body.dark,
 /* ################################################### */
 
 @layer components {
-  .navigation-icon {
+  nav .theme-icon {
     @apply flex ml-auto mr-2 p-2 rounded-lg
     transition duration-300 ease-in-out 
-    text-black cursor-pointer hover:bg-primary hover:text-white
-    dark:hover:bg-primary-dark dark:text-custom-white;
+    text-black cursor-pointer 
+    hover:bg-primary hover:text-white
+    dark:hover:bg-primary-dark dark:text-white;
   }
 
   nav a.navbar-item {
     @apply no-underline px-2 py-1 mx-1 block rounded-lg
     duration-300 ease-in-out 
-  hover:bg-primary hover:text-white text-black visited:text-black
-  dark:hover:bg-primary-dark dark:hover:text-custom-white dark:text-custom-white dark:visited:text-custom-white;
+    text-black visited:text-black
+    hover:bg-primary hover:text-white
+    dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
   }
   
   nav button.hamburger-menu {
@@ -181,8 +183,7 @@ body, body.dark,
     background-color: transparent;
   }
 
-  button.hamburger-menu path
-  {
+  button.hamburger-menu path {
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     fill: black;
@@ -213,7 +214,6 @@ body, body.dark,
 
 .navbar-container {
   /* Sticky properties */
-  /* position:static;   */
   position: sticky;
   top: 0;
   z-index: 1;

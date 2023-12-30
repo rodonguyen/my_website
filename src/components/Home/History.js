@@ -186,7 +186,7 @@ export default function History() {
 					</p>
 					<p>
 						Developed a highly-intuitive custom feature for video management
-						software, resulting in <b>significantly shorter reaction time</b> for
+						software in <b>.NET</b>, resulting in <b>significantly shorter reaction time</b> for
 						Emergency Events for a public transport client.
 					</p>
 				</div>
