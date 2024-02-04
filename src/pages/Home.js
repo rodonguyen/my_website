@@ -35,7 +35,11 @@ const Home = () => {
 				</div>
 			</div>
 
-			{/* Skills section */}
+			{/* Skills section
+					Shorter on resume 
+					but you should list everything on your website. 
+					Because it's YOUR website. 
+			*/}
 			{/* <div className="container skills">
 				<h1>Skills</h1>
 				<ul>

@@ -5,7 +5,7 @@ const ContactMe = () => {
 
 	return (
 		<div className="container contact-list">
-			<h1 className="center">Yo :)</h1>
+			<h1 className="center">A stranger is a friend we haven't met. - A marketplace buyer</h1>
 
 			<ul className="text-align-left center">
 				<li>Email: rodonguyendd at gmail.com </li>
