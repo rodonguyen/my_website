@@ -67,15 +67,15 @@ const List100 = () => {
 			<h1 className="text-align-left xlarge">My Wish List</h1>
 			<p>
 				This helps mitigate the headache of my close friends as my birthday
-				comes. {"Love, Rodo <3"}
+				approaches. {"Love, Rodo <3"}
 			</p>
 			<ul className="text-align-left">
 				<li>Polaroid camera/printer</li>
-				<li>UltraBoost shoes (size 11)</li>
+				<li>Sport/UltraBoost shoes (US 10, FR 44)</li>
+				<li>Badminton racket</li>
 				<li>Great time with friends and family.</li>
-				<li>Swisse watch with EOL battery</li>
-				<li>Tshirts</li>
-				<li>Gym clothes, shorts, tank tops,...</li>
+				<li>Swisse watch with EOL battery (Tissot? maybe)</li>
+				<li>1 Bitcoin (haha)</li>
 			</ul>
 		</div>
 	)
