@@ -16,7 +16,7 @@ const List100 = () => {
 				{/* Legacy */}
 				<li>✗ Read 100 books ({readBookNum}/100)</li>
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
-				<li>✓ Teach a course in university</li>
+				<li>✓ Teach a course in university (CAB230, IFB102 at QUT)</li>
 				<li>✗ Found a tech company in Vietnam and it survives :)</li>
 				<li>✗ Give a talk to {">"}100 audiences (like... any talk)</li>
 				<li>✗ Establish a Mentorship Program in my high school</li>
