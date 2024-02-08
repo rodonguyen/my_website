@@ -25,7 +25,7 @@ const Home = () => {
 							"https://amazing.rodonguyen.dev/",
 							"my pet projects"
 						)}{" "}
-						where I code things that are fun and interesting.
+						where I code fun and interesting things.
 					</p>
 				</div>
 			</div>
@@ -66,31 +66,27 @@ const Home = () => {
 			</div> */}
 
 			{/* content block: Projects */}
-			<div className="background-color-2">
-				<div className="container">
-					<h1>Amazing Projects</h1>
-					{createHyperlink(
-						"https://amazing.rodonguyen.dev/",
-						<button id="amazing-webpage-button">{"<Check them out/>"}</button>
-					)}
-				</div>
+			<div className="container">
+				<h1>Amazing Projects</h1>
+				{createHyperlink(
+					"https://amazing.rodonguyen.dev/",
+					<button id="amazing-webpage-button">{"<Check them out/>"}</button>
+				)}
 			</div>
 
 			{/* Skills section */}
 
-			<div className="container">
-				<h1>Hobbies</h1>
-				<p>
-					{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
-					<LeetcodeSvg />
-					&ensp; Top 700k
-				</p>
-				<p>
-					{createHyperlink("https://www.chess.com/member/rodobolo", "Chess")} ♟️
-					Beginner, ELO 1000 (rapid){" "}
-				</p>
-				<p>Hiking, Gym/Calisthenics, Bowling, Badminton, Reading, Movies</p>
-				<p>Haven't tried but willing to: Camping, Tennis,...</p>
+			<div className="background-color-2">
+				<div className="container">
+					<h1>Hobbies</h1>
+					{/* <p>
+						{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
+						<LeetcodeSvg />
+						&ensp; Top 700k
+					</p> */}
+					<p>Hiking, Gym/Calisthenics, Bowling, {createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}♟️(ELO 1000, rapid), Badminton, Reading, Movies</p>
+					<p>Haven't tried but willing to: Camping, Tennis,...</p>
+				</div>
 			</div>
 		</>
 	)
