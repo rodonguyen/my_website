@@ -68,7 +68,7 @@ const Home = () => {
 				<h1>Amazing Projects</h1>
 				{createHyperlink(
 					"https://amazing.rodonguyen.dev/",
-					<button id="amazing-webpage-button">{"<Check them out/>"}</button>
+					<button id="amazing-webpage-button">{"<AmazingProjects />"}</button>
 				)}
 			</div>
 

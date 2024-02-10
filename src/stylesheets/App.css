@@ -92,14 +92,14 @@ button {
   /* border-width: 1px; */
   background-color: var(--secondary);
   cursor: pointer;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--primary);
   color: #000000;
 }
 button:hover {
-  background-color: var(--accent);
+  background-color: var(--primary);
 }
 .dark button {
-  background: var(--accent);
+  background: var(--primary);
 }
 .dark button:hover {
   background: var(--secondary);
@@ -442,7 +442,7 @@ button#amazing-webpage-button {
   padding: 15px 50px;
   font-size: var(--font-size-large);
   border-radius: 6px;
-  background-color: var(--accent);
+  background-color: var(--primary);
 }
 
 button#amazing-webpage-button:hover {
@@ -603,8 +603,6 @@ input#coolerdate {
 
   --primary: #3fa8f9;
   --secondary: #137DCE;
-  --accent: #137DCE;
-  --accent-darker: #26201d;
 
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;
