@@ -83,7 +83,7 @@ const Home = () => {
 						&ensp; Top 700k
 					</p> */}
 					<p>Hiking, Gym/Calisthenics, Bowling, {createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}♟️(ELO 1000, rapid), Badminton, Reading, Movies</p>
-					<p>Haven't tried but willing to: Camping, Tennis,...</p>
+					<p>Haven't tried but willing to: Camping, Tennis, ...</p>
 				</div>
 			</div>
 		</>
