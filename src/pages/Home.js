@@ -1,8 +1,6 @@
-//
 import rodoImage from "../media/Rodo.jpg"
 import History from "../components/Home/History"
 import { changeWindowTitle, createHyperlink } from "../components/utils"
-import LeetcodeSvg from "../components/LeetcodeSvg"
 
 const Home = () => {
 	changeWindowTitle(window.location.pathname)
