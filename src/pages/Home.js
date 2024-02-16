@@ -113,7 +113,7 @@ const Home = () => {
 					{createHyperlink("https://www.chess.com/member/rodobolo", "Chess")} ♟️
 					Beginner, ELO 1000 (rapid){" "}
 				</p>
-				<p>Hiking, Gym/Calisthenics, Bawling, Badminton, Reading, Movies</p>
+				<p>Hiking, Gym/Calisthenics, Bowling, Badminton, Reading, Movies</p>
 				<p>Haven't tried but willing to: Camping, Tennis,...</p>
 			</div>
 

@@ -26,11 +26,9 @@ export default function History() {
 					</h5>
 					<p>
 						I'm in charge of maintaining and expanding both the system's{" "}
-						<b>React</b> front-end and <b>Express.js API</b> capability while following{" "}
-						<b>OpenAPI</b> specifications to facilitate third-party integration.
-					</p>
-					<p>
-						Carried out multiple <b>AWS deployments</b> for the production API.{" "}
+						<b>React</b> front-end and <b>Express.js API</b> capability while
+						following <b>OpenAPI</b> specifications to facilitate third-party
+						integration.
 					</p>
 					<p>
 						Worked together with Senior Engineers to <b>architect</b> the flow
@@ -39,19 +37,17 @@ export default function History() {
 					</p>
 					<p>
 						Headed up <b>TypeScript and React</b> best practice documentation to
-						increase collaboration and maintainability in the codebases.{" "}
+						increase collaboration and maintainability in the codebases.
 					</p>
 					<p>
 						Ensured outcomes are at the highest quality, including collaborating
 						with Quality Assurance analysts to fix bugs and implement security
-						patches.{" "}
+						patches.
 					</p>
 					<p>
-						{" "}
-						Integrated <b>Jest and Mocha</b> testing suites for the API to
-						prevent new changes breaking old features, and unit tested important
-						functions and processes of the application, with a coverage goal of
-						<b>{" >"}90%</b>.
+						Integrated <b>Jest</b> testing suites for the API to prevent new
+						changes breaking old features and core logics, reaching the coverage
+						goal of <b>80%</b>.
 					</p>
 				</div>
 			</div>
@@ -128,14 +124,14 @@ export default function History() {
 						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.{" "}
 					</p>
 					<p>
-						Achieved an <b>8x reduction</b> in memory consumption of the ML model by
-						applying a novel training strategy that utilizes smaller loads of
-						training datasets, significantly improving resource efficiency
-						without compromising accuracy.{" "}
+						Achieved an <b>8x reduction</b> in memory consumption of the ML
+						model by applying a novel training strategy that utilizes smaller
+						loads of training datasets, significantly improving resource
+						efficiency without compromising accuracy.{" "}
 					</p>
 					<p>
-						Conducted a series of <b>exhaustive tests</b> on both Ubuntu and Raspberry
-						Pi to ensure robust inter-device functionalities.
+						Conducted a series of <b>exhaustive tests</b> on both Ubuntu and
+						Raspberry Pi to ensure robust inter-device functionalities.
 					</p>
 					<p>
 						{createHyperlink(
@@ -175,9 +171,9 @@ export default function History() {
 					</h5>
 					<p>
 						In this Work-Integrated-Learning job, I efficiently developed the{" "}
-						<b>Front-End</b> with modern look for executing CRUD operations to a health
-						database using <b>React and MaterialUI</b>, resulting in a 6-sprint being
-						delivered in 4 sprints.
+						<b>Front-End</b> with modern look for executing CRUD operations to a
+						health database using <b>React and MaterialUI</b>, resulting in a
+						6-sprint being delivered in 4 sprints.
 					</p>
 					<p>
 						Implemented many core features which handle complicated queried data
@@ -186,8 +182,9 @@ export default function History() {
 					</p>
 					<p>
 						Developed a highly-intuitive custom feature for video management
-						software in <b>.NET</b>, resulting in <b>significantly shorter reaction time</b> for
-						Emergency Events for a public transport client.
+						software in <b>.NET</b>, resulting in{" "}
+						<b>significantly shorter reaction time</b> for Emergency Events for
+						a public transport client.
 					</p>
 				</div>
 			</div>
@@ -203,11 +200,13 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>Vacation Researcher at QUT</h5>
-					<p>Won the{" "}
+					<p>
+						Won the{" "}
 						{createHyperlink(
 							"https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
 							"Best Research Poster Award"
-						)}. #python #data_analytics #cybersecurity
+						)}
+						. #python #data_analytics #cybersecurity
 					</p>
 				</div>
 			</div>
