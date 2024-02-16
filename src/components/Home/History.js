@@ -40,13 +40,13 @@ export default function History() {
 						increase collaboration and maintainability in the codebases.
 					</p>
 					<p>
-						Ensured outcomes are at the highest quality, including collaborating
-						with Quality Assurance analysts to fix bugs and implement security
+						Ensured outcomes were at the highest quality and collaborated with
+						Quality Assurance analysts to fix bugs and implement security
 						patches.
 					</p>
 					<p>
 						Integrated <b>Jest</b> testing suites for the API to prevent new
-						changes breaking old features and core logics, reaching the coverage
+						changes breaking old features and core logic, reaching the coverage
 						goal of <b>80%</b>.
 					</p>
 				</div>
@@ -121,13 +121,13 @@ export default function History() {
 					<p></p>
 					<p>
 						I spearheaded an independent research, evaluating and selecting
-						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.{" "}
+						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.
 					</p>
 					<p>
 						Achieved an <b>8x reduction</b> in memory consumption of the ML
 						model by applying a novel training strategy that utilizes smaller
 						loads of training datasets, significantly improving resource
-						efficiency without compromising accuracy.{" "}
+						efficiency without compromising accuracy.
 					</p>
 					<p>
 						Conducted a series of <b>exhaustive tests</b> on both Ubuntu and
