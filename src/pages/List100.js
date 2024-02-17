@@ -24,7 +24,7 @@ const List100 = () => {
 				{/* Travelling */}
 				<li>✗ See Auroras</li>
 				<li>✗ Conquer Fansipan Mountain</li>
-				<li>✗ 10-day Vipassana Meditation Retreat</li>
+				<li>✗ Vipassana Meditation Retreat</li>
 				<li>✗ Pay and have a 14-day holiday with my family</li>
 				<li>✗ Visit Norway's mountains</li>
 				<li>✗ Visit New Zealand's mountains</li>

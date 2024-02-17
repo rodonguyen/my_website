@@ -80,8 +80,6 @@ const Home = () => {
 
 			<div className="container">
 				<h1>Hobbies</h1>
-
-				{/* Uncomment these when the rank/elo is high */}
 				<p>
 					{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
 					<LeetcodeSvg />
@@ -94,24 +92,6 @@ const Home = () => {
 				<p>Hiking, Gym/Calisthenics, Bowling, Badminton, Reading, Movies</p>
 				<p>Haven't tried but willing to: Camping, Tennis,...</p>
 			</div>
-
-			{/* content block: Postscript
-			<div className="background-color-2">
-				<div className="container">
-					<p>p.s. </p>
-					<p>
-						This website is made with bare HTML/CSS, ReactJS and no special
-						styling frameworks :) KISS!
-					</p>
-				</div>
-			</div> */}
-
-			{/* Certificates section
-			<div className="background-color-2">
-				<div className="container text-align-left certificate">
-				<h1>Certificates</h1>
-				</div>
-			</div> */}
 		</>
 	)
 }
