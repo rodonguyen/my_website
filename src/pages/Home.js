@@ -18,14 +18,14 @@ const Home = () => {
 				</div>
 				<div className="bio">
 					<h1 className="xlarge text-align-left">Engineer great software</h1>
-					<p></p>
+					<p>Driven by the amazing and exciting world of technology.</p>
 					<p>
 						Also here are{" "}
 						{createHyperlink(
 							"https://amazing.rodonguyen.dev/",
-							"my 'amazing' projects"
+							"my pet projects"
 						)}{" "}
-						where I put my skills to practice.
+						where I code things that are fun and interesting.
 					</p>
 				</div>
 			</div>
@@ -33,20 +33,12 @@ const Home = () => {
 			{/* content block: History */}
 			<div className="background-color-2">
 				<div className="container">
-					<h1>Career Summary</h1>
-					<p>
-						Fullstack Software Engineer with 1+ years of experience in
-						developing commercial applications. Proven track record in
-						debugging, building, and testing complicated software. Fast and avid
-						learner.
-					</p>
-					<p>
-						Interesting opportunity? 👉🏽{" "}
-						{createHyperlink("/resume", "My Resume")}
-					</p>
+					<History />
+				</div>
+			</div>
 
-					{/* Skills section */}
-					{/* <div className="container skills">
+			{/* Skills section */}
+			{/* <div className="container skills">
 				<h1>Skills</h1>
 				<ul>
 					<li>
@@ -72,10 +64,6 @@ const Home = () => {
 					</li>
 				</ul>
 			</div> */}
-
-					<History />
-				</div>
-			</div>
 
 			{/* content block: Projects */}
 			<div className="background-color-2">
