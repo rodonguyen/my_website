@@ -23,7 +23,7 @@ const Home = () => {
 						Also here are{" "}
 						{createHyperlink(
 							"https://amazing.rodonguyen.dev/",
-							"my 'amazing' amazing projects"
+							"my 'amazing' projects"
 						)}{" "}
 						where I put my skills to practice.
 					</p>
@@ -33,11 +33,6 @@ const Home = () => {
 			{/* content block: History */}
 			<div className="background-color-2">
 				<div className="container">
-					<p>
-						Interesting opportunity? 👉🏽{" "}
-						{createHyperlink("/resume", "My Resume")}
-					</p>
-
 					<h1>Career Summary</h1>
 					<p>
 						Fullstack Software Engineer with 1+ years of experience in
@@ -45,11 +40,13 @@ const Home = () => {
 						debugging, building, and testing complicated software. Fast and avid
 						learner.
 					</p>
-				</div>
-			</div>
+					<p>
+						Interesting opportunity? 👉🏽{" "}
+						{createHyperlink("/resume", "My Resume")}
+					</p>
 
-			{/* Skills section */}
-			{/* <div className="container skills">
+					{/* Skills section */}
+					{/* <div className="container skills">
 				<h1>Skills</h1>
 				<ul>
 					<li>
@@ -76,8 +73,6 @@ const Home = () => {
 				</ul>
 			</div> */}
 
-			<div className="background-color-2">
-				<div className="container">
 					<History />
 				</div>
 			</div>
