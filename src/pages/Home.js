@@ -17,8 +17,8 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="bio">
-					<h1 className="xlarge text-align-left">Hello World!</h1>
-					<p>Engineer great software.</p>
+					<h1 className="xlarge text-align-left">Engineer great software</h1>
+					<p></p>
 					<p>
 						Also here are{" "}
 						{createHyperlink(
