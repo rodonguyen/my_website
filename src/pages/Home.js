@@ -18,7 +18,7 @@ const Home = () => {
 				</div>
 				<div className="bio">
 					<h1 className="xlarge text-align-left">Hello World!</h1>
-					<p>Engineer great things only.</p>
+					<p>Engineer great software.</p>
 					<p>
 						Also here are{" "}
 						{createHyperlink(
@@ -56,7 +56,7 @@ const Home = () => {
 						<b>Languages</b>:&ensp; JavaScript/TypeScript, Python, Solidity,
 						SQL, C#, HTML/CSS.
 					</li>
-					<li>
+					{/* <li>
 						<b>Technologies</b>:&ensp; React, Vue, Express.js, .NET, PostgreSQL,
 						AWS (DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
 						Tailwind, Jest, Chai.
@@ -72,7 +72,7 @@ const Home = () => {
 					<li>
 						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Data
 						Structures and Algorithms, Test-driven development, Agile.
-					</li>
+					</li> */}
 				</ul>
 			</div>
 
