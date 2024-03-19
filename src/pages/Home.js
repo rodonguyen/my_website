@@ -40,23 +40,23 @@ const Home = () => {
 
 					<h1>Career Summary</h1>
 					<p>
-						Software Engineer with 1+ years of experience in developing
-						commercial applications. Proven expertise in debugging, coding, and
-						testing complicated software. Super familiar with Agile Methodology
-						and Software Development Life Cycle. A fast and driven learner.
+						Fullstack Software Engineer with 1+ years of experience in
+						developing commercial applications. Proven track record in
+						debugging, building, and testing complicated software. Fast and avid
+						learner.
 					</p>
 				</div>
 			</div>
 
 			{/* Skills section */}
-			<div className="container skills">
+			{/* <div className="container skills">
 				<h1>Skills</h1>
 				<ul>
 					<li>
 						<b>Languages</b>:&ensp; JavaScript/TypeScript, Python, Solidity,
 						SQL, C#, HTML/CSS.
 					</li>
-					{/* <li>
+					<li>
 						<b>Technologies</b>:&ensp; React, Vue, Express.js, .NET, PostgreSQL,
 						AWS (DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
 						Tailwind, Jest, Chai.
@@ -72,9 +72,9 @@ const Home = () => {
 					<li>
 						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Data
 						Structures and Algorithms, Test-driven development, Agile.
-					</li> */}
+					</li>
 				</ul>
-			</div>
+			</div> */}
 
 			<div className="background-color-2">
 				<div className="container">
