@@ -18,19 +18,14 @@ const Home = () => {
 				</div>
 				<div className="bio">
 					<h1 className="xlarge text-align-left">Hello World!</h1>
+					<p>Engineer great things only.</p>
 					<p>
-						I'm a motivated Software Engineer who loves to work on impactful
-						products that bring value to users at scale.
-					</p>
-					<p>
-						I like to build personal projects where I put my skills or my
-						recently acquired knowledge to practice. While we're on this, check
-						out{" "}
+						Also here are{" "}
 						{createHyperlink(
 							"https://amazing.rodonguyen.dev/",
-							"my amazing projects"
-						)}
-						.
+							"my 'amazing' amazing projects"
+						)}{" "}
+						where I put my skills to practice.
 					</p>
 				</div>
 			</div>
@@ -62,8 +57,8 @@ const Home = () => {
 						SQL, C#, HTML/CSS.
 					</li>
 					<li>
-						<b>Technologies</b>:&ensp; React, Vue, Express.js, .NET, PostgreSQL, AWS
-						(DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
+						<b>Technologies</b>:&ensp; React, Vue, Express.js, .NET, PostgreSQL,
+						AWS (DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
 						Tailwind, Jest, Chai.
 					</li>
 					<li>
