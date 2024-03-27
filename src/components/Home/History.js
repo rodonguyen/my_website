@@ -4,6 +4,8 @@ import qutLogo from "../../media/history_qut_logo.jpeg"
 import s23mLogo from "../../media/history_s23m_logo.jpeg"
 import aervisionLogo from "../../media/history_aervision_logo.png"
 import csirodata61Logo from "../../media/history_csirodata61_logo.jpeg"
+import dltxlogo from "../../media/history_dltx_logo.png"
+import cslogo from "../../media/history_cs_logo.png"
 
 import { createHyperlink } from "../utils"
 
@@ -11,6 +13,35 @@ export default function History() {
 	return (
 		<>
 			<h1>Experience</h1>
+
+			<div className="row entry history">
+				<div className="time">2023-now</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.dltx.io/",
+						<img src={dltxlogo} alt="dltx labs logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>Software Engineer at DLTx Labs</h5>
+				</div>
+			</div>
+
+			<div className="row entry history">
+				<div className="time">2023 - now</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+					{createHyperlink(
+						"https://www.qut.edu.au/",
+						<img src={qutLogo} alt="qut logo" />
+					)}
+				</div>
+				<div className="description">
+					<h5>Sessional Tutor at QUT</h5>
+				</div>
+			</div>
+
 			<div className="row entry history">
 				<div className="time">2023</div>
 				<div className="company-logo">
@@ -22,9 +53,9 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>
-						<b>Software Engineer at AerVision</b>
+						Software Engineer at AerVision
 					</h5>
-					<p>
+					{/* <p>
 						I'm in charge of maintaining and expanding both the system's{" "}
 						<b>React</b> front-end and <b>Express.js API</b> capability while
 						following <b>OpenAPI</b> specifications to facilitate third-party
@@ -48,9 +79,10 @@ export default function History() {
 						Integrated <b>Jest</b> testing suites for the API to prevent new
 						changes breaking old features and core logic, reaching the coverage
 						goal of <b>80%</b>.
-					</p>
+					</p> */}
 				</div>
 			</div>
+
 			{/* 
 			<div className="row entry history">
 				<div className="time">2023</div>
@@ -91,20 +123,6 @@ export default function History() {
 			</div> */}
 
 			<div className="row entry history">
-				<div className="time">2023</div>
-				<div className="company-logo">
-					<div class="entry-dot"></div>
-					{createHyperlink(
-						"https://www.qut.edu.au/",
-						<img src={qutLogo} alt="qut logo" />
-					)}
-				</div>
-				<div className="description">
-					<h5>Sessional Tutor at QUT</h5>
-				</div>
-			</div>
-
-			<div className="row entry history">
 				<div className="time">2022 - 2023</div>
 				<div className="company-logo">
 					<div class="entry-dot"></div>
@@ -116,10 +134,9 @@ export default function History() {
 
 				<div className="description">
 					<h5>
-						<b>Vacation Researcher at CSIRO's Data61</b>
+						Vacation Researcher at CSIRO's Data61
 					</h5>
-					<p></p>
-					<p>
+					{/* <p>
 						I spearheaded an independent research, evaluating and selecting
 						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.
 					</p>
@@ -152,7 +169,7 @@ export default function History() {
 							"Dr Sara Khalifa"
 						)}{" "}
 						whom I have the pleasure to work with.
-					</p>
+					</p> */}
 				</div>
 			</div>
 
@@ -167,9 +184,9 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>
-						<b>Software Engineer at S23M</b>
+						Software Engineer at S23M
 					</h5>
-					<p>
+					{/* <p>
 						In this Work-Integrated-Learning job, I efficiently developed the{" "}
 						<b>Front-End</b> with modern look for executing CRUD operations to a
 						health database using <b>React and MaterialUI</b>, resulting in a
@@ -185,7 +202,7 @@ export default function History() {
 						software in <b>.NET</b>, resulting in{" "}
 						<b>significantly shorter reaction time</b> for Emergency Events for
 						a public transport client.
-					</p>
+					</p> */}
 				</div>
 			</div>
 
@@ -200,14 +217,14 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>Vacation Researcher at QUT</h5>
-					<p>
+					{/* <p>
 						Won the{" "}
 						{createHyperlink(
 							"https://github.com/rodonguyen/vres_code_2021/tree/main/Documents/Final_Poster_2022",
 							"Best Research Poster Award"
 						)}
 						. #python #data_analytics #cybersecurity
-					</p>
+					</p> */}
 				</div>
 			</div>
 			<div className="row entry history">
@@ -251,6 +268,20 @@ export default function History() {
 					<h5>International Students Officer at QUT Guild</h5>
 				</div>
 			</div>
+
+
+			<div className="row entry history">
+				<div className="time">2019 - 2020</div>
+				<div className="company-logo">
+					<div class="entry-dot"></div>
+						<img src={cslogo} alt="customer service logo" />
+				</div>
+				<div className="description">
+					<h5>Front of House Staff at Macca</h5>
+					<h5>Kitchenhand at Hundred Acres Bar</h5>
+				</div>
+			</div>
+
 			{/* <div className="row entry history">
 				<div className="time">2021 - 2022</div>
 				<div className="company-logo">
