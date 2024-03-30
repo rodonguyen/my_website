@@ -12,10 +12,19 @@ import { createHyperlink } from "../utils"
 export default function History() {
 	return (
 		<>
-			<h1>Experience</h1>
+			<h1>What did I do since I'm 18yo? Good question...</h1>
+			<p>
+				Visit my{" "}
+				{createHyperlink("https://www.linkedin.com/in/rodonguyen/", "LinkedIn")}{" "}
+				for more
+			</p>
+			<p>
+				Interesting opportunity? 👉🏽 {createHyperlink("/resume", "My Resume")}
+			</p>
+			<br/>
 
 			<div className="row entry history">
-				<div className="time">2023-now</div>
+				<div className="time">2023 - now</div>
 				<div className="company-logo">
 					<div class="entry-dot"></div>
 					{createHyperlink(
@@ -52,9 +61,7 @@ export default function History() {
 					)}
 				</div>
 				<div className="description">
-					<h5>
-						Software Engineer at AerVision
-					</h5>
+					<h5>Software Engineer at AerVision</h5>
 					{/* <p>
 						I'm in charge of maintaining and expanding both the system's{" "}
 						<b>React</b> front-end and <b>Express.js API</b> capability while
@@ -133,9 +140,7 @@ export default function History() {
 				</div>
 
 				<div className="description">
-					<h5>
-						Vacation Researcher at CSIRO's Data61
-					</h5>
+					<h5>Vacation Researcher at CSIRO's Data61</h5>
 					{/* <p>
 						I spearheaded an independent research, evaluating and selecting
 						optimal <b>C++ ML libraries</b> for an <b>EdgeAI</b> project.
@@ -183,9 +188,7 @@ export default function History() {
 					)}
 				</div>
 				<div className="description">
-					<h5>
-						Software Engineer at S23M
-					</h5>
+					<h5>Software Engineer at S23M</h5>
 					{/* <p>
 						In this Work-Integrated-Learning job, I efficiently developed the{" "}
 						<b>Front-End</b> with modern look for executing CRUD operations to a
@@ -269,12 +272,11 @@ export default function History() {
 				</div>
 			</div>
 
-
 			<div className="row entry history">
 				<div className="time">2019 - 2020</div>
 				<div className="company-logo">
 					<div class="entry-dot"></div>
-						<img src={cslogo} alt="customer service logo" />
+					<img src={cslogo} alt="customer service logo" />
 				</div>
 				<div className="description">
 					<h5>Front of House Staff at Macca</h5>
