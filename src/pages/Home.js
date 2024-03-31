@@ -40,55 +40,76 @@ const Home = () => {
 					but you should list everything on your website. 
 					Because it's YOUR website. 
 			*/}
-			{/* <div className="container skills">
+			<div className="container skills">
 				<h1>Skills</h1>
 				<ul>
 					<li>
-						<b>Languages</b>:&ensp; JavaScript/TypeScript, Python, Solidity,
-						SQL, C#, HTML/CSS.
+						<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity •
+						C# • SQL • HTML/CSS.
 					</li>
 					<li>
-						<b>Technologies</b>:&ensp; React, Vue, Express.js, .NET, PostgreSQL,
-						AWS (DynamoDB, S3, EC2, Lambda, Auto Scaling, Load Balancer, etc.),
-						Tailwind, Jest, Chai.
+						<b>Soft skills</b>:&ensp; Teamwork • Project management •
+						Stakeholder engagement • Agile
 					</li>
 					<li>
-						<b>Cloud/AWS</b>:&ensp; EC2, Redis, DynamoDB, S3, Lambda, IAM, Load
-						Balancer, Auto Scaling
+						<b>Front-End</b>:&ensp; React • Tailwind • Vite • HTML5 • CSS • SCSS
 					</li>
 					<li>
-						<b>Machine Learning</b>:&ensp; PyTorch, Sklearn, Pandas, Numpy,
+						<b>Back-End</b>:&ensp; NestJS • ExpressJS • .NET
+					</li>
+					<li>
+						<b>AWS</b>:&ensp; DynamoDB • S3 • EC2 • Lambda • Auto Scaling • Load
+						Balancer • IAM
+					</li>
+					<li>
+						<b>DBMS</b>:&ensp; PostgreSQL • MySQL • DynamoDB • MongoDB
+					</li>
+					<li>
+						<b>Testing</b>:&ensp; Jest • Chai • PyTest
+					</li>
+					<li>
+						<b>Blockchain</b>:&ensp; Solidity • Web3.js • Ethers.js
+					</li>
+					<li>
+						<b>Machine Learning</b>:&ensp; PyTorch • Sklearn • Pandas • Numpy •
 						MatplotLib
 					</li>
 					<li>
-						<b>Others</b>:&ensp; Linux/Ubuntu, Git/GitHub, Docker, Data
-						Structures and Algorithms, Test-driven development, Agile.
+						<b>Other Technologies</b>:&ensp; Linux/Ubuntu • Git/GitHub • Docker
+					</li>
+					<li>
+						<b>Others</b>:&ensp; Data Structures and Algorithms • Test-driven
+						development
 					</li>
 				</ul>
-			</div> */}
+			</div>
 
 			{/* content block: Projects */}
-			<div className="container">
-				<h1>Amazing Projects</h1>
-				{createHyperlink(
-					"https://amazing.rodonguyen.dev/",
-					<button id="amazing-webpage-button">{"<AmazingProjects />"}</button>
-				)}
+			<div className="background-color-2">
+				<div className="container">
+					<h1>Amazing Projects</h1>
+					{createHyperlink(
+						"https://amazing.rodonguyen.dev/",
+						<button id="amazing-webpage-button">{"<AmazingProjects />"}</button>
+					)}
+				</div>
 			</div>
 
 			{/* Skills section */}
 
-			<div className="background-color-2">
-				<div className="container">
-					<h1>Hobbies</h1>
-					{/* <p>
+			<div className="container">
+				<h1>Hobbies</h1>
+				{/* <p>
 						{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
 						<LeetcodeSvg />
 						&ensp; Top 700k
 					</p> */}
-					<p>Hiking, Gym/Calisthenics, Bowling, {createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}♟️(ELO 1000, rapid), Badminton, Reading, Movies</p>
-					<p>Haven't tried but willing to: Camping, Tennis, ...</p>
-				</div>
+				<p>
+					Hiking, Gym/Calisthenics, Bowling,{" "}
+					{createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}
+					♟️(ELO 1000, rapid), Badminton, Reading, Movies
+				</p>
+				<p>Haven't tried but willing to: Camping, Tennis, ...</p>
 			</div>
 		</>
 	)
