@@ -49,7 +49,7 @@ const Home = () => {
 					</li>
 					<li>
 						<b>Soft skills</b>:&ensp; Teamwork • Project management •
-						Stakeholder engagement • Agile
+						Stakeholder engagement • Agile • Presentation
 					</li>
 					<li>
 						<b>Front-End</b>:&ensp; React • Tailwind • Vite • HTML5 • CSS • SCSS
@@ -75,11 +75,17 @@ const Home = () => {
 						MatplotLib
 					</li>
 					<li>
+						<b>DevOps</b>:&ensp; GitHub Actions
+					</li>
+					<li>
+						<b>Other Cloud Platforms</b>:&ensp; Vercel • Netlify
+					</li>
+					<li>
 						<b>Other Technologies</b>:&ensp; Linux/Ubuntu • Git/GitHub • Docker
 					</li>
 					<li>
 						<b>Others</b>:&ensp; Data Structures and Algorithms • Test-driven
-						development
+						development • Research
 					</li>
 				</ul>
 			</div>
@@ -110,6 +116,10 @@ const Home = () => {
 					♟️(ELO 1000, rapid), Badminton, Reading, Movies
 				</p>
 				<p>Haven't tried but willing to: Camping, Tennis, ...</p>
+			</div>
+
+			<div className="background-color-2">
+				<div className="container">Deployed with {createHyperlink('https://www.netlify.com/', 'Netlify')}</div>
 			</div>
 		</>
 	)
