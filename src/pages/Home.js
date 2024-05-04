@@ -15,15 +15,12 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="bio">
-					<h1 className="xlarge text-align-left">Engineer great software</h1>
+					<h1 className="xlarge text-align-left">"Engineer great software"</h1>
 					<p>Driven by the amazing and exciting world of technology.</p>
 					<p>
-						Also here are{" "}
-						{createHyperlink(
-							"https://amazing.rodonguyen.dev/",
-							"my pet projects"
-						)}{" "}
-						where I code fun and interesting things.
+						Besides day-to-day software engineering work, I'm a Blockchain lover
+						and I'm learning Smart Contracts, Web3 and Clarity to find new
+						opportunities in this emerging sector.
 					</p>
 				</div>
 			</div>
@@ -68,7 +65,7 @@ const Home = () => {
 						<b>Testing</b>:&ensp; Jest • Chai • PyTest
 					</li>
 					<li>
-						<b>Blockchain</b>:&ensp; Solidity • Web3.js • Ethers.js
+						<b>Blockchain</b>:&ensp; Solidity • Web3.js • Ethers.js • Clarity
 					</li>
 					<li>
 						<b>Machine Learning</b>:&ensp; PyTorch • Sklearn • Pandas • Numpy •
@@ -119,7 +116,9 @@ const Home = () => {
 			</div>
 
 			<div className="background-color-2">
-				<div className="container">Deployed with {createHyperlink('https://www.netlify.com/', 'Netlify')}</div>
+				<div className="container">
+					Deployed with {createHyperlink("https://www.netlify.com/", "Netlify")}
+				</div>
 			</div>
 		</>
 	)
