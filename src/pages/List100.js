@@ -16,7 +16,7 @@ const List100 = () => {
 				{/* Legacy */}
 				<li>✗ Read 100 books ({readBookNum}/100)</li>
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
-				<li>✓ Teach a course in university (CAB230, IFB102 at QUT)</li>
+				<li>✓ Teach a course in university (CAB403, CAB230, IFB102 at QUT)</li>
 				<li>✗ Found a tech company in Vietnam and it survives :)</li>
 				<li>✗ Give a talk to {">"}100 audiences (like... any talk)</li>
 				<li>✗ Establish a Mentorship Program in my high school</li>
@@ -72,7 +72,7 @@ const List100 = () => {
 			<ul className="text-align-left">
 				<li>Polaroid camera/printer</li>
 				<li>Sport/UltraBoost shoes (US 10, FR 44)</li>
-				<li>Badminton racket</li>
+				<li>Tennis racket</li>
 				<li>Great time with friends and family.</li>
 				<li>Swisse watch with EOL battery (Tissot? maybe)</li>
 				<li>1 Bitcoin (haha)</li>

@@ -1,6 +1,7 @@
 import rodoImage from "../media/Rodo.jpg"
 import History from "../components/Home/History"
 import { changeWindowTitle, createHyperlink } from "../components/utils"
+import LeetcodeSvg from "../components/LeetcodeSvg"
 
 const Home = () => {
 	changeWindowTitle(window.location.pathname)
@@ -16,11 +17,19 @@ const Home = () => {
 				</div>
 				<div className="bio">
 					<h1 className="xlarge text-align-left">"Engineer great software"</h1>
-					<p>Driven by the amazing and exciting world of technology.</p>
+					<h5 className="text-align-left">
+						Driven by the amazing and exciting world of tech.
+					</h5>
 					<p>
-						Besides day-to-day software engineering work, I'm a Blockchain lover
-						and I'm learning Smart Contracts, Web3 and Clarity to find new
-						opportunities in this emerging sector.
+						<b>What I'm doing</b>: Software Engineer
+					</p>
+					<p>
+						<b>In my personal time</b>: Expanding my skillset in Software
+						Engineering (System Design, Security, Docker, etc.), Blockchain
+						Development
+					</p>
+					<p>
+						<b>I want to expore</b>: SWE in Finance sector, AI, Blockchain, Web3
 					</p>
 				</div>
 			</div>
@@ -32,81 +41,42 @@ const Home = () => {
 				</div>
 			</div>
 
-			{/* Skills section
-					Shorter on resume 
-					but you should list everything on your website. 
-					Because it's YOUR website. 
-			*/}
-			<div className="container skills">
-				<h1>Skills</h1>
-				<ul>
-					<li>
-						<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity •
-						C# • SQL • HTML/CSS.
-					</li>
-					<li>
-						<b>Soft skills</b>:&ensp; Teamwork • Project management •
-						Stakeholder engagement • Agile • Presentation
-					</li>
-					<li>
-						<b>Front-End</b>:&ensp; React • Tailwind • Vite • HTML5 • CSS • SCSS
-					</li>
-					<li>
-						<b>Back-End</b>:&ensp; NestJS • ExpressJS • .NET
-					</li>
-					<li>
-						<b>AWS</b>:&ensp; DynamoDB • S3 • EC2 • Lambda • Auto Scaling • Load
-						Balancer • IAM
-					</li>
-					<li>
-						<b>DBMS</b>:&ensp; PostgreSQL • MySQL • DynamoDB • MongoDB
-					</li>
-					<li>
-						<b>Testing</b>:&ensp; Jest • Chai • PyTest
-					</li>
-					<li>
-						<b>Blockchain</b>:&ensp; Solidity • Web3.js • Ethers.js • Clarity
-					</li>
-					<li>
-						<b>Machine Learning</b>:&ensp; PyTorch • Sklearn • Pandas • Numpy •
-						MatplotLib
-					</li>
-					<li>
-						<b>DevOps</b>:&ensp; GitHub Actions
-					</li>
-					<li>
-						<b>Other Cloud Platforms</b>:&ensp; Vercel • Netlify
-					</li>
-					<li>
-						<b>Other Technologies</b>:&ensp; Linux/Ubuntu • Git/GitHub • Docker
-					</li>
-					<li>
-						<b>Others</b>:&ensp; Data Structures and Algorithms • Test-driven
-						development • Research
-					</li>
-				</ul>
+			{/* content block: Projects */}
+			<div className="container">
+				<h1>Random projects I made</h1>
+				{createHyperlink(
+					"https://amazing.rodonguyen.dev/",
+					<button className="button">{"<AmazingProjects />"}</button>
+				)}
 			</div>
 
-			{/* content block: Projects */}
 			<div className="background-color-2">
-				<div className="container">
-					<h1>Amazing Projects</h1>
-					{createHyperlink(
-						"https://amazing.rodonguyen.dev/",
-						<button id="amazing-webpage-button">{"<AmazingProjects />"}</button>
-					)}
+				<div className="container blogs">
+					<h1>Blogs</h1>
+					<ul>
+						<li>
+							{createHyperlink(
+								"https://dev.to/rodonguyen",
+								<button className="button">{"<Dev.to />"}</button>
+							)}
+						</li>
+						<li>
+							{createHyperlink(
+								"https://substack.com/@rodonguyen/notes",
+								<button className="button">{"<Substack />"}</button>
+							)}
+						</li>
+					</ul>
 				</div>
 			</div>
 
-			{/* Skills section */}
-
 			<div className="container">
 				<h1>Hobbies</h1>
-				{/* <p>
-						{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
-						<LeetcodeSvg />
-						&ensp; Top 700k
-					</p> */}
+				<p>
+					{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
+					<LeetcodeSvg />
+					&ensp; Top 700k (and dropping)
+				</p>
 				<p>
 					Hiking, Gym/Calisthenics, Bowling,{" "}
 					{createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}

@@ -8,18 +8,14 @@ import dltxlogo from "../../media/history_dltx_logo.png"
 import cslogo from "../../media/history_cs_logo.png"
 
 import { createHyperlink } from "../utils"
+import { Link } from "react-router-dom"
 
 export default function History() {
 	return (
 		<>
 			<h1>What did I do since I'm 18yo? Good question...</h1>
 			<p>
-				Visit my{" "}
-				{createHyperlink("https://www.linkedin.com/in/rodonguyen/", "LinkedIn")}{" "}
-				for more
-			</p>
-			<p>
-				Interesting opportunity? 👉🏽 {createHyperlink("/resume", "My Resume")}
+				Interesting opportunity? 👉🏽 <Link to="/resume">My Resume</Link>
 			</p>
 			<br/>
 
@@ -156,7 +152,7 @@ export default function History() {
 					<img src={cslogo} alt="customer service logo" />
 				</div>
 				<div className="description">
-					<h5>Front of House Staff at Macca</h5>
+					<h5>Front of House Staff at KFC</h5>
 					<h5>Kitchenhand at Hundred Acres Bar</h5>
 				</div>
 			</div>

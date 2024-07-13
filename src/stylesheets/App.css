@@ -82,6 +82,11 @@ a, a:visited {
   text-align: left;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
+
 .fade {
   color: var(--black-blue-2);
 }
@@ -345,6 +350,10 @@ div.navbar-container {
   text-align: left;
 }
 
+.bio p {
+  margin: 0;
+}
+
 @media (max-width: 820px) {
   .bio {
     grid-column: span 12;
@@ -437,25 +446,26 @@ div.navbar-container {
 /* ################################################### */
 /* ################################################### */
 
-button#amazing-webpage-button {
+.button {
   color: white;
-  padding: 15px 50px;
+  padding: 10px 30px 12px;
   font-size: var(--font-size-large);
   border-radius: 6px;
   background-color: var(--primary);
 }
 
-button#amazing-webpage-button:hover {
+.button:hover {
   background-color: var(--secondary);
 }
 
+
 /* ################################################### */
 /* ################################################### */
-/* ##                   ACHIEVEMENTS                ## */
+/* ##                   BLOGS                       ## */
 /* ################################################### */
 /* ################################################### */
-.achievements li.no-list-style {
-  list-style: none;
+.blogs ul li {
+  margin: 0.5rem 0;
 }
 
 
@@ -525,8 +535,17 @@ svg.leetcode-icon {
 /* ################################################### */
 /* ################################################### */
 
-.contact-list .center {
-  margin-left: 25%;
+.contact-list {
+  padding-left: 15% ;
+  padding-right: 15% ;
+}
+.quote {
+  display: inline;
+}
+
+.author {
+  margin-top: 0;
+  font-style: italic;
 }
 
 .icon {
@@ -536,7 +555,8 @@ svg.leetcode-icon {
 
 @media (max-width: 500px) {
   .contact-list .center {
-    margin-left: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
   }
 }
 
@@ -547,8 +567,8 @@ svg.leetcode-icon {
 /* ################################################### */
 /* ################################################### */
 
-.container.resume {
-  height: 86vh;
+.container.resume embed {
+  height: 88vh;
 }
 
 .container.resume button {
