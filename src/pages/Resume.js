@@ -1,4 +1,4 @@
-import rodoResumePdf from "../media/Rodo_Resume.pdf"
+import rodoResumePdf from "../media/Rodo_resume.pdf"
 import { changeWindowTitle } from "../components/utils"
 
 const Resume = () => {
