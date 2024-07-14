@@ -49,12 +49,14 @@ br.small {
   font-size: var(--font-size-xlarge);
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: underline;
   color: #091372;
 }
 
-.dark a, .dark a:visited {
+.dark a,
+.dark a:visited {
   color: #a9adff;
 }
 
@@ -100,12 +102,15 @@ button {
   border: 2px solid var(--primary);
   color: #000000;
 }
+
 button:hover {
   background-color: var(--primary);
 }
+
 .dark button {
   background: var(--primary);
 }
+
 .dark button:hover {
   background: var(--secondary);
 }
@@ -127,10 +132,15 @@ button:hover {
   max-width: 982px;
   text-align: left;
 }
+
 @media (max-width: 500px) {
   .container {
-    padding-left: 2rem; 
+    padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xlarge {
+    font-size: var(--font-size-large);
   }
 }
 
@@ -152,10 +162,16 @@ button:hover {
 }
 
 .App,
-a, a:visited, .dark a, .dark a:visited,
-.container, .dark .container,
-body, body.dark,
-.dark .navbar-container, .navbar-container {
+a,
+a:visited,
+.dark a,
+.dark a:visited,
+.container,
+.dark .container,
+body,
+body.dark,
+.dark .navbar-container,
+.navbar-container {
   transition: 300ms ease;
 }
 
@@ -168,21 +184,13 @@ body, body.dark,
 
 @layer components {
   nav .theme-icon {
-    @apply flex ml-auto mr-2 p-2 rounded-lg
-    transition duration-300 ease-in-out 
-    text-black cursor-pointer 
-    hover:bg-primary hover:text-white
-    dark:hover:bg-primary-dark dark:text-white;
+    @apply flex ml-auto mr-2 p-2 rounded-lg transition duration-300 ease-in-out text-black cursor-pointer hover:bg-primary hover:text-white dark:hover:bg-primary-dark dark:text-white;
   }
 
   nav a.navbar-item {
-    @apply no-underline px-2 py-1 mx-1 block rounded-lg
-    duration-300 ease-in-out 
-    text-black visited:text-black
-    hover:bg-primary hover:text-white
-    dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
+    @apply no-underline px-2 py-1 mx-1 block rounded-lg duration-300 ease-in-out text-black visited:text-black hover:bg-primary hover:text-white dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
   }
-  
+
   nav button.hamburger-menu {
     display: none;
     background-color: transparent;
@@ -193,19 +201,16 @@ body, body.dark,
     transition-timing-function: ease-in-out;
     fill: black;
   }
-  
+
   .dark button.hamburger-menu path,
-  button.hamburger-menu:hover path
-  {
+  button.hamburger-menu:hover path {
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     fill: white;
   }
 
   nav button.hamburger-menu {
-    @apply duration-300 ease-in-out 
-    hover:bg-primary
-    dark:hover:bg-primary-dark
+    @apply duration-300 ease-in-out hover:bg-primary dark:hover:bg-primary-dark
   }
 }
 
@@ -352,7 +357,15 @@ div.navbar-container {
 
 .bio p {
   margin: 0;
+  text-align: left;
 }
+
+.bio .quote {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
 
 @media (max-width: 820px) {
   .bio {
@@ -536,11 +549,14 @@ svg.leetcode-icon {
 /* ################################################### */
 
 .contact-list {
-  padding-left: 15% ;
-  padding-right: 15% ;
+  padding-left: 15%;
+  padding-right: 15%;
 }
-.quote {
-  display: inline;
+
+.contact-list .quote {
+  display: inline;  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 .author {
@@ -557,6 +573,10 @@ svg.leetcode-icon {
   .contact-list .center {
     margin-left: 7%;
     margin-right: 7%;
+  }
+
+  .contact-list .quote {
+    font-size: var(--font-size-normal);
   }
 }
 

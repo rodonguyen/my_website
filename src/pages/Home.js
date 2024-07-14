@@ -16,7 +16,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="bio">
-					<h1 className="xlarge text-align-left">"Engineer great software"</h1>
+					<h1 className="xlarge text-align-left quote">"Engineer great software"</h1>
 					<h5 className="text-align-left">
 						Driven by the amazing and exciting world of tech.
 					</h5>
