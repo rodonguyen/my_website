@@ -29,7 +29,7 @@ const Home = () => {
 						Development
 					</p>
 					<p>
-						<b>I want to expore</b>: SWE in Finance sector, AI, Blockchain, Web3
+						<b>I want to explore</b>: SWE in Finance sector, AI, Blockchain, Web3
 					</p>
 				</div>
 			</div>
