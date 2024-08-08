@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rodonguyen.dev
-Token: 036b0e18d44e311eb171d003e256e373d64c4d270714587d457e9d59d4821389
