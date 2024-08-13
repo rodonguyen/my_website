@@ -2,7 +2,7 @@
 
 // https://www.realtimecolors.com/?colors=e8f3f3-030307-0670c1-329bec-294ef5&fonts=Poppins-Poppins
 module.exports = {
-	content: ["./src/**/*.{js,jsx}", "./public/index.html"],
+	content: ["./src/**/*.{js,jsx}"],
 	darkMode: "class",
 	theme: {
 		extend: {

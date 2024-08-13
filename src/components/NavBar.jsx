@@ -35,16 +35,6 @@ const NavBar = () => {
 									Contact me
 								</Link>
 							</li>
-							{/* <li>
-								<a
-									href="https://rodonguyen.medium.com/"
-									className="navbar-item"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Blog
-								</a>
-							</li> */}
 						</ul>
 						<button
 							className="hamburger-menu"
