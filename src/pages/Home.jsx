@@ -1,4 +1,4 @@
-import rodoImage from "../media/Rodo.jpg"
+import rodoImage from "../assets/Rodo.jpg"
 import History from "../components/Home/History"
 import { changeWindowTitle, createHyperlink } from "../components/utils"
 import LeetcodeSvg from "../components/LeetcodeSvg"
