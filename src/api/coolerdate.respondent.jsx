@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_SERVER_RESPONDENT_ENDPOINT;
+// const apiUrl = process.env.REACT_APP_SERVER_RESPONDENT_ENDPOINT;
+const apiUrl = '';
 
 export const addRespondentFormToDatabase = async (
   username,

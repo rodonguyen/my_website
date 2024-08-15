@@ -47,7 +47,7 @@ const NavBar = () => {
 							</li> */}
 						</ul>
 						<button
-							class="hamburger-menu"
+							className="hamburger-menu"
 							onClick={() => {
 								navbarItemsRef.current.classList.toggle(
 									"display-vertical-nav-items"
