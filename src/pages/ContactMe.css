@@ -34,13 +34,8 @@
   .contact-list .quote {
     font-size: var(--font-size-normal);
   }
+
   .contact-list .author {
     font-size: var(--font-size-small);
   }
-}
-
-@media (min-width: 800px) {
-  .extra-padding {
-    padding: 0 10rem;
-  }  
 }
