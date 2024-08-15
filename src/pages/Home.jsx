@@ -1,6 +1,6 @@
 import rodoImage from "../assets/Rodo.jpg"
 import History from "../components/Home/History"
-import { changeWindowTitle, createHyperlink } from "../components/utils"
+import { changeWindowTitle, Hyperlink } from "../components/utils"
 import LeetcodeSvg from "../components/LeetcodeSvg"
 
 const Home = () => {
@@ -17,16 +17,13 @@ const Home = () => {
 				</div>
 				<div className="bio">
 					<h1 className="xlarge text-align-left quote">"Engineer great software"</h1>
-					<h5 className="text-align-left">
-						Driven by the amazing and exciting world of tech.
-					</h5>
+					<h5 className="text-align-left">Driven by the amazing and exciting world of tech.</h5>
 					<p>
 						<b>What I'm doing</b>: Software Engineer
 					</p>
 					<p>
-						<b>In my personal time</b>: Expanding my skillset in Software
-						Engineering (System Design, Security, Docker, etc.), Blockchain
-						Development
+						<b>In my personal time</b>: Expanding my skillset in Software Engineering (System
+						Design, Security, Docker, etc.), Blockchain Development
 					</p>
 					<p>
 						<b>I want to explore</b>: SWE in Finance sector, AI, Blockchain, Web3
@@ -44,36 +41,33 @@ const Home = () => {
 			{/* content block: Projects */}
 			<div className="container">
 				<h1>Random projects I made</h1>
-				{createHyperlink(
-					"https://amazing.rodonguyen.dev/",
+				<Hyperlink href="https://amazing.rodonguyen.dev/">
 					<button className="button">{"<AmazingProjects />"}</button>
-				)}
+				</Hyperlink>
 			</div>
 
 			<div className="background-color-2">
 				<div className="container blogs">
 					<h1>Blogs</h1>
-							{createHyperlink(
-								"https://dev.to/rodonguyen",
-								<button className="button">{"<Dev.to />"}</button>
-							)}
-							{createHyperlink(
-								"https://substack.com/@rodonguyen/notes",
-								<button className="button">{"<Substack />"}</button>
-							)}
+					<Hyperlink href="https://dev.to/rodonguyen">
+						<button className="button">{"<Dev.to />"}</button>
+					</Hyperlink>
+					<Hyperlink href="https://substack.com/@rodonguyen/notes">
+						<button className="button">{"<Substack />"}</button>
+					</Hyperlink>
 				</div>
 			</div>
 
 			<div className="container">
 				<h1>Hobbies</h1>
 				<p>
-					{createHyperlink("https://leetcode.com/rodonguyen/", "Leetcode")}{" "}
+					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink>
 					<LeetcodeSvg />
 					&ensp; Top 700k (and dropping)
 				</p>
 				<p>
 					Hiking, Gym/Calisthenics, Bowling,{" "}
-					{createHyperlink("https://www.chess.com/member/rodobolo", "Chess")}
+					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
 					♟️(ELO 1000, rapid), Badminton, Reading, Movies
 				</p>
 				<p>Haven't tried but willing to: Camping, Tennis, ...</p>
@@ -81,7 +75,7 @@ const Home = () => {
 
 			<div className="background-color-2">
 				<div className="container">
-					Deployed with {createHyperlink("https://www.netlify.com/", "Netlify")}
+					Deployed with <Hyperlink href="https://www.netlify.com/">Netlify</Hyperlink>
 				</div>
 			</div>
 		</>

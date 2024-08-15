@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
-export const createHyperlink = (link, content) => {
+export const Hyperlink = ({href, children}) => {
 	return (
-		<a target="_blank" rel="noopener noreferrer" href={link}>
-			{content}
+		<a target="_blank" rel="noopener noreferrer" href={href}>
+			{children}
 		</a>
 	)
 }
