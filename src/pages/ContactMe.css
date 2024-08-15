@@ -1,0 +1,46 @@
+/* ################################################### */
+/* ################################################### */
+/* ##                   CONTACT                     ## */
+/* ################################################### */
+/* ################################################### */
+
+.contact-list {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.contact-list .quote {
+  display: inline;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.author {
+  margin-top: 0;
+  font-style: italic;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 500px) {
+  .contact-list .center {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .contact-list .quote {
+    font-size: var(--font-size-normal);
+  }
+  .contact-list .author {
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (min-width: 800px) {
+  .extra-padding {
+    padding: 0 10rem;
+  }  
+}

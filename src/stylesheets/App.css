@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* *************************************************** */
 /* *************************************************** */
 /*                   APP                               */
@@ -74,10 +70,9 @@ a:visited {
   transform: translate(0, -50%);
 }
 
-@layer components {
-  .background-color-2 {
-    @apply bg-primary-10;
-  }
+.background-color-2 {
+  /* Primary color 10% opacity */
+  background: var(--primary-10);
 }
 
 .text-align-left {
@@ -182,35 +177,86 @@ body.dark,
 /* ################################################### */
 /* ################################################### */
 
-@layer components {
-  nav .theme-icon {
-    @apply flex ml-auto mr-2 p-2 rounded-lg transition duration-300 ease-in-out text-black cursor-pointer hover:bg-primary hover:text-white dark:hover:bg-primary-dark dark:text-white;
+nav .theme-icon {
+  display: flex;
+  margin-left: auto;
+  margin-right: 2px;
+  padding: 2px;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+  color: black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-30);
+  }
+}
+
+
+nav a.navbar-item {
+  text-decoration: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: block;
+  border-radius: 0.5rem;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  color: black;
+
+  &:visited {
+    color: black;
   }
 
-  nav a.navbar-item {
-    @apply no-underline px-2 py-1 mx-1 block rounded-lg duration-300 ease-in-out text-black visited:text-black hover:bg-primary hover:text-white dark:hover:bg-primary-dark dark:hover:text-white dark:text-white dark:visited:text-white;
+  &:hover {
+    background-color: var(--primary-30);
+  }
+}
+
+.dark nav a.navbar-item,
+.dark .theme-icon {
+  color: white;
+
+  &:hover {
+    background-color: var(--primary-30);
   }
 
-  nav button.hamburger-menu {
-    display: none;
-    background-color: transparent;
+  &:visited {
+    color: white;
+  }
+}
+
+nav button.hamburger-menu {
+  display: none;
+  background-color: transparent;
+}
+
+button.hamburger-menu path {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  fill: black;
+}
+
+.dark button.hamburger-menu path,
+button.hamburger-menu:hover path {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  fill: white;
+}
+
+nav button.hamburger-menu {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: var(--primary);
   }
 
-  button.hamburger-menu path {
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    fill: black;
-  }
-
-  .dark button.hamburger-menu path,
-  button.hamburger-menu:hover path {
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    fill: white;
-  }
-
-  nav button.hamburger-menu {
-    @apply duration-300 ease-in-out hover:bg-primary dark:hover:bg-primary-dark
+  &:hover.dark {
+    background-color: var(--primary-dark);
   }
 }
 
@@ -246,7 +292,7 @@ body.dark,
 }
 
 
-a.navbar-item.brand {
+.navbar-item.brand {
   font-size: var(--font-size-large);
 }
 
@@ -404,13 +450,18 @@ div.navbar-container {
 
 .history .entry-dot {
   position: absolute;
-  top: 0px;
-  left: -4px;
+  top: -0.5px;
+  left: -5.5px;
   width: 6px;
   height: 6px;
   border-radius: 7px;
   background: var(--dark-1);
   border: 2px solid var(--dark-1);
+}
+
+.dark .history .entry-dot {
+  background: var(--light-2);
+  border: 2px solid var(--light-2);
 }
 
 .history .company-logo {
@@ -459,27 +510,13 @@ div.navbar-container {
 /* ################################################### */
 /* ################################################### */
 
-.button {
-  color: white;
-  padding: 10px 30px 12px;
-  font-size: var(--font-size-large);
-  border-radius: 6px;
-  background-color: var(--primary);
-}
-
-.button:hover {
-  background-color: var(--secondary);
-}
-
 
 /* ################################################### */
 /* ################################################### */
 /* ##                   BLOGS                       ## */
 /* ################################################### */
 /* ################################################### */
-.blogs ul li {
-  margin: 0.5rem 0;
-}
+
 
 
 /* ################################################### */
@@ -488,13 +525,6 @@ div.navbar-container {
 /* ################################################### */
 /* ################################################### */
 
-.skills ul {
-  list-style: none;
-}
-
-.skills h2 {
-  font-weight: normal;
-}
 
 svg.leetcode-icon {
   width: 1.5rem;
@@ -534,6 +564,34 @@ svg.leetcode-icon {
 /* ################################################### */
 /* ################################################### */
 
+.button {
+  color: white;
+  padding: 10px 30px 12px;
+  font-size: var(--font-size-large);
+  border-radius: 6px;
+  background-color: var(--primary);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+}
+
+.button-small {
+  color: white;
+  padding: 4px 8px 4px;
+  font-size: var(--font-size-normal);
+  border-radius: 6px;
+  background-color: var(--primary);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-small:hover {
+  background-color: var(--secondary);
+}
+
 .btn-primary {
   margin: 0 0.2rem;
   --bs-btn-focus-shadow-rgb: none;
@@ -541,44 +599,6 @@ svg.leetcode-icon {
 }
 
 
-
-/* ################################################### */
-/* ################################################### */
-/* ##                   CONTACT                     ## */
-/* ################################################### */
-/* ################################################### */
-
-.contact-list {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.contact-list .quote {
-  display: inline;  
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-}
-
-.author {
-  margin-top: 0;
-  font-style: italic;
-}
-
-.icon {
-  width: 16px;
-  height: 16px;
-}
-
-@media (max-width: 500px) {
-  .contact-list .center {
-    margin-left: 7%;
-    margin-right: 7%;
-  }
-
-  .contact-list .quote {
-    font-size: var(--font-size-normal);
-  }
-}
 
 
 /* ################################################### */
@@ -641,8 +661,10 @@ input#coolerdate {
   --dark-1: #252424;
   --dark-2: #0b121b;
 
+  --primary-10: #3fa8f91a;
+  --primary-30: #3fa8f94d;
   --primary: #3fa8f9;
-  --secondary: #137DCE;
+  --secondary: #1988dc;
 
   --red-vanilla: #E63946;
   --white-vanilla: #fefefe;

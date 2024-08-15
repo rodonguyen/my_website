@@ -1,11 +1,11 @@
-import qutguildLogo from "../../media/history_qutguild_logo.png"
-import vietqLogo from "../../media/history_vietq_logo.jpg"
-import qutLogo from "../../media/history_qut_logo.jpeg"
-import s23mLogo from "../../media/history_s23m_logo.jpeg"
-import aervisionLogo from "../../media/history_aervision_logo.png"
-import csirodata61Logo from "../../media/history_csirodata61_logo.jpeg"
-import dltxlogo from "../../media/history_dltx_logo.png"
-import cslogo from "../../media/history_cs_logo.png"
+import qutguildLogo from "../../assets/history_qutguild_logo.png"
+import vietqLogo from "../../assets/history_vietq_logo.jpg"
+import qutLogo from "../../assets/history_qut_logo.jpeg"
+import s23mLogo from "../../assets/history_s23m_logo.jpeg"
+import aervisionLogo from "../../assets/history_aervision_logo.png"
+import csirodata61Logo from "../../assets/history_csirodata61_logo.jpeg"
+import dltxlogo from "../../assets/history_dltx_logo.png"
+import cslogo from "../../assets/history_cs_logo.png"
 
 import { createHyperlink } from "../utils"
 import { Link } from "react-router-dom"
@@ -22,7 +22,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2023 - now</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.dltx.io/",
 						<img src={dltxlogo} alt="dltx labs logo" />
@@ -36,7 +36,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2023 - now</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.qut.edu.au/",
 						<img src={qutLogo} alt="qut logo" />
@@ -50,7 +50,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2023</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.aervision.com/",
 						<img src={aervisionLogo} alt="AerVision logo" />
@@ -64,7 +64,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2022 - 2023</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.csiro.au/",
 						<img src={csirodata61Logo} alt="csiro-data61 logo" />
@@ -79,7 +79,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2022</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"http://www.s23m.com/about/index.html",
 						<img src={s23mLogo} alt="S23M logo" />
@@ -93,7 +93,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2021 - 2022</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.qut.edu.au/",
 						<img src={qutLogo} alt="qut logo" />
@@ -106,7 +106,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2021</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.qut.edu.au/",
 						<img src={qutLogo} alt="qut logo" />
@@ -120,7 +120,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2021</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://www.facebook.com/vietqbrisbane/",
 						<img src={vietqLogo} alt="VietQ logo" />
@@ -134,7 +134,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2021</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					{createHyperlink(
 						"https://qutguild.com/about/qut-guild/",
 						<img src={qutguildLogo} alt="qutguild logo" />
@@ -148,7 +148,7 @@ export default function History() {
 			<div className="row entry history">
 				<div className="time">2019 - 2020</div>
 				<div className="company-logo">
-					<div class="entry-dot"></div>
+					<div className="entry-dot"></div>
 					<img src={cslogo} alt="customer service logo" />
 				</div>
 				<div className="description">

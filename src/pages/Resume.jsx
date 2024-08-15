@@ -1,4 +1,4 @@
-import rodoResumePdf from "../media/Rodo_resume.pdf"
+import rodoResumePdf from "../assets/Rodo_resume.pdf"
 import { changeWindowTitle } from "../components/utils"
 
 const Resume = () => {
@@ -9,15 +9,12 @@ const Resume = () => {
 			<div className="container resume">
 				<div className="text-align-left">
 					<a href={rodoResumePdf} download="Rodo_Resume">
-						<button type="button">Download</button>
+						<button className="button-small" type="button">
+							Download
+						</button>
 					</a>
 				</div>
-				<embed
-					src={rodoResumePdf}
-					type="application/pdf"
-					width="100%"
-					height="100%"
-				/>
+				<embed src={rodoResumePdf} type="application/pdf" width="100%" height="100%" />
 			</div>
 
 			<div className="background-color-2">
@@ -28,12 +25,12 @@ const Resume = () => {
 							<b>Human Languages</b>:&ensp; Vietnamese • English
 						</li>
 						<li>
-							<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity
-							• C# • SQL • HTML/CSS.
+							<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity • C# • SQL •
+							HTML/CSS.
 						</li>
 						<li>
-							<b>Soft skills</b>:&ensp; Teamwork • Project management •
-							Stakeholder engagement • Agile • Presentation
+							<b>Soft skills</b>:&ensp; Teamwork • Project management • Stakeholder engagement •
+							Agile • Presentation
 						</li>
 						<li>
 							<b>Front-End</b>:&ensp; React • Tailwind • Vite • HTML • CSS
@@ -45,12 +42,10 @@ const Resume = () => {
 							<b> Cloud</b>:&ensp; AWS • Vercel • Netlify
 						</li>
 						<li>
-							<b>AWS</b>:&ensp; DynamoDB • S3 • EC2 • Lambda • Auto Scaling •
-							Load Balancer • IAM
+							<b>AWS</b>:&ensp; DynamoDB • S3 • EC2 • Lambda • Auto Scaling • Load Balancer • IAM
 						</li>
 						<li>
-							<b>Database</b>:&ensp; PostgreSQL • MySQL • Redis • DynamoDB •
-							MongoDB • DynamoDB
+							<b>Database</b>:&ensp; PostgreSQL • MySQL • Redis • DynamoDB • MongoDB • DynamoDB
 						</li>
 						<li>
 							<b>Testing</b>:&ensp; Jest • Chai • K6 • PyTest
@@ -59,8 +54,7 @@ const Resume = () => {
 							<b>Blockchain</b>:&ensp; Solidity • Web3.js • Ethers.js • Clarity
 						</li>
 						<li>
-							<b>Machine Learning</b>:&ensp; PyTorch • Sklearn • Pandas • Numpy
-							• MatplotLib
+							<b>Machine Learning</b>:&ensp; PyTorch • Sklearn • Pandas • Numpy • MatplotLib
 						</li>
 						<li>
 							<b>DevOps</b>:&ensp; GitHub Actions • Docker

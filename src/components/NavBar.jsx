@@ -35,19 +35,9 @@ const NavBar = () => {
 									Contact me
 								</Link>
 							</li>
-							{/* <li>
-								<a
-									href="https://rodonguyen.medium.com/"
-									className="navbar-item"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Blog
-								</a>
-							</li> */}
 						</ul>
 						<button
-							class="hamburger-menu"
+							className="hamburger-menu"
 							onClick={() => {
 								navbarItemsRef.current.classList.toggle(
 									"display-vertical-nav-items"

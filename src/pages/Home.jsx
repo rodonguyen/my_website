@@ -1,4 +1,4 @@
-import rodoImage from "../media/Rodo.jpg"
+import rodoImage from "../assets/Rodo.jpg"
 import History from "../components/Home/History"
 import { changeWindowTitle, createHyperlink } from "../components/utils"
 import LeetcodeSvg from "../components/LeetcodeSvg"
@@ -53,20 +53,14 @@ const Home = () => {
 			<div className="background-color-2">
 				<div className="container blogs">
 					<h1>Blogs</h1>
-					<ul>
-						<li>
 							{createHyperlink(
 								"https://dev.to/rodonguyen",
 								<button className="button">{"<Dev.to />"}</button>
 							)}
-						</li>
-						<li>
 							{createHyperlink(
 								"https://substack.com/@rodonguyen/notes",
 								<button className="button">{"<Substack />"}</button>
 							)}
-						</li>
-					</ul>
 				</div>
 			</div>
 
