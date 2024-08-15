@@ -47,13 +47,13 @@ br.small {
 
 a,
 a:visited {
-  text-decoration: underline;
-  color: #091372;
+  text-decoration: none;
+  color: #6970ff;
 }
 
 .dark a,
 .dark a:visited {
-  color: #a9adff;
+  color: #7a80ff;
 }
 
 .left.intro {
@@ -144,12 +144,12 @@ button:hover {
 /* *************************************************** */
 .dark .App,
 .dark .navbar-container {
-  background: var(--dark-1);
+  background: var(--dark-2);
   color: #F0F0F0;
 }
 
 .dark .background-color-2 {
-  background: var(--dark-2);
+  background: var(--dark-1);
 }
 
 .dark .fade {
@@ -409,6 +409,7 @@ div.navbar-container {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   font-style: italic;
+  color: var(--dark-8);
 }
 
 
@@ -454,8 +455,8 @@ div.navbar-container {
   width: 6px;
   height: 6px;
   border-radius: 7px;
-  background: var(--dark-1);
-  border: 2px solid var(--dark-1);
+  background: var(--dark-2);
+  border: 2px solid var(--dark-2);
 }
 
 .dark .history .entry-dot {
@@ -657,8 +658,14 @@ input#coolerdate {
   --light-1: #f6faff;
   --light-2: #e2e2e6;
 
-  --dark-1: #252424;
-  --dark-2: #0b121b;
+  --dark-1: #0b121b;
+  --dark-2: #252424;
+  --dark-3: #555555;
+  --dark-4: #676767;
+  --dark-5: #797979;
+  --dark-6: #8c8c8c;
+  --dark-7: #a3a3a3;
+  --dark-8: #bababa;
 
   --primary-10: #3fa8f91a;
   --primary-30: #3fa8f94d;

@@ -5,19 +5,20 @@
 /* ################################################### */
 
 .contact-list {
-  padding-left: 10%;
-  padding-right: 10%;
+  max-width: 600px !important;
 }
 
 .contact-list .quote {
   display: inline;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
+  color: var(--dark-5)
 }
 
 .author {
   margin-top: 0;
   font-style: italic;
+  color: var(--dark-5)
 }
 
 .icon {
