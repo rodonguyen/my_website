@@ -75,7 +75,7 @@ const List100 = () => {
 			<ul className="text-align-left">
 				<li>Polaroid camera/printer</li>
 				<li>Great time with friends and family</li>
-				<li>Swisse watch with EOL battery (Tissot? maybe)</li>
+				<li>Swisse watch (Tissot open heart)</li>
 				<li>Amazon Giftcard for books</li>
 				<li>Some Sats / Eth</li>
 			</ul>
