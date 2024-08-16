@@ -1,6 +1,6 @@
 import rodoImage from "../assets/home/Rodo.jpg"
-import History from "../components/Home/History"
-import { changeWindowTitle, Hyperlink } from "../components/utils"
+import History from "./Home/History"
+import { changeWindowTitle, Hyperlink } from "../utils/utils"
 import LeetcodeSvg from "../components/LeetcodeSvg"
 
 const Home = () => {

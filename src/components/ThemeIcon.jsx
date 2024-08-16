@@ -1,5 +1,5 @@
 import { FaMoon, FaSun } from "react-icons/fa"
-import { useDarkMode } from "./utils"
+import { useDarkMode } from "../utils/utils"
 
 const ThemeIcon = () => {
 	const [darkThemeEnabled, changeTheme] = useDarkMode()

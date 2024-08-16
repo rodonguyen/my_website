@@ -8,7 +8,7 @@ import { addRespondentFormToDatabase } from "../api/coolerdate.respondent"
 
 import NotFound from "./NotFound"
 import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage"
-import { changeWindowTitle } from "../components/utils"
+import { changeWindowTitle } from "../utils/utils"
 import {
 	calculateTimeLeftInSeconds,
 	formatTimeLeft

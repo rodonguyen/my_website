@@ -1,4 +1,4 @@
-import { changeWindowTitle } from "../components/utils"
+import { changeWindowTitle } from "../utils/utils"
 
 const List100 = () => {
 	changeWindowTitle(window.location.pathname)

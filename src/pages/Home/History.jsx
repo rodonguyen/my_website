@@ -7,7 +7,7 @@ import csirodata61Logo from "../../assets/history/history_csirodata61_logo.jpeg"
 import dltxlogo from "../../assets/history/history_dltx_logo.png"
 import cslogo from "../../assets/history/history_cs_logo.png"
 
-import { Hyperlink } from "../utils"
+import { Hyperlink } from "../../utils/utils"
 import { Link } from "react-router-dom"
 
 export default function History() {

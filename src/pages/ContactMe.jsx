@@ -1,5 +1,5 @@
 import React from "react"
-import { Hyperlink, changeWindowTitle } from "../components/utils"
+import { Hyperlink, changeWindowTitle } from "../utils/utils"
 import "../stylesheets/ContactMe.css"
 
 const ContactMe = () => {
