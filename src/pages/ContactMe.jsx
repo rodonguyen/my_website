@@ -1,6 +1,6 @@
 import React from "react"
 import { Hyperlink, changeWindowTitle } from "../components/utils"
-import "./ContactMe.css"
+import "../stylesheets/ContactMe.css"
 
 const ContactMe = () => {
 	changeWindowTitle(window.location.pathname)
