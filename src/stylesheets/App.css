@@ -78,10 +78,6 @@ br.small {
 }
 
 
-button:hover {
-  background-color: var(--primary);
-}
-
 .dark button {
   background: var(--primary);
 }
@@ -123,14 +119,6 @@ button:hover {
 .dark .App,
 .dark .navbar-container {
   background: var(--dark-2);
-}
-
-.dark .background-color-2 {
-  background: var(--dark-1);
-}
-
-.dark .fade {
-  color: var(--black-blue)
 }
 
 .App,
@@ -190,19 +178,6 @@ nav a.navbar-item {
 
   &:hover {
     background-color: var(--primary-30);
-  }
-}
-
-.dark nav a.navbar-item,
-.dark .theme-icon {
-  color: white;
-
-  &:hover {
-    background-color: var(--primary-30);
-  }
-
-  &:visited {
-    color: white;
   }
 }
 
@@ -324,10 +299,6 @@ div.navbar-container {
   ul.navbar-items.display-vertical-nav-items {
     opacity: 1;
     display: inline-block;
-  }
-
-  .dark ul.navbar-items.display-vertical-nav-items {
-    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -526,19 +497,6 @@ svg.leetcode-icon {
 }
 
 .button:hover {
-  background-color: var(--secondary);
-}
-
-.button-small {
-  padding: 4px 8px 4px;
-  font-size: var(--font-size-normal);
-  border-radius: 6px;
-  background-color: var(--primary);
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.button-small:hover {
   background-color: var(--secondary);
 }
 

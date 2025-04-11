@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const Hyperlink = ({href, children}) => {
+export const Hyperlink = ({ href, children }) => {
 	return (
 		<a target="_blank" rel="noopener noreferrer" href={href}>
 			{children}
@@ -17,11 +17,14 @@ export const useDarkMode = () => {
 	const [darkThemeEnabled, changeTheme] = useState(darkThemeEnabledOnStorage)
 
 	useEffect(() => {
+		const root = document.documentElement // Get the <html> element
 		if (darkThemeEnabled === true) {
-			document.body.classList.add("dark")
+			// document.body.classList.add(\"dark\") // Remove this line
+			root.setAttribute("data-theme", "dark") // Use DaisyUI dark theme
 			localStorage.setItem("darkThemeEnabled", "true")
 		} else if (darkThemeEnabled === false) {
-			document.body.classList.remove("dark")
+			// document.body.classList.remove(\"dark\") // Remove this line
+			root.setAttribute("data-theme", "light") // Use DaisyUI light theme
 			localStorage.setItem("darkThemeEnabled", "false")
 		}
 	}, [darkThemeEnabled])

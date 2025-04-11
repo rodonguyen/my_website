@@ -18,8 +18,8 @@ const NavBar = () => {
 						<Link to="/" className="navbar-item brand text-align-left">
 							Rodo
 						</Link>
-						<ThemeIcon />
-						<ul className="navbar-items" ref={navbarItemsRef}>
+						{/* <ThemeIcon /> */}
+						<ul className="navbar-items ml-auto" ref={navbarItemsRef}>
 							<li>
 								<Link to="/list-100" className="navbar-item">
 									List 100
@@ -32,7 +32,7 @@ const NavBar = () => {
 							</li>
 						</ul>
 						<button
-							className="hamburger-menu"
+							className="hamburger-menu ml-auto"
 							onClick={() => {
 								navbarItemsRef.current.classList.toggle("display-vertical-nav-items")
 							}}
