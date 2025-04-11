@@ -78,14 +78,6 @@ br.small {
 }
 
 
-.dark button {
-  background: var(--primary);
-}
-
-.dark button:hover {
-  background: var(--secondary);
-}
-
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -111,28 +103,6 @@ br.small {
   .xlarge {
     font-size: var(--font-size-large);
   }
-}
-
-/* *************************************************** */
-/*                        DARK                         */
-/* *************************************************** */
-.dark .App,
-.dark .navbar-container {
-  background: var(--dark-2);
-}
-
-.App,
-a,
-a:visited,
-.dark a,
-.dark a:visited,
-.container,
-.dark .container,
-body,
-body.dark,
-.dark .navbar-container,
-.navbar-container {
-  transition: 300ms ease;
 }
 
 
@@ -192,11 +162,6 @@ button.hamburger-menu path {
   fill: black;
 }
 
-.dark button.hamburger-menu path,
-button.hamburger-menu:hover path {
-  transition-duration: 150ms;
-  transition-timing-function: ease-in-out;
-}
 
 nav button.hamburger-menu {
   transition-duration: 150ms;
@@ -205,10 +170,6 @@ nav button.hamburger-menu {
   &:hover {
     background-color: var(--primary-30);
   }
-}
-
-.dark nav button.hamburger-menu path {
-  fill: white;
 }
 
 .navbar-container nav {
@@ -399,7 +360,7 @@ div.navbar-container {
 .history .entry-dot {
   position: absolute;
   top: -0.5px;
-  left: -5.5px;
+  left: -4.9px;
   width: 6px;
   height: 6px;
   border-radius: 7px;
@@ -407,10 +368,6 @@ div.navbar-container {
   border: 2px solid var(--dark-2);
 }
 
-.dark .history .entry-dot {
-  background: var(--light-2);
-  border: 2px solid var(--light-2);
-}
 
 .history .company-logo {
   grid-column: span 1;
@@ -479,9 +436,6 @@ svg.leetcode-icon {
   height: 1.5rem;
 }
 
-.dark svg path.leetcode-icon-path-1 {
-  fill: #b1d5f1
-}
 
 /* ################################################### */
 /* ################################################### */

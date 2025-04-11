@@ -10,26 +10,26 @@ export const Hyperlink = ({ href, children }) => {
 
 export const useDarkMode = () => {
 	// Utilise cache/local storage to store themeMode, keep it consistent throughout the session
-	let darkThemeEnabledOnStorage = localStorage.getItem("darkThemeEnabled")
+	let darkThemeEnabledOnStorage = localStorage.getItem("darkTheme")
 	darkThemeEnabledOnStorage = darkThemeEnabledOnStorage
 		? JSON.parse(darkThemeEnabledOnStorage)
 		: false
 	const [darkThemeEnabled, changeTheme] = useState(darkThemeEnabledOnStorage)
 
-	useEffect(() => {
-		const root = document.documentElement // Get the <html> element
-		if (darkThemeEnabled === true) {
-			// document.body.classList.add(\"dark\") // Remove this line
-			root.setAttribute("data-theme", "dark") // Use DaisyUI dark theme
-			localStorage.setItem("darkThemeEnabled", "true")
-		} else if (darkThemeEnabled === false) {
-			// document.body.classList.remove(\"dark\") // Remove this line
-			root.setAttribute("data-theme", "light") // Use DaisyUI light theme
-			localStorage.setItem("darkThemeEnabled", "false")
-		}
-	}, [darkThemeEnabled])
+	// useEffect(() => {
+	// 	const root = document.documentElement // Get the <html> element
+	// 	if (darkThemeEnabled === true) {
+	// 		// document.body.classList.add(\"dark\") // Remove this line
+	// 		root.setAttribute("data-theme", "light") // Use DaisyUI dark theme
+	// 		localStorage.setItem("darkTheme", "true")
+	// 	} else if (darkThemeEnabled === false) {
+	// 		// document.body.classList.remove(\"dark\") // Remove this line
+	// 		root.setAttribute("data-theme", "light") // Use DaisyUI light theme
+	// 		localStorage.setItem("darkTheme", "true")
+	// 	}
+	// }, [darkThemeEnabled])
 
-	return [darkThemeEnabled, changeTheme]
+	return [false, changeTheme]
 }
 
 export const changeWindowTitle = (path) => {
