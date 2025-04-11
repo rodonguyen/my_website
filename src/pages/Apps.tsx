@@ -16,7 +16,7 @@ const projects: Project[] = [
 	{
 		title: "Fav Stop",
 		description: "All your frequent bus stops in one place",
-		mediaUrl: "../assets/apps/favstop.png", // Example: src/assets/apps/project-alpha.png
+		mediaUrl: "favstop.png", // Example: src/assets/apps/project-alpha.png
 		mediaType: "image",
 		projectUrl: "https://favstop.netlify.app/"
 	},
