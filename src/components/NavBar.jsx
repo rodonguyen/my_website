@@ -4,9 +4,9 @@ import HamburgerMenuSvg from "./HamburgerMenuSvg"
 import ThemeIcon from "./ThemeIcon"
 
 /**
- * Source: 
+ * Source:
  * - Hamburger Menu: https://www.youtube.com/watch?v=HQopEEurQYE
-*/
+ */
 const NavBar = () => {
 	const navbarItemsRef = useRef(null)
 
@@ -21,27 +21,20 @@ const NavBar = () => {
 						<ThemeIcon />
 						<ul className="navbar-items" ref={navbarItemsRef}>
 							<li>
-								<Link to="/resume" className="navbar-item">
-									Resume
-								</Link>
-							</li>
-							<li>
 								<Link to="/list-100" className="navbar-item">
 									List 100
 								</Link>
 							</li>
 							<li>
-								<Link to="/contactme" className="navbar-item">
-									Contact me
+								<Link to="/apps" className="navbar-item">
+									Amazing Apps
 								</Link>
 							</li>
 						</ul>
 						<button
 							className="hamburger-menu"
 							onClick={() => {
-								navbarItemsRef.current.classList.toggle(
-									"display-vertical-nav-items"
-								)
+								navbarItemsRef.current.classList.toggle("display-vertical-nav-items")
 							}}
 						>
 							<HamburgerMenuSvg />
@@ -54,5 +47,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-

@@ -120,8 +120,8 @@ button:hover {
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   max-width: 750px;
@@ -570,8 +570,6 @@ svg.leetcode-icon {
   font-size: var(--font-size-large);
   border-radius: 6px;
   background-color: var(--primary);
-  margin-left: 1rem;
-  margin-bottom: 1rem;
 }
 
 .button:hover {

@@ -2,6 +2,7 @@ import rodoImage from "../assets/home/Rodo.jpg"
 import History from "./Home/History"
 import { changeWindowTitle, Hyperlink } from "../utils/utils"
 import LeetcodeSvg from "../components/LeetcodeSvg"
+import { Link } from "react-router-dom"
 
 const Home = () => {
 	changeWindowTitle(window.location.pathname)
@@ -34,49 +35,41 @@ const Home = () => {
 			{/* content block: History */}
 			<div className="background-color-2">
 				<div className="container">
-					<History />
+					<Link to="/apps">
+						<button className="button">{"<Amazing Projects I Made />"}</button>
+					</Link>
 				</div>
 			</div>
 
 			{/* content block: Projects */}
 			<div className="container">
-				<h1>Random projects I made</h1>
-				<Hyperlink href="https://amazing.rodonguyen.dev/">
-					<button className="button">{"<AmazingProjects />"}</button>
-				</Hyperlink>
+				<History />
 			</div>
 
-			<div className="background-color-2">
-				<div className="container blogs">
-					<h1>Blogs</h1>
-					<Hyperlink href="https://dev.to/rodonguyen">
-						<button className="button">{"<Dev.to />"}</button>
-					</Hyperlink>
-					<Hyperlink href="https://substack.com/@rodonguyen/notes">
-						<button className="button">{"<Substack />"}</button>
-					</Hyperlink>
-				</div>
-			</div>
-
-			<div className="container">
-				<h1>Hobbies</h1>
-				<p>
-					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink>
-					<LeetcodeSvg />
-					&ensp; Top 700k (and dropping)
-				</p>
-				<p>
-					Hiking, Gym/Calisthenics, Bowling,{" "}
-					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
-					♟️(ELO 1000, rapid), Badminton, Reading, Movies
-				</p>
-				<p>Haven't tried but willing to: Camping, Tennis, ...</p>
-			</div>
-
+			{/* content block: Hobbies */}
 			<div className="background-color-2">
 				<div className="container">
-					Deployed with <Hyperlink href="https://www.netlify.com/">Netlify</Hyperlink>
+					<h1>Hobbies</h1>
+					<p>
+						<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink>
+						<LeetcodeSvg />
+						&ensp; top 1 million (and dropping)
+					</p>
+					<p>
+						Hiking, Gym/Calisthenics, Bowling,{" "}
+						<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
+						♟️(ELO 1000, rapid), Badminton, Reading, Movies
+					</p>
+					<p>Things I'm proud to know a bit: Tennis, Golf, Bouldering</p>
+					<p>Haven't tried but willing to: Camping</p>
 				</div>
+			</div>
+
+			{/* Contact Me */}
+			<div className="container">
+				<Hyperlink href="https://beacons.ai/rodo8888">
+					<button className="button">{"<Contact me />"}</button>
+				</Hyperlink>
 			</div>
 		</>
 	)

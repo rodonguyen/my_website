@@ -5,6 +5,7 @@ import Resume from "./Resume"
 import Home from "./Home"
 import DateMe from "./DateMe"
 import NotFound from "./NotFound"
+import Apps from "./Apps"
 import "../stylesheets/App.css"
 
 import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom"
@@ -23,9 +24,9 @@ function App() {
 				<Routes>
 					<Route path="/" element={AppConstantElements}>
 						<Route path="contactme" element={<ContactMe />} />
-						<Route path="resume" element={<Resume />} />
 						<Route path="list-100" element={<List100 />} />
 						<Route path="dateme" element={<DateMe />} />
+						<Route path="apps" element={<Apps />} />
 						<Route path="/" exact element={<Home />} />
 						<Route path="*" element={<NotFound />} />
 					</Route>

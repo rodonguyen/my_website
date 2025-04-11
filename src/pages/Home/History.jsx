@@ -6,16 +6,18 @@ import aervisionLogo from "../../assets/history/history_aervision_logo.png"
 import csirodata61Logo from "../../assets/history/history_csirodata61_logo.jpeg"
 import dltxlogo from "../../assets/history/history_dltx_logo.png"
 import cslogo from "../../assets/history/history_cs_logo.png"
-
+import rodoResumePdf from "../../assets/resume/Rodo_resume.pdf"
 import { Hyperlink } from "../../utils/utils"
-import { Link } from "react-router-dom"
 
 export default function History() {
 	return (
 		<>
 			<h1>What did I do since I'm 18yo? Good question...</h1>
 			<p>
-				Interesting opportunity? 👉🏽 <Link to="/resume">My Resume</Link>
+				Interesting opportunity? 👉🏽{" "}
+				<a href={rodoResumePdf} download="Rodo_Resume">
+					My Resume
+				</a>
 			</p>
 			<br />
 
