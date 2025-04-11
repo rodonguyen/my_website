@@ -14,26 +14,26 @@ const projects: Project[] = [
 	// Add your project data here
 	// Example:
 	{
-		title: "Project Alpha",
-		description: "This is the description for Project Alpha. It uses amazing tech.",
-		mediaUrl: "project-alpha.png", // Example: src/assets/apps/project-alpha.png
+		title: "Fav Stop",
+		description: "All your frequent bus stops in one place",
+		mediaUrl: "../assets/apps/favstop.png", // Example: src/assets/apps/project-alpha.png
 		mediaType: "image",
-		projectUrl: "https://github.com/your-repo/project-alpha"
+		projectUrl: "https://favstop.netlify.app/"
 	},
 	{
-		title: "Project Beta (Video)",
-		description: "A short description for Project Beta, showcasing video.",
-		mediaUrl: "project-beta.mp4", // Example: src/assets/apps/project-beta.mp4
-		mediaType: "video"
+		title: "BitTracker",
+		description: "Trade bitcoin algorithmically (Retired)",
+		mediaUrl: "bittracker.png", // Example: src/assets/apps/project-beta.mp4
+		mediaType: "image",
+		projectUrl: "https://github.com/rodonguyen/bittracker2024"
 	},
 	{
-		title: "Project Gamma (GIF)",
-		description: "Look at this cool GIF for Project Gamma.",
-		mediaUrl: "project-gamma.gif", // Example: src/assets/apps/project-gamma.gif
-		mediaType: "gif",
-		projectUrl: "https://live-project-gamma.com"
+		title: "Time I have left!",
+		description: "Look at life from the 'percentage' perspective",
+		mediaUrl: "timeihaveleft.png", // Example: src/assets/apps/project-gamma.gif
+		mediaType: "image",
+		projectUrl: "https://rodonguyen.dev/apps/timeihaveleft"
 	}
-	// Add more projects as needed
 ]
 
 // Helper function to get the full media path
@@ -57,16 +57,16 @@ const getMediaPath = (mediaUrl: string) => {
 const Apps: React.FC = () => {
 	return (
 		<div className="container mx-auto py-8">
-			<h1 className="text-3xl font-bold mb-8 !text-center">My Amazing Projects</h1>
+			<h1 className="text-3xl font-bold mb-8 !text-center">My Amazing Apps</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				{projects.map((project, index) => (
-					<div key={index} className="card bg-base-100 shadow-xl">
-						<figure className="px-10 pt-10">
+					<div key={index} className="card !rounded-[1rem] bg-base-100 shadow-xl">
+						<figure className="px-4 pt-4">
 							{project.mediaType === "image" && (
 								<img
 									src={getMediaPath(project.mediaUrl)}
 									alt={project.title}
-									className="rounded-xl object-cover h-48 w-full"
+									className="rounded-xl rounded-b-none object-cover h-48 w-full"
 									loading="lazy"
 								/>
 							)}
@@ -89,10 +89,10 @@ const Apps: React.FC = () => {
 							)}
 						</figure>
 						<div className="card-body items-center text-center">
-							<h2 className="card-title">{project.title}</h2>
+							<h2 className="!card-title">{project.title}</h2>
 							<p>{project.description}</p>
 							{project.projectUrl && (
-								<div className="card-actions mt-4">
+								<div className="card-actions mt-2">
 									<a
 										href={project.projectUrl}
 										target="_blank"

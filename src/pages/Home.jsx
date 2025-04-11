@@ -36,7 +36,7 @@ const Home = () => {
 			<div className="background-color-2">
 				<div className="container">
 					<Link to="/apps">
-						<button className="button">{"<Amazing Projects I Made />"}</button>
+						<button className="button">{"<Amazing Apps I Made />"}</button>
 					</Link>
 				</div>
 			</div>

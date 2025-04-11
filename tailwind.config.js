@@ -4,26 +4,10 @@
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	darkMode: "class",
-	theme: {
-		extend: {
-			colors: {
-				primary: {
-					DEFAULT: "#3fa8f9",
-					dark: "#0670C1",
-					10: "#3FA8F91A",
-					90: "#3FA8F9E6"
-				},
-				secondary: {
-					DEFAULT: "#137DCE",
-					dark: "#329bec"
-				},
-				accent: "#294EF5"
-			},
-			textColor: {
-				"custom-black": "#0F0F0F",
-				"custom-white": "#F0F0F0"
-			}
-		}
-	},
-	plugins: [require("daisyui")]
+	theme: {},
+	plugins: [require("daisyui")],
+	// Add daisyUI configuration
+	daisyui: {
+		logs: true // Keep logs enabled for now (optional)
+	}
 }

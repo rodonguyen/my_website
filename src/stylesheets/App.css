@@ -7,7 +7,6 @@
 .App {
   text-align: center;
   background: var(--light-1);
-  color: #0F0F0F;
   height: 100%;
   min-height: 100vh;
   font-size: var(--font-size-normal);
@@ -19,11 +18,11 @@ h1 {
   text-align: left;
 }
 
-h2 {
+/* h2 {
   font-size: var(--font-size-large);
   margin: 0.5rem auto;
   text-align: left;
-}
+} */
 
 h5 {
   font-size: var(--font-size-normal);
@@ -45,16 +44,6 @@ br.small {
   font-size: var(--font-size-xlarge);
 }
 
-a,
-a:visited {
-  text-decoration: none;
-  color: #6970ff;
-}
-
-.dark a,
-.dark a:visited {
-  color: #7a80ff;
-}
 
 .left.intro {
   width: 40%;
@@ -88,15 +77,6 @@ a:visited {
   color: var(--black-blue-2);
 }
 
-button {
-  padding: 5px 10px;
-  border-radius: 5px;
-  /* border-width: 1px; */
-  background-color: var(--secondary);
-  cursor: pointer;
-  border: 2px solid var(--primary);
-  color: #000000;
-}
 
 button:hover {
   background-color: var(--primary);
@@ -120,8 +100,6 @@ button:hover {
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   max-width: 750px;
@@ -145,7 +123,6 @@ button:hover {
 .dark .App,
 .dark .navbar-container {
   background: var(--dark-2);
-  color: #F0F0F0;
 }
 
 .dark .background-color-2 {
@@ -535,29 +512,6 @@ svg.leetcode-icon {
   fill: #b1d5f1
 }
 
-
-/* ################################################### */
-/* ################################################### */
-/* ##                   CARD                        ## */
-/* ################################################### */
-/* ################################################### */
-
-.card {
-  --bs-card-border-radius: 0.5rem;
-  --bs-card-inner-border-radius: calc(0.5rem - 1px);
-}
-
-.card-body {
-  background: var(--light-2);
-  border-color: var(--light-2);
-  border-radius: 0 0 .5rem .5rem;
-}
-
-.bg-dark {
-  --bs-bg-opacity: 0.1;
-}
-
-
 /* ################################################### */
 /* ################################################### */
 /* ##                     BUTTON                    ## */
@@ -565,7 +519,6 @@ svg.leetcode-icon {
 /* ################################################### */
 
 .button {
-  color: white;
   padding: 10px 30px 12px;
   font-size: var(--font-size-large);
   border-radius: 6px;
@@ -577,7 +530,6 @@ svg.leetcode-icon {
 }
 
 .button-small {
-  color: white;
   padding: 4px 8px 4px;
   font-size: var(--font-size-normal);
   border-radius: 6px;
@@ -589,14 +541,6 @@ svg.leetcode-icon {
 .button-small:hover {
   background-color: var(--secondary);
 }
-
-.btn-primary {
-  margin: 0 0.2rem;
-  --bs-btn-focus-shadow-rgb: none;
-  font-size: var(--font-size-normal);
-}
-
-
 
 
 /* ################################################### */

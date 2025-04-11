@@ -41,6 +41,7 @@ const List100 = () => {
 				<li>✗ Sky dive (without an instructor)</li>
 				<li>✗ Camp and enjoy the Milky Way Galaxy</li>
 				<li>✗ Hike to Everest base camp + see the Hymalayas</li>
+				<li>✗ Participate in a chess boxing match</li>
 				<li>✗ Cuddle lions</li>
 				<li>✗ Ride horse</li>
 				<li>✗ Buy a house for my parents to retire in Australia</li>
