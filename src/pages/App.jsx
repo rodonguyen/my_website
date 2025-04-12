@@ -1,9 +1,8 @@
 import NavBar from "../components/NavBar"
 import ContactMe from "./ContactMe"
 import List100 from "./List100"
-import Resume from "./Resume"
 import Home from "./Home"
-import DateMe from "./DateMe"
+import TimeIHaveLeft from "./TimeIHaveLeft"
 import NotFound from "./NotFound"
 import Apps from "./Apps"
 import "../stylesheets/App.css"
@@ -23,11 +22,12 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={AppConstantElements}>
+						<Route index element={<Home />} />
 						<Route path="contactme" element={<ContactMe />} />
 						<Route path="list-100" element={<List100 />} />
-						<Route path="dateme" element={<DateMe />} />
-						<Route path="apps" element={<Apps />} />
-						<Route path="/" exact element={<Home />} />
+						<Route path="apps" element={<Apps />}>
+							<Route path="timeihaveleft" element={<TimeIHaveLeft />} />
+						</Route>
 						<Route path="*" element={<NotFound />} />
 					</Route>
 				</Routes>

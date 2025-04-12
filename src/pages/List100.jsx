@@ -31,12 +31,15 @@ const List100 = () => {
 				<li>✗ Vipassana Meditation Retreat</li>
 				<li>✗ Pay and have a 14-day holiday with my family</li>
 				<li>✗ Visit Norway's mountains</li>
-				<li>✗ Visit New Zealand's mountains</li>
-				<li>✗ Travel to 10 countries (1/10)</li>
+				<li>
+					✓ Visit New Zealand's mountains (I've seen them but next time I want to get closer and do
+					some hiking)
+				</li>
+				<li>✗ Travel to 10 countries (2/10)</li>
 				<li>✗ Travel to 20 Vietnamese cities (5/20)</li>{" "}
 				{/* HCM, Danang, Hue, Phu Quoc, Kon Tum,  */}
 				<li>✗ Have a vacation on an island/a yatch</li>
-				<li>✗ Climb Great Pyramid of Giza, Egypt</li>
+				<li>✗ Check-in at Great Pyramid of Giza, Egypt</li>
 				<li>✗ Travel to Africa</li>
 				<li>✗ Sky dive (without an instructor)</li>
 				<li>✗ Camp and enjoy the Milky Way Galaxy</li>
@@ -74,9 +77,9 @@ const List100 = () => {
 				{"Love, Rodo <3"}
 			</p>
 			<ul className="text-align-left">
-				<li>Polaroid camera/printer</li>
 				<li>Great time with friends and family</li>
-				<li>Swisse watch (Tissot open heart)</li>
+				<li>Tissot Le Locle Powermatic 80 Open Heart</li>
+				<li>Altra gym shoes, Birkenstock size 42</li>
 				<li>Amazon Giftcard for books</li>
 				<li>Some Sats / Eth</li>
 			</ul>

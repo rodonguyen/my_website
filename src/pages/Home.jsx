@@ -51,9 +51,8 @@ const Home = () => {
 				<div className="container">
 					<h1>Hobbies</h1>
 					<p>
-						<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink>
-						<LeetcodeSvg />
-						&ensp; top 1 million (and dropping)
+						<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{" "}
+						top 1 million (and dropping)
 					</p>
 					<p>
 						Hiking, Gym/Calisthenics, Bowling,{" "}
@@ -67,9 +66,12 @@ const Home = () => {
 
 			{/* Contact Me */}
 			<div className="container">
-				<Hyperlink href="https://beacons.ai/rodo8888">
-					<button className="button">{"<Contact me />"}</button>
-				</Hyperlink>
+				<button
+					className="button text-neutral"
+					onClick={() => window.open("https://beacons.ai/rodo8888", "_blank")}
+				>
+					{"<Contact me />"}
+				</button>
 			</div>
 		</>
 	)

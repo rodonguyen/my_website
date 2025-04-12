@@ -18,21 +18,10 @@ h1 {
   text-align: left;
 }
 
-/* h2 {
-  font-size: var(--font-size-large);
-  margin: 0.5rem auto;
-  text-align: left;
-} */
 
 h5 {
   font-size: var(--font-size-normal);
   margin: 0.5rem auto;
-}
-
-p {
-  text-align: justify;
-  text-justify: inter-word;
-  margin: 0.8rem auto;
 }
 
 br.small {
@@ -392,10 +381,6 @@ div.navbar-container {
   padding-bottom: 1rem;
 }
 
-.history p {
-  margin: auto auto 0.5rem auto;
-  text-align: justify;
-}
 
 .description h5 {
   margin-top: 0;
@@ -431,10 +416,6 @@ div.navbar-container {
 /* ################################################### */
 
 
-svg.leetcode-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
 
 
 /* ################################################### */
@@ -454,36 +435,6 @@ svg.leetcode-icon {
   background-color: var(--secondary);
 }
 
-
-/* ################################################### */
-/* ################################################### */
-/* ##                     RESUME                    ## */
-/* ################################################### */
-/* ################################################### */
-
-.container.resume embed {
-  height: 88vh;
-}
-
-.container.resume button {
-  margin: 0.3rem;
-}
-
-
-/* ################################################### */
-/* ################################################### */
-/* ##                COOLER DATE                    ## */
-/* ################################################### */
-/* ################################################### */
-
-.container.dateme {
-  padding-top: 3rem;
-  max-width: 700px;
-}
-
-input#coolerdate {
-  width: 400px;
-}
 
 
 

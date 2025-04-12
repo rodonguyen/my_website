@@ -1,7 +1,7 @@
 const LeetcodeSvg = () => {
 	return (
 		<svg
-			className="leetcode-icon inline"
+			className="w-[1.5rem] h-[1.5rem] inline"
 			xmlns="http://www.w3.org/2000/svg"
 			enableBackground="new 0 0 24 24"
 			viewBox="0 0 24 24"

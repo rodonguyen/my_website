@@ -8,6 +8,7 @@ module.exports = {
 	plugins: [require("daisyui")],
 	// Add daisyUI configuration
 	daisyui: {
+		themes: ["light"], // specify themes here
 		logs: true // Keep logs enabled for now (optional)
 	}
 }

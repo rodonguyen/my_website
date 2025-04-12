@@ -1,12 +1,15 @@
 import React from "react"
-
+import { FaGithub } from "react-icons/fa" // Import GitHub icon
+// @ts-ignore
+import { changeWindowTitle } from "../utils/utils"
 // Define the structure for a project
 interface Project {
 	title: string
 	description: string
 	mediaUrl: string // Path relative to src/assets/apps/
 	mediaType: "image" | "video" | "gif"
-	projectUrl?: string // Optional link to live project or repo
+	liveUrl?: string // Optional link to the live project
+	githubUrl?: string // Optional link to the GitHub repository
 }
 
 // Hardcoded project data
@@ -18,21 +21,22 @@ const projects: Project[] = [
 		description: "All your frequent bus stops in one place",
 		mediaUrl: "favstop.png", // Example: src/assets/apps/project-alpha.png
 		mediaType: "image",
-		projectUrl: "https://favstop.netlify.app/"
+		liveUrl: "https://favstop.netlify.app/"
 	},
 	{
 		title: "BitTracker",
 		description: "Trade bitcoin algorithmically (Retired)",
 		mediaUrl: "bittracker.png", // Example: src/assets/apps/project-beta.mp4
 		mediaType: "image",
-		projectUrl: "https://github.com/rodonguyen/bittracker2024"
+		// liveUrl: undefined, // No live URL for this one
+		githubUrl: "https://github.com/rodonguyen/bittracker2024" // Added GitHub URL
 	},
 	{
 		title: "Time I have left!",
 		description: "Look at life from the 'percentage' perspective",
 		mediaUrl: "timeihaveleft.png", // Example: src/assets/apps/project-gamma.gif
 		mediaType: "image",
-		projectUrl: "https://rodonguyen.dev/apps/timeihaveleft"
+		liveUrl: "/apps/timeihaveleft"
 	}
 ]
 
@@ -55,6 +59,8 @@ const getMediaPath = (mediaUrl: string) => {
 }
 
 const Apps: React.FC = () => {
+	changeWindowTitle("/apps")
+
 	return (
 		<div className="container mx-auto py-8">
 			<h1 className="text-3xl font-bold mb-8 !text-center">My Amazing Apps</h1>
@@ -91,18 +97,31 @@ const Apps: React.FC = () => {
 						<div className="card-body items-center text-center">
 							<h2 className="!card-title">{project.title}</h2>
 							<p>{project.description}</p>
-							{project.projectUrl && (
-								<div className="card-actions mt-2">
+							<div className="card-actions mt-2 flex justify-center gap-2">
+								{/* Live Project Button */}
+								{project.liveUrl && (
 									<a
-										href={project.projectUrl}
+										href={project.liveUrl}
 										target="_blank"
 										rel="noopener noreferrer"
 										className="btn btn-primary"
 									>
 										View Project
 									</a>
-								</div>
-							)}
+								)}
+								{/* GitHub Button */}
+								{project.githubUrl && (
+									<a
+										href={project.githubUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="btn btn-" // Use a different style, e.g., secondary
+									>
+										<FaGithub />
+										GitHub
+									</a>
+								)}
+							</div>
 						</div>
 					</div>
 				))}
