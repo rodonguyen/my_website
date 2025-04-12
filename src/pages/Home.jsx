@@ -24,10 +24,10 @@ const Home = () => {
 					</p>
 					<p>
 						<b>In my personal time</b>: Expanding my skillset in Software Engineering (System
-						Design, Security, Docker, etc.), Blockchain Development
+						Architecture, Security, etc.)
 					</p>
 					<p>
-						<b>I want to explore</b>: SWE in Finance sector, AI, Blockchain, Web3
+						<b>I want to explore</b>: SWE in Finance sector, AI, Web3
 					</p>
 				</div>
 			</div>

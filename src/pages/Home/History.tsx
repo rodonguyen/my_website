@@ -2,9 +2,8 @@ import qutguildLogo from "../../assets/history/history_qutguild_logo.png"
 import vietqLogo from "../../assets/history/history_vietq_logo.jpg"
 import qutLogo from "../../assets/history/history_qut_logo.jpeg"
 import s23mLogo from "../../assets/history/history_s23m_logo.jpeg"
-import aervisionLogo from "../../assets/history/history_aervision_logo.png"
 import csirodata61Logo from "../../assets/history/history_csirodata61_logo.jpeg"
-import dltxlogo from "../../assets/history/history_dltx_logo.png"
+import softwareEngineerToyFigureLogo from "../../assets/history/software_engineer_toy_figure.png"
 import cslogo from "../../assets/history/history_cs_logo.png"
 import rodoResumePdf from "../../assets/resume/Rodo_resume.pdf"
 import { Hyperlink } from "../../utils/utils"
@@ -22,15 +21,14 @@ export default function History() {
 			<br />
 
 			<div className="row entry history">
-				<div className="time">2023 - now</div>
+				<div className="time">2022 - now</div>
 				<div className="company-logo">
 					<div className="entry-dot"></div>
-					<Hyperlink href="https://www.dltx.io/">
-						<img src={dltxlogo} alt="dltx labs logo" />
-					</Hyperlink>
+					<img src={softwareEngineerToyFigureLogo} alt="Software Engineer toy figure" />
 				</div>
 				<div className="description">
-					<h5>Software Engineer at DLTx Labs</h5>
+					<h5>Software Engineer</h5>
+					<p className="text-sm">Details updated in resume file.</p>
 				</div>
 			</div>
 
@@ -44,19 +42,6 @@ export default function History() {
 				</div>
 				<div className="description">
 					<h5>Sessional Tutor at QUT</h5>
-				</div>
-			</div>
-
-			<div className="row entry history">
-				<div className="time">2023</div>
-				<div className="company-logo">
-					<div className="entry-dot"></div>
-					<Hyperlink href="https://www.aervision.com/">
-						<img src={aervisionLogo} alt="AerVision logo" />
-					</Hyperlink>
-				</div>
-				<div className="description">
-					<h5>Software Engineer at AerVision</h5>
 				</div>
 			</div>
 
