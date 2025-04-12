@@ -36,7 +36,8 @@ const projects: Project[] = [
 		description: "Look at life from the 'percentage' perspective",
 		mediaUrl: "timeihaveleft.png", // Example: src/assets/apps/project-gamma.gif
 		mediaType: "image",
-		liveUrl: "/apps/timeihaveleft"
+		liveUrl: "/apps/timeihaveleft",
+		githubUrl: "https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx"
 	}
 ]
 
