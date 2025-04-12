@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Hyperlink, changeWindowTitle } from "../utils/utils"
 import lifebarAnnotationImage from "../assets/TimeIHaveLeft_Lifebar_annotation.jpg"
+import "./TimeIHaveLeft.css"
 
 interface TimeLeft {
 	years: number

@@ -1,5 +1,4 @@
 import NavBar from "../components/NavBar"
-import ContactMe from "./ContactMe"
 import List100 from "./List100"
 import Home from "./Home"
 import TimeIHaveLeft from "./TimeIHaveLeft"
@@ -23,11 +22,9 @@ function App() {
 				<Routes>
 					<Route path="/" element={AppConstantElements}>
 						<Route index element={<Home />} />
-						<Route path="contactme" element={<ContactMe />} />
 						<Route path="list-100" element={<List100 />} />
-						<Route path="apps" element={<Apps />}>
-							<Route path="timeihaveleft" element={<TimeIHaveLeft />} />
-						</Route>
+						<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />
+						<Route path="apps" element={<Apps />}></Route>
 						<Route path="*" element={<NotFound />} />
 					</Route>
 				</Routes>
