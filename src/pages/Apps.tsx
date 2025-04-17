@@ -19,7 +19,7 @@ const projects: Project[] = [
 	{
 		title: "Fav Stop",
 		description: "All your frequent bus stops in one place",
-		mediaUrl: "favstop.png", // Example: src/assets/apps/project-alpha.png
+		mediaUrl: "favstop.jpg", // Example: src/assets/apps/project-alpha.png
 		mediaType: "image",
 		liveUrl: "https://favstop.netlify.app/"
 	},
@@ -34,7 +34,7 @@ const projects: Project[] = [
 	{
 		title: "Time I have left!",
 		description: "Look at life from the 'percentage' perspective",
-		mediaUrl: "timeihaveleft.png", // Example: src/assets/apps/project-gamma.gif
+		mediaUrl: "timeihaveleft.jpg",
 		mediaType: "image",
 		liveUrl: "/apps/timeihaveleft",
 		githubUrl: "https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx"

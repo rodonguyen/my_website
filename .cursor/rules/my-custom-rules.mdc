@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+- Use Yarn
+- Consider the scalability and customisability of the codebase when adding new feature
+- Refactor and create new file if necessary to make files cleaner and shorter
+
+
+<!-- - You can @ files here
+- You can use markdown but dont have to -->
