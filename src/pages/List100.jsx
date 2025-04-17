@@ -1,18 +1,19 @@
-import { changeWindowTitle } from "../utils/utils"
+import { changeWindowTitle, Hyperlink } from "../utils/utils"
+import { LeetcodeSvg } from "../assets/icons"
 
 const List100 = () => {
 	changeWindowTitle(window.location.pathname)
 	const readBookNum = 22
 
 	return (
-		<div className="container">
-			<h1 className="text-align-left xlarge">List 100</h1>
+		<div className="container text-left">
+			<h1 className="text-2xl mb-4">List 100</h1>
 			<p>
 				We all have 1 life. Why not making the most of it and do exciting things? They keep me
 				waking up everyday with a spirit on fire and I plan to do them before I die. Inspired by
 				Chip Huyen's.
 			</p>
-			<ol className="text-align-left">
+			<ol>
 				{/* Legacy */}
 				<li>✗ Read 100 books ({readBookNum}/100)</li>
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
@@ -71,17 +72,31 @@ const List100 = () => {
 				{/* <li>✗ Bring a girl home from club</li> */}
 			</ol>
 
-			<h1 className="text-align-left xlarge">My Wish List</h1>
+			<h1 className="text-xl mt-4 mb-2">My Wish List</h1>
 			<p>
 				This helps mitigate the headache of my close friends as my birthday approaches.{" "}
 				{"Love, Rodo <3"}
 			</p>
-			<ul className="text-align-left">
+			<ul className="list-disc list-inside">
 				<li>Great time with friends and family</li>
 				<li>Tissot Le Locle Powermatic 80 Open Heart</li>
-				<li>Altra gym shoes, Birkenstock size 42</li>
 				<li>Amazon Giftcard for books</li>
 				<li>Some Sats / Eth</li>
+			</ul>
+
+			<h1 className="text-xl mt-4 mb-2">Hobbies</h1>
+			<ul className="list-disc list-inside">
+				<li>
+					Hiking, Gym/Calisthenics, Bowling,{" "}
+					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
+					♟️(ELO 1000, rapid), Badminton, Reading, Movies
+				</li>
+				<li>Things I'm proud to know a bit: Tennis, Golf, Bouldering</li>
+				<li>Want to try: Camping</li>
+				<li>
+					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{" "}
+					top 1 million (and dropping)
+				</li>
 			</ul>
 		</div>
 	)

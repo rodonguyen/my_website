@@ -8,30 +8,6 @@ export const Hyperlink = ({ href, children }: { href: string; children: React.Re
 	)
 }
 
-export const useDarkMode = () => {
-	// Utilise cache/local storage to store themeMode, keep it consistent throughout the session
-	let darkThemeEnabledOnStorage = localStorage.getItem("darkTheme")
-	darkThemeEnabledOnStorage = darkThemeEnabledOnStorage
-		? JSON.parse(darkThemeEnabledOnStorage)
-		: false
-	const [darkThemeEnabled, changeTheme] = useState(darkThemeEnabledOnStorage)
-
-	// useEffect(() => {
-	// 	const root = document.documentElement // Get the <html> element
-	// 	if (darkThemeEnabled === true) {
-	// 		// document.body.classList.add(\"dark\") // Remove this line
-	// 		root.setAttribute("data-theme", "light") // Use DaisyUI dark theme
-	// 		localStorage.setItem("darkTheme", "true")
-	// 	} else if (darkThemeEnabled === false) {
-	// 		// document.body.classList.remove(\"dark\") // Remove this line
-	// 		root.setAttribute("data-theme", "light") // Use DaisyUI light theme
-	// 		localStorage.setItem("darkTheme", "true")
-	// 	}
-	// }, [darkThemeEnabled])
-
-	return [false, changeTheme]
-}
-
 export const changeWindowTitle = (path: string) => {
 	if (path === "/") {
 		document.title = "Rodo"

@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom"
 import { useRef } from "react"
-import HamburgerMenuSvg from "./HamburgerMenuSvg"
-import ThemeIcon from "./ThemeIcon"
 
-/**
- * Source:
- * - Hamburger Menu: https://www.youtube.com/watch?v=HQopEEurQYE
- */
 const NavBar = () => {
 	const navbarItemsRef = useRef(null)
 
@@ -18,7 +12,6 @@ const NavBar = () => {
 						<Link to="/" className="navbar-item brand text-align-left">
 							Rodo
 						</Link>
-						{/* <ThemeIcon /> */}
 						<ul className="navbar-items ml-auto" ref={navbarItemsRef}>
 							<li>
 								<Link to="/list-100" className="navbar-item">
@@ -34,11 +27,11 @@ const NavBar = () => {
 						<button
 							className="hamburger-menu ml-auto"
 							onClick={() => {
-								navbarItemsRef.current.classList.toggle("display-vertical-nav-items")
+								;(navbarItemsRef.current as unknown as HTMLElement)?.classList.toggle(
+									"display-vertical-nav-items"
+								)
 							}}
-						>
-							<HamburgerMenuSvg />
-						</button>
+						></button>
 					</nav>
 				</div>
 			</div>

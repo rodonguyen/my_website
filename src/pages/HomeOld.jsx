@@ -46,24 +46,6 @@ const Home = () => {
 				<History />
 			</div>
 
-			{/* content block: Hobbies */}
-			<div className="background-color-2">
-				<div className="container">
-					<h1>Hobbies</h1>
-					<p>
-						<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{" "}
-						top 1 million (and dropping)
-					</p>
-					<p>
-						Hiking, Gym/Calisthenics, Bowling,{" "}
-						<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
-						♟️(ELO 1000, rapid), Badminton, Reading, Movies
-					</p>
-					<p>Things I'm proud to know a bit: Tennis, Golf, Bouldering</p>
-					<p>Haven't tried but willing to: Camping</p>
-				</div>
-			</div>
-
 			{/* Contact Me */}
 			<div className="container">
 				<button
