@@ -1,13 +1,13 @@
-import NavBar from "../components/NavBar"
-import List100 from "./List100"
-import Home from "./Home"
-import TimeIHaveLeft from "./TimeIHaveLeft"
-import NotFound from "./NotFound"
-import Apps from "./Apps"
-import Footer from "../components/Footer"
-import "../stylesheets/App.css"
+import NavBar from '../components/NavBar'
+import List100 from './List100'
+import Home from './Home'
+import TimeIHaveLeft from './TimeIHaveLeft'
+import NotFound from './NotFound'
+import Apps from './Apps'
+import Footer from '../components/Footer'
+import '../stylesheets/App.css'
 
-import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom"
+import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 	const AppConstantElements = (
@@ -18,7 +18,7 @@ function App() {
 	)
 
 	return (
-		<div className="App flex flex-col min-h-screen">
+		<div className="App flex flex-col min-h-screen pb-12">
 			<div className="flex-grow">
 				<BrowserRouter>
 					<Routes>

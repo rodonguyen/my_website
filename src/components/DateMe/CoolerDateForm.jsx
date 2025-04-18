@@ -1,13 +1,8 @@
-import { Input, Button, Form, Label } from "reactstrap"
-import { useState } from "react"
+import { Input, Button, Form, Label } from 'reactstrap'
+import { useState } from 'react'
 
 export default function CoolerDateForm({ onSendFunction, setResultMessage }) {
-	const [inputValues, setInputValues] = useState([
-		null,
-		null,
-		"rodonguyen",
-		null
-	])
+	const [inputValues, setInputValues] = useState([null, null, 'rodonguyen', null])
 	const [previousValues, setPreviousValues] = useState(inputValues)
 
 	const updateInputValue = (index, value) => {
@@ -20,7 +15,7 @@ export default function CoolerDateForm({ onSendFunction, setResultMessage }) {
 		// console.log(inputValues, previousValues);
 		if (inputValues === previousValues) {
 			setResultMessage(
-				"[ DUPLICATE ] Duplicate input. Change the username/code and then click submit again."
+				'[ DUPLICATE ] Duplicate input. Change the username/code and then click submit again.'
 			)
 			return true
 		}
@@ -45,21 +40,13 @@ export default function CoolerDateForm({ onSendFunction, setResultMessage }) {
 			>
 				<Label>
 					Switch:
-					<Input
-						type="text"
-						name="Switch"
-						onChange={(e) => updateInputValue(0, e.target.value)}
-					/>
+					<Input type="text" name="Switch" onChange={(e) => updateInputValue(0, e.target.value)} />
 				</Label>
 				<br />
 
 				<Label>
 					Case:
-					<Input
-						type="text"
-						name="Case"
-						onChange={(e) => updateInputValue(1, e.target.value)}
-					/>
+					<Input type="text" name="Case" onChange={(e) => updateInputValue(1, e.target.value)} />
 				</Label>
 
 				<br />
@@ -77,11 +64,7 @@ export default function CoolerDateForm({ onSendFunction, setResultMessage }) {
 				<br />
 				<Label>
 					Code:
-					<Input
-						type="text"
-						name="Code"
-						onChange={(e) => updateInputValue(3, e.target.value)}
-					/>
+					<Input type="text" name="Code" onChange={(e) => updateInputValue(3, e.target.value)} />
 				</Label>
 				<br />
 

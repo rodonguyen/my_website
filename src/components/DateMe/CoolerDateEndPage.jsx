@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 /** Landing page after respondents send their answers
  *  Includes a thankyou note and a timer to redirect to homepage
@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 export default function CoolerDateEndPage() {
 	/** Redirect to homepage */
 	function redirect() {
-		document.location.href = "/" // This still runs after user switches subpage
+		document.location.href = '/' // This still runs after user switches subpage
 		clearInterval(interval)
 	}
 
@@ -29,10 +29,7 @@ export default function CoolerDateEndPage() {
 			<div className="container dateme text-align-left">
 				<h1>Thanks! You just make my day 💙</h1>
 				<p>I'll contact you soon!</p>
-				<p>
-					-- the code has been destroyed, direct to homepage in {secondsLeft}{" "}
-					seconds. --
-				</p>
+				<p>-- the code has been destroyed, direct to homepage in {secondsLeft} seconds. --</p>
 			</div>
 		</>
 	)

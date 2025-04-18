@@ -1,12 +1,12 @@
-import { changeWindowTitle, Hyperlink } from "../utils/utils"
-import { LeetcodeSvg } from "../assets/icons"
+import { changeWindowTitle, Hyperlink } from '../utils/utils'
+import { LeetcodeSvg } from '../assets/icons'
 
 const List100 = () => {
 	changeWindowTitle(window.location.pathname)
 	const readBookNum = 22
 
 	return (
-		<div className="container text-left">
+		<div className="container mt-8 text-left">
 			<h1 className="text-2xl mb-4">List 100</h1>
 			<p>
 				We all have 1 life. Why not making the most of it and do exciting things? They keep me
@@ -19,7 +19,7 @@ const List100 = () => {
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
 				<li>✓ Teach a course in university (CAB403, CAB230, IFB102 at QUT)</li>
 				<li>✗ Found a tech company in Vietnam and it survives :)</li>
-				<li>✗ Give a talk to {">"}100 audiences (like... any talk)</li>
+				<li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
 				<li>✗ Establish a Mentorship Program/AlumNetwork in my high school</li>
 				<li>✗ Found an organic modern farm (my father's dream)</li>
 				{/* Career */}
@@ -37,7 +37,7 @@ const List100 = () => {
 					some hiking)
 				</li>
 				<li>✗ Travel to 10 countries (2/10)</li>
-				<li>✗ Travel to 20 Vietnamese cities (5/20)</li>{" "}
+				<li>✗ Travel to 20 Vietnamese cities (5/20)</li>{' '}
 				{/* HCM, Danang, Hue, Phu Quoc, Kon Tum,  */}
 				<li>✗ Have a vacation on an island/a yatch</li>
 				<li>✗ Check-in at Great Pyramid of Giza, Egypt</li>
@@ -74,8 +74,8 @@ const List100 = () => {
 
 			<h1 className="text-xl mt-4 mb-2">My Wish List</h1>
 			<p>
-				This helps mitigate the headache of my close friends as my birthday approaches.{" "}
-				{"Love, Rodo <3"}
+				This helps mitigate the headache of my close friends as my birthday approaches.{' '}
+				{'Love, Rodo <3'}
 			</p>
 			<ul className="list-disc list-inside">
 				<li>Great time with friends and family</li>
@@ -87,14 +87,14 @@ const List100 = () => {
 			<h1 className="text-xl mt-4 mb-2">Hobbies</h1>
 			<ul className="list-disc list-inside">
 				<li>
-					Hiking, Gym/Calisthenics, Bowling,{" "}
+					Hiking, Gym/Calisthenics, Bowling,{' '}
 					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
 					♟️(ELO 1000, rapid), Badminton, Reading, Movies
 				</li>
 				<li>Things I'm proud to know a bit: Tennis, Golf, Bouldering</li>
 				<li>Want to try: Camping</li>
 				<li>
-					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{" "}
+					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{' '}
 					top 1 million (and dropping)
 				</li>
 			</ul>

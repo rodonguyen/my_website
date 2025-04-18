@@ -1,7 +1,7 @@
 /** Add leading zeros to a number*/
 function addLeadingZeros(number, size = 2) {
 	number = number.toString()
-	while (number.length < size) number = "0" + number
+	while (number.length < size) number = '0' + number
 	return number
 }
 
@@ -17,10 +17,7 @@ export function formatTimeLeft(timeLeftInSeconds) {
 }
 
 /** Calculate 'timeLeft' for the 'code' */
-export function calculateTimeLeftInSeconds(
-	firstAccessTime,
-	milisecondsGivenTillExpiration
-) {
+export function calculateTimeLeftInSeconds(firstAccessTime, milisecondsGivenTillExpiration) {
 	const startDatetime = new Date(firstAccessTime).getTime()
 	// console.log(startDatetime)
 	const now = new Date().getTime()

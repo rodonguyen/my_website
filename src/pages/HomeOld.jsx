@@ -1,8 +1,8 @@
-import rodoImage from "../assets/home/Rodo.jpg"
-import History from "./Home/History"
-import { changeWindowTitle, Hyperlink } from "../utils/utils"
-import LeetcodeSvg from "../components/LeetcodeSvg"
-import { Link } from "react-router-dom"
+import rodoImage from '../assets/home/Rodo.jpg'
+import History from './Home/History'
+import { changeWindowTitle, Hyperlink } from '../utils/utils'
+import LeetcodeSvg from '../components/LeetcodeSvg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 	changeWindowTitle(window.location.pathname)
@@ -36,7 +36,7 @@ const Home = () => {
 			<div className="background-color-2">
 				<div className="container">
 					<Link to="/apps">
-						<button className="button">{"<Amazing Apps I Made />"}</button>
+						<button className="button">{'<Amazing Apps I Made />'}</button>
 					</Link>
 				</div>
 			</div>
@@ -50,9 +50,9 @@ const Home = () => {
 			<div className="container">
 				<button
 					className="button text-neutral"
-					onClick={() => window.open("https://beacons.ai/rodo8888", "_blank")}
+					onClick={() => window.open('https://beacons.ai/rodo8888', '_blank')}
 				>
-					{"<Contact me />"}
+					{'<Contact me />'}
 				</button>
 			</div>
 		</>

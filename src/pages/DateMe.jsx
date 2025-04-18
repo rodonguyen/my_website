@@ -1,28 +1,25 @@
 // import { useParams } from 'react-router-dom';
-import { useSearchParams } from "react-router-dom"
-import { checkCode } from "../api/coolerdate.code"
-import { useEffect, useMemo, useState } from "react"
-import { Spinner } from "reactstrap"
-import { getAndSetProfile } from "../api/coolerdate.profile"
-import { addRespondentFormToDatabase } from "../api/coolerdate.respondent"
+import { useSearchParams } from 'react-router-dom'
+import { checkCode } from '../api/coolerdate.code'
+import { useEffect, useMemo, useState } from 'react'
+import { Spinner } from 'reactstrap'
+import { getAndSetProfile } from '../api/coolerdate.profile'
+import { addRespondentFormToDatabase } from '../api/coolerdate.respondent'
 
-import NotFound from "./NotFound"
-import CoolerDateEndPage from "../components/DateMe/CoolerDateEndPage"
-import { changeWindowTitle } from "../utils/utils"
-import {
-	calculateTimeLeftInSeconds,
-	formatTimeLeft
-} from "../components/DateMe/DateMe.utils"
+import NotFound from './NotFound'
+import CoolerDateEndPage from '../components/DateMe/CoolerDateEndPage'
+import { changeWindowTitle } from '../utils/utils'
+import { calculateTimeLeftInSeconds, formatTimeLeft } from '../components/DateMe/DateMe.utils'
 
 const DateMe = () => {
 	changeWindowTitle(window.location.pathname)
 
 	const [searchParams] = useSearchParams()
-	const code = searchParams.get("code")
+	const code = searchParams.get('code')
 
 	const [myCheckResult, setMyCheckResult] = useState(null)
 	const [myProfile, setMyProfile] = useState(null)
-	const [timeLeft, setTimeLeft] = useState("")
+	const [timeLeft, setTimeLeft] = useState('')
 	const secondsLeftUntilCodeExpires = { value: 1 } // TODO: Timer does not work properly if I use an integer... Improve this later I guess
 
 	const currentDateTime = useMemo(() => new Date(), [])
@@ -34,9 +31,7 @@ const DateMe = () => {
 
 	// let CDProgressFromLocalStorage = localStorage.getItem("CoolerDateProgress");
 	const CDProgressFromLocalStorage = 0
-	const [CoolerDateProgress, setCoolerDateProgress] = useState(
-		CDProgressFromLocalStorage || 0
-	)
+	const [CoolerDateProgress, setCoolerDateProgress] = useState(CDProgressFromLocalStorage || 0)
 	const stage01 = 1,
 		stage02 = 2,
 		stage03 = 3
@@ -45,7 +40,7 @@ const DateMe = () => {
 	/** Handle sending new Respondent request and next actions with the page */
 	async function sendHandler(event) {
 		const sendResponse = await addRespondentFormToDatabase(
-			"rodonguyen",
+			'rodonguyen',
 			code,
 			event,
 			setFirst3SectionsFilled
@@ -55,7 +50,7 @@ const DateMe = () => {
 		// Block the next step if sending the respondent form is unsuccessful
 		if (!sendResponse.successful) {
 			// TODO: Display prompt to send again
-			console.log("Send unsuccessfully.")
+			console.log('Send unsuccessfully.')
 			return
 		}
 
@@ -73,7 +68,7 @@ const DateMe = () => {
 				return
 			}
 			// Check the code from url
-			checkCode(code, "rodonguyen", setMyCheckResult)
+			checkCode(code, 'rodonguyen', setMyCheckResult)
 		},
 		[code]
 	)
@@ -127,8 +122,7 @@ const DateMe = () => {
 
 			// Assign firstAccessTime a `Date` of 'currentDateTime' if this is the first time accessing
 			// (i.e. myCheckResult.data.entry.firstAccessTime is `null`)
-			const firstAccessTime =
-				myCheckResult.data.entry.firstAccessTime || currentDateTime
+			const firstAccessTime = myCheckResult.data.entry.firstAccessTime || currentDateTime
 			secondsLeftUntilCodeExpires.value = calculateTimeLeftInSeconds(
 				firstAccessTime,
 				milisecondsGivenTillExpiration
@@ -158,9 +152,7 @@ const DateMe = () => {
 		return (
 			<>
 				<div className="container dateme text-align-left">
-					<h1>
-						If you're seeing this, I think you are absolutely beautiful 🥰
-					</h1>
+					<h1>If you're seeing this, I think you are absolutely beautiful 🥰</h1>
 
 					{/* Section 1: Introduce myself */}
 					<button
@@ -229,32 +221,25 @@ const DateMe = () => {
 								<input type="text" id="coolerdate" name="bio" required></input>
 								<br></br>
 
-								<label for="ifact">
-									Interesting facts not many people know about you
-								</label>
+								<label for="ifact">Interesting facts not many people know about you</label>
 								<br></br>
 								<input type="text" id="coolerdate" name="ifact"></input>
 								<br></br>
 
 								<label for="place">
-									An ideal first-date place? It can be general (e.g. cafe,
-									dinner, river view, romantic atmosphere) or specific (e.g. ABC
-									Restaurant)?
+									An ideal first-date place? It can be general (e.g. cafe, dinner, river view,
+									romantic atmosphere) or specific (e.g. ABC Restaurant)?
 								</label>
 								<br></br>
 								<input type="text" id="coolerdate" name="place"></input>
 								<br></br>
 
-								<label for="dressing">
-									How do you want me to dress in our first date
-								</label>
+								<label for="dressing">How do you want me to dress in our first date</label>
 								<br></br>
 								<input type="text" id="coolerdate" name="dressing"></input>
 								<br></br>
 
-								<label for="boyfriend">
-									3 words to describe your desired boyfriend?
-								</label>
+								<label for="boyfriend">3 words to describe your desired boyfriend?</label>
 								<br></br>
 								<input type="text" id="coolerdate" name="boyfriend"></input>
 								<br></br>

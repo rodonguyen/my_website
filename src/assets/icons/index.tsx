@@ -1,3 +1,3 @@
-import LeetcodeSvg from "./LeetcodeSvg"
+import LeetcodeSvg from './LeetcodeSvg'
 
 export { LeetcodeSvg }

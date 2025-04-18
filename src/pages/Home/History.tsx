@@ -1,19 +1,19 @@
-import qutguildLogo from "../../assets/history/history_qutguild_logo.png"
-import vietqLogo from "../../assets/history/history_vietq_logo.jpg"
-import qutLogo from "../../assets/history/history_qut_logo.jpeg"
-import s23mLogo from "../../assets/history/history_s23m_logo.jpeg"
-import csirodata61Logo from "../../assets/history/history_csirodata61_logo.jpeg"
-import softwareEngineerToyFigureLogo from "../../assets/history/software_engineer_toy_figure.png"
-import cslogo from "../../assets/history/history_cs_logo.png"
-import rodoResumePdf from "../../assets/resume/Rodo_resume.pdf"
-import { Hyperlink } from "../../utils/utils"
+import qutguildLogo from '../../assets/history/history_qutguild_logo.png'
+import vietqLogo from '../../assets/history/history_vietq_logo.jpg'
+import qutLogo from '../../assets/history/history_qut_logo.jpeg'
+import s23mLogo from '../../assets/history/history_s23m_logo.jpeg'
+import csirodata61Logo from '../../assets/history/history_csirodata61_logo.jpeg'
+import softwareEngineerToyFigureLogo from '../../assets/history/software_engineer_toy_figure.png'
+import cslogo from '../../assets/history/history_cs_logo.png'
+import rodoResumePdf from '../../assets/resume/Rodo_resume.pdf'
+import { Hyperlink } from '../../utils/utils'
 
 export default function History() {
 	return (
 		<>
 			<h1>What did I do since I'm 18yo? Good question...</h1>
 			<p>
-				Interesting opportunity? 👉🏽{" "}
+				Interesting opportunity? 👉🏽{' '}
 				<a href={rodoResumePdf} download="Rodo_Resume">
 					My Resume
 				</a>

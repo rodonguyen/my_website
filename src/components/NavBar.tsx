@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { useRef } from "react"
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 
 const NavBar = () => {
 	const navbarItemsRef = useRef(null)
@@ -28,7 +28,7 @@ const NavBar = () => {
 							className="hamburger-menu ml-auto"
 							onClick={() => {
 								;(navbarItemsRef.current as unknown as HTMLElement)?.classList.toggle(
-									"display-vertical-nav-items"
+									'display-vertical-nav-items'
 								)
 							}}
 						></button>

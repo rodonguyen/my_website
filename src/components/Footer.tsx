@@ -1,8 +1,12 @@
-import React from "react"
+import React from 'react'
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="py-2 mt-12 text-center text-sm text-base-content/40">Built by Rodo</footer>
+		<footer className="fixed bottom-0 left-0 right-0 z-50 text-center text-sm text-base-content/40 bg-base-100">
+			<nav className="mx-auto">
+				<p>Built by Rodo</p>
+			</nav>
+		</footer>
 	)
 }
 
