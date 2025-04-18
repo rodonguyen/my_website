@@ -1,13 +1,13 @@
-import React from "react"
-import { FaGithub } from "react-icons/fa" // Import GitHub icon
+import React from 'react'
+import { FaGithub } from 'react-icons/fa' // Import GitHub icon
 // @ts-ignore
-import { changeWindowTitle } from "../utils/utils"
+import { changeWindowTitle } from '../utils/utils'
 // Define the structure for a project
 interface Project {
 	title: string
 	description: string
 	mediaUrl: string // Path relative to src/assets/apps/
-	mediaType: "image" | "video" | "gif"
+	mediaType: 'image' | 'video' | 'gif'
 	liveUrl?: string // Optional link to the live project
 	githubUrl?: string // Optional link to the GitHub repository
 }
@@ -17,27 +17,27 @@ const projects: Project[] = [
 	// Add your project data here
 	// Example:
 	{
-		title: "Fav Stop",
-		description: "All your frequent bus stops in one place",
-		mediaUrl: "favstop.jpg", // Example: src/assets/apps/project-alpha.png
-		mediaType: "image",
-		liveUrl: "https://favstop.netlify.app/"
+		title: 'Fav Stop',
+		description: 'All your frequent bus stops in one place',
+		mediaUrl: 'favstop.jpg', // Example: src/assets/apps/project-alpha.png
+		mediaType: 'image',
+		liveUrl: 'https://favstop.netlify.app/'
 	},
 	{
-		title: "BitTracker",
-		description: "Trade bitcoin algorithmically (Retired)",
-		mediaUrl: "bittracker.png", // Example: src/assets/apps/project-beta.mp4
-		mediaType: "image",
+		title: 'BitTracker',
+		description: 'Trade bitcoin algorithmically (Retired)',
+		mediaUrl: 'bittracker.png', // Example: src/assets/apps/project-beta.mp4
+		mediaType: 'image',
 		// liveUrl: undefined, // No live URL for this one
-		githubUrl: "https://github.com/rodonguyen/bittracker2024" // Added GitHub URL
+		githubUrl: 'https://github.com/rodonguyen/bittracker2024' // Added GitHub URL
 	},
 	{
-		title: "Time I have left!",
+		title: 'Time I have left!',
 		description: "Look at life from the 'percentage' perspective",
-		mediaUrl: "timeihaveleft.jpg",
-		mediaType: "image",
-		liveUrl: "/apps/timeihaveleft",
-		githubUrl: "https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx"
+		mediaUrl: 'timeihaveleft.jpg',
+		mediaType: 'image',
+		liveUrl: '/apps/timeihaveleft',
+		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
 	}
 ]
 
@@ -55,12 +55,12 @@ const getMediaPath = (mediaUrl: string) => {
 		return new URL(`../assets/apps/${mediaUrl}`, import.meta.url).href
 	} catch (e) {
 		console.error(`Error creating URL for ${mediaUrl}:`, e)
-		return "" // Return empty string or a placeholder path on error
+		return '' // Return empty string or a placeholder path on error
 	}
 }
 
 const Apps: React.FC = () => {
-	changeWindowTitle("/apps")
+	changeWindowTitle('/apps')
 
 	return (
 		<div className="container mx-auto py-8">
@@ -69,7 +69,7 @@ const Apps: React.FC = () => {
 				{projects.map((project, index) => (
 					<div key={index} className="card !rounded-[1rem] bg-base-100 shadow-xl">
 						<figure className="px-4 pt-4">
-							{project.mediaType === "image" && (
+							{project.mediaType === 'image' && (
 								<img
 									src={getMediaPath(project.mediaUrl)}
 									alt={project.title}
@@ -77,7 +77,7 @@ const Apps: React.FC = () => {
 									loading="lazy"
 								/>
 							)}
-							{project.mediaType === "video" && (
+							{project.mediaType === 'video' && (
 								<video
 									controls
 									src={getMediaPath(project.mediaUrl)}
@@ -87,7 +87,7 @@ const Apps: React.FC = () => {
 									Your browser does not support the video tag.
 								</video>
 							)}
-							{project.mediaType === "gif" && (
+							{project.mediaType === 'gif' && (
 								<img
 									src={getMediaPath(project.mediaUrl)} // GIFs are treated like images
 									alt={project.title}

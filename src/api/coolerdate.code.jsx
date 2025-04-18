@@ -1,10 +1,10 @@
-import axios from "axios"
+import axios from 'axios'
 
 // const apiUrl = process.env.REACT_APP_SERVER_CODE_ENDPOINT;
-const apiUrl = ""
+const apiUrl = ''
 
-export const checkCode = async (code, username = "rodonguyen", setResponse) => {
-	if (code === null || code === "") return false
+export const checkCode = async (code, username = 'rodonguyen', setResponse) => {
+	if (code === null || code === '') return false
 
 	const fullUrl = `${apiUrl}check`
 	const data = {
@@ -13,7 +13,7 @@ export const checkCode = async (code, username = "rodonguyen", setResponse) => {
 	}
 
 	await axios({
-		method: "post",
+		method: 'post',
 		url: fullUrl,
 		data: data,
 		timeout: 6000
@@ -22,8 +22,8 @@ export const checkCode = async (code, username = "rodonguyen", setResponse) => {
 			setResponse(res)
 		})
 		.catch((error) => {
-			if (error.code === "ECONNABORTED") {
-				console.error("Request timed out")
+			if (error.code === 'ECONNABORTED') {
+				console.error('Request timed out')
 			}
 			setResponse({ data: { isValid: false } })
 			// console.log(error);

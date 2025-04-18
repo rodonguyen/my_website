@@ -1,5 +1,5 @@
-import rodoResumePdf from "../assets/resume/Rodo_resume.pdf"
-import { changeWindowTitle } from "../utils/utils"
+import rodoResumePdf from '../assets/resume/Rodo_resume.pdf'
+import { changeWindowTitle } from '../utils/utils'
 
 const Resume = () => {
 	changeWindowTitle(window.location.pathname)

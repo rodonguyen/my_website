@@ -1,20 +1,20 @@
-import { defineConfig } from "vitest/config"
-import react from "@vitejs/plugin-react-swc"
-import tailwindcss from "@tailwindcss/vite"
+import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react-swc'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "/",
+	base: '/',
 	plugins: [react(), tailwindcss()],
 	test: {
 		globals: true,
-		environment: "jsdom",
-		setupFiles: "./src/setupTests.ts",
+		environment: 'jsdom',
+		setupFiles: './src/setupTests.ts',
 		css: true,
-		reporters: ["verbose"],
+		reporters: ['verbose'],
 		coverage: {
-			reporter: ["text", "json", "html"],
-			include: ["src/**/*"],
+			reporter: ['text', 'json', 'html'],
+			include: ['src/**/*'],
 			exclude: []
 		}
 	}

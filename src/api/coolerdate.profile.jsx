@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios from 'axios'
 
 // const apiUrl = process.env.REACT_APP_SERVER_PROFILE_ENDPOINT;
-const apiUrl = ""
+const apiUrl = ''
 
 export const getAndSetProfile = async (username, profile, setResponse) => {
 	if (profile === null || username === null) return false

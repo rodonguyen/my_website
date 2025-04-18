@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
-import { Hyperlink, changeWindowTitle } from "../utils/utils"
-import lifebarAnnotationImage from "../assets/TimeIHaveLeft_Lifebar_annotation.jpg"
-import "./TimeIHaveLeft.css"
+import React, { useState, useEffect } from 'react'
+import { Hyperlink, changeWindowTitle } from '../utils/utils'
+import lifebarAnnotationImage from '../assets/apps/TimeIHaveLeft_Lifebar_annotation.jpg'
+import './TimeIHaveLeft.css'
 
 interface TimeLeft {
 	years: number
@@ -12,9 +12,9 @@ interface TimeLeft {
 const TimeIHaveLeft = () => {
 	changeWindowTitle(window.location.pathname)
 
-	const [over100yoMessage, setOver100yoMessage] = useState("")
-	const [percentage, setPercentage] = useState("")
-	const [dob, setDob] = useState(new Date("2001-01-01"))
+	const [over100yoMessage, setOver100yoMessage] = useState('')
+	const [percentage, setPercentage] = useState('')
+	const [dob, setDob] = useState(new Date('2001-01-01'))
 	const [timeLeft, setTimeLeft] = useState<TimeLeft>({
 		years: 0,
 		months: 0,
@@ -35,7 +35,7 @@ const TimeIHaveLeft = () => {
 		if (percentage > 125) {
 			setOver100yoMessage("(Looks like you're not human, dude!)")
 		} else {
-			setOver100yoMessage("")
+			setOver100yoMessage('')
 		}
 	}
 
@@ -70,10 +70,10 @@ const TimeIHaveLeft = () => {
 
 		// Calculate % used
 		const tempPercentage = calculatePercentage(monthsLeft)
-		setPercentage(tempPercentage + "%")
+		setPercentage(tempPercentage + '%')
 
 		// Adjust the progress bar's width to reflect % used
-		const progressBar = document.getElementById("life-progress")!
+		const progressBar = document.getElementById('life-progress')!
 		progressBar.style.width = `${tempPercentage}%`
 
 		changeOver100Message(monthsLeft)
@@ -126,7 +126,7 @@ const TimeIHaveLeft = () => {
 					<b>~{timeLeft.days} days </b> {over100yoMessage}
 				</p>
 				<p>
-					Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have{" "}
+					Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have{' '}
 					<br />
 					<b>~{timeLeftMinus10Years.years} years</b> OR <br />
 					<b>~{timeLeftMinus10Years.months} months</b> OR <br />
@@ -134,7 +134,7 @@ const TimeIHaveLeft = () => {
 				</p>
 				<p>
 					Through this new len of looking at life expectancy, I hope you now think about your life a
-					bit differently.{" "}
+					bit differently.{' '}
 				</p>
 				<p>Can I make you feel worse? Try with your parent's DoB.</p>
 			</>

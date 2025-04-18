@@ -1,4 +1,6 @@
-const LeetcodeSvg = () => {
+import React from 'react'
+
+const LeetcodeSvg: React.FC = () => {
 	return (
 		<svg
 			className="w-[1.5rem] h-[1.5rem] inline"

@@ -1,7 +1,7 @@
-import { changeWindowTitle } from "../utils/utils"
+import { changeWindowTitle } from '../utils/utils'
 
 const NotFound = () => {
-	changeWindowTitle("Not found...")
+	changeWindowTitle('Not found...')
 
 	return (
 		<div className="container notfound">
