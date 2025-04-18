@@ -7,8 +7,8 @@ const List100 = () => {
 
 	return (
 		<div className="container mt-8 text-left">
-			<h1 className="text-2xl mb-4">List 100</h1>
-			<p>
+			<h1 className="text-2xl">List 100</h1>
+			<p className="mb-4">
 				We all have 1 life. Why not making the most of it and do exciting things? They keep me
 				waking up everyday with a spirit on fire and I plan to do them before I die. Inspired by
 				Chip Huyen's.
@@ -72,7 +72,7 @@ const List100 = () => {
 				{/* <li>✗ Bring a girl home from club</li> */}
 			</ol>
 
-			<h1 className="text-xl mt-4 mb-2">My Wish List</h1>
+			<h1 className="text-xl mt-6">My Wish List</h1>
 			<p>
 				This helps mitigate the headache of my close friends as my birthday approaches.{' '}
 				{'Love, Rodo <3'}
@@ -84,12 +84,12 @@ const List100 = () => {
 				<li>Some Sats / Eth</li>
 			</ul>
 
-			<h1 className="text-xl mt-4 mb-2">Hobbies</h1>
+			<h1 className="text-xl mt-6">Hobbies</h1>
 			<ul className="list-disc list-inside">
 				<li>
 					Hiking, Gym/Calisthenics, Bowling,{' '}
 					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
-					♟️(ELO 1000, rapid), Badminton, Reading, Movies
+					♟️ (ELO 1000, rapid), Badminton, Reading, Movies
 				</li>
 				<li>Things I'm proud to know a bit: Tennis, Golf, Bouldering</li>
 				<li>Want to try: Camping</li>

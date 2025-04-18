@@ -12,13 +12,14 @@ import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
 	const AppConstantElements = (
 		<div className="App">
-			{/* <NavBar /> */}
+			<NavBar />
 			<Outlet />
+			<Footer />
 		</div>
 	)
 
 	return (
-		<div className="App flex flex-col min-h-screen pb-12">
+		<div className="App flex flex-col min-h-screen py-12">
 			<div className="flex-grow">
 				<BrowserRouter>
 					<Routes>
@@ -32,7 +33,6 @@ function App() {
 					</Routes>
 				</BrowserRouter>
 			</div>
-			<Footer />
 		</div>
 	)
 }
