@@ -8,7 +8,7 @@ const NavBar = () => {
 	return (
 		<div
 			className={
-				'navbar fixed top-0 left-0 right-0 z-10 min-h-6 bg-base-100 shadow-sm p-0 text-base-content/60' +
+				'navbar fixed top-0 left-0 right-0 z-10 md:px-6 min-h-6 bg-base-100 shadow-sm p-0 text-base-content/80' +
 				(hideNavBar ? ' hidden' : '')
 			}
 		>
@@ -26,6 +26,7 @@ const NavBar = () => {
 					Amazing Apps
 				</Link>
 			</div>
+
 			<div className="md:hidden flex justify-end">
 				<div className="dropdown dropdown-end">
 					<button tabIndex={0} className="btn btn-ghost py-0 text-xl">
