@@ -7,23 +7,24 @@ const List100 = () => {
 
 	return (
 		<div className="container mt-8 text-left">
-			<h1 className="text-2xl">List 100</h1>
+			<h1 className="text-3xl font-bold mb-4 text-center">List 100</h1>
 			<p className="mb-4">
-				We all have 1 life. Why not making the most of it and do exciting things? They keep me
-				waking up everyday with a spirit on fire and I plan to do them before I die. Inspired by
-				Chip Huyen's.
+				We all have 1 life. Why not making the most of it and do exciting things? These goals below
+				keep me waking up everyday with a spirit on fire and I plan to do them before I die.
+				Inspired by Chip Huyen's.
 			</p>
 			<ol>
 				{/* Legacy */}
 				<li>✗ Read 100 books ({readBookNum}/100)</li>
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
-				<li>✓ Teach a course in university (CAB403, CAB230, IFB102 at QUT)</li>
+				<li>✅ Teach a course in university (CAB403, CAB230, IFB102 at QUT)</li>
+				<li>✗ Reach 10,000 subscribers on YouTube/Instagram</li>
 				<li>✗ Found a tech company in Vietnam and it survives :)</li>
 				<li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
 				<li>✗ Establish a Mentorship Program/AlumNetwork in my high school</li>
 				<li>✗ Found an organic modern farm (my father's dream)</li>
 				{/* Career */}
-				<li>✓ Annual income before tax AU$65,000</li>
+				<li>✅ Annual income before tax AU$65,000</li>
 				<li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
 				<li>✗ Get Aussie PR</li>
 				{/* Travelling */}
@@ -33,7 +34,7 @@ const List100 = () => {
 				<li>✗ Pay and have a 14-day holiday with my family</li>
 				<li>✗ Visit Norway's mountains</li>
 				<li>
-					✓ Visit New Zealand's mountains (I've seen them but next time I want to get closer and do
+					✅ Visit New Zealand's mountains (I've seen them but next time I want to get closer and do
 					some hiking)
 				</li>
 				<li>✗ Travel to 10 countries (2/10)</li>
@@ -67,12 +68,13 @@ const List100 = () => {
 				<li>✗ Swim in outer space</li>
 				<li>✗ Swim with whales/dolphins</li>
 				<li>~ Live a great life</li>
+				<li>~ Do what you love, default 'no' to the rest</li>
 				{/* <li>✗ Date a model</li> */}
 				{/* <li>✓ </li> */}
 				{/* <li>✗ Bring a girl home from club</li> */}
 			</ol>
 
-			<h1 className="text-xl mt-6">My Wish List</h1>
+			<h1 className="text-3xl font-bold my-4 text-center">My Wish List</h1>
 			<p>
 				This helps mitigate the headache of my close friends as my birthday approaches.{' '}
 				{'Love, Rodo <3'}
@@ -84,7 +86,7 @@ const List100 = () => {
 				<li>Some Sats / Eth</li>
 			</ul>
 
-			<h1 className="text-xl mt-6">Hobbies</h1>
+			<h1 className="text-3xl font-bold my-4 text-center">Hobbies</h1>
 			<ul className="list-disc list-inside">
 				<li>
 					Hiking, Gym/Calisthenics, Bowling,{' '}
