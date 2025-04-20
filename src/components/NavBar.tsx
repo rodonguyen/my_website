@@ -13,18 +13,23 @@ const NavBar = () => {
 			}
 		>
 			<div className="flex-1">
-				<Link to="/" className="btn btn-ghost py-0 text-xl">
+				<Link to="/" className="btn btn-ghost text-xl">
 					<img className="rounded-full w-6 h-6" src={rodoImage}></img>
 					Rodo
 				</Link>
 			</div>
-			<div className="ml-auto gap-2 hidden md:flex">
-				<Link to="/list-100" className="btn btn-ghost py-0  text-xl">
-					List 100
-				</Link>
-				<Link to="/apps" className="btn btn-ghost py-0  text-xl">
-					Amazing Apps
-				</Link>
+			<div className="hidden md:flex">
+				<ul className="menu menu-horizontal px-1">
+					<li>
+						<Link to="/list-100">List 100</Link>
+					</li>
+					<li>
+						<Link to="/apps">Amazing Apps</Link>
+					</li>
+					<li>
+						<Link to="/career">Career</Link>
+					</li>
+				</ul>
 			</div>
 
 			<div className="md:hidden flex justify-end">
@@ -56,6 +61,9 @@ const NavBar = () => {
 							<Link to="/apps">
 								Amazing Apps <span className="badge">New</span>
 							</Link>
+						</li>
+						<li>
+							<Link to="/career">Career journey</Link>
 						</li>
 					</ul>
 				</div>
