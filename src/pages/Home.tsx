@@ -26,13 +26,13 @@ const Home = () => {
 					className="custom-card"
 				>
 					<div className="card-body text-left">
-						<h2 className="text-xl font-bold mb-4">Sharing is caring. Why I started my podcast.</h2>
-						<p className="text-base-content/50 mb-2 md:text-md text-sm">
+						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
+						<p className="text-base-content/65 mb-2 md:text-md text-sm">
 							Born in a small city widely known for its elephant as the main transport, somehow my
 							parents managed to earn and save enough for me to study at QUT in Brisbane, Australia.
 							It is the BEST thing that happens to me.
 						</p>
-						<p className="text-base-content/50 mb-2 md:text-md text-sm">
+						<p className="text-base-content/65 mb-2 md:text-md text-sm">
 							Yet, I feel like I could have used my university time more wisely and productively so
 							I want to share all my learnings, my lessons and my experiences with you.
 							#software_engineer #life_experience #early_career
@@ -48,20 +48,40 @@ const Home = () => {
 					</div>
 				</Hyperlink>
 
-				<h2 className="text-xl font-bold mt-6 text-base-content/50">Others</h2>
+				<h2 className="text-xl font-bold mt-6 text-base-content/65">Others</h2>
+
+				<Link to="https://favstop.netlify.app/" className="custom-card">
+					<div className="card-body text-left">
+						<h2 className="card-title">
+							🚏 Fav Stop <span className="badge badge-soft badge-primary">New!</span>
+						</h2>
+						<p className="text-base-content/65">
+							An app to track your bus (or train, ferry) arrival time. At your favourite stops. In
+							real-time.
+						</p>
+					</div>
+				</Link>
 
 				<Link to="/apps" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">🚀 Amazing Apps</h2>
-						<p className="text-base-content/50">Things I do for fun but actually useful</p>
+						<p className="text-base-content/65">Things I do for fun but actually useful</p>
 					</div>
 				</Link>
 
 				<Link to="/list-100" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 List 100</h2>
-						<p className="text-base-content/50">
+						<p className="text-base-content/65">
 							Things I want to do before I die. Inspired by Chip Huyen's List100.
+						</p>
+					</div>
+				</Link>
+				<Link to="/career" className="custom-card">
+					<div className="card-body text-left">
+						<h2 className="card-title">👔 My Career Journey</h2>
+						<p className="text-base-content/65">
+							from the very first job as a Kitchenhand in Australia.
 						</p>
 					</div>
 				</Link>

@@ -5,6 +5,7 @@ import TimeIHaveLeft from './TimeIHaveLeft'
 import NotFound from './NotFound'
 import Apps from './Apps'
 import Footer from '../components/Footer'
+import Career from './Career'
 import '../stylesheets/App.css'
 
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -26,6 +27,7 @@ function App() {
 						<Route path="/" element={AppConstantElements}>
 							<Route index element={<Home />} />
 							<Route path="list-100" element={<List100 />} />
+							<Route path="career" element={<Career />} />
 							<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />
 							<Route path="apps" element={<Apps />}></Route>
 							<Route path="*" element={<NotFound />} />
