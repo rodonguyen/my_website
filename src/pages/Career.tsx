@@ -94,26 +94,26 @@ const Career = () => {
 					</div>
 					<div className="timeline-end md:mb-10">
 						<time className="font-mono italic">2021</time>
-						<div className="text-lg font-black">Vacation Researcher</div>
+						<div className="text-lg font-semibold">Vacation Researcher</div>
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT
 						</Hyperlink>
-						<div className="text-lg font-black mt-4">HiQ Concierge</div>
+						<div className="text-lg font-semibold mt-4">HiQ Concierge</div>
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT
 						</Hyperlink>
-						<div className="text-lg font-black mt-4">Vacation Researcher</div>
+						<div className="text-lg font-semibold mt-4">Vacation Researcher</div>
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT
 						</Hyperlink>
-						<div className="text-lg font-black mt-4">Secretary</div>
+						<div className="text-lg font-semibold mt-4">Secretary</div>
 						<Hyperlink
 							href="https://www.facebook.com/vietqbrisbane/"
 							className="text-base-content/60"
 						>
 							VietQ - QUT Vietnamese Students Association
 						</Hyperlink>
-						<div className="text-lg font-black mt-4">International Students Officer</div>
+						<div className="text-lg font-semibold mt-4">International Students Officer</div>
 						<Hyperlink href="https://www.qutguild.com/" className="text-base-content/60">
 							QUT Guild
 						</Hyperlink>
@@ -127,11 +127,11 @@ const Career = () => {
 					</div>
 					<div className="timeline-start mb-10 md:text-end">
 						<time className="font-mono italic">2019 - 2020</time>
-						<div className="text-lg font-black mt-4">Front of House Staff</div>
+						<div className="text-lg font-semibold mt-4">Front of House Staff</div>
 						<Hyperlink href="https://www.kfc.com.au/" className="text-base-content/60">
 							KFC
 						</Hyperlink>
-						<div className="text-lg font-black mt-4">Kitchenhand</div>
+						<div className="text-lg font-semibold mt-4">Kitchenhand</div>
 						<div className="text-base-content/60">Hundred Acres Bar</div>
 					</div>
 				</li>
