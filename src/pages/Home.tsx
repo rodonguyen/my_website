@@ -15,7 +15,7 @@ const Home = () => {
 					</div>
 				</div>
 				<h1 className="text-4xl font-bold mb-6">Rodo</h1>
-				<p className="text-xl text-base-content/50 mb-4">Engineer great software</p>
+				<p className="text-xl text-base-content/50 mb-4">Engineer great software!</p>
 				<div className="flex space-x-6 mb-12 text-base-content/50">
 					<SocialIcons />
 				</div>
@@ -23,7 +23,7 @@ const Home = () => {
 				{/* <div className="max-w-[30rem]"> */}
 				<Hyperlink
 					href="https://www.youtube.com/@rodo.podcast?sub_confirmation=1"
-					className="custom-card"
+					className="custom-card bg-primary/15 hover:bg-primary/30"
 				>
 					<div className="card-body text-left">
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
@@ -50,7 +50,10 @@ const Home = () => {
 
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">Others</h2>
 
-				<Link to="https://favstop.netlify.app/" className="custom-card">
+				<Link
+					to="https://favstop.netlify.app/"
+					className="custom-card bg-secondary/15 hover:bg-secondary/30"
+				>
 					<div className="card-body text-left">
 						<h2 className="card-title">
 							🚏 Fav Stop <span className="badge badge-soft badge-primary">New!</span>
