@@ -23,7 +23,7 @@ const Home = () => {
 				{/* <div className="max-w-[30rem]"> */}
 				<Hyperlink
 					href="https://www.youtube.com/@rodo.podcast?sub_confirmation=1"
-					className="custom-card bg-primary/15 hover:bg-primary/30"
+					className="custom-card bg-red-500/20 hover:bg-red-500/30"
 				>
 					<div className="card-body text-left">
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
@@ -52,7 +52,7 @@ const Home = () => {
 
 				<Link
 					to="https://favstop.netlify.app/"
-					className="custom-card bg-secondary/15 hover:bg-secondary/30"
+					className="custom-card bg-amber-500/20 hover:bg-amber-500/30"
 				>
 					<div className="card-body text-left">
 						<h2 className="card-title">
@@ -65,14 +65,14 @@ const Home = () => {
 					</div>
 				</Link>
 
-				<Link to="/apps" className="custom-card">
+				<Link to="/apps" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">🚀 Amazing Apps</h2>
 						<p className="text-base-content/65">Things I do for fun but actually useful</p>
 					</div>
 				</Link>
 
-				<Link to="/list-100" className="custom-card">
+				<Link to="/list-100" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 List 100</h2>
 						<p className="text-base-content/65">
@@ -80,7 +80,7 @@ const Home = () => {
 						</p>
 					</div>
 				</Link>
-				<Link to="/career" className="custom-card">
+				<Link to="/career" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">👔 My Career Journey</h2>
 						<p className="text-base-content/65">
