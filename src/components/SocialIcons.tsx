@@ -5,7 +5,8 @@ import {
 	FaThreads,
 	FaEnvelope,
 	FaYoutube,
-	FaXTwitter
+	FaXTwitter,
+  FaTiktok
 } from 'react-icons/fa6'
 
 const SocialIcons: React.FC = () => {
@@ -18,6 +19,14 @@ const SocialIcons: React.FC = () => {
 				className="text-2xl hover:text-rose-500 transition-colors duration-200"
 			>
 				<FaInstagram />
+			</a>
+			<a
+				href="https://www.tiktok.com/@rodo.podcast"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-2xl hover:text-rose-500 transition-colors duration-200"
+			>
+				<FaTiktok />
 			</a>
 			<a
 				href="https://threads.net/rodo.nguyen"

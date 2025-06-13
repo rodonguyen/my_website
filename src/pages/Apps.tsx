@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGithub } from 'react-icons/fa' // Import GitHub icon
 // @ts-ignore
 import { changeWindowTitle } from '../utils/utils'
+import { Link } from 'react-router-dom'
 // Define the structure for a project
 interface Project {
 	title: string
@@ -63,8 +64,8 @@ const Apps: React.FC = () => {
 	changeWindowTitle('/apps')
 
 	return (
-		<div className="container mx-auto py-8">
-			<h1 className="text-3xl font-bold mb-8 !text-center">My Amazing Apps</h1>
+		<div className="container-large  mx-auto py-8">
+			<h1 className="h1 text-center">My Amazing Apps</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				{projects.map((project, index) => (
 					<div key={index} className="card !rounded-[1rem] bg-base-100 shadow-xl">
@@ -101,14 +102,12 @@ const Apps: React.FC = () => {
 							<div className="card-actions mt-2 flex justify-center gap-2">
 								{/* Live Project Button */}
 								{project.liveUrl && (
-									<a
-										href={project.liveUrl}
-										target="_blank"
-										rel="noopener noreferrer"
+									<Link
+										to={project.liveUrl}
 										className="btn btn-primary"
 									>
 										View Project
-									</a>
+									</Link>
 								)}
 								{/* GitHub Button */}
 								{project.githubUrl && (

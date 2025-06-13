@@ -100,19 +100,23 @@ const TimeIHaveLeft = () => {
 	}, [dob])
 
 	return (
-		<div className="container">
-			<h1>Time I Have Left</h1>
-			<label htmlFor="dob">Your date of birth:</label>&ensp;
+		<div className="container py-8">
+			<h1 className="h1 text-center">Time I Have Left</h1>
+			<label htmlFor="dob">Your date of birth:</label>
+			<br></br>
+      <div className='flex justify-center'>
 			<input
 				type="date"
 				name="dob"
+				className="input input-bordered w-40 my-2"
+				title="Select your date of birth"
 				min="1900-01-01"
 				max="2100-01-01"
 				defaultValue="2001-01-01"
 				onChange={handleDobChange}
 				required
-			/>
-			<br></br>
+        />
+        </div>
 			<>
 				<p>
 					If you can live up to 80 years old, assumingly don't get any genetec adjustments or have
@@ -136,33 +140,32 @@ const TimeIHaveLeft = () => {
 					Through this new len of looking at life expectancy, I hope you now think about your life a
 					bit differently.{' '}
 				</p>
+        <br></br>
 				<p>Can I make you feel worse? Try with your parent's DoB.</p>
 			</>
 			{/* Progress bar */}
-			<div className="lifebar-illustration-container">
-				<div className="annotation-container">
+			<div className="w-[80%] mx-auto my-6 rounded-2xl">
 					<img
-						className="lifebar-annotation"
+						className="lifebar-annotation rounded-t-xl"
 						src={lifebarAnnotationImage}
 						alt="Life bar annotations"
 					/>
-				</div>
-				<div className="lifebar-container">
-					<div className="lifebar" id="life-progress">
+				<div className="bg-[#ffdebf] h-12 rounded-b-xl relative">
+					<div className="bg-[#4caf50] h-full rounded-bl-xl w-0 transition-all duration-1000" id="life-progress">
 						<div className="lifebar-text">{percentage}</div>
 					</div>
 				</div>
 			</div>
 			<h1>Resources you may need:</h1>
-			<ul>
+			<ul className='list-disc list-inside'>
 				<li>
-					<Hyperlink href="https://youtu.be/gGLxPY3qDYY">
-						"Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen"
+					<Hyperlink href="https://youtu.be/gGLxPY3qDYY" className='link'>
+						Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen
 					</Hyperlink>
 				</li>
 				<li>
-					<Hyperlink href="https://www.youtube.com/shorts/Wa7-n9j_ARM?feature=share">
-						"Life advice for your 20s, 30s, 40s, 60s - Koskas"
+					<Hyperlink href="https://www.youtube.com/shorts/Wa7-n9j_ARM?feature=share" className='link'>
+						Life advice for your 20s, 30s, 40s, 60s - Koskas
 					</Hyperlink>
 				</li>
 				<li>

@@ -7,7 +7,7 @@ const List100 = () => {
 
 	return (
 		<div className="container mt-8 text-left">
-			<h1 className="text-3xl font-bold mb-4 text-center">List 100</h1>
+			<h1 className="h1 text-center">List 100</h1>
 			<p className="mb-4">
 				We all have 1 life. Why not making the most of it and do exciting things? These goals below
 				keep me waking up everyday with a spirit on fire and I plan to do them before I die.
@@ -74,7 +74,7 @@ const List100 = () => {
 				{/* <li>✗ Bring a girl home from club</li> */}
 			</ol>
 
-			<h1 className="text-3xl font-bold my-4 text-center">My Wish List</h1>
+			<h1 className="h1 text-center">My Wish List</h1>
 			<p>
 				This helps mitigate the headache of my close friends as my birthday approaches.{' '}
 				{'Love, Rodo <3'}
@@ -86,17 +86,17 @@ const List100 = () => {
 				<li>Some Sats / Eth</li>
 			</ul>
 
-			<h1 className="text-3xl font-bold my-4 text-center">Hobbies</h1>
+			<h1 className="h1 text-center">Hobbies</h1>
 			<ul className="list-disc list-inside">
 				<li>
 					Hiking, Gym/Calisthenics, Bowling,{' '}
-					<Hyperlink href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
+					<Hyperlink className='link' href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
 					♟️ (ELO 1000, rapid), Badminton, Reading, Movies
 				</li>
 				<li>Things I'm proud to know a bit: Tennis, Golf, Bouldering</li>
 				<li>Want to try: Camping</li>
 				<li>
-					<Hyperlink href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{' '}
+					<Hyperlink className='link' href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{' '}
 					top 1 million (and dropping)
 				</li>
 			</ul>

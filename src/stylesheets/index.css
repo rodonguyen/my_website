@@ -22,8 +22,16 @@ code {
     @apply mx-auto md:px-10 px-4 !max-w-[600px];
   }
 
+  .container-large {
+    @apply mx-auto md:px-10 px-4 !max-w-[800px];
+  }
+
   .custom-card {
     @apply w-full my-4 md:px-6 px-2 py-4 bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl text-left transition-all duration-100 hover:border-gray-400 hover:bg-gray-100;
+  }
+
+  .h1 {
+    @apply text-3xl font-bold mb-8;
   }
 }
 

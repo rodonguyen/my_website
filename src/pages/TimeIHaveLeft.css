@@ -1,17 +1,16 @@
 .lifebar-illustration-container {
 	width: 80%;
 	margin: 30px auto;
+  border-radius: 20px;
 }
 
 img.lifebar-annotation {
 	margin: 30px auto 0 auto;
-	border-radius: 5px;
 	width: 100%;
 }
 
 .lifebar-container {
-	background-color: var(--secondary);
-	border-radius: 5px;
+	background-color: #ffdebf;
 	height: 50px;
 	position: relative;
 }
@@ -19,16 +18,15 @@ img.lifebar-annotation {
 .lifebar {
 	background-color: #4caf50;
 	height: 100%;
-	border-radius: 5px;
 	width: 0;
-	transition: width 0.3s ease-in-out;
+	transition: width 1s ease-in-out;
 }
 
 .lifebar-text {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%) translateY(30%);
+	transform: translateX(-50%) translateY(25%);
 	line-height: 30px;
 	/* Center vertically */
 	font-size: var(--font-size-normal);

@@ -19,8 +19,8 @@ const TickIcon = () => (
 const Career = () => {
 	changeWindowTitle('/career')
 	return (
-		<div className="container mx-auto py-8 history">
-			<h1 className="text-3xl font-bold mb-8 text-center">My career journey</h1>
+		<div className="container py-8">
+			<h1 className="h1 text-center">My career journey</h1>
 
 			<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
 				<li>
