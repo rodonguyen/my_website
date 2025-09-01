@@ -23,7 +23,7 @@ const Home = () => {
 				{/* <div className="max-w-[30rem]"> */}
 				<Hyperlink
 					href="https://www.youtube.com/@rodo.podcast?sub_confirmation=1"
-					className="custom-card bg-red-500/20 hover:bg-red-500/30"
+					className="custom-card bg-amber-500/20 hover:bg-amber-500/30"
 				>
 					<div className="card-body text-left">
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
@@ -49,21 +49,6 @@ const Home = () => {
 				</Hyperlink>
 
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">Others</h2>
-
-				<Link
-					to="https://favstop.netlify.app/"
-					className="custom-card bg-amber-500/20 hover:bg-amber-500/30"
-				>
-					<div className="card-body text-left">
-						<h2 className="card-title">
-							🚏 Fav Stop <span className="badge badge-soft badge-primary">New!</span>
-						</h2>
-						<p className="text-base-content/65">
-							An app to track your bus (or train, ferry) arrival time. At your favourite stops. In
-							real-time.
-						</p>
-					</div>
-				</Link>
 
 				<Link to="/apps" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
