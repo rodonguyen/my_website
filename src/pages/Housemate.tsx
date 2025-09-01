@@ -1,5 +1,11 @@
-function Housemate() {
-	const getCurrentHousemateInfo = () => {
+interface HousemateInfo {
+	name: string;
+	startDate: string;
+	endDate: string;
+}
+
+function Housemate(): JSX.Element {
+	const getCurrentHousemateInfo = (): HousemateInfo => {
 		const housemates = ['Rodo', 'Alan', 'Jose']
 		const startDate = new Date('2025-09-01')
 		const currentDate = new Date()
@@ -14,7 +20,7 @@ function Housemate() {
 		const weekEndDate = new Date(weekStartDate)
 		weekEndDate.setDate(weekStartDate.getDate() + 6)
 
-		const formatDate = (date) => {
+		const formatDate = (date: Date): string => {
 			return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
 		}
 

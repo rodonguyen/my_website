@@ -14,7 +14,7 @@ const NavBar = () => {
 		>
 			<div className="flex-1">
 				<Link to="/" className="btn btn-ghost text-xl">
-					<img className="rounded-full w-6 h-6" src={rodoImage}></img>
+					<img title="Rodo" className="rounded-full w-6 h-6" src={rodoImage}></img>
 					Rodo
 				</Link>
 			</div>
@@ -34,7 +34,7 @@ const NavBar = () => {
 
 			<div className="md:hidden flex justify-end">
 				<div className="dropdown dropdown-end">
-					<button tabIndex={0} className="btn btn-ghost py-0 text-xl">
+					<button tabIndex={0} title="Menu" className="btn btn-ghost py-0 text-xl">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
