@@ -3,20 +3,11 @@ import axios from 'axios'
 // const apiUrl = process.env.REACT_APP_SERVER_RESPONDENT_ENDPOINT;
 const apiUrl = ''
 
-export const addRespondentFormToDatabase = async (
-	username,
-	code,
-	event,
-	setFirst3SectionsFilled
-) => {
+export const addRespondentFormToDatabase = async (username, code, event, setFirst3SectionsFilled) => {
 	event.preventDefault()
 
 	// Block if required sections are not filled
-	if (
-		event.target.name.value === '' ||
-		event.target.contact.value === '' ||
-		event.target.bio.value === ''
-	) {
+	if (event.target.name.value === '' || event.target.contact.value === '' || event.target.bio.value === '') {
 		setFirst3SectionsFilled(false)
 		console.log('First 3 are not all filled.')
 		return { successful: false }

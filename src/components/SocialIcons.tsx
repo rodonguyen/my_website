@@ -1,13 +1,5 @@
 import React from 'react'
-import {
-	FaLinkedin,
-	FaInstagram,
-	FaThreads,
-	FaEnvelope,
-	FaYoutube,
-	FaXTwitter,
-  FaTiktok
-} from 'react-icons/fa6'
+import { FaLinkedin, FaInstagram, FaThreads, FaEnvelope, FaYoutube, FaXTwitter, FaTiktok } from 'react-icons/fa6'
 
 const SocialIcons: React.FC = () => {
 	return (
@@ -36,10 +28,7 @@ const SocialIcons: React.FC = () => {
 			>
 				<FaThreads />
 			</a>
-			<a
-				href="mailto:rodonguyendd@gmail.com"
-				className="text-2xl hover:text-rose-500 transition-colors duration-200"
-			>
+			<a href="mailto:rodonguyendd@gmail.com" className="text-2xl hover:text-rose-500 transition-colors duration-200">
 				<FaEnvelope />
 			</a>
 			<a

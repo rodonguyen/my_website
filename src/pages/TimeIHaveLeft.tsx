@@ -52,8 +52,7 @@ const TimeIHaveLeft = () => {
 
 	const calculateTotalMonths = (deathDate: Date, currentDate: Date): number => {
 		const differenceInMonths =
-			(deathDate.getFullYear() - currentDate.getFullYear()) * 12 +
-			(deathDate.getMonth() - currentDate.getMonth())
+			(deathDate.getFullYear() - currentDate.getFullYear()) * 12 + (deathDate.getMonth() - currentDate.getMonth())
 		return differenceInMonths
 	}
 
@@ -104,24 +103,24 @@ const TimeIHaveLeft = () => {
 			<h1 className="h1 text-center">Time I Have Left</h1>
 			<label htmlFor="dob">Your date of birth:</label>
 			<br></br>
-      <div className='flex justify-center'>
-			<input
-				type="date"
-				name="dob"
-				className="input input-bordered w-40 my-2"
-				title="Select your date of birth"
-				min="1900-01-01"
-				max="2100-01-01"
-				defaultValue="2001-01-01"
-				onChange={handleDobChange}
-				required
-        />
-        </div>
+			<div className="flex justify-center">
+				<input
+					type="date"
+					name="dob"
+					className="input input-bordered w-40 my-2"
+					title="Select your date of birth"
+					min="1900-01-01"
+					max="2100-01-01"
+					defaultValue="2001-01-01"
+					onChange={handleDobChange}
+					required
+				/>
+			</div>
 			<>
 				<p>
-					If you can live up to 80 years old, assumingly don't get any genetec adjustments or have
-					your body frozen, and survive through maybe a few more financial crises, social
-					revolutions, artificial intelligent impact, cancers, epidemics, then...
+					If you can live up to 80 years old, assumingly don't get any genetec adjustments or have your body frozen, and
+					survive through maybe a few more financial crises, social revolutions, artificial intelligent impact, cancers,
+					epidemics, then...
 				</p>
 				<p>
 					the amount of time you have left is: <br />
@@ -130,26 +129,20 @@ const TimeIHaveLeft = () => {
 					<b>~{timeLeft.days} days </b> {over100yoMessage}
 				</p>
 				<p>
-					Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have{' '}
-					<br />
+					Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have <br />
 					<b>~{timeLeftMinus10Years.years} years</b> OR <br />
 					<b>~{timeLeftMinus10Years.months} months</b> OR <br />
 					<b>~{timeLeftMinus10Years.days} days left.</b>
 				</p>
 				<p>
-					Through this new len of looking at life expectancy, I hope you now think about your life a
-					bit differently.{' '}
+					Through this new len of looking at life expectancy, I hope you now think about your life a bit differently.{' '}
 				</p>
-        <br></br>
+				<br></br>
 				<p>Can I make you feel worse? Try with your parent's DoB.</p>
 			</>
 			{/* Progress bar */}
 			<div className="w-[80%] mx-auto my-6 rounded-2xl">
-					<img
-						className="lifebar-annotation rounded-t-xl"
-						src={lifebarAnnotationImage}
-						alt="Life bar annotations"
-					/>
+				<img className="lifebar-annotation rounded-t-xl" src={lifebarAnnotationImage} alt="Life bar annotations" />
 				<div className="bg-[#ffdebf] h-12 rounded-b-xl relative">
 					<div className="bg-[#4caf50] h-full rounded-bl-xl w-0 transition-all duration-1000" id="life-progress">
 						<div className="lifebar-text">{percentage}</div>
@@ -157,20 +150,18 @@ const TimeIHaveLeft = () => {
 				</div>
 			</div>
 			<h1>Resources you may need:</h1>
-			<ul className='list-disc list-inside'>
+			<ul className="list-disc list-inside">
 				<li>
-					<Hyperlink href="https://youtu.be/gGLxPY3qDYY" className='link'>
+					<Hyperlink href="https://youtu.be/gGLxPY3qDYY" className="link">
 						Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen
 					</Hyperlink>
 				</li>
 				<li>
-					<Hyperlink href="https://www.youtube.com/shorts/Wa7-n9j_ARM?feature=share" className='link'>
+					<Hyperlink href="https://www.youtube.com/shorts/Wa7-n9j_ARM?feature=share" className="link">
 						Life advice for your 20s, 30s, 40s, 60s - Koskas
 					</Hyperlink>
 				</li>
-				<li>
-					Eat healthy food and Exercise regularly, you may be able to delay aging 10 more years
-				</li>
+				<li>Eat healthy food and Exercise regularly, you may be able to delay aging 10 more years</li>
 				<li>Suggestion? Send it to rodonguyendd@gmail.com</li>
 			</ul>
 		</div>

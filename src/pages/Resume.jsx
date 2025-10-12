@@ -25,12 +25,10 @@ const Resume = () => {
 							<b>Human Languages</b>:&ensp; Vietnamese • English
 						</li>
 						<li>
-							<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity • C# • SQL •
-							HTML/CSS.
+							<b>Languages</b>:&ensp; JavaScript/TypeScript • Python • Solidity • C# • SQL • HTML/CSS.
 						</li>
 						<li>
-							<b>Soft skills</b>:&ensp; Teamwork • Project management • Stakeholder engagement •
-							Agile • Presentation
+							<b>Soft skills</b>:&ensp; Teamwork • Project management • Stakeholder engagement • Agile • Presentation
 						</li>
 						<li>
 							<b>Front-End</b>:&ensp; React • Tailwind • Vite • HTML • CSS

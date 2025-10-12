@@ -102,10 +102,7 @@ const Apps: React.FC = () => {
 							<div className="card-actions mt-2 flex justify-center gap-2">
 								{/* Live Project Button */}
 								{project.liveUrl && (
-									<Link
-										to={project.liveUrl}
-										className="btn btn-primary"
-									>
+									<Link to={project.liveUrl} className="btn btn-primary">
 										View Project
 									</Link>
 								)}

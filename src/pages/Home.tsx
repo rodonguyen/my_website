@@ -28,14 +28,12 @@ const Home = () => {
 					<div className="card-body text-left">
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
 						<p className="text-base-content/65 mb-2 md:text-md text-sm">
-							Born in a small city widely known for its elephant as the main transport, somehow my
-							parents managed to save enough for me to study abroad at QUT in Brisbane, Australia.
-							It is the BEST thing that happens to me.
+							Born in a small city widely known for its elephant as the main transport, somehow my parents managed to
+							save enough for me to study abroad at QUT in Brisbane, Australia. It is the BEST thing that happens to me.
 						</p>
 						<p className="text-base-content/65 mb-2 md:text-md text-sm">
-							Yet, I feel like I could have used that time more wisely and productively so I want to
-							share all my learnings, my lessons and my experiences with you. #software_engineer
-							#life_experience #early_career
+							Yet, I feel like I could have used that time more wisely and productively so I want to share all my
+							learnings, my lessons and my experiences with you. #software_engineer #life_experience #early_career
 						</p>
 						<div className="flex justify-center rounded-xl overflow-hidden mx-auto w-[300px] h-[200px]">
 							<iframe
@@ -60,17 +58,13 @@ const Home = () => {
 				<Link to="/list-100" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 List 100</h2>
-						<p className="text-base-content/65">
-							Things I want to do before I die. Inspired by Chip Huyen's List100.
-						</p>
+						<p className="text-base-content/65">Things I want to do before I die. Inspired by Chip Huyen's List100.</p>
 					</div>
 				</Link>
 				<Link to="/career" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">👔 My Career Journey</h2>
-						<p className="text-base-content/65">
-							from the very first job as a Kitchenhand in Australia.
-						</p>
+						<p className="text-base-content/65">from the very first job as a Kitchenhand in Australia.</p>
 					</div>
 				</Link>
 			</div>
