@@ -3,43 +3,38 @@ import { LeetcodeSvg } from '../assets/icons'
 
 const List100 = () => {
 	changeWindowTitle(window.location.pathname)
-	const readBookNum = 22
+	const readBookNum = 30
 
 	return (
 		<div className="container mt-8 text-left">
 			<h1 className="h1 text-center">List 100</h1>
 			<p className="mb-4">
-				We all have 1 life. Why not making the most of it and do exciting things? These goals below
-				keep me waking up everyday with a spirit on fire and I plan to do them before I die.
-				Inspired by Chip Huyen's.
+				We all have 1 life. Why not making the most of it and do exciting things? These goals below keep me waking up
+				everyday with a spirit on fire and I plan to do them before I die. Inspired by Chip Huyen's.
 			</p>
 			<ol>
 				{/* Legacy */}
 				<li>✗ Read 100 books ({readBookNum}/100)</li>
 				<li>✗ Read 1000 books ({readBookNum}/1000)</li>
 				<li>✅ Teach a course in university (CAB403, CAB230, IFB102 at QUT)</li>
-				<li>✗ Reach 10,000 subscribers on YouTube/Instagram</li>
+				<li>✗ Reach 10,000 subs on any social platform (470/10000 subs)</li>
 				<li>✗ Found a tech company in Vietnam and it survives :)</li>
 				<li>✗ Give a talk to {'>'}100 audiences (like... any talk)</li>
 				<li>✗ Establish a Mentorship Program/AlumNetwork in my high school</li>
 				<li>✗ Found an organic modern farm (my father's dream)</li>
 				{/* Career */}
-				<li>✅ Annual income before tax AU$65,000</li>
+				<li>✅ Annual income before tax AU$100,000</li>
 				<li>✗ Get a PhD (I would be the 1st Dr in my family)</li>
 				<li>✗ Get Aussie PR</li>
 				{/* Travelling */}
 				<li>✗ See Auroras</li>
 				<li>✗ Conquer Fansipan Mountain</li>
 				<li>✗ Vipassana Meditation Retreat</li>
-				<li>✗ Pay and have a 14-day holiday with my family</li>
+				<li>✗ Rich enough to have a 14-day holiday with my family</li>
 				<li>✗ Visit Norway's mountains</li>
-				<li>
-					✅ Visit New Zealand's mountains (I've seen them but next time I want to get closer and do
-					some hiking)
-				</li>
-				<li>✗ Travel to 10 countries (2/10)</li>
-				<li>✗ Travel to 20 Vietnamese cities (5/20)</li>{' '}
-				{/* HCM, Danang, Hue, Phu Quoc, Kon Tum,  */}
+				<li>✅ Visit New Zealand's mountains (I've seen them but next time I want to get closer and do some hiking)</li>
+				<li>✗ Travel to 10 countries (3/10)</li>
+				<li>✗ Travel to 20 Vietnamese cities (5/20)</li> {/* HCM, Danang, Hue, Phu Quoc, Kon Tum,  */}
 				<li>✗ Have a vacation on an island/a yatch</li>
 				<li>✗ Check-in at Great Pyramid of Giza, Egypt</li>
 				<li>✗ Travel to Africa</li>
@@ -51,7 +46,7 @@ const List100 = () => {
 				<li>✗ Ride horse</li>
 				<li>✗ Buy a house for my parents to retire in Australia</li>
 				<li>✗ Get married on an island and honeymoon around the world</li>
-				<li>✗ Get a driver license</li>
+				<li>✅ Get a driver license</li>
 				<li>✗ Learn to fly helicopter/plane</li>
 				<li>✗ Achieve Financial Freedom</li>
 				<li>✗ Work in a giant financial insitution</li>
@@ -60,10 +55,7 @@ const List100 = () => {
 				<li>✗ Finish a full marathon</li>
 				<li>✗ Be 70kg and muscular</li>
 				<li>✗ Master Vim</li>
-				<li>
-					✗ Connect with 10 start-up founders (GPIB, RSP, Electrafi, AerVision, Concensus Layer,
-					Labrys)
-				</li>
+				<li>✗ Connect with 10 start-up founders (GPIB, RSP, Electrafi, AerVision, Concensus Layer, Labrys)</li>
 				<li>✗ Walk on the moon</li>
 				<li>✗ Swim in outer space</li>
 				<li>✗ Swim with whales/dolphins</li>
@@ -75,10 +67,7 @@ const List100 = () => {
 			</ol>
 
 			<h1 className="h1 text-center">My Wish List</h1>
-			<p>
-				This helps mitigate the headache of my close friends as my birthday approaches.{' '}
-				{'Love, Rodo <3'}
-			</p>
+			<p>This helps mitigate the headache of my close friends as my birthday approaches. {'Love, Rodo <3'}</p>
 			<ul className="list-disc list-inside">
 				<li>Great time with friends and family</li>
 				<li>Tissot Le Locle Powermatic 80 Open Heart</li>
@@ -90,14 +79,18 @@ const List100 = () => {
 			<ul className="list-disc list-inside">
 				<li>
 					Hiking, Gym/Calisthenics, Bowling,{' '}
-					<Hyperlink className='link' href="https://www.chess.com/member/rodobolo">Chess</Hyperlink>
+					<Hyperlink className="link" href="https://www.chess.com/member/rodobolo">
+						Chess
+					</Hyperlink>
 					♟️ (ELO 1000, rapid), Badminton, Reading, Movies
 				</li>
 				<li>Things I'm proud to know a bit: Tennis, Golf, Bouldering</li>
 				<li>Want to try: Camping</li>
 				<li>
-					<Hyperlink className='link' href="https://leetcode.com/rodonguyen/">Leetcode</Hyperlink> <LeetcodeSvg />{' '}
-					top 1 million (and dropping)
+					<Hyperlink className="link" href="https://leetcode.com/rodonguyen/">
+						Leetcode
+					</Hyperlink>{' '}
+					<LeetcodeSvg /> top 1 million (and dropping)
 				</li>
 			</ul>
 		</div>

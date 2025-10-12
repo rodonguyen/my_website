@@ -29,13 +29,13 @@ const Home = () => {
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
 						<p className="text-base-content/65 mb-2 md:text-md text-sm">
 							Born in a small city widely known for its elephant as the main transport, somehow my
-							parents managed to earn and save enough for me to study at QUT in Brisbane, Australia.
+							parents managed to save enough for me to study abroad at QUT in Brisbane, Australia.
 							It is the BEST thing that happens to me.
 						</p>
 						<p className="text-base-content/65 mb-2 md:text-md text-sm">
-							Yet, I feel like I could have used my university time more wisely and productively so
-							I want to share all my learnings, my lessons and my experiences with you.
-							#software_engineer #life_experience #early_career
+							Yet, I feel like I could have used that time more wisely and productively so I want to
+							share all my learnings, my lessons and my experiences with you. #software_engineer
+							#life_experience #early_career
 						</p>
 						<div className="flex justify-center rounded-xl overflow-hidden mx-auto w-[300px] h-[200px]">
 							<iframe
