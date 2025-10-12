@@ -4,7 +4,13 @@
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
-	theme: {},
+	theme: {
+		extend: {
+			screens: {
+				'2xs': '390px'
+			}
+		}
+	},
 	plugins: [require('daisyui')],
 	// Add daisyUI configuration
 	daisyui: {

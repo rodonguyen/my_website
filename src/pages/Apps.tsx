@@ -15,23 +15,6 @@ interface Project {
 
 // Hardcoded project data
 const projects: Project[] = [
-	// Add your project data here
-	// Example:
-	{
-		title: 'Fav Stop',
-		description: 'All your frequent bus stops in one place',
-		mediaUrl: 'favstop.jpg', // Example: src/assets/apps/project-alpha.png
-		mediaType: 'image',
-		liveUrl: 'https://favstop.netlify.app/'
-	},
-	{
-		title: 'BitTracker',
-		description: 'Trade bitcoin algorithmically (Retired)',
-		mediaUrl: 'bittracker.png', // Example: src/assets/apps/project-beta.mp4
-		mediaType: 'image',
-		// liveUrl: undefined, // No live URL for this one
-		githubUrl: 'https://github.com/rodonguyen/bittracker2024' // Added GitHub URL
-	},
 	{
 		title: 'Time I have left!',
 		description: "Look at life from the 'percentage' perspective",
@@ -39,6 +22,21 @@ const projects: Project[] = [
 		mediaType: 'image',
 		liveUrl: '/apps/timeihaveleft',
 		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
+	},
+	{
+		title: 'Fav Stop',
+		description: 'All your frequent bus stops in one place (retired)',
+		mediaUrl: 'favstop.jpg',
+		mediaType: 'image',
+		githubUrl: 'https://github.com/rodonguyen/fav-bus-stop'
+	},
+	{
+		title: 'BitTracker',
+		description: 'Trade bitcoin algorithmically (Retired)',
+		mediaUrl: 'bittracker.png',
+		mediaType: 'image',
+		// liveUrl: undefined, // No live URL for this one
+		githubUrl: 'https://github.com/rodonguyen/bittracker2024' // Added GitHub URL
 	}
 ]
 
@@ -103,7 +101,7 @@ const Apps: React.FC = () => {
 								{/* Live Project Button */}
 								{project.liveUrl && (
 									<Link to={project.liveUrl} className="btn btn-primary">
-										View Project
+										Try now
 									</Link>
 								)}
 								{/* GitHub Button */}

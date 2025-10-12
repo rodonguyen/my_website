@@ -22,17 +22,33 @@ const Career = () => {
 					<div className="timeline-middle">
 						<TickIcon />
 					</div>
-					<div className="timeline-start mb-10 md:text-end">
-						<time className="font-mono italic">2024 - now</time>
-						<div className="text-lg font-semibold">Software Engineer</div>
+					<div className="timeline-end mb-10 md:text-start">
+						<time className="font-mono italic">2025 - now</time>
+						<div className="text-lg font-semibold">Developement Engineer - Reliability, Middleware & Integration</div>
 						<Hyperlink href="https://codify.com/" className="text-base-content/60">
-							Codify
+							Griffith University
 						</Hyperlink>
 						<div className="text-base-content/60">
 							<a href={rodoResumePdf} download="Rodo_Resume">
 								👉🏽 / Current resume /
 							</a>
 						</div>
+						<Hyperlink href="https://www.youtube.com/@rodo.podcast">
+							<div className="text-lg font-semibold mt-4">Content Creator</div>
+						</Hyperlink>
+					</div>
+					<hr />
+				</li>
+				<li>
+					<div className="timeline-middle">
+						<TickIcon />
+					</div>
+					<div className="timeline-start mb-10 md:text-end">
+						<time className="font-mono italic">2024 - 2025</time>
+						<div className="text-lg font-semibold">Software Engineer</div>
+						<Hyperlink href="https://codify.com/" className="text-base-content/60">
+							Codify
+						</Hyperlink>
 						<div className="text-lg font-semibold mt-4">Sessional Academic Staff</div>
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT

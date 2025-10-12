@@ -52,18 +52,22 @@ const NavBar = () => {
 					</button>
 					<ul
 						tabIndex={0}
-						className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-left"
+						className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-left text-2xl"
 					>
 						<li>
-							<Link to="/list-100">List 100</Link>
-						</li>
-						<li>
-							<Link to="/apps">
-								Amazing Apps <span className="badge">New</span>
+							<Link to="/list-100" className="text-lg">
+								List 100 <span className="badge bg-blue-100">Updated</span>
 							</Link>
 						</li>
 						<li>
-							<Link to="/career">Career journey</Link>
+							<Link to="/apps" className="text-lg">
+								Amazing Apps
+							</Link>
+						</li>
+						<li>
+							<Link to="/career" className="text-lg">
+								Career journey
+							</Link>
 						</li>
 					</ul>
 				</div>
