@@ -20,18 +20,34 @@ const Home = () => {
 					<SocialIcons />
 				</div>
 
+				<div className="custom-card bg-sky-100/20 hover:bg-sky-100/50">
+					<div className="card-body text-left text-base-content/80 mb-2 md:text-md text-sm">
+						<h2 className="card-title">👋 Hello there!</h2>
+						<p>
+							I'm Rodo and I am a rather average software engineer with an average background. I did OK at uni and have
+							an OK job. And there's absolutely nothing wrong about that.
+						</p>
+						<p>That statement is my first step to personal fulfillment.</p>
+						<p>
+							But at the same time, I always strive to be better and by acknowledging I'm nowhere near great, I have
+							more motivation to grow.
+						</p>
+						<p>The road to greatness starts with acknowledging the need to start.</p>
+					</div>
+				</div>
+
 				{/* <div className="max-w-[30rem]"> */}
 				<Hyperlink
 					href="https://www.youtube.com/@rodo.podcast?sub_confirmation=1"
 					className="custom-card bg-amber-500/20 hover:bg-amber-500/30"
 				>
-					<div className="card-body text-left">
+					<div className="card-body text-left text-base-content/80 space-y-2 md:text-md text-sm">
 						<h2 className="card-title">Sharing is caring. Why I started my podcast.</h2>
-						<p className="text-base-content/65 mb-2 md:text-md text-sm">
+						<p>
 							Born in a small city widely known for its elephant as the main transport, somehow my parents managed to
 							save enough for me to study abroad at QUT in Brisbane, Australia. It is the BEST thing that happens to me.
 						</p>
-						<p className="text-base-content/65 mb-2 md:text-md text-sm">
+						<p>
 							Yet, I feel like I could have used that time more wisely and productively so I want to share all my
 							learnings, my lessons and my experiences with you. #software_engineer #life_experience #early_career
 						</p>
@@ -67,6 +83,21 @@ const Home = () => {
 						<p className="text-base-content/65">from the very first job as a Kitchenhand in Australia.</p>
 					</div>
 				</Link>
+
+				<div className="custom-card bg-blue-300/15 hover:bg-blue-300/20 justify-center">
+					<div className="card-body">
+						<h2 className="card-title ">✍🏽 Subscribe for new updates </h2>
+						<p>I'm supposed to put something here to make it more enticing for you to subscribe.</p>
+						<div className="flex justify-center">
+							<iframe
+								src="https://rodonguyen.substack.com/embed"
+								width="480"
+								height="150"
+								style={{ border: '1px solid #EEE', background: 'white' }}
+							></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	)

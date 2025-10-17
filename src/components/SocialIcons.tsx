@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaLinkedin, FaInstagram, FaThreads, FaEnvelope, FaYoutube, FaXTwitter, FaTiktok } from 'react-icons/fa6'
+import { FaLinkedin, FaInstagram, FaThreads, FaEnvelope, FaYoutube, FaTiktok } from 'react-icons/fa6'
+import { BsSubstack } from 'react-icons/bs'
 
 const SocialIcons: React.FC = () => {
 	return (
@@ -20,6 +21,15 @@ const SocialIcons: React.FC = () => {
 			>
 				<FaTiktok />
 			</a>
+			{/* SubStack */}
+			<a
+				href="https://rodo.substack.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-2xl hover:text-rose-500 transition-colors duration-200"
+			>
+				<BsSubstack />
+			</a>
 			<a
 				href="https://threads.net/rodo.nguyen"
 				target="_blank"
@@ -39,14 +49,14 @@ const SocialIcons: React.FC = () => {
 			>
 				<FaYoutube />
 			</a>
-			<a
+			{/* <a
 				href="https://x.com/rodonguyen"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="text-2xl hover:text-rose-500 transition-colors duration-200"
 			>
 				<FaXTwitter />
-			</a>
+			</a> */}
 			<a
 				href="https://www.linkedin.com/in/rodonguyen/"
 				target="_blank"

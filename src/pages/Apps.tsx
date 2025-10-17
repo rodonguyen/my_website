@@ -16,6 +16,13 @@ interface Project {
 // Hardcoded project data
 const projects: Project[] = [
 	{
+		title: 'Lucius Capital',
+		description: 'Designed and dev-ed the website for Lucius Capital.',
+		liveUrl: 'https://lucius.capital/',
+		mediaUrl: 'luciuscapital.png',
+		mediaType: 'image'
+	},
+	{
 		title: 'Time I have left!',
 		description: "Look at life from the 'percentage' perspective",
 		mediaUrl: 'timeihaveleft.jpg',
@@ -62,7 +69,7 @@ const Apps: React.FC = () => {
 	changeWindowTitle('/apps')
 
 	return (
-		<div className="container-large  mx-auto py-8">
+		<div className="container  mx-auto py-8">
 			<h1 className="h1 text-center">My Amazing Apps</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				{projects.map((project, index) => (
@@ -100,8 +107,8 @@ const Apps: React.FC = () => {
 							<div className="card-actions mt-2 flex justify-center gap-2">
 								{/* Live Project Button */}
 								{project.liveUrl && (
-									<Link to={project.liveUrl} className="btn btn-primary">
-										Try now
+									<Link to={project.liveUrl} className="btn btn-soft btn-primary">
+										Check it out!
 									</Link>
 								)}
 								{/* GitHub Button */}
