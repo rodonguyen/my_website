@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Hyperlink, changeWindowTitle } from '../utils/utils'
 import lifebarAnnotationImage from '../assets/apps/TimeIHaveLeft_Lifebar_annotation.jpg'
+import lifebarAnnotationImageVn from '../assets/apps/TimeIHaveLeft_Lifebar_annotation_vn.png'
 import './TimeIHaveLeft.css'
+import { useTranslation } from 'react-i18next'
 
 interface TimeLeft {
 	years: number
@@ -10,6 +12,7 @@ interface TimeLeft {
 }
 
 const TimeIHaveLeft = () => {
+	const { t, i18n } = useTranslation()
 	changeWindowTitle(window.location.pathname)
 
 	const [over100yoMessage, setOver100yoMessage] = useState('')
@@ -33,7 +36,7 @@ const TimeIHaveLeft = () => {
 		const percentage = (1 - monthsLeft / (ASSUMED_LIFE_EXPECTANCY * 12)) * 100
 
 		if (percentage > 125) {
-			setOver100yoMessage("(Looks like you're not human, dude!)")
+			setOver100yoMessage(t('timeLeft.notHumanMessage'))
 		} else {
 			setOver100yoMessage('')
 		}
@@ -100,8 +103,8 @@ const TimeIHaveLeft = () => {
 
 	return (
 		<div className="container py-8">
-			<h1 className="h1 text-center">Time I Have Left</h1>
-			<label htmlFor="dob">Your date of birth:</label>
+			<h1 className="h1 text-center">{t('timeLeft.pageTitle')}</h1>
+			<label htmlFor="dob">{t('timeLeft.dobLabel')}</label>
 			<br></br>
 			<div className="flex justify-center">
 				<input
@@ -117,52 +120,71 @@ const TimeIHaveLeft = () => {
 				/>
 			</div>
 			<>
+				<p>{t('timeLeft.assumption')}</p>
 				<p>
-					If you can live up to 80 years old, assumingly don't get any genetec adjustments or have your body frozen, and
-					survive through maybe a few more financial crises, social revolutions, artificial intelligent impact, cancers,
-					epidemics, then...
+					{t('timeLeft.timeLeftLabel')} <br />
+					<b>
+						~{timeLeft.years} {t('timeLeft.years')}
+					</b>{' '}
+					{t('timeLeft.or')} <br />
+					<b>
+						~{timeLeft.months} {t('timeLeft.months')}
+					</b>{' '}
+					{t('timeLeft.or')} <br />
+					<b>
+						~{timeLeft.days} {t('timeLeft.days')}{' '}
+					</b>{' '}
+					{over100yoMessage}
 				</p>
 				<p>
-					the amount of time you have left is: <br />
-					<b>~{timeLeft.years} years</b> OR <br />
-					<b>~{timeLeft.months} months</b> OR <br />
-					<b>~{timeLeft.days} days </b> {over100yoMessage}
+					{t('timeLeft.minusLast10')} <br />
+					<b>
+						~{timeLeftMinus10Years.years} {t('timeLeft.years')}
+					</b>{' '}
+					{t('timeLeft.or')} <br />
+					<b>
+						~{timeLeftMinus10Years.months} {t('timeLeft.months')}
+					</b>{' '}
+					{t('timeLeft.or')} <br />
+					<b>
+						~{timeLeftMinus10Years.days} {t('timeLeft.daysLeft')}
+					</b>
 				</p>
-				<p>
-					Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have <br />
-					<b>~{timeLeftMinus10Years.years} years</b> OR <br />
-					<b>~{timeLeftMinus10Years.months} months</b> OR <br />
-					<b>~{timeLeftMinus10Years.days} days left.</b>
-				</p>
-				<p>
-					Through this new len of looking at life expectancy, I hope you now think about your life a bit differently.{' '}
-				</p>
+				<p>{t('timeLeft.newPerspective')} </p>
 				<br></br>
-				<p>Can I make you feel worse? Try with your parent's DoB.</p>
+				<p>{t('timeLeft.feelWorse')}</p>
 			</>
 			{/* Progress bar */}
 			<div className="w-[80%] mx-auto my-6 rounded-2xl">
-				<img className="lifebar-annotation rounded-t-xl" src={lifebarAnnotationImage} alt="Life bar annotations" />
+				{i18n.language.startsWith('vi') ? (
+					<img
+						className="lifebar-annotation rounded-t-xl"
+						src={lifebarAnnotationImageVn}
+						alt="Life bar annotations in Vietnamese"
+					/>
+				) : (
+					<img className="lifebar-annotation rounded-t-xl" src={lifebarAnnotationImage} alt="Life bar annotations" />
+				)}
 				<div className="bg-[#ffdebf] h-12 rounded-b-xl relative">
 					<div className="bg-[#4caf50] h-full rounded-bl-xl w-0 transition-all duration-1000" id="life-progress">
 						<div className="lifebar-text">{percentage}</div>
 					</div>
 				</div>
 			</div>
-			<h1>Resources you may need:</h1>
+			<h1>{t('timeLeft.resourcesTitle')}</h1>
 			<ul className="list-disc list-inside">
 				<li>
 					<Hyperlink href="https://youtu.be/gGLxPY3qDYY" className="link">
-						Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen
+						{t('timeLeft.resources.worthyLife')}
 					</Hyperlink>
 				</li>
 				<li>
 					<Hyperlink href="https://www.youtube.com/shorts/Wa7-n9j_ARM?feature=share" className="link">
-						Life advice for your 20s, 30s, 40s, 60s - Koskas
+						{t('timeLeft.resources.lifeAdvice')}
 					</Hyperlink>
 				</li>
-				<li>Eat healthy food and Exercise regularly, you may be able to delay aging 10 more years</li>
-				<li>Suggestion? Send it to rodonguyendd@gmail.com</li>
+				<li>{t('timeLeft.resources.healthTip')}</li>
+				<li>{t('timeLeft.resources.suggestion')}</li>
 			</ul>
 		</div>
 	)

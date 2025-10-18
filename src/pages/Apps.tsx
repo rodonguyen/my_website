@@ -3,10 +3,12 @@ import { FaGithub } from 'react-icons/fa' // Import GitHub icon
 // @ts-ignore
 import { changeWindowTitle } from '../utils/utils'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 // Define the structure for a project
 interface Project {
-	title: string
-	description: string
+	titleKey: string
+	descriptionKey: string
 	mediaUrl: string // Path relative to src/assets/apps/
 	mediaType: 'image' | 'video' | 'gif'
 	liveUrl?: string // Optional link to the live project
@@ -16,30 +18,30 @@ interface Project {
 // Hardcoded project data
 const projects: Project[] = [
 	{
-		title: 'Lucius Capital',
-		description: 'Designed and dev-ed the website for Lucius Capital.',
+		titleKey: 'apps.projects.luciusCapital.title',
+		descriptionKey: 'apps.projects.luciusCapital.description',
 		liveUrl: 'https://lucius.capital/',
 		mediaUrl: 'luciuscapital.png',
 		mediaType: 'image'
 	},
 	{
-		title: 'Time I have left!',
-		description: "Look at life from the 'percentage' perspective",
+		titleKey: 'apps.projects.timeIHaveLeft.title',
+		descriptionKey: 'apps.projects.timeIHaveLeft.description',
 		mediaUrl: 'timeihaveleft.jpg',
 		mediaType: 'image',
 		liveUrl: '/apps/timeihaveleft',
 		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
 	},
 	{
-		title: 'Fav Stop',
-		description: 'All your frequent bus stops in one place (retired)',
+		titleKey: 'apps.projects.favStop.title',
+		descriptionKey: 'apps.projects.favStop.description',
 		mediaUrl: 'favstop.jpg',
 		mediaType: 'image',
 		githubUrl: 'https://github.com/rodonguyen/fav-bus-stop'
 	},
 	{
-		title: 'BitTracker',
-		description: 'Trade bitcoin algorithmically (Retired)',
+		titleKey: 'apps.projects.bitTracker.title',
+		descriptionKey: 'apps.projects.bitTracker.description',
 		mediaUrl: 'bittracker.png',
 		mediaType: 'image',
 		// liveUrl: undefined, // No live URL for this one
@@ -66,11 +68,12 @@ const getMediaPath = (mediaUrl: string) => {
 }
 
 const Apps: React.FC = () => {
+	const { t } = useTranslation()
 	changeWindowTitle('/apps')
 
 	return (
 		<div className="container  mx-auto py-8">
-			<h1 className="h1 text-center">My Amazing Apps</h1>
+			<h1 className="h1 text-center">{t('apps.pageTitle')}</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				{projects.map((project, index) => (
 					<div key={index} className="card !rounded-[1rem] bg-base-100 shadow-xl">
@@ -78,7 +81,7 @@ const Apps: React.FC = () => {
 							{project.mediaType === 'image' && (
 								<img
 									src={getMediaPath(project.mediaUrl)}
-									alt={project.title}
+									alt={t(project.titleKey)}
 									className="rounded-xl rounded-b-none object-cover h-48 w-full"
 									loading="lazy"
 								/>
@@ -96,19 +99,19 @@ const Apps: React.FC = () => {
 							{project.mediaType === 'gif' && (
 								<img
 									src={getMediaPath(project.mediaUrl)} // GIFs are treated like images
-									alt={project.title}
+									alt={t(project.titleKey)}
 									className="rounded-xl object-cover h-48 w-full"
 								/>
 							)}
 						</figure>
 						<div className="card-body items-center text-center">
-							<h2 className="!card-title">{project.title}</h2>
-							<p>{project.description}</p>
+							<h2 className="!card-title">{t(project.titleKey)}</h2>
+							<p>{t(project.descriptionKey)}</p>
 							<div className="card-actions mt-2 flex justify-center gap-2">
 								{/* Live Project Button */}
 								{project.liveUrl && (
 									<Link to={project.liveUrl} className="btn btn-soft btn-primary">
-										Check it out!
+										{t('apps.checkItOut')}
 									</Link>
 								)}
 								{/* GitHub Button */}
@@ -120,7 +123,7 @@ const Apps: React.FC = () => {
 										className="btn btn-" // Use a different style, e.g., secondary
 									>
 										<FaGithub />
-										GitHub
+										{t('apps.github')}
 									</a>
 								)}
 							</div>

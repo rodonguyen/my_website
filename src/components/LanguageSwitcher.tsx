@@ -26,8 +26,7 @@ const LanguageSwitcher = ({ className }: { className: string }) => {
 								d="M19.753 16.037L18 10.642l-1.753 5.395h-5.672l4.589 3.333l-1.753 5.395L18 21.431l4.589 3.334l-1.753-5.395l4.589-3.333z"
 							></path>
 						</g>
-					</svg>{' '}
-					VI
+					</svg>
 				</>
 			)}
 		</button>

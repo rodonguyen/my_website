@@ -1,6 +1,12 @@
 {
   "nav": {
-    "home": "Home"
+    "home": "Home",
+    "list100": "List 100",
+    "apps": "Amazing Apps",
+    "career": "Career"
+  },
+  "footer": {
+    "builtBy": "Built by Rodo"
   },
   "errors": {
     "notFound": "Page Not Found...",
@@ -13,5 +19,153 @@
     "intro2": "That statement is my first step to personal fulfillment.",
     "intro3": "But at the same time, I always strive to be better and by acknowledging I'm nowhere near great, I have more motivation to grow.",
     "intro4": "The road to greatness starts with acknowledging the need to start."
+  },
+  "homePodcast": {
+    "title": "Sharing is caring. Why I started my podcast.",
+    "intro1": "Born in a small city widely known for its elephant as the main transport, somehow my parents managed to save enough for me to study abroad at QUT in Brisbane, Australia. It is the BEST thing that happens to me.",
+    "intro2": "Yet, I feel like I could have used that time more wisely and productively so I want to share all my learnings, my lessons and my experiences with you. #software_engineer #life_experience #career"
+  },
+  "homeOthers": {
+    "title": "Others",
+    "appsTitle": "Amazing Apps",
+    "appsDescription": "Things I do for fun but actually useful",
+    "list100Title": "List 100",
+    "list100Description": "Things I want to do before I die. Inspired by Chip Huyen's List100.",
+    "careerTitle": "My Career Journey",
+    "careerDescription": "from the very first job as a Kitchenhand in Australia.",
+    "subscribeTitle": "Subscribe for new updates",
+    "subscribeDescription": "New blog, new video, new podcast, new project. You will get all updates via email."
+  },
+  "apps": {
+    "pageTitle": "My Amazing Apps",
+    "checkItOut": "Check it out!",
+    "github": "GitHub",
+    "projects": {
+      "luciusCapital": {
+        "title": "Lucius Capital",
+        "description": "Designed and dev-ed the website for Lucius Capital."
+      },
+      "timeIHaveLeft": {
+        "title": "Time I have left!",
+        "description": "Look at life from the 'percentage' perspective"
+      },
+      "favStop": {
+        "title": "Fav Stop",
+        "description": "All your frequent bus stops in one place (retired)"
+      },
+      "bitTracker": {
+        "title": "BitTracker",
+        "description": "Trade bitcoin algorithmically (Retired)"
+      }
+    }
+  },
+  "list100": {
+    "pageTitle": "List 100",
+    "intro": "We all have 1 life. Why not making the most of it and do exciting things? These goals below keep me waking up everyday with a spirit on fire and I plan to do them before I die. Inspired by Chip Huyen's.",
+    "items": {
+      "readBooks100": "Read 100 books",
+      "readBooks1000": "Read 1000 books",
+      "teachUni": "Teach a course in university (CAB403, CAB230, IFB102 at QUT)",
+      "reach10kSubs": "Reach 10,000 subs on any social platform",
+      "foundTechCompany": "Found a tech company in Vietnam and it survives :)",
+      "giveTalk100": "Give a talk to >100 audiences (like... any talk)",
+      "establishMentorship": "Establish a Mentorship Program/AlumNetwork in my high school",
+      "foundFarm": "Found an organic modern farm (my father's dream)",
+      "income100k": "Annual income before tax AU$100,000",
+      "getPhD": "Get a PhD (I would be the 1st Dr in my family)",
+      "getAussiePR": "Get Aussie PR",
+      "seeAuroras": "See Auroras",
+      "conquerFansipan": "Conquer Fansipan Mountain",
+      "vipassanaRetreat": "Vipassana Meditation Retreat",
+      "familyHoliday": "Rich enough to have a 14-day holiday with my family",
+      "norwayMountains": "Visit Norway's mountains",
+      "nzMountains": "Visit New Zealand's mountains (I've seen them but next time I want to get closer and do some hiking)",
+      "travel10Countries": "Travel to 10 countries",
+      "travel50VNCities": "Travel to 50 Vietnamese cities",
+      "islandVacation": "Have a vacation on an island/a yatch",
+      "pyramidGiza": "Check-in at Great Pyramid of Giza, Egypt",
+      "travelAfrica": "Travel to Africa",
+      "skyDive": "Sky dive (without an instructor)",
+      "campMilkyWay": "Camp and enjoy the Milky Way Galaxy",
+      "everestBaseCamp": "Hike to Everest base camp + see the Hymalayas",
+      "chessBoxing": "Participate in a chess boxing match",
+      "cuddleLions": "Cuddle lions",
+      "rideHorse": "Ride horse",
+      "buyHouseParents": "Buy a house for my parents to retire in Australia",
+      "islandWedding": "Get married on an island and honeymoon around the world",
+      "driverLicense": "Get a driver license",
+      "learnFly": "Learn to fly helicopter/plane",
+      "financialFreedom": "Achieve Financial Freedom",
+      "workBigFinance": "Work in a giant financial insitution",
+      "learnInstrument": "Learn to play a musical instrument (guitar)",
+      "askStrangerOut": "Ask a stranger out successfully",
+      "fullMarathon": "Finish a full marathon",
+      "muscular70kg": "Be 70kg and muscular",
+      "masterVim": "Master Vim",
+      "connect10Founders": "Connect with 10 start-up founders (GPIB, RSP, Electrafi, AerVision, Concensus Layer, Labrys)",
+      "walkMoon": "Walk on the moon",
+      "swimSpace": "Swim in outer space",
+      "swimWhales": "Swim with whales/dolphins",
+      "liveGreatLife": "Live a great life",
+      "doWhatYouLove": "Do what you love, default 'no' to the rest"
+    },
+    "wishListTitle": "My Wish List",
+    "wishListIntro": "This helps mitigate the headache of my close friends as my birthday approaches. Love, Rodo <3",
+    "wishListItems": {
+      "greatTime": "Great time with friends and family",
+      "watch": "Tissot Le Locle Powermatic 80 Open Heart",
+      "giftcard": "Amazon Giftcard for books",
+      "crypto": "Some Sats / Eth"
+    },
+    "hobbiesTitle": "Hobbies",
+    "hobbiesItems": {
+      "main": "Hiking, Gym/Calisthenics, Bowling,",
+      "chess": "Chess",
+      "chessElo": "(ELO 1000, rapid), Badminton, Reading, Movies",
+      "proud": "Things I'm proud to know a bit: Tennis, Golf, Bouldering",
+      "wantToTry": "Want to try: Camping",
+      "leetcode": "Leetcode",
+      "leetcodeRank": "top 1 million (and dropping)"
+    }
+  },
+  "career": {
+    "pageTitle": "My career journey",
+    "currentResume": "Current resume",
+    "positions": {
+      "devEngineer": "Developement Engineer - Reliability, Middleware & Integration",
+      "contentCreator": "Content Creator",
+      "softwareEngineer": "Software Engineer",
+      "sessionalStaff": "Sessional Academic Staff",
+      "youtuber": "Youtuber",
+      "vacationResearcher": "Vacation Researcher",
+      "swIntern": "Software Engineer Intern",
+      "hiqConcierge": "HiQ Concierge",
+      "secretary": "Secretary",
+      "internationalOfficer": "International Students Officer",
+      "frontOfHouse": "Front of House Staff",
+      "kitchenhand": "Kitchenhand"
+    }
+  },
+  "timeLeft": {
+    "pageTitle": "Time I Have Left",
+    "dobLabel": "Your date of birth:",
+    "assumption": "If you can live up to 80 years old, assumingly don't get any genetec adjustments or have your body frozen, and survive through maybe a few more financial crises, social revolutions, artificial intelligent impact, cancers, epidemics, then...",
+    "timeLeftLabel": "the amount of time you have left is:",
+    "years": "years",
+    "months": "months",
+    "days": "days",
+    "or": "OR",
+    "notHumanMessage": "(Looks like you're not human, dude!)",
+    "minusLast10": "Oh maybe minus the last 10 useless weak-ass years of your life as well, now you have",
+    "daysLeft": "days left.",
+    "newPerspective": "Through this new len of looking at life expectancy, I hope you now think about your life a bit differently.",
+    "feelWorse": "Can I make you feel worse? Try with your parent's DoB.",
+    "resourcesTitle": "Resources you may need:",
+    "resources": {
+      "worthyLife": "Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen",
+      "lifeAdvice": "Life advice for your 20s, 30s, 40s, 60s - Koskas",
+      "healthTip": "Eat healthy food and Exercise regularly, you may be able to delay aging 10 more years",
+      "suggestion": "Suggestion? Send it to rodonguyendd@gmail.com"
+    }
   }
 }

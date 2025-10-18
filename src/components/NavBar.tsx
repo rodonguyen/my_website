@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import rodoImage from '../assets/home/Rodo.jpg'
+import { useTranslation } from 'react-i18next'
 
 const NavBar = () => {
+	const { t } = useTranslation()
 	const location = useLocation()
 	const hideNavBar = location.pathname === '/'
 
@@ -21,13 +23,13 @@ const NavBar = () => {
 			<div className="hidden md:flex">
 				<ul className="menu menu-horizontal px-1">
 					<li>
-						<Link to="/list-100">List 100</Link>
+						<Link to="/list-100">{t('nav.list100')}</Link>
 					</li>
 					<li>
-						<Link to="/apps">Amazing Apps</Link>
+						<Link to="/apps">{t('nav.apps')}</Link>
 					</li>
 					<li>
-						<Link to="/career">Career</Link>
+						<Link to="/career">{t('nav.career')}</Link>
 					</li>
 				</ul>
 			</div>
@@ -56,17 +58,17 @@ const NavBar = () => {
 					>
 						<li>
 							<Link to="/list-100" className="text-lg">
-								List 100 <span className="badge bg-blue-100">Updated</span>
+								{t('nav.list100')} <span className="badge bg-blue-100">Updated</span>
 							</Link>
 						</li>
 						<li>
 							<Link to="/apps" className="text-lg">
-								Amazing Apps
+								{t('nav.apps')}
 							</Link>
 						</li>
 						<li>
 							<Link to="/career" className="text-lg">
-								Career journey
+								{t('nav.career')}
 							</Link>
 						</li>
 					</ul>

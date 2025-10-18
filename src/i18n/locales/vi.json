@@ -1,6 +1,12 @@
 {
   "nav": {
-    "home": "Trang chủ"
+    "home": "Trang chủ",
+    "list100": "Danh sách 100",
+    "apps": "Dự án",
+    "career": "Sự nghiệp"
+  },
+  "footer": {
+    "builtBy": "Làm bởi Rodo"
   },
   "errors": {
     "notFound": "Không tìm thấy trang...",
@@ -13,5 +19,153 @@
     "intro2": "Câu nói đó là bước đầu tiên để cảm thấy hạnh phúc viên mãn.",
     "intro3": "Nhưng đồng thời, mình luôn cố gắng để trở nên tốt hơn và khi thừa nhận mình chưa giỏi, mình có động lực để phát triển hơn.",
     "intro4": "Con đường đến vĩ đại bắt đầu bằng việc nhận ra sự cần thiết để bắt đầu."
+  },
+  "homePodcast": {
+    "title": "Chia sẻ là sẻ chia. Tại sao mình bắt đầu podcast.",
+    "intro1": "Sinh ra ở một thành phố nhỏ nổi tiếng với voi làm phương tiện giao thông chính, bằng cách nào đó bố mẹ mình đã tiết kiệm đủ tiền để mình đi du học tại QUT ở Brisbane, Úc. Đó là điều TUYỆT VỜI NHẤT xảy ra với mình.",
+    "intro2": "Tuy nhiên, mình cảm thấy mình có thể sử dụng thời gian đó một cách khôn ngoan và hiệu quả hơn. Vì vậy mình muốn chia sẻ tất cả những gì mình học được và trải qua được với bạn. #kỹ_sư_phần_mềm #kinh_nghiệm_sống #sự_nghiệp"
+  },
+  "homeOthers": {
+    "title": "Khác",
+    "appsTitle": "Ứng dụng tuyệt vời",
+    "appsDescription": "Những thứ mình làm cho vui nhưng thực sự hữu ích",
+    "list100Title": "Danh sách 100",
+    "list100Description": "Những điều mình muốn làm trước khi chết. Lấy cảm hứng từ List100 của Chip Huyen.",
+    "careerTitle": "Hành trình sự nghiệp",
+    "careerDescription": "từ công việc đầu tiên là phụ bếp ở Úc.",
+    "subscribeTitle": "Đăng ký email để nhận cập nhật mới nhất từ mình",
+    "subscribeDescription": "Blog mới, video mới, podcast mới, dự án mới. Bạn sẽ nhận mọi cập nhật qua email."
+  },
+  "apps": {
+    "pageTitle": "Dự án tuyệt vời của mình",
+    "checkItOut": "Xem thử!",
+    "github": "GitHub",
+    "projects": {
+      "luciusCapital": {
+        "title": "Lucius Capital",
+        "description": "Thiết kế và phát triển website cho Lucius Capital."
+      },
+      "timeIHaveLeft": {
+        "title": "Thời gian còn lại!",
+        "description": "Nhìn cuộc sống từ góc nhìn 'phần trăm'"
+      },
+      "favStop": {
+        "title": "Fav Stop",
+        "description": "Tất cả các trạm xe buýt thường xuyên của bạn ở một nơi (đã dừng)"
+      },
+      "bitTracker": {
+        "title": "BitTracker",
+        "description": "Giao dịch bitcoin tự động (Đã dừng)"
+      }
+    }
+  },
+  "list100": {
+    "pageTitle": "List 100",
+    "intro": "Mỗi người chỉ có 1 đời thôi. Sao không sống thật hết mình và làm những điều xịn xò? Những mục tiêu dưới đây là lý do mình thức dậy mỗi sáng với tràn đầy năng lượng và mình sẽ làm hết trước khi nằm dưới 3 tấc đất. Lấy cảm hứng từ Chip Huyen.",
+    "items": {
+      "readBooks100": "Đọc 100 quyển sách",
+      "readBooks1000": "Đọc 1000 quyển sách",
+      "teachUni": "Dạy ở đại học (CAB403, CAB230, IFB102 tại QUT)",
+      "reach10kSubs": "Đạt 10,000 subs trên bất kỳ nền tảng nào",
+      "foundTechCompany": "Lập công ty công nghệ ở VN và nó sống sót :)",
+      "giveTalk100": "Nói trước >100 khán giả (nói gì cũng được)",
+      "establishMentorship": "Lập chương trình Mentorship/AlumNetwork ở trường cấp 3 mình",
+      "foundFarm": "Lập trang trại hữu cơ hiện đại (ước mơ của ba)",
+      "income100k": "Thu nhập hàng năm trước thuế AU$100,000",
+      "getPhD": "Lấy bằng Tiến sĩ (mình sẽ là Tiến sĩ đầu tiên trong gia đình)",
+      "getAussiePR": "Lấy PR Úc",
+      "seeAuroras": "Ngắm cực quang",
+      "conquerFansipan": "Chinh phục Fansipan",
+      "vipassanaRetreat": "Tham gia khóa Thiền Vipassana",
+      "familyHoliday": "Có kỳ nghỉ 14 ngày với gia đình",
+      "norwayMountains": "Nhìn thấy núi Na Uy",
+      "nzMountains": "Nhìn thấy núi New Zealand (đã thấy rồi nhưng lần sau muốn lại gần và hike luôn)",
+      "travel10Countries": "Du lịch 10 quốc gia",
+      "travel50VNCities": "Du lịch 50 thành phố Việt Nam",
+      "islandVacation": "Nghỉ dưỡng trên đảo/du thuyền",
+      "pyramidGiza": "Check-in tại Kim tự tháp Giza, Ai Cập",
+      "travelAfrica": "Du lịch châu Phi",
+      "skyDive": "Nhảy dù (không có người hướng dẫn)",
+      "campMilkyWay": "Cắm trại và ngắm Ngân Hà",
+      "everestBaseCamp": "Leo đến trạm cắm trại Everest + ngắm dãy Himalaya",
+      "chessBoxing": "Đấu chess boxing",
+      "cuddleLions": "Ôm sư tử",
+      "rideHorse": "Cưỡi ngựa",
+      "buyHouseParents": "Mua nhà cho bố mẹ về hưu ở Úc",
+      "islandWedding": "Cưới trên đảo và đi tuần trăng mật vòng quanh thế giới",
+      "driverLicense": "Lấy bằng lái xe",
+      "learnFly": "Học lái máy bay trực thăng/máy bay",
+      "financialFreedom": "Đạt được Tự do tài chính",
+      "workBigFinance": "Làm ở tổ chức tài chính khổng lồ",
+      "learnInstrument": "Học chơi nhạc cụ (guitar)",
+      "askStrangerOut": "Rủ người lạ hẹn hò thành công",
+      "fullMarathon": "Chạy full marathon",
+      "muscular70kg": "Lên 70kg và có múi",
+      "masterVim": "Thành thạo Vim",
+      "connect10Founders": "Kết nối với 10 founder startup (GPIB, RSP, Electrafi, AerVision, Concensus Layer, Labrys)",
+      "walkMoon": "Đi bộ trên mặt trăng",
+      "swimSpace": "Bơi ngoài vũ trụ",
+      "swimWhales": "Bơi cùng cá voi/cá heo",
+      "liveGreatLife": "Sống một cuộc đời tuyệt vời",
+      "doWhatYouLove": "Làm những gì bạn yêu thích, còn lại thì nói 'không'"
+    },
+    "wishListTitle": "Danh sách mong muốn",
+    "wishListIntro": "Cái này giúp bạn bè mình đỡ đau đầu suy nghĩ quà sinh nhật. Yêu, Rodo <3",
+    "wishListItems": {
+      "greatTime": "Thời gian chill với bạn bè và gia đình",
+      "watch": "Tissot Le Locle Powermatic 80 Open Heart",
+      "giftcard": "Amazon Giftcard mua sách",
+      "crypto": "Một ít Sats / Eth"
+    },
+    "hobbiesTitle": "Sở thích",
+    "hobbiesItems": {
+      "main": "Leo núi, Gym/Thể dục, Bowling,",
+      "chess": "Cờ vua",
+      "chessElo": "(ELO 1000, rapid), Cầu lông, Đọc sách, Xem phim",
+      "proud": "Mấy thứ mình tự hào biết được tí: Tennis, Golf, Bouldering",
+      "wantToTry": "Muốn thử: Cắm trại",
+      "leetcode": "Leetcode",
+      "leetcodeRank": "top 1 triệu (và đang tụt hạng)"
+    }
+  },
+  "career": {
+    "pageTitle": "Hành trình sự nghiệp của mình",
+    "currentResume": "CV hiện tại",
+    "positions": {
+      "devEngineer": "Kỹ sư phát triển - Reliability, Middleware & Integration",
+      "contentCreator": "Người sáng tạo nội dung",
+      "softwareEngineer": "Kỹ sư phần mềm",
+      "sessionalStaff": "Giảng dạy lớp",
+      "youtuber": "Youtuber",
+      "vacationResearcher": "Nghiên cứu viên ngắn hạn",
+      "swIntern": "Thực tập sinh Kỹ sư phần mềm",
+      "hiqConcierge": "HiQ Concierge",
+      "secretary": "Thư ký",
+      "internationalOfficer": "Cán bộ sinh viên quốc tế",
+      "frontOfHouse": "Nhân viên phục vụ",
+      "kitchenhand": "Phụ bếp"
+    }
+  },
+  "timeLeft": {
+    "pageTitle": "Thời gian còn lại của bạn",
+    "dobLabel": "Ngày sinh của bạn:",
+    "assumption": "Giả sử bạn sống được tới 80 tuổi, không bị chỉnh sửa gen hay đông lạnh cơ thể, và vượt qua được mấy cuộc khủng hoảng tài chính, cách mạng xã hội, tác động AI, ung thư, dịch bệnh thì...",
+    "timeLeftLabel": "số thời gian còn lại của bạn là:",
+    "years": "năm",
+    "months": "tháng",
+    "days": "ngày",
+    "or": "HOẶC",
+    "notHumanMessage": "(Bạn không phải người luôn!)",
+    "minusLast10": "À mà trừ đi 10 năm cuối yếu ớt vô dụng nữa thì giờ bạn còn",
+    "daysLeft": "ngày thôi.",
+    "newPerspective": "Qua cách nhìn mới này về tuổi thọ, mình hy vọng bạn suy nghĩ về cuộc đời mình khác đi một chút.",
+    "feelWorse": "Muốn thấy tệ hơn không? Thử với ngày sinh của ba mẹ xem.",
+    "resourcesTitle": "Tài nguyên bạn có thể cần:",
+    "resources": {
+      "worthyLife": "Một cuộc đời đáng sống (vietnamese) - Hieu Nguyen",
+      "lifeAdvice": "Life advice for your 20s, 30s, 40s, 60s - Koskas",
+      "healthTip": "Ăn uống lành mạnh và tập thể dục đều đặn, bạn có thể trì hoãn lão hóa thêm 10 năm nữa",
+      "suggestion": "Có gợi ý? Gửi về rodonguyendd@gmail.com"
+    }
   }
 }
