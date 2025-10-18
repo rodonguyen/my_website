@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home"
+  },
+  "errors": {
+    "notFound": "Page Not Found...",
+    "clickToGoHome": "Click here to go back to Home Page"
+  },
+  "homeIntro": {
+    "tagline": "Engineer great things!",
+    "greeting": "Hello there!",
+    "intro1": "I'm Rodo and I am a rather average software engineer with an average background. I did OK at uni and have an OK job. And there's absolutely nothing wrong about that.",
+    "intro2": "That statement is my first step to personal fulfillment.",
+    "intro3": "But at the same time, I always strive to be better and by acknowledging I'm nowhere near great, I have more motivation to grow.",
+    "intro4": "The road to greatness starts with acknowledging the need to start."
+  }
+}

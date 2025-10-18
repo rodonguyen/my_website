@@ -2,12 +2,16 @@ import { changeWindowTitle, Hyperlink } from '../utils/utils'
 import rodoImage from '../assets/home/Rodo.jpg'
 import SocialIcons from '../components/SocialIcons'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 const Home = () => {
+	const { t } = useTranslation()
 	changeWindowTitle(window.location.pathname)
 
 	return (
 		<>
+			<LanguageSwitcher className="absolute top-4 right-4" />
 			<div className="container flex flex-col items-center text-center ">
 				<div className="avatar mt-12 mb-2">
 					<div className="rounded-full md:w-48 w-24">
@@ -15,24 +19,18 @@ const Home = () => {
 					</div>
 				</div>
 				<h1 className="text-4xl font-bold mb-6">Rodo</h1>
-				<p className="text-xl text-base-content/50 mb-4">Engineer great software!</p>
+				<p className="text-xl text-base-content/50 mb-4">{t('homeIntro.tagline')}</p>
 				<div className="flex space-x-6 mb-12 text-base-content/50">
 					<SocialIcons />
 				</div>
 
 				<div className="custom-card bg-sky-100/20 hover:bg-sky-100/50">
 					<div className="card-body text-left text-base-content/80 mb-2 md:text-md text-sm">
-						<h2 className="card-title">👋 Hello there!</h2>
-						<p>
-							I'm Rodo and I am a rather average software engineer with an average background. I did OK at uni and have
-							an OK job. And there's absolutely nothing wrong about that.
-						</p>
-						<p>That statement is my first step to personal fulfillment.</p>
-						<p>
-							But at the same time, I always strive to be better and by acknowledging I'm nowhere near great, I have
-							more motivation to grow.
-						</p>
-						<p>The road to greatness starts with acknowledging the need to start.</p>
+						<h2 className="card-title">👋 {t('homeIntro.greeting')}</h2>
+						<p>{t('homeIntro.intro1')}</p>
+						<p>{t('homeIntro.intro2')}</p>
+						<p>{t('homeIntro.intro3')}</p>
+						<p>{t('homeIntro.intro4')}</p>
 					</div>
 				</div>
 

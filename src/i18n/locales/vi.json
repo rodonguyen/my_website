@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Trang chủ"
+  },
+  "errors": {
+    "notFound": "Không tìm thấy trang...",
+    "clickToGoHome": "Nhấn vào đây để quay về Trang chủ"
+  },
+  "homeIntro": {
+    "tagline": "Xây dựng kiệt tác!",
+    "greeting": "Chào bạn!",
+    "intro1": "Mình là Rodo và mình là một kỹ sư phần mềm khá bình thường với xuất thân bình thường. Mình học OK và có một công việc cũng OK. Và không có gì sai với điều đó cả.",
+    "intro2": "Câu nói đó là bước đầu tiên để cảm thấy hạnh phúc viên mãn.",
+    "intro3": "Nhưng đồng thời, mình luôn cố gắng để trở nên tốt hơn và khi thừa nhận mình chưa giỏi, mình có động lực để phát triển hơn.",
+    "intro4": "Con đường đến vĩ đại bắt đầu bằng việc nhận ra sự cần thiết để bắt đầu."
+  }
+}
