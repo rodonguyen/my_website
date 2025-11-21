@@ -6,7 +6,7 @@ interface HousemateInfo {
 
 function Housemate(): JSX.Element {
 	const getCurrentHousemateInfo = (): HousemateInfo => {
-		const housemates = ['Rodo', 'Alan', 'Jose']
+		const housemates = ['Alan', 'Rodo']
 		const startDate = new Date('2025-09-01')
 		const currentDate = new Date()
 
@@ -45,15 +45,11 @@ function Housemate(): JSX.Element {
 				<div className="space-y-2">
 					<label className="flex items-center space-x-2">
 						<input type="checkbox" className="checkbox" />
-						<span>Take out the garbage when it's full</span>
+						<span>Take out the garbage when it's {'>'}80% full (check every day)</span>
 					</label>
 					<label className="flex items-center space-x-2">
 						<input type="checkbox" className="checkbox" />
-						<span>Sweep the floor</span>
-					</label>
-					<label className="flex items-center space-x-2">
-						<input type="checkbox" className="checkbox" />
-						<span>Mop the floor</span>
+						<span>Sweep and mop the floor (must do once, if busy, do it early next week)</span>
 					</label>
 				</div>
 			</div>

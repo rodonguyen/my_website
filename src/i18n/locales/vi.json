@@ -5,20 +5,17 @@
     "apps": "Dự án",
     "career": "Sự nghiệp"
   },
-  "footer": {
-    "builtBy": "Làm bởi Rodo"
-  },
   "errors": {
     "notFound": "Không tìm thấy trang...",
     "clickToGoHome": "Nhấn vào đây để quay về Trang chủ"
   },
   "homeIntro": {
-    "tagline": "Xây dựng kiệt tác!",
-    "greeting": "Chào bạn!",
+    "tagline": "Xây dựng những kiệt tác!",
+    "greeting": "Hellu!",
     "intro1": "Mình là Rodo và mình là một kỹ sư phần mềm khá bình thường với xuất thân bình thường. Mình học OK và có một công việc cũng OK. Và không có gì sai với điều đó cả.",
-    "intro2": "Câu nói đó là bước đầu tiên để cảm thấy hạnh phúc viên mãn.",
-    "intro3": "Nhưng đồng thời, mình luôn cố gắng để trở nên tốt hơn và khi thừa nhận mình chưa giỏi, mình có động lực để phát triển hơn.",
-    "intro4": "Con đường đến vĩ đại bắt đầu bằng việc nhận ra sự cần thiết để bắt đầu."
+    "intro2": "Đó là bước đầu tiên để cảm thấy hạnh phúc đủ đầy.",
+    "intro3": "Nhưng mình cũng luôn cố gắng để trở nên tốt hơn. Khi thừa nhận mình chưa giỏi, mình có động lực để phát triển hơn.",
+    "intro4": "Đường đến vĩ đại bắt đầu bằng việc nhận ra sự cần thiết để bắt đầu."
   },
   "homePodcast": {
     "title": "Chia sẻ là sẻ chia. Tại sao mình bắt đầu podcast.",
