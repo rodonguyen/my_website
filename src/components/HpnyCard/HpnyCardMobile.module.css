@@ -4,25 +4,31 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
+  overflow: visible;
 }
 
 .scene {
   font-family: 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', 'Segoe UI', system-ui, cursive;
   letter-spacing: 0.01em;
-  width: min(760px, 92vw);
+  width: 150vw;
   perspective: 1600px;
   -webkit-user-select: none;
   user-select: none;
   touch-action: manipulation;
   outline: none;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateX(-25%);
   transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.open {
-  transform: translateX(0);
+.closed {
+  transform: translateX(-35vw);
+}
+
+.openPage1 {
+  transform: translateX(32vw);
+}
+
+.openPage2 {
+  transform: translateX(-32vw);
 }
 
 .card {
@@ -31,6 +37,52 @@
   aspect-ratio: 16 / 10;
   transform-style: preserve-3d;
   border-radius: 18px;
+}
+
+.hinge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.35));
+  transform: translateX(-1px);
+  pointer-events: none;
+  border-radius: 2px;
+  filter: blur(0.1px);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  z-index: 3;
+}
+
+.openPage1 .hinge,
+.openPage2 .hinge {
+  opacity: 1;
+}
+
+.leftPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 18px 0 0 18px;
+  background: rgba(255, 255, 255, 1);
+  padding: 18px;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 260ms ease 200ms;
+}
+
+.closed .leftPage {
+  opacity: 0;
+  transition: opacity 0ms;
+}
+
+.openPage1 .leftPage,
+.openPage2 .leftPage {
+  opacity: 1;
 }
 
 .imageFrame {
@@ -52,10 +104,10 @@
   display: block;
 }
 
-.insidePage {
+.rightPage {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 50%;
   width: 50%;
   height: 100%;
   border-radius: 0 18px 18px 0;
@@ -66,17 +118,21 @@
     0 18px 50px rgba(0, 0, 0, 0.28),
     inset 0 0 0 1px rgba(0, 0, 0, 0.06);
   padding: 20px 18px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rightPageContent {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow: hidden;
-  z-index: 1;
+  height: 100%;
 }
 
 .cover {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 50%;
   width: 50%;
   height: 100%;
   transform-style: preserve-3d;
@@ -86,8 +142,20 @@
   z-index: 2;
 }
 
-.open .cover {
+.closed .cover {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.openPage1 .cover {
   transform: rotateY(-180deg);
+  z-index: 1;
+}
+
+.openPage2 .cover {
+  transform: rotateY(-180deg);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .coverFrontFace,
@@ -118,37 +186,14 @@
 .coverBackFace {
   transform: rotateY(180deg);
   background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(248, 248, 248, 1));
-  box-shadow:
-    -8px 0 30px rgba(0, 0, 0, 0.15),
-    0 18px 50px rgba(0, 0, 0, 0.28),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.06);
   padding: 18px;
   border-radius: 18px 0 0 18px;
   opacity: 1;
 }
 
-.open .coverBackFace {
+.openPage1 .coverBackFace,
+.openPage2 .coverBackFace {
   box-shadow: none;
-}
-
-.hinge {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.35));
-  transform: translateX(-1px);
-  pointer-events: none;
-  border-radius: 2px;
-  filter: blur(0.1px);
-  opacity: 0;
-  transition: opacity 220ms ease;
-  z-index: 3;
-}
-
-.open .hinge {
-  opacity: 1;
 }
 
 .title {
@@ -189,6 +234,10 @@
   }
 
   .cover {
+    transition-duration: 1ms;
+  }
+
+  .leftPage {
     transition-duration: 1ms;
   }
 }
