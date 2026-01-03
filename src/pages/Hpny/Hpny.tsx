@@ -8,7 +8,7 @@ const Hpny = () => {
 	const { name } = useParams<{ name: string }>()
 	const [isMobile, setIsMobile] = useState<boolean>(false)
 
-	const receiverKey = (name ?? '').toLowerCase()
+	const receiverKey = name ?? ''
 
 	if (!isHpnyReceiver(receiverKey)) {
 		return <Navigate to="/" replace />
