@@ -1,0 +1,249 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	overflow: visible;
+}
+
+.scene {
+	font-family: 'Handlee', 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', 'Segoe UI', system-ui, cursive;
+	letter-spacing: 0.01em;
+	width: 150vw;
+	perspective: 1600px;
+	-webkit-user-select: none;
+	user-select: none;
+	touch-action: manipulation;
+	outline: none;
+	transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.closed {
+	transform: translateX(-35vw);
+}
+
+.openPage1 {
+	transform: translateX(32vw);
+}
+
+.openPage2 {
+	transform: translateX(-32vw);
+}
+
+.card {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	transform-style: preserve-3d;
+	border-radius: 18px;
+}
+
+.hinge {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.35));
+	transform: translateX(-1px);
+	pointer-events: none;
+	border-radius: 2px;
+	filter: blur(0.1px);
+	opacity: 0;
+	transition: opacity 220ms ease;
+	z-index: 3;
+}
+
+.openPage1 .hinge,
+.openPage2 .hinge {
+	opacity: 1;
+}
+
+.leftPage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border-radius: 18px 0 0 18px;
+	background: rgba(255, 255, 255, 1);
+	padding: 18px;
+	overflow: hidden;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 260ms ease 200ms;
+}
+
+.closed .leftPage {
+	opacity: 0;
+	transition: opacity 0ms;
+}
+
+.openPage1 .leftPage,
+.openPage2 .leftPage {
+	opacity: 1;
+}
+
+.imageFrame {
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.98);
+	border-radius: 5px;
+	padding: 12px;
+	box-shadow:
+		0 10px 28px rgba(0, 0, 0, 0.16),
+		inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 4px;
+	display: block;
+}
+
+.rightPage {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	border-radius: 0 18px 18px 0;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.98));
+	color: rgba(12, 18, 28, 0.95);
+	box-shadow: none;
+	padding: 30px 25px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 1;
+}
+
+.rightPageContent {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: 100%;
+}
+
+.cover {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: left center;
+	transform: rotateY(0deg);
+	transition: transform 850ms cubic-bezier(0.2, 0.8, 0.2, 1);
+	z-index: 2;
+}
+
+.closed .cover {
+	transform: rotateY(0deg);
+	z-index: 2;
+}
+
+.openPage1 .cover {
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+
+.openPage2 .cover {
+	transform: rotateY(-180deg);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.coverFrontFace,
+.coverBackFace {
+	position: absolute;
+	inset: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow: hidden;
+}
+
+.coverFrontFace {
+	background: radial-gradient(circle at 30% 25%, rgba(249, 252, 255, 0.22), transparent 50%),
+		linear-gradient(135deg, rgb(85, 150, 187), rgba(15, 23, 42, 1));
+	color: rgba(255, 255, 255, 1);
+	box-shadow:
+		0 22px 65px rgba(0, 0, 0, 0.45),
+		inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 22px;
+	border-radius: 0 18px 18px 0;
+	opacity: 1;
+}
+
+.coverBackFace {
+	transform: rotateY(180deg);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(248, 248, 248, 1));
+	padding: 18px;
+	border-radius: 18px 0 0 18px;
+	opacity: 1;
+}
+
+.openPage1 .coverBackFace,
+.openPage2 .coverBackFace {
+	box-shadow: none;
+}
+
+.title {
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	font-size: clamp(1.2rem, 3.3vw, 2rem);
+	line-height: 1.1;
+}
+
+.subtitle {
+	margin-top: 8px;
+	font-weight: 600;
+	opacity: 0.9;
+	font-size: clamp(0.9rem, 2.4vw, 1.1rem);
+}
+
+.sectionTitle {
+	font-weight: 800;
+	font-size: 1rem;
+}
+
+.body {
+	white-space: pre-wrap;
+	font-size: 0.95rem;
+	line-height: 1.35;
+	opacity: 0.92;
+}
+
+.signature {
+	margin-top: auto;
+	font-weight: 700;
+	opacity: 0.9;
+}
+
+.signatureImage {
+	margin-top: 3px;
+	height: auto;
+	max-width: 120px;
+	opacity: 0.85;
+	display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scene {
+		transition-duration: 1ms;
+	}
+
+	.cover {
+		transition-duration: 1ms;
+	}
+
+	.leftPage {
+		transition-duration: 1ms;
+	}
+}

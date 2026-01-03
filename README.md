@@ -1,5 +1,8 @@
 # Rodo Personal Website
 
-- nav bar when in sub path
-- smaller sticky navbar
-- career history
+To start:
+
+```
+yarn
+yarn dev
+```
