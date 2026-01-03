@@ -79,6 +79,26 @@ const content = {
 			"Dear Hoang Anh,\n\nHappy new year and welcome you to the age of independence (18yo)!\n\nYou are earning your own money now, I'm so happy! Life is still long but make sure you use it wisely, make plans to travel around more (at least 1 near and 1 far place a year) as this is what I wish I have done in your age. I thought when I have money, I will travel more but I can hardly find the time.\n\nTraveling is one of the cheap actions that you can do to get out of your comfort zones - the house and the city you know too well. So do that more, I think that will eventually form a habit of getting out of your comfort zones somehow.\n\nBe hungry, brother.",
 		signature: 'Best'
 	},
+	mom: {
+		receiverId: 'mom',
+		receiverDisplayName: 'Mom',
+		coverTitle: 'Happy New Year!',
+		coverSubtitle: 'to my mom',
+		insideTitle: '',
+		insideBody:
+			'Dear Mom,\n\nI wish you another year full of health and happiness with your family.\n\nI want to take this opportunity to thank you for your support with ODI and a lot more at work. Here to another awesome year working together 🤜🤛!',
+		signature: 'Best'
+	},
+	dad: {
+		receiverId: 'dad',
+		receiverDisplayName: 'Dad',
+		coverTitle: 'Happy New Year!',
+		coverSubtitle: 'to my dad',
+		insideTitle: '',
+		insideBody:
+			'Dear Dad,\n\nI wish you another year full of health and happiness with your family.\n\nI want to take this opportunity to thank you for your support with ODI and a lot more at work. Here to another awesome year working together 🤜🤛!',
+		signature: 'Best'
+	},
 	roland: {
 		receiverId: 'roland',
 		receiverDisplayName: 'Minh',
