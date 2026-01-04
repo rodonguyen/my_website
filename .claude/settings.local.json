@@ -1,12 +1,12 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(yarn dev)",
-      "Bash(yarn build)",
-      "Bash(yarn add i18next react-i18next i18next-browser-languagedetector)",
-      "mcp__ide__getDiagnostics"
-    ],
-    "deny": [],
-    "ask": []
-  }
+	"permissions": {
+		"allow": [
+			"Bash(yarn dev)",
+			"Bash(yarn build)",
+			"Bash(yarn add i18next react-i18next i18next-browser-languagedetector)",
+			"mcp__ide__getDiagnostics"
+		],
+		"deny": [],
+		"ask": []
+	}
 }

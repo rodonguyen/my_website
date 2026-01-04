@@ -3,6 +3,7 @@ import type { KeyboardEventHandler } from 'react'
 import styles from './HpnyCardMobile.module.css'
 import type { HpnyCardContent } from '../../pages/Hpny/hpnyContent'
 import fireworksImage from '../../assets/hpny/fireworks.jpg'
+import signatureImage from '../../assets/hpny/signature.png'
 
 type HpnyCardMobileProps = {
 	content: HpnyCardContent
@@ -56,11 +57,10 @@ const HpnyCardMobile = ({ content, initialState = 'closed' }: HpnyCardMobileProp
 
 					<div className={styles.rightPage}>
 						<div className={styles.rightPageContent}>
-							<div className={styles.sectionTitle}>{content.insideLeftTitle}</div>
-							<div className={styles.body}>{content.insideLeftBody}</div>
-							{content.insideRightTitle ? <div className={styles.sectionTitle}>{content.insideRightTitle}</div> : null}
-							<div className={styles.body}>{content.insideRightBody}</div>
+							{content.insideTitle ? <div className={styles.sectionTitle}>{content.insideTitle}</div> : null}
+							<div className={styles.body}>{content.insideBody}</div>
 							{content.signature ? <div className={styles.signature}>{content.signature}</div> : null}
+							<img className={styles.signatureImage} src={signatureImage} alt="Signature" />
 						</div>
 					</div>
 

@@ -13,8 +13,12 @@ const List100 = () => {
 			<p className="mb-4">{t('list100.intro')}</p>
 			<ol>
 				{/* Legacy */}
-				<li>✗ {t('list100.items.readBooks100')} ({readBookNum}/100)</li>
-				<li>✗ {t('list100.items.readBooks1000')} ({readBookNum}/1000)</li>
+				<li>
+					✗ {t('list100.items.readBooks100')} ({readBookNum}/100)
+				</li>
+				<li>
+					✗ {t('list100.items.readBooks1000')} ({readBookNum}/1000)
+				</li>
 				<li>✅ {t('list100.items.teachUni')}</li>
 				<li>✗ {t('list100.items.reach10kSubs')} (470/10000 subs)</li>
 				<li>✗ {t('list100.items.foundTechCompany')}</li>

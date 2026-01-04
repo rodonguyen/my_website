@@ -3,6 +3,7 @@ import type { KeyboardEventHandler } from 'react'
 import styles from './HpnyCard.module.css'
 import type { HpnyCardContent } from '../../pages/Hpny/hpnyContent'
 import fireworksImage from '../../assets/hpny/fireworks.jpg'
+import signatureImage from '../../assets/hpny/signature.png'
 
 type HpnyCardProps = {
 	content: HpnyCardContent
@@ -39,11 +40,10 @@ const HpnyCard = ({ content, initialOpen = false }: HpnyCardProps) => {
 					<div className={styles.hinge} aria-hidden="true" />
 
 					<div className={styles.insidePage}>
-						<div className={styles.sectionTitle}>{content.insideLeftTitle}</div>
-						<div className={styles.body}>{content.insideLeftBody}</div>
-						{content.insideRightTitle ? <div className={styles.sectionTitle}>{content.insideRightTitle}</div> : null}
-						<div className={styles.body}>{content.insideRightBody}</div>
+						{content.insideTitle ? <div className={styles.sectionTitle}>{content.insideTitle}</div> : null}
+						<div className={styles.body}>{content.insideBody}</div>
 						{content.signature ? <div className={styles.signature}>{content.signature}</div> : null}
+						<img className={styles.signatureImage} src={signatureImage} alt="Signature" />
 					</div>
 
 					<div className={styles.cover}>
