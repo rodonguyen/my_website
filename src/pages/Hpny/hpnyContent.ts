@@ -8,4 +8,5 @@ export type HpnyCardContent = {
 	insideTitle?: string
 	insideBody: string
 	signature?: string
+	images?: string[]
 }

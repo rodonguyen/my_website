@@ -2,8 +2,8 @@ import { useCallback, useMemo, useState } from 'react'
 import type { KeyboardEventHandler } from 'react'
 import styles from './HpnyCardMobile.module.css'
 import type { HpnyCardContent } from '../../pages/Hpny/hpnyContent'
-import fireworksImage from '../../assets/hpny/fireworks.jpg'
 import signatureImage from '../../assets/hpny/signature.png'
+import { getHpnyImageUrls } from '../../api/hpny.images'
 
 type HpnyCardMobileProps = {
 	content: HpnyCardContent
@@ -50,9 +50,22 @@ const HpnyCardMobile = ({ content, initialState = 'closed' }: HpnyCardMobileProp
 					<div className={styles.hinge} aria-hidden="true" />
 
 					<div className={styles.leftPage}>
-						<div className={styles.imageFrame}>
-							<img className={styles.image} src={fireworksImage} alt="Fireworks" />
-						</div>
+						{content.images && content.images.length >= 2 ? (
+							<div className={styles.imagesContainer}>
+								<img
+									className={styles.image}
+									src={getHpnyImageUrls(content.images)[0]}
+									alt=""
+									crossOrigin="anonymous"
+								/>
+								<img
+									className={styles.image}
+									src={getHpnyImageUrls(content.images)[1]}
+									alt=""
+									crossOrigin="anonymous"
+								/>
+							</div>
+						) : null}
 					</div>
 
 					<div className={styles.rightPage}>
@@ -72,9 +85,22 @@ const HpnyCardMobile = ({ content, initialState = 'closed' }: HpnyCardMobileProp
 							</div>
 						</div>
 						<div className={styles.coverBackFace}>
-							<div className={styles.imageFrame}>
-								<img className={styles.image} src={fireworksImage} alt="Fireworks" />
-							</div>
+							{content.images && content.images.length >= 2 ? (
+								<div className={styles.imagesContainer}>
+									<img
+										className={styles.image}
+										src={getHpnyImageUrls(content.images)[0]}
+										alt=""
+										crossOrigin="anonymous"
+									/>
+									<img
+										className={styles.image}
+										src={getHpnyImageUrls(content.images)[1]}
+										alt=""
+										crossOrigin="anonymous"
+									/>
+								</div>
+							) : null}
 						</div>
 					</div>
 				</div>
