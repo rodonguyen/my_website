@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from 'react'
 import type { KeyboardEventHandler } from 'react'
 import styles from './HpnyCardMobile.module.css'
 import type { HpnyCardContent } from '../../pages/Hpny/hpnyContent'
-import fireworksImage from '../../assets/hpny/fireworks.jpg'
 import signatureImage from '../../assets/hpny/signature.png'
 import { getHpnyImageUrls } from '../../api/hpny.images'
 
@@ -66,9 +65,7 @@ const HpnyCardMobile = ({ content, initialState = 'closed' }: HpnyCardMobileProp
 									crossOrigin="anonymous"
 								/>
 							</div>
-						) : (
-							<img className={styles.image} src={fireworksImage} alt="Fireworks" />
-						)}
+						) : null}
 					</div>
 
 					<div className={styles.rightPage}>
@@ -103,9 +100,7 @@ const HpnyCardMobile = ({ content, initialState = 'closed' }: HpnyCardMobileProp
 										crossOrigin="anonymous"
 									/>
 								</div>
-							) : (
-								<img className={styles.image} src={fireworksImage} alt="Fireworks" />
-							)}
+							) : null}
 						</div>
 					</div>
 				</div>
