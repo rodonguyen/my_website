@@ -12,13 +12,13 @@
 	"homeIntro": {
 		"tagline": "Xây dựng những kiệt tác!",
 		"greeting": "Hellu!",
-		"intro1": "Mình là Rodo và mình là một kỹ sư phần mềm khá bình thường với xuất thân bình thường. Mình học OK và có một công việc cũng OK. Và không có gì sai với điều đó cả.",
-		"intro2": "Đó là bước đầu tiên để cảm thấy hạnh phúc đủ đầy.",
-		"intro3": "Nhưng mình cũng luôn cố gắng để trở nên tốt hơn. Khi thừa nhận mình chưa giỏi, mình có động lực để phát triển hơn.",
-		"intro4": "Đường đến vĩ đại bắt đầu bằng việc nhận ra sự cần thiết để bắt đầu."
+		"intro1": "Mình là Rodo, thích mày mò, sống mộng mơ, và là một kỹ sư phần mềm suốt ngày xây dựng những giải pháp số cùng mấy cái data pipeline rối rắm — thứ đằng sau trang web mà bạn chẳng bao giờ thấy.",
+		"intro2": "Mình viết blog và làm video để chia sẻ về hành trình sự nghiệp, những bài toán kỹ thuật, và cả chuyện đi làm mà chẳng ai dạy. Hay hoạt động trên Threads, X nhất; YouTube, Insta, TikTok thì thỉnh thoảng vì lười edit videos (:",
+		"intro3": "",
+		"intro4": ""
 	},
 	"homePodcast": {
-		"title": "Chia sẻ là sẻ chia. Tại sao mình bắt đầu podcast.",
+		"title": "Chia sẻ là sẻ chia. Tại sao mình bắt đầu viết blog và làm video.",
 		"intro1": "Sinh ra ở một thành phố nhỏ nổi tiếng với voi làm phương tiện giao thông chính, bằng cách nào đó bố mẹ mình đã tiết kiệm đủ tiền để mình đi du học tại QUT ở Brisbane, Úc. Đó là điều TUYỆT VỜI NHẤT xảy ra với mình.",
 		"intro2": "Tuy nhiên, mình cảm thấy mình có thể sử dụng thời gian đó một cách khôn ngoan và hiệu quả hơn. Vì vậy mình muốn chia sẻ tất cả những gì mình học được và trải qua được với bạn. #kỹ_sư_phần_mềm #kinh_nghiệm_sống #sự_nghiệp"
 	},

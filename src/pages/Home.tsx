@@ -29,8 +29,8 @@ const Home = () => {
 						<h2 className="card-title">👋 {t('homeIntro.greeting')}</h2>
 						<p>{t('homeIntro.intro1')}</p>
 						<p>{t('homeIntro.intro2')}</p>
-						<p>{t('homeIntro.intro3')}</p>
-						<p>{t('homeIntro.intro4')}</p>
+						{/* <p>{t('homeIntro.intro3')}</p>
+						<p>{t('homeIntro.intro4')}</p> */}
 					</div>
 				</div>
 

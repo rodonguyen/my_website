@@ -12,13 +12,13 @@
 	"homeIntro": {
 		"tagline": "Engineer great things!",
 		"greeting": "Hello there!",
-		"intro1": "I'm Rodo and I am a rather average software engineer with an average background. I did OK at uni and have an OK job. And there's absolutely nothing wrong about that.",
-		"intro2": "That statement is my first step to personal fulfillment.",
-		"intro3": "But at the same time, I always strive to be better and by acknowledging I'm nowhere near great, I have more motivation to grow.",
-		"intro4": "The road to greatness starts with acknowledging the need to start."
+		"intro1": "I'm Rodo, a tinkerer, a dreamer, a software engineer who's spent his career building the digital solutions and spaghetti data pipelines that power what you see on screen — you just never knew it was there.",
+		"intro2": "I write blogs and make videos covering software engineering, career experience, and the parts of adulthood nobody really prepares you for. Most active on Threads and X — occasionally on YouTube, Instagram, and TikTok.",
+		"intro3": "",
+		"intro4": ""
 	},
 	"homePodcast": {
-		"title": "Sharing is caring. Why I started my podcast.",
+		"title": "Sharing is caring. Why I started blogging / making videos.",
 		"intro1": "Born in a small city widely known for its elephant as the main transport, somehow my parents managed to save enough for me to study abroad at QUT in Brisbane, Australia. It is the BEST thing that happens to me.",
 		"intro2": "Yet, I feel like I could have used that time more wisely and productively so I want to share all my learnings, my lessons and my experiences with you. #software_engineer #life_experience #career"
 	},
