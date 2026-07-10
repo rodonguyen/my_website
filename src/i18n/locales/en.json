@@ -2,7 +2,7 @@
 	"nav": {
 		"home": "Home",
 		"list100": "List 100",
-		"apps": "Amazing Apps",
+		"apps": "Side Projects",
 		"career": "Career"
 	},
 	"errors": {
@@ -17,6 +17,9 @@
 		"intro3": "",
 		"intro4": ""
 	},
+	"homeLatestPosts": {
+		"writingTitle": "Latest writing"
+	},
 	"homePodcast": {
 		"title": "Sharing is caring. Why I started blogging / making videos.",
 		"intro1": "Born in a small city widely known for its elephant as the main transport, somehow my parents managed to save enough for me to study abroad at QUT in Brisbane, Australia. It is the BEST thing that happens to me.",
@@ -24,19 +27,23 @@
 	},
 	"homeOthers": {
 		"title": "Others",
-		"appsTitle": "Amazing Apps",
+		"appsTitle": "Side Projects",
 		"appsDescription": "Things I do for fun but actually useful",
 		"list100Title": "List 100",
 		"list100Description": "Things I want to do before I die. Inspired by Chip Huyen's List100.",
 		"careerTitle": "My Career Journey",
 		"careerDescription": "from the very first job as a Kitchenhand in Australia.",
+		"githubTitle": "GitHub",
+		"githubDescription": "Open source projects, experiments, and code.",
 		"subscribeTitle": "Subscribe for new updates",
 		"subscribeDescription": "New blog, new video, new podcast, new project. You will get all updates via email."
 	},
 	"apps": {
-		"pageTitle": "My Amazing Apps",
+		"pageTitle": "Side Projects",
 		"checkItOut": "Check it out!",
 		"github": "GitHub",
+		"githubCardTitle": "More on GitHub",
+		"githubCardDescription": "See the projects I'm building and experimenting with on GitHub.",
 		"projects": {
 			"luciusCapital": {
 				"title": "Lucius Capital",
@@ -45,14 +52,6 @@
 			"timeIHaveLeft": {
 				"title": "Time I have left!",
 				"description": "Look at life from the 'percentage' perspective"
-			},
-			"favStop": {
-				"title": "Fav Stop",
-				"description": "All your frequent bus stops in one place (retired)"
-			},
-			"bitTracker": {
-				"title": "BitTracker",
-				"description": "Trade bitcoin algorithmically (Retired)"
 			}
 		}
 	},

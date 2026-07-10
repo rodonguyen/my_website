@@ -4,6 +4,8 @@ import SocialIcons from '../components/SocialIcons'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import LatestPosts from '../components/LatestPosts/LatestPosts'
+import ScrambleText from '../components/ScrambleText'
 
 const Home = () => {
 	const { t } = useTranslation()
@@ -19,8 +21,10 @@ const Home = () => {
 					</div>
 				</div>
 				<h1 className="text-4xl font-bold mb-6">Rodo</h1>
-				<p className="text-xl text-base-content/50 mb-4">{t('homeIntro.tagline')}</p>
-				<div className="flex space-x-6 mb-12 text-base-content/50">
+				<p className="text-xl text-base-content/85 mb-4">
+					<ScrambleText text={t('homeIntro.tagline')} />
+				</p>
+				<div className="flex space-x-6 mb-12 text-base-content/85">
 					<SocialIcons />
 				</div>
 
@@ -33,6 +37,8 @@ const Home = () => {
 						<p>{t('homeIntro.intro4')}</p> */}
 					</div>
 				</div>
+
+				<LatestPosts />
 
 				{/* <div className="max-w-[30rem]"> */}
 				<Hyperlink

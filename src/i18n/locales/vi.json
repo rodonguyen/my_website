@@ -2,7 +2,7 @@
 	"nav": {
 		"home": "Trang chủ",
 		"list100": "Danh sách 100",
-		"apps": "Dự án",
+		"apps": "Dự án phụ",
 		"career": "Sự nghiệp"
 	},
 	"errors": {
@@ -17,6 +17,9 @@
 		"intro3": "",
 		"intro4": ""
 	},
+	"homeLatestPosts": {
+		"writingTitle": "Bài viết mới nhất"
+	},
 	"homePodcast": {
 		"title": "Chia sẻ là sẻ chia. Tại sao mình bắt đầu viết blog và làm video.",
 		"intro1": "Sinh ra ở một thành phố nhỏ nổi tiếng với voi làm phương tiện giao thông chính, bằng cách nào đó bố mẹ mình đã tiết kiệm đủ tiền để mình đi du học tại QUT ở Brisbane, Úc. Đó là điều TUYỆT VỜI NHẤT xảy ra với mình.",
@@ -24,19 +27,23 @@
 	},
 	"homeOthers": {
 		"title": "Khác",
-		"appsTitle": "Ứng dụng tuyệt vời",
+		"appsTitle": "Dự án phụ",
 		"appsDescription": "Những thứ mình làm cho vui nhưng thực sự hữu ích",
 		"list100Title": "Danh sách 100",
 		"list100Description": "Những điều mình muốn làm trước khi chết. Lấy cảm hứng từ List100 của Chip Huyen.",
 		"careerTitle": "Hành trình sự nghiệp",
 		"careerDescription": "từ công việc đầu tiên là phụ bếp ở Úc.",
+		"githubTitle": "GitHub",
+		"githubDescription": "Dự án mã nguồn mở, thử nghiệm và code.",
 		"subscribeTitle": "Đăng ký email để nhận cập nhật mới nhất từ mình",
 		"subscribeDescription": "Blog mới, video mới, podcast mới, dự án mới. Bạn sẽ nhận mọi cập nhật qua email."
 	},
 	"apps": {
-		"pageTitle": "Dự án tuyệt vời của mình",
+		"pageTitle": "Dự án phụ",
 		"checkItOut": "Xem thử!",
 		"github": "GitHub",
+		"githubCardTitle": "Xem thêm trên GitHub",
+		"githubCardDescription": "Xem các dự án mình đang làm và thử nghiệm trên GitHub.",
 		"projects": {
 			"luciusCapital": {
 				"title": "Lucius Capital",
@@ -45,14 +52,6 @@
 			"timeIHaveLeft": {
 				"title": "Thời gian còn lại!",
 				"description": "Nhìn cuộc sống từ góc nhìn 'phần trăm'"
-			},
-			"favStop": {
-				"title": "Fav Stop",
-				"description": "Tất cả các trạm xe buýt thường xuyên của bạn ở một nơi (đã dừng)"
-			},
-			"bitTracker": {
-				"title": "BitTracker",
-				"description": "Giao dịch bitcoin tự động (Đã dừng)"
 			}
 		}
 	},

@@ -31,21 +31,6 @@ const projects: Project[] = [
 		mediaType: 'image',
 		liveUrl: '/apps/timeihaveleft',
 		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
-	},
-	{
-		titleKey: 'apps.projects.favStop.title',
-		descriptionKey: 'apps.projects.favStop.description',
-		mediaUrl: 'favstop.jpg',
-		mediaType: 'image',
-		githubUrl: 'https://github.com/rodonguyen/fav-bus-stop'
-	},
-	{
-		titleKey: 'apps.projects.bitTracker.title',
-		descriptionKey: 'apps.projects.bitTracker.description',
-		mediaUrl: 'bittracker.png',
-		mediaType: 'image',
-		// liveUrl: undefined, // No live URL for this one
-		githubUrl: 'https://github.com/rodonguyen/bittracker2024' // Added GitHub URL
 	}
 ]
 
@@ -130,6 +115,28 @@ const Apps: React.FC = () => {
 						</div>
 					</div>
 				))}
+				<a
+					href="https://github.com/rodonguyen/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="card !rounded-[1rem] bg-base-100 shadow-xl hover:bg-indigo-100/10 transition-colors"
+				>
+					<figure className="px-4 pt-4">
+						<div className="rounded-xl rounded-b-none bg-indigo-100/30 flex items-center justify-center h-48 w-full">
+							<FaGithub className="text-5xl" />
+						</div>
+					</figure>
+					<div className="card-body items-center text-center py-4">
+						<h2 className="!card-title">{t('apps.githubCardTitle')}</h2>
+						<p className="text-sm">{t('apps.githubCardDescription')}</p>
+						<div className="card-actions mt-2 flex justify-center">
+							<span className="btn btn-soft">
+								<FaGithub />
+								{t('apps.github')}
+							</span>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	)

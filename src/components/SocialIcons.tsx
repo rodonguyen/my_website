@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube, FaXTwitter } from 'react-icons/fa6'
+import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube, FaXTwitter, FaGithub } from 'react-icons/fa6'
 import { BsSubstack } from 'react-icons/bs'
 
 const socialIconClass = 'text-2xl hover:text-rose-500 transition-colors duration-200'
@@ -17,7 +17,15 @@ const SocialIcons: React.FC = () => {
 			<a href="https://instagram.com/rodo.nguyen" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<FaInstagram />
 			</a>
-			<a href="https://www.linkedin.com/in/rodonguyen/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+			<a href="https://github.com/rodonguyen/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+				<FaGithub />
+			</a>
+			<a
+				href="https://www.linkedin.com/in/rodonguyen/"
+				target="_blank"
+				rel="noopener noreferrer"
+				className={socialIconClass}
+			>
 				<FaLinkedin />
 			</a>
 			<a href="https://youtube.com/@rodo.podcast" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
