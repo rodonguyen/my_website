@@ -52,7 +52,7 @@ const getMediaPath = (mediaUrl: string) => {
 	}
 }
 
-const Apps: React.FC = () => {
+const SideProjects: React.FC = () => {
 	const { t } = useTranslation()
 	changeWindowTitle('/apps')
 
@@ -142,4 +142,4 @@ const Apps: React.FC = () => {
 	)
 }
 
-export default Apps
+export default SideProjects

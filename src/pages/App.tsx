@@ -3,7 +3,7 @@ import List100 from './List100'
 import Home from './Home'
 import TimeIHaveLeft from './TimeIHaveLeft'
 import NotFound from './NotFound'
-import Apps from './Apps'
+import SideProjects from './SideProjects'
 import Footer from '../components/Footer'
 import Career from './Career'
 import Housemate from './Housemate'
@@ -33,7 +33,7 @@ function App() {
 							<Route path="career" element={<Career />} />
 							<Route path="housemate" element={<Housemate />} />
 							<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />
-							<Route path="apps" element={<Apps />}></Route>
+							<Route path="apps" element={<SideProjects />}></Route>
 							<Route path="*" element={<NotFound />} />
 						</Route>
 					</Routes>
