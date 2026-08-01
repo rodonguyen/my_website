@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub } from 'react-icons/fa' // Import GitHub icon
+import { FaGithub, FaMapMarkedAlt } from 'react-icons/fa'
 // @ts-ignore
 import { changeWindowTitle } from '../utils/utils'
 import { Link } from 'react-router-dom'
@@ -9,8 +9,8 @@ import { useTranslation } from 'react-i18next'
 interface Project {
 	titleKey: string
 	descriptionKey: string
-	mediaUrl: string // Path relative to src/assets/apps/
-	mediaType: 'image' | 'video' | 'gif'
+	mediaUrl?: string // Path relative to src/assets/apps/
+	mediaType: 'image' | 'video' | 'gif' | 'icon'
 	liveUrl?: string // Optional link to the live project
 	githubUrl?: string // Optional link to the GitHub repository
 }
@@ -31,6 +31,12 @@ const projects: Project[] = [
 		mediaType: 'image',
 		liveUrl: '/apps/timeihaveleft',
 		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
+	},
+	{
+		titleKey: 'apps.projects.brisbaneParkingFinder.title',
+		descriptionKey: 'apps.projects.brisbaneParkingFinder.description',
+		mediaType: 'icon',
+		liveUrl: 'https://brisbane-parking-finder.netlify.app/'
 	}
 ]
 
@@ -65,7 +71,7 @@ const SideProjects: React.FC = () => {
 						<figure className="px-4 pt-4">
 							{project.mediaType === 'image' && (
 								<img
-									src={getMediaPath(project.mediaUrl)}
+									src={getMediaPath(project.mediaUrl ?? '')}
 									alt={t(project.titleKey)}
 									className="rounded-xl rounded-b-none object-cover h-48 w-full"
 									loading="lazy"
@@ -74,7 +80,7 @@ const SideProjects: React.FC = () => {
 							{project.mediaType === 'video' && (
 								<video
 									controls
-									src={getMediaPath(project.mediaUrl)}
+									src={getMediaPath(project.mediaUrl ?? '')}
 									className="rounded-xl object-cover h-48 w-full"
 									preload="metadata" // Load only metadata initially
 								>
@@ -83,10 +89,15 @@ const SideProjects: React.FC = () => {
 							)}
 							{project.mediaType === 'gif' && (
 								<img
-									src={getMediaPath(project.mediaUrl)} // GIFs are treated like images
+									src={getMediaPath(project.mediaUrl ?? '')}
 									alt={t(project.titleKey)}
 									className="rounded-xl object-cover h-48 w-full"
 								/>
+							)}
+							{project.mediaType === 'icon' && (
+								<div className="rounded-xl rounded-b-none bg-primary/10 flex items-center justify-center h-48 w-full">
+									<FaMapMarkedAlt className="text-5xl text-primary" aria-hidden="true" />
+								</div>
 							)}
 						</figure>
 						<div className="card-body items-center text-center">

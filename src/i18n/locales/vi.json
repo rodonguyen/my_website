@@ -52,6 +52,10 @@
 			"timeIHaveLeft": {
 				"title": "Thời gian còn lại!",
 				"description": "Nhìn cuộc sống từ góc nhìn 'phần trăm'"
+			},
+			"brisbaneParkingFinder": {
+				"title": "Brisbane Parking Finder",
+				"description": "Tìm chỗ đậu xe trống trước khi phải chạy vòng quanh khu phố."
 			}
 		}
 	},
