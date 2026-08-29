@@ -11,10 +11,10 @@ const SocialIcons: React.FC = () => {
 				<FaXTwitter />
 			</a>
 			{/* SubStack */}
-			<a href="https://rodo.substack.com" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+			<a href="https://rodonguyen.substack.com/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<BsSubstack />
 			</a>
-			<a href="https://instagram.com/rodo.nguyen" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+			<a href="https://instagram.com/rodo.rodeo" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<FaInstagram />
 			</a>
 			<a href="https://github.com/rodonguyen/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>

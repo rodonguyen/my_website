@@ -7,6 +7,11 @@ import { substackRssPlugin } from './vite/substackRssPlugin'
 export default defineConfig({
 	base: '/',
 	plugins: [substackRssPlugin(), react(), tailwindcss()],
+	server: {
+		watch: {
+			ignored: ['**/.playwright-cli/**']
+		}
+	},
 	test: {
 		globals: true,
 		environment: 'jsdom',

@@ -3,4 +3,5 @@ export type PostPreview = {
 	url: string
 	date: string
 	excerpt: string
+	coverImage: string
 }

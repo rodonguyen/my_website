@@ -1,12 +1,13 @@
-import { changeWindowTitle, Hyperlink } from '../utils/utils'
+import { changeWindowTitle } from '../utils/utils'
 import rodoImage from '../assets/home/Rodo.jpg'
 import SocialIcons from '../components/SocialIcons'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../components/LanguageSwitcher'
-import LatestPosts from '../components/LatestPosts/LatestPosts'
+import FeaturedMedia from '../components/FeaturedMedia/FeaturedMedia'
 import ScrambleText from '../components/ScrambleText'
 import SubstackSubscribe from '../components/SubstackSubscribe'
+import ThoughtBubble from '../components/ThoughtBubble'
 
 const Home = () => {
 	const { t } = useTranslation()
@@ -14,12 +15,15 @@ const Home = () => {
 
 	return (
 		<>
-			<LanguageSwitcher className="absolute top-4 right-4" />
+			<LanguageSwitcher className="absolute top-4 right-4 z-20" />
 			<div className="container flex flex-col items-center text-center ">
-				<div className="avatar mt-12 mb-2">
-					<div className="rounded-full md:w-48 w-24">
-						<img src={rodoImage} alt="Rodo Avatar" className="rounded-full" />
+				<div className="avatar-stage">
+					<div className="avatar">
+						<div className="rounded-full md:w-48 w-24">
+							<img src={rodoImage} alt="Rodo Avatar" className="rounded-full" />
+						</div>
 					</div>
+					<ThoughtBubble text={t('homeIntro.thought')} />
 				</div>
 				<h1 className="text-4xl font-bold mb-6">Rodo</h1>
 				<p className="text-xl text-base-content/85 mb-4">
@@ -39,45 +43,25 @@ const Home = () => {
 					</div>
 				</div>
 
-				<LatestPosts />
-
-				{/* <div className="max-w-[30rem]"> */}
-				<Hyperlink
-					href="https://www.youtube.com/@rodo.podcast?sub_confirmation=1"
-					className="custom-card bg-amber-500/20 hover:bg-amber-500/30"
-				>
-					<div className="card-body text-left text-base-content/80 space-y-2 md:text-md text-sm">
-						<h2 className="card-title">{t('homePodcast.title')}</h2>
-						<p>{t('homePodcast.intro1')}</p>
-						<p>{t('homePodcast.intro2')}</p>
-						<div className="flex justify-center rounded-xl overflow-hidden mx-auto w-[300px] h-[200px]">
-							<iframe
-								src="https://www.youtube.com/embed/x8ZmhqwKTFY"
-								title="YouTube video player"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								allowFullScreen
-							></iframe>
-						</div>
-					</div>
-				</Hyperlink>
+				<FeaturedMedia />
 
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">{t('homeOthers.title')}</h2>
 
-				<Link to="/career" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
+				<Link to="/career" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
 					<div className="card-body text-left">
 						<h2 className="card-title">👔 {t('homeOthers.careerTitle')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.careerDescription')}</p>
 					</div>
 				</Link>
 
-				<Link to="/apps" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
+				<Link to="/apps" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
 					<div className="card-body text-left">
 						<h2 className="card-title">🚀 {t('homeOthers.appsTitle')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.appsDescription')}</p>
 					</div>
 				</Link>
 
-				<Link to="/list-100" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
+				<Link to="/list-100" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 {t('homeOthers.list100Title')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.list100Description')}</p>

@@ -24,5 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
+.playwright-cli/
+
 
 encode-content.cjs
