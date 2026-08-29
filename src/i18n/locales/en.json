@@ -36,7 +36,13 @@
 		"githubTitle": "GitHub",
 		"githubDescription": "Open source projects, experiments, and code.",
 		"subscribeTitle": "Subscribe for new updates",
-		"subscribeDescription": "New blog, new video, new podcast, new project. You will get all updates via email."
+		"subscribeDescription": "New blog, new video, new podcast, new project. You will get all updates via email.",
+		"subscribePlaceholder": "Type your email...",
+		"subscribeButton": "Subscribe",
+		"subscribeSuccess": "Check your inbox to confirm your subscription.",
+		"subscribeTerms": "By subscribing you agree to Substack's",
+		"termsOfUse": "Terms of Use",
+		"privacyPolicy": "Privacy Policy"
 	},
 	"apps": {
 		"pageTitle": "Side Projects",

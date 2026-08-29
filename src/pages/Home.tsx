@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 import LatestPosts from '../components/LatestPosts/LatestPosts'
 import ScrambleText from '../components/ScrambleText'
+import SubstackSubscribe from '../components/SubstackSubscribe'
 
 const Home = () => {
 	const { t } = useTranslation()
@@ -62,6 +63,13 @@ const Home = () => {
 
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">{t('homeOthers.title')}</h2>
 
+				<Link to="/career" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
+					<div className="card-body text-left">
+						<h2 className="card-title">👔 {t('homeOthers.careerTitle')}</h2>
+						<p className="text-base-content/65">{t('homeOthers.careerDescription')}</p>
+					</div>
+				</Link>
+
 				<Link to="/apps" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
 					<div className="card-body text-left">
 						<h2 className="card-title">🚀 {t('homeOthers.appsTitle')}</h2>
@@ -75,25 +83,12 @@ const Home = () => {
 						<p className="text-base-content/65">{t('homeOthers.list100Description')}</p>
 					</div>
 				</Link>
-				<Link to="/career" className="custom-card bg-lime-500/15 hover:bg-lime-500/30">
-					<div className="card-body text-left">
-						<h2 className="card-title">👔 {t('homeOthers.careerTitle')}</h2>
-						<p className="text-base-content/65">{t('homeOthers.careerDescription')}</p>
-					</div>
-				</Link>
 
 				<div className="custom-card bg-blue-300/15 hover:bg-blue-300/20 justify-center">
 					<div className="card-body">
 						<h2 className="card-title ">✍🏽 {t('homeOthers.subscribeTitle')} </h2>
 						<p>{t('homeOthers.subscribeDescription')}</p>
-						<div className="flex justify-center">
-							<iframe
-								src="https://rodonguyen.substack.com/embed"
-								width="480"
-								height="150"
-								style={{ border: '1px solid #EEE', background: 'white' }}
-							></iframe>
-						</div>
+						<SubstackSubscribe />
 					</div>
 				</div>
 			</div>

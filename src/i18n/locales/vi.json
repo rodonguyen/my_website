@@ -36,7 +36,13 @@
 		"githubTitle": "GitHub",
 		"githubDescription": "Dự án mã nguồn mở, thử nghiệm và code.",
 		"subscribeTitle": "Đăng ký email để nhận cập nhật mới nhất từ mình",
-		"subscribeDescription": "Blog mới, video mới, podcast mới, dự án mới. Bạn sẽ nhận mọi cập nhật qua email."
+		"subscribeDescription": "Blog mới, video mới, podcast mới, dự án mới. Bạn sẽ nhận mọi cập nhật qua email.",
+		"subscribePlaceholder": "Nhập email...",
+		"subscribeButton": "Đăng ký",
+		"subscribeSuccess": "Kiểm tra hộp thư để xác nhận đăng ký.",
+		"subscribeTerms": "Khi đăng ký, bạn đồng ý với",
+		"termsOfUse": "Điều khoản sử dụng",
+		"privacyPolicy": "Chính sách quyền riêng tư"
 	},
 	"apps": {
 		"pageTitle": "Dự án phụ",
