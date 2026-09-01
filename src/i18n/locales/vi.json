@@ -5,6 +5,10 @@
     "apps": "Dự án phụ",
     "career": "Sự nghiệp"
   },
+  "footer": {
+    "pages": "Trang",
+    "visitors": "MapMyVisitors"
+  },
   "errors": {
     "notFound": "Không tìm thấy trang...",
     "clickToGoHome": "Nhấn vào đây để quay về Trang chủ"
@@ -51,6 +55,10 @@
     "subscribeTerms": "Khi đăng ký, bạn đồng ý với",
     "termsOfUse": "Điều khoản sử dụng",
     "privacyPolicy": "Chính sách quyền riêng tư"
+  },
+  "visitors": {
+    "pageTitle": "MapMyVisitors",
+    "mapTitle": "Visit tracker"
   },
   "apps": {
     "pageTitle": "Dự án phụ",

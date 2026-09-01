@@ -25,12 +25,6 @@ const NavBar = () => {
 					<li>
 						<Link to="/list-100">{t('nav.list100')}</Link>
 					</li>
-					<li>
-						<Link to="/apps">{t('nav.apps')}</Link>
-					</li>
-					<li>
-						<Link to="/career">{t('nav.career')}</Link>
-					</li>
 				</ul>
 			</div>
 
@@ -59,16 +53,6 @@ const NavBar = () => {
 						<li>
 							<Link to="/list-100" className="text-lg">
 								{t('nav.list100')} <span className="badge bg-blue-100">Updated</span>
-							</Link>
-						</li>
-						<li>
-							<Link to="/apps" className="text-lg">
-								{t('nav.apps')}
-							</Link>
-						</li>
-						<li>
-							<Link to="/career" className="text-lg">
-								{t('nav.career')}
 							</Link>
 						</li>
 					</ul>

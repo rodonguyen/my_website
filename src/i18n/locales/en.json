@@ -5,6 +5,10 @@
     "apps": "Side Projects",
     "career": "Career"
   },
+  "footer": {
+    "pages": "Pages",
+    "visitors": "MapMyVisitors"
+  },
   "errors": {
     "notFound": "Page Not Found...",
     "clickToGoHome": "Click here to go back to Home Page"
@@ -51,6 +55,10 @@
     "subscribeTerms": "By subscribing you agree to Substack's",
     "termsOfUse": "Terms of Use",
     "privacyPolicy": "Privacy Policy"
+  },
+  "visitors": {
+    "pageTitle": "MapMyVisitors",
+    "mapTitle": "Visit tracker"
   },
   "apps": {
     "pageTitle": "Side Projects",

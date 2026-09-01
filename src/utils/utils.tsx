@@ -3,14 +3,16 @@ import React, { useState } from 'react'
 export const Hyperlink = ({
 	href,
 	className,
+	title,
 	children
 }: {
 	href: string
 	className?: string
+	title?: string
 	children?: React.ReactNode
 }) => {
 	return (
-		<a className={className} target="_blank" rel="noopener noreferrer" href={href}>
+		<a className={className} target="_blank" rel="noopener noreferrer" href={href} title={title}>
 			{children}
 		</a>
 	)
@@ -25,6 +27,8 @@ export const changeWindowTitle = (path: string) => {
 		document.title = 'List 100'
 	} else if (path === '/apps/timeihaveleft') {
 		document.title = 'Time I Have Left'
+	} else if (path === '/visitors') {
+		document.title = 'MapMyVisitors'
 	} else {
 		document.title = 'Rodo'
 	}

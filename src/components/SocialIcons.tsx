@@ -5,9 +5,10 @@ import { BsSubstack } from 'react-icons/bs'
 export const INSTAGRAM_HREF = 'https://instagram.com/rodo.rodeo'
 export const YOUTUBE_HREF = 'https://youtube.com/@rodo.podcast'
 
-const socialIconClass = 'text-2xl hover:text-rose-500 transition-colors duration-200'
+const defaultIconClass = 'text-2xl hover:text-rose-500 transition-colors duration-200'
 
-const SocialIcons: React.FC = () => {
+const SocialIcons: React.FC<{ className?: string }> = ({ className }) => {
+	const socialIconClass = className ?? defaultIconClass
 	return (
 		<>
 			<a href="https://x.com/rodonguyen" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
