@@ -7,7 +7,7 @@ export const Hyperlink = ({
 }: {
 	href: string
 	className?: string
-	children: React.ReactNode
+	children?: React.ReactNode
 }) => {
 	return (
 		<a className={className} target="_blank" rel="noopener noreferrer" href={href}>
