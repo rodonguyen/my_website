@@ -13,7 +13,7 @@
     "thought": "I want more time!!",
     "tagline": "Engineer great things!",
     "greeting": "Hello there!",
-    "intro1": "I'm Rodo, a tinkerer, <dreamLink>a dreamer</dreamLink>, and I became a software engineer after graduating. I also like coding <appsLink>fun, random products</appsLink> (an innate builder).",
+    "intro1": "I'm Rodo, a tinkerer, <dreamLink>a dreamer</dreamLink>, and I became a software engineer after graduating. I also like crafting <appsLink>fun, random products</appsLink> (an innate builder I'd say).",
     "intro2": "I'm working at Griffith Uni as a data engineer, migrating 10 years old ODI pipeline to Azure. AI has helped me tremendously in my daily boring tasks -- I think I'm reaching expert level at leveraging AI to <legacyLink>migrate away from legacy software</legacyLink>.",
     "intro3": "I'm also trying out a more academic direction and <honoursLink>studying Honours</honoursLink> year of the Bachelor of Computer Science in Griffith (and I hate red now). I'm researching external memory for LLM agent and more ambitiously, aiming to train competitive Vietnamese-native LLM models. Out of ~100k AI papers published in 2026, I'm super delighted / over the moon to say I contributed <oneLink>ONE</oneLink> in that pile.",
     "intro4": "I love sharing things but still struggle to find time to invest on this content creator thing. Anyway, do follow my <instaLink>insta</instaLink> (reels) and <youtubeLink>youtube</youtubeLink> for longer-form videos if you're interested."
@@ -116,6 +116,7 @@
       "fullMarathon": "Finish a full marathon",
       "muscular70kg": "Be 70kg and muscular",
       "masterVim": "Master Vim",
+      "masterVimNote": "(I feel like this is becoming less relevant and worthwhile in AI age)",
       "connect10Founders": "Connect with 10 start-up founders (GPIB, RSP, Electrafi, AerVision, Concensus Layer, Labrys)",
       "walkMoon": "Walk on the moon",
       "swimSpace": "Swim in outer space",

@@ -13,10 +13,10 @@
     "thought": "I want more time!!",
     "tagline": "Xây dựng những kiệt tác!",
     "greeting": "Hellu!",
-    "intro1": "Mình là Rodo, thích mày mò, <dreamLink>sống mộng mơ</dreamLink>, và ra trường làm kỹ sư phần mềm. Mình cũng hay thích code <appsLink>product linh tinh</appsLink> nữa (một builder bẩm sinh).",
-    "intro2": "Mình đang làm data engineer tại Griffith Uni, migrate pipeline ODI 10 năm tuổi sang Azure. AI giúp mình rất nhiều trong những việc nhàm chán hàng ngày -- mình nghĩ mình đang ở mức expert khi dùng AI để <legacyLink>migrate away from legacy software</legacyLink>.",
-    "intro3": "Mình cũng đang thử hướng học thuật hơn và <honoursLink>studying Honours</honoursLink> năm của Bachelor of Computer Science ở Griffith (và mình ghét màu đỏ rồi). Mình đang nghiên cứu external memory cho LLM agent và tham vọng hơn là train mô hình LLM native tiếng Việt đủ sức cạnh tranh. Trong ~100k paper AI xuất bản năm 2026, mình vui muốn xỉu khi nói mình đóng góp được <oneLink>ONE</oneLink> trong đống đó.",
-    "intro4": "Mình thích chia sẻ nhưng vẫn khó dành thời gian cho chuyện content creator. Dù sao thì follow <instaLink>insta</instaLink> (reels) và <youtubeLink>youtube</youtubeLink> cho video dài hơn nếu bạn hứng thú nhé."
+    "intro1": "Mình là Rodo, thích mày mò, <dreamLink>sống mộng mơ</dreamLink>, và ra trường làm kỹ sư phần mềm. Mình cũng hay thích code <appsLink>product linh tinh</appsLink> nữa (builder bẩm sinh).",
+    "intro2": "Mình đang làm data engineer tại Griffith Uni, di cư ODI pipeline 10 năm tuổi sang Azure. AI giúp mình rất nhiều trong những việc nhàm chán này -- mình nghĩ mình đang ở mức expert khi dùng AI để <legacyLink>di cư khỏi phần mềm phần mềm tiền sử</legacyLink>.",
+    "intro3": "Mình cũng đang thử hướng học thuật hơn và <honoursLink>học Honours</honoursLink> cử nhân khoa học máy tính ở Griffith (và mình ghét màu đỏ rồi). Mình đang nghiên cứu external memory cho LLM agent và tham vọng hơn là train mô hình LLM native tiếng Việt đủ sức cạnh tranh với models hiện tai. Trong ~100k paper AI xuất bản năm 2026, mình vui vail* khi chia sẻ là mình đóng góp được <oneLink>MỘT bài báo</oneLink> trong đống đó.",
+    "intro4": "Mình thích chia sẻ nhưng vẫn không có thời gian làm content creator. Dù sao thì follow <instaLink>insta</instaLink> (reels) và <youtubeLink>youtube</youtubeLink> (video dài hơn) nếu bạn hứng thú nhé."
   },
   "homeFeatured": {
     "label": "Bài viết và video"
@@ -116,6 +116,7 @@
       "fullMarathon": "Chạy full marathon",
       "muscular70kg": "Lên 70kg và có múi",
       "masterVim": "Thành thạo Vim",
+      "masterVimNote": "(Mình cảm giác cái này càng ngày càng ít liên quan và đáng làm trong thời AI)",
       "connect10Founders": "Kết nối với 10 founder startup (GPIB, RSP, Electrafi, AerVision, Concensus Layer, Labrys)",
       "walkMoon": "Đi bộ trên mặt trăng",
       "swimSpace": "Bơi ngoài vũ trụ",

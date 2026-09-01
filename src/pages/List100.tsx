@@ -57,7 +57,9 @@ const List100 = () => {
 				<li>✗ {t('list100.items.askStrangerOut')}</li>
 				<li>✗ {t('list100.items.fullMarathon')}</li>
 				<li>✗ {t('list100.items.muscular70kg')}</li>
-				<li>✗ {t('list100.items.masterVim')}</li>
+				<li>
+					✗ {t('list100.items.masterVim')} {t('list100.items.masterVimNote')}
+				</li>
 				<li>✗ {t('list100.items.connect10Founders')}</li>
 				<li>✗ {t('list100.items.walkMoon')}</li>
 				<li>✗ {t('list100.items.swimSpace')}</li>
