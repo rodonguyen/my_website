@@ -10,7 +10,6 @@ import Housemate from './Housemate'
 import '../stylesheets/App.css'
 
 import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom'
-import Hpny from './Hpny/Hpny'
 
 function App() {
 	const AppConstantElements = (
@@ -26,7 +25,6 @@ function App() {
 			<div className="flex-grow">
 				<BrowserRouter>
 					<Routes>
-						<Route path="/hpny/:name" element={<Hpny />} />
 						<Route path="/" element={AppConstantElements}>
 							<Route index element={<Home />} />
 							<Route path="list-100" element={<List100 />} />
