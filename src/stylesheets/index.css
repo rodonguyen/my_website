@@ -23,7 +23,8 @@ code {
 	}
 
 	.custom-card {
-		@apply w-full my-4 md:px-6 px-2 py-4 bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl text-left transition-all duration-100 hover:border-gray-400 hover:bg-gray-100;
+		--card-p: 0;
+		@apply w-full my-4 p-4 md:p-5 bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl text-left transition-all duration-100 hover:border-gray-400 hover:bg-gray-100;
 	}
 
 	.h1 {
@@ -206,9 +207,8 @@ code {
 	}
 }
 
-/* Custom utility layers if needed */
-/* @layer utilities {
-  .custom-utility {
-    @apply property-value;
-  }
-} */
+@layer utilities {
+	.custom-card .card-body {
+		padding: 0;
+	}
+}

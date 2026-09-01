@@ -13,10 +13,10 @@
     "thought": "I want more time!!",
     "tagline": "Engineer great things!",
     "greeting": "Hello there!",
-    "intro1": "I'm Rodo, a tinkerer, a dreamer, a software engineer who's spent his career building the digital solutions and spaghetti data pipelines that power what you see on screen — you just never knew it was there.",
-    "intro2": "I write blogs and make videos covering software engineering, career experience, and the parts of adulthood nobody really prepares you for.",
-    "intro3": "",
-    "intro4": ""
+    "intro1": "I'm Rodo, a tinkerer, <dreamLink>a dreamer</dreamLink>, and I became a software engineer after graduating. I also like coding <appsLink>fun, random products</appsLink> (an innate builder).",
+    "intro2": "I'm working at Griffith Uni as a data engineer, migrating 10 years old ODI pipeline to Azure. AI has helped me tremendously in my daily boring tasks -- I think I'm reaching expert level at leveraging AI to <legacyLink>migrate away from legacy software</legacyLink>.",
+    "intro3": "I'm also trying out a more academic direction and <honoursLink>studying Honours</honoursLink> year of the Bachelor of Computer Science in Griffith (and I hate red now). I'm researching external memory for LLM agent and more ambitiously, aiming to train competitive Vietnamese-native LLM models. Out of ~100k AI papers published in 2026, I'm super delighted / over the moon to say I contributed <oneLink>ONE</oneLink> in that pile.",
+    "intro4": "I love sharing things but still struggle to find time to invest on this content creator thing. Anyway, do follow my <instaLink>insta</instaLink> (reels) and <youtubeLink>youtube</youtubeLink> for longer-form videos if you're interested."
   },
   "homeFeatured": {
     "label": "Writing and video"

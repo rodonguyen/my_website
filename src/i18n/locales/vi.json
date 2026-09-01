@@ -13,10 +13,10 @@
     "thought": "I want more time!!",
     "tagline": "Xây dựng những kiệt tác!",
     "greeting": "Hellu!",
-    "intro1": "Mình là Rodo, thích mày mò, sống mộng mơ, và là một kỹ sư phần mềm suốt ngày xây dựng những giải pháp số cùng mấy cái data pipeline rối rắm — thứ đằng sau trang web mà bạn chẳng bao giờ thấy.",
-    "intro2": "Mình viết blog và làm video để chia sẻ về hành trình sự nghiệp, những bài toán kỹ thuật, và cả chuyện đi làm mà chẳng ai dạy.",
-    "intro3": "",
-    "intro4": ""
+    "intro1": "Mình là Rodo, thích mày mò, <dreamLink>sống mộng mơ</dreamLink>, và ra trường làm kỹ sư phần mềm. Mình cũng hay thích code <appsLink>product linh tinh</appsLink> nữa (một builder bẩm sinh).",
+    "intro2": "Mình đang làm data engineer tại Griffith Uni, migrate pipeline ODI 10 năm tuổi sang Azure. AI giúp mình rất nhiều trong những việc nhàm chán hàng ngày -- mình nghĩ mình đang ở mức expert khi dùng AI để <legacyLink>migrate away from legacy software</legacyLink>.",
+    "intro3": "Mình cũng đang thử hướng học thuật hơn và <honoursLink>studying Honours</honoursLink> năm của Bachelor of Computer Science ở Griffith (và mình ghét màu đỏ rồi). Mình đang nghiên cứu external memory cho LLM agent và tham vọng hơn là train mô hình LLM native tiếng Việt đủ sức cạnh tranh. Trong ~100k paper AI xuất bản năm 2026, mình vui muốn xỉu khi nói mình đóng góp được <oneLink>ONE</oneLink> trong đống đó.",
+    "intro4": "Mình thích chia sẻ nhưng vẫn khó dành thời gian cho chuyện content creator. Dù sao thì follow <instaLink>insta</instaLink> (reels) và <youtubeLink>youtube</youtubeLink> cho video dài hơn nếu bạn hứng thú nhé."
   },
   "homeFeatured": {
     "label": "Bài viết và video"

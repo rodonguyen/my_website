@@ -8,6 +8,7 @@ import FeaturedMedia from '../components/FeaturedMedia/FeaturedMedia'
 import ScrambleText from '../components/ScrambleText'
 import SubstackSubscribe from '../components/SubstackSubscribe'
 import ThoughtBubble from '../components/ThoughtBubble'
+import HomeIntro from '../components/HomeIntro'
 
 const Home = () => {
 	const { t } = useTranslation()
@@ -34,12 +35,9 @@ const Home = () => {
 				</div>
 
 				<div className="custom-card bg-sky-100/20 hover:bg-sky-100/50">
-					<div className="card-body text-left text-base-content/80 mb-2 md:text-md text-sm">
+					<div className="card-body text-left text-base-content/80 md:text-md text-sm">
 						<h2 className="card-title">👋 {t('homeIntro.greeting')}</h2>
-						<p>{t('homeIntro.intro1')}</p>
-						<p>{t('homeIntro.intro2')}</p>
-						{/* <p>{t('homeIntro.intro3')}</p>
-						<p>{t('homeIntro.intro4')}</p> */}
+						<HomeIntro />
 					</div>
 				</div>
 

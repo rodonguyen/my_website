@@ -2,6 +2,9 @@ import React from 'react'
 import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube, FaXTwitter, FaGithub } from 'react-icons/fa6'
 import { BsSubstack } from 'react-icons/bs'
 
+export const INSTAGRAM_HREF = 'https://instagram.com/rodo.rodeo'
+export const YOUTUBE_HREF = 'https://youtube.com/@rodo.podcast'
+
 const socialIconClass = 'text-2xl hover:text-rose-500 transition-colors duration-200'
 
 const SocialIcons: React.FC = () => {
@@ -14,7 +17,7 @@ const SocialIcons: React.FC = () => {
 			<a href="https://rodonguyen.substack.com/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<BsSubstack />
 			</a>
-			<a href="https://instagram.com/rodo.rodeo" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+			<a href={INSTAGRAM_HREF} target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<FaInstagram />
 			</a>
 			<a href="https://github.com/rodonguyen/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
@@ -28,7 +31,7 @@ const SocialIcons: React.FC = () => {
 			>
 				<FaLinkedin />
 			</a>
-			<a href="https://youtube.com/@rodo.podcast" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
+			<a href={YOUTUBE_HREF} target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<FaYoutube />
 			</a>
 			<a href="mailto:rodonguyendd@gmail.com" className={socialIconClass}>
