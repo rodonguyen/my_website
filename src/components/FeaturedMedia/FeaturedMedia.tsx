@@ -27,8 +27,7 @@ const FeaturedMedia = () => {
 				<VideoCard
 					label={t('homePodcast.watchLabel')}
 					title={t('homePodcast.title')}
-					intro1={t('homePodcast.intro1')}
-					intro2={t('homePodcast.intro2')}
+					intro={t('homePodcast.intro1')}
 					playLabel={t('homePodcast.playLabel')}
 				/>
 			</div>

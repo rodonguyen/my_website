@@ -35,7 +35,7 @@ const Home = () => {
 				</div>
 
 				<div className="custom-card bg-sky-100/20 hover:bg-sky-100/50">
-					<div className="card-body text-left text-base-content/80 md:text-md text-sm">
+					<div className="card-body text-left text-base-content/80">
 						<h2 className="card-title">👋 {t('homeIntro.greeting')}</h2>
 						<HomeIntro />
 					</div>

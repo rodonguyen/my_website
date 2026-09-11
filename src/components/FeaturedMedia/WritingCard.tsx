@@ -19,7 +19,7 @@ const WritingCard = ({ post, label, cta, locale }: WritingCardProps) => {
 	return (
 		<Hyperlink href={post.url} className="featured-card featured-card--writing group">
 			<p className="featured-card__label">
-				<BsSubstack className="text-base" />
+				<BsSubstack className="featured-card__brand-icon featured-card__brand-icon--substack" />
 				{label}
 			</p>
 			{post.coverImage ? (

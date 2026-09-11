@@ -33,8 +33,7 @@
   "homePodcast": {
     "watchLabel": "Video mới",
     "title": "Chia sẻ là sẻ chia",
-    "intro1": "Sinh ra ở một thành phố nhỏ nổi tiếng với voi làm phương tiện đi lại, bằng cách nào đó bố mẹ mình vẫn tiết kiệm đủ để gửi mình đi du học. Nếu không đi học thì chắc mình vẫn là 1 con ếch ngồi đáy giếng.",
-    "intro2": "Tuy nhiên khi ngẫm lại thì mình đã lãng phí quãng thời gian quý báu đó khá nhiều. Nên mình viết và làm video để chia sẻ những bài học mình ước ai đó đã dạy cho mình.",
+    "intro1": "Đôi khi ngẫm lại mình đã lãng phí quãng thời gian đầu du học rất nhiều nên mình viết và làm video để chia sẻ những bài học mình ước ai đó đã dạy cho mình.",
     "playLabel": "Xem trên YouTube"
   },
   "homeOthers": {
@@ -58,7 +57,8 @@
   },
   "visitors": {
     "pageTitle": "MapMyVisitors",
-    "mapTitle": "Visit tracker"
+    "mapTitle": "Visit tracker",
+    "loading": "Đang ghim bản đồ…"
   },
   "apps": {
     "pageTitle": "Dự án phụ",

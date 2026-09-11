@@ -33,8 +33,7 @@
   "homePodcast": {
     "watchLabel": "Latest video",
     "title": "Sharing is caring",
-    "intro1": "Born in a small city famous for elephants as everyday transport and somehow my parents still saved enough to send me study abroad. It's the best thing that ever happened to me. Otherwise, I would just be another frog at the bottom of the well.",
-    "intro2": "Looking back however, I could have used those years better. So I write and film the lessons I wish someone had handed me.",
+    "intro1": "Looking back to the time at university, I could have used those years better so this is me writing and filming the lessons I wish someone had told me earlier.",
     "playLabel": "Watch on YouTube"
   },
   "homeOthers": {
@@ -58,7 +57,8 @@
   },
   "visitors": {
     "pageTitle": "MapMyVisitors",
-    "mapTitle": "Visit tracker"
+    "mapTitle": "Visit tracker",
+    "loading": "Dropping pins…"
   },
   "apps": {
     "pageTitle": "Side Projects",

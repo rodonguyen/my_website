@@ -5,7 +5,7 @@ import { INSTAGRAM_HREF, YOUTUBE_HREF } from './SocialIcons'
 
 const LEGACY_MIGRATION_HREF = 'https://lnkd.in/p/ggtihNzi'
 const HONOURS_HREF = 'https://lnkd.in/p/guvyPdjH'
-const PAPER_HREF = 'https://github.com/icedpanda/awesome-personalized-graph-memory'
+const PAPER_HREF = 'https://arxiv.org/abs/2609.08599'
 
 const introLinkClass = 'link'
 
