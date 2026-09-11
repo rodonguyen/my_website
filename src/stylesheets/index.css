@@ -9,6 +9,12 @@
     'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+  --paper: #f7f4ee;
+  --ink: #3a342e;
+  --sky-tint: #d4e8f4;
+}
+
 html {
   font-size: 1rem;
 }
@@ -19,6 +25,54 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body:has(.home-page),
+body:has(.home-page) .App {
+  background-color: var(--paper);
+}
+
+body:has(.home-page) footer {
+  background-color: transparent;
+}
+
+.ink-flow-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.home-page {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  min-height: 100%;
+  background-color: transparent;
+}
+
+.home-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 45% at 8% -10%, color-mix(in srgb, var(--sky-tint) 34%, transparent), transparent 58%),
+    radial-gradient(ellipse 55% 40% at 96% 110%, color-mix(in srgb, var(--sky-tint) 18%, transparent), transparent 52%);
+}
+
+.home-page::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.72  0 0 0 0 0.69  0 0 0 0 0.64  0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 code {
@@ -35,6 +89,23 @@ code {
     --card-p: 0;
     --card-fs: 1rem;
     @apply w-full my-4 p-4 md:p-5 bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl text-left text-base transition-all duration-100 hover:border-gray-400 hover:bg-gray-100;
+  }
+
+  .home-page .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .home-page .custom-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-color: color-mix(in srgb, var(--ink) 10%, transparent);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent);
+  }
+
+  .home-page .featured-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .h1 {
