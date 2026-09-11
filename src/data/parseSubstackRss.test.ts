@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { parseSubstackRss } from './parseSubstackRss'
 
 const SAMPLE_FEED = `<?xml version="1.0" encoding="UTF-8"?>
