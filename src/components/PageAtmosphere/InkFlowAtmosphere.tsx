@@ -25,16 +25,24 @@ function prefersReducedMotion() {
 	return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-function spawnFilament(width: number, height: number): Filament {
-	return {
+function spawnFilament(width: number, height: number, time = 0): Filament {
+	const fil: Filament = {
 		pts: [{ x: gutterSpawnX(width), y: Math.random() * height }],
-		speed: 0.13 + Math.random() * 0.12,
-		maxLen: 18 + Math.floor(Math.random() * 16),
+		speed: 0.85 + Math.random() * 0.7,
+		maxLen: 42 + Math.floor(Math.random() * 28),
 		life: 0,
 		maxLife: 380 + Math.random() * 520,
 		blue: Math.random() < 0.2,
-		width: 0.65 + Math.random() * 1.4
+		width: 0.9 + Math.random() * 1.6
 	}
+
+	let head = fil.pts[0]
+	for (let i = 0; i < fil.maxLen - 1; i += 1) {
+		head = advectPoint(head.x, head.y, time, fil.speed * 4.2, null)
+		fil.pts.push(head)
+	}
+
+	return fil
 }
 
 function readCssColor(name: string, fallback: string) {
@@ -105,7 +113,7 @@ function paintStaticWash(
 			y = next.y
 			pts.push({ x, y })
 		}
-		drawPolyline(ctx, pts, ink, 1.05, 0.11)
+		drawPolyline(ctx, pts, ink, 1.15, 0.2)
 	}
 }
 
@@ -132,32 +140,8 @@ const InkFlowAtmosphere = () => {
 		const sky = readCssColor('--sky-tint', '#d4e8f4')
 		const reduced = prefersReducedMotion()
 
-		const resize = () => {
-			dpr = Math.min(window.devicePixelRatio || 1, MAX_DPR)
-			width = window.innerWidth
-			height = window.innerHeight
-			canvas.width = Math.floor(width * dpr)
-			canvas.height = Math.floor(height * dpr)
-			canvas.style.width = `${width}px`
-			canvas.style.height = `${height}px`
-			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-			lines = layoutConstructionLines(width, height)
-			const target = filamentCount(width)
-			if (filaments.length > target) filaments.length = target
-			while (filaments.length < target) filaments.push(spawnFilament(width, height))
-			if (reduced) paintStaticWash(ctx, width, height, ink, sky, lines)
-		}
-
-		const onPointer = (event: PointerEvent) => {
-			cursor = { x: event.clientX, y: event.clientY }
-		}
-
-		const onPointerLeave = () => {
-			cursor = null
-		}
-
 		const recycle = (fil: Filament) => {
-			const next = spawnFilament(width, height)
+			const next = spawnFilament(width, height, time)
 			fil.pts = next.pts
 			fil.speed = next.speed
 			fil.maxLen = next.maxLen
@@ -167,13 +151,14 @@ const InkFlowAtmosphere = () => {
 			fil.width = next.width
 		}
 
-		const frame = (now: number) => {
-			if (!running) return
-			const dt = Math.min(32, now - last)
-			last = now
-			time += dt / 1000
-			const stepScale = dt / 16.67
-
+		const paint = (advance: boolean, now: number) => {
+			let stepScale = 1
+			if (advance) {
+				const dt = Math.min(32, now - last)
+				last = now
+				time += dt / 1000
+				stepScale = dt / 16.67
+			}
 			ctx.clearRect(0, 0, width, height)
 
 			const skyWash = ctx.createRadialGradient(width * 0.12, 0, 10, width * 0.2, height * 0.15, width * 0.55)
@@ -202,23 +187,54 @@ const InkFlowAtmosphere = () => {
 
 			for (const fil of filaments) {
 				const head = fil.pts[fil.pts.length - 1]
-				const next = advectPoint(head.x, head.y, time, fil.speed * stepScale, cursor)
-				fil.pts.push(next)
-				if (fil.pts.length > fil.maxLen) fil.pts.shift()
-				fil.life += 1
+				if (advance) {
+					const next = advectPoint(head.x, head.y, time, fil.speed * stepScale, cursor)
+					fil.pts.push(next)
+					if (fil.pts.length > fil.maxLen) fil.pts.shift()
+					fil.life += 1
+					const off =
+						next.x < -40 || next.x > width + 40 || next.y < -40 || next.y > height + 40 || fil.life > fil.maxLife
+					if (off) recycle(fil)
+				}
 
+				const tip = fil.pts[fil.pts.length - 1]
 				const faded = fil.life / fil.maxLife
-				const inColumn = next.x > colLeft + 24 && next.x < colRight - 24
-				const alpha = (inColumn ? 0.07 : 0.16) * (1 - faded) * (0.55 + 0.45 * Math.min(1, fil.pts.length / 8))
+				const inColumn = tip.x > colLeft + 24 && tip.x < colRight - 24
+				const alpha = (inColumn ? 0.12 : 0.34) * (1 - faded) * (0.55 + 0.45 * Math.min(1, fil.pts.length / 8))
 				const color = fil.blue ? 'rgba(70, 96, 118, 1)' : ink
 				drawPolyline(ctx, fil.pts, color, fil.width, alpha)
-
-				const off =
-					next.x < -40 || next.x > width + 40 || next.y < -40 || next.y > height + 40 || fil.life > fil.maxLife
-				if (off) recycle(fil)
 			}
+		}
 
+		const frame = (now: number) => {
+			if (!running) return
+			paint(true, now)
 			raf = requestAnimationFrame(frame)
+		}
+
+		const resize = () => {
+			dpr = Math.min(window.devicePixelRatio || 1, MAX_DPR)
+			width = window.innerWidth
+			height = window.innerHeight
+			canvas.width = Math.floor(width * dpr)
+			canvas.height = Math.floor(height * dpr)
+			canvas.style.width = `${width}px`
+			canvas.style.height = `${height}px`
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+			lines = layoutConstructionLines(width, height)
+			const target = filamentCount(width)
+			if (filaments.length > target) filaments.length = target
+			while (filaments.length < target) filaments.push(spawnFilament(width, height, time))
+			if (reduced) paintStaticWash(ctx, width, height, ink, sky, lines)
+			else paint(false, performance.now())
+		}
+
+		const onPointer = (event: PointerEvent) => {
+			cursor = { x: event.clientX, y: event.clientY }
+		}
+
+		const onPointerLeave = () => {
+			cursor = null
 		}
 
 		const onVisibility = () => {

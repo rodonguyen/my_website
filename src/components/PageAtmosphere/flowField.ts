@@ -78,26 +78,26 @@ export function layoutConstructionLines(width: number, height: number): Construc
 	const right = left + col
 	const tilt = (11 * Math.PI) / 180
 	const lines: ConstructionLine[] = [
-		{ ax: 20, ay: height * 0.18, bx: width - 20, by: height * 0.18, alpha: 0.055 },
+		{ ax: 20, ay: height * 0.18, bx: width - 20, by: height * 0.18, alpha: 0.12 },
 		{
 			ax: width * 0.04,
 			ay: height * 0.06,
 			bx: width * 0.04 + Math.cos(tilt) * width * 0.42,
 			by: height * 0.06 + Math.sin(tilt) * height * 0.55,
-			alpha: 0.042
+			alpha: 0.09
 		},
 		{
 			ax: width * 0.97,
 			ay: height * 0.12,
 			bx: width * 0.62,
 			by: height * 0.88,
-			alpha: 0.038
+			alpha: 0.08
 		}
 	]
 	if (width > 880) {
 		lines.push(
-			{ ax: left, ay: 28, bx: left, by: height - 28, alpha: 0.07 },
-			{ ax: right, ay: 28, bx: right, by: height - 28, alpha: 0.07 }
+			{ ax: left, ay: 28, bx: left, by: height - 28, alpha: 0.14 },
+			{ ax: right, ay: 28, bx: right, by: height - 28, alpha: 0.14 }
 		)
 	}
 	return lines
