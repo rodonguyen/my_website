@@ -3,8 +3,6 @@ import {
 	advectPoint,
 	filamentCount,
 	gutterSpawnX,
-	layoutConstructionLines,
-	type ConstructionLine,
 	type Vec2
 } from './flowField'
 
@@ -14,6 +12,7 @@ type Filament = {
 	maxLen: number
 	life: number
 	maxLife: number
+	hold: number
 	blue: boolean
 	width: number
 }
@@ -25,20 +24,22 @@ function prefersReducedMotion() {
 	return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-function spawnFilament(width: number, height: number, time = 0): Filament {
+function spawnFilament(width: number, height: number, time = 0, grown = 0): Filament {
 	const fil: Filament = {
 		pts: [{ x: gutterSpawnX(width), y: Math.random() * height }],
-		speed: 0.85 + Math.random() * 0.7,
-		maxLen: 42 + Math.floor(Math.random() * 28),
+		speed: 0.28 + Math.random() * 0.18,
+		maxLen: 120 + Math.floor(Math.random() * 55),
 		life: 0,
-		maxLife: 380 + Math.random() * 520,
-		blue: Math.random() < 0.2,
-		width: 0.9 + Math.random() * 1.6
+		maxLife: 860 + Math.random() * 720,
+		hold: grown > 0 ? 0 : 20 + Math.floor(Math.random() * 240),
+		blue: Math.random() < 0.18,
+		width: 0.75 + Math.random() * 1.25
 	}
 
 	let head = fil.pts[0]
-	for (let i = 0; i < fil.maxLen - 1; i += 1) {
-		head = advectPoint(head.x, head.y, time, fil.speed * 4.2, null)
+	const steps = Math.min(grown, fil.maxLen - 1)
+	for (let i = 0; i < steps; i += 1) {
+		head = advectPoint(head.x, head.y, time, fil.speed, null)
 		fil.pts.push(head)
 	}
 
@@ -77,8 +78,7 @@ function paintStaticWash(
 	width: number,
 	height: number,
 	ink: string,
-	sky: string,
-	lines: ConstructionLine[]
+	sky: string
 ) {
 	ctx.clearRect(0, 0, width, height)
 	const wash = ctx.createRadialGradient(width * 0.18, height * 0.08, 20, width * 0.3, height * 0.2, width * 0.7)
@@ -88,19 +88,6 @@ function paintStaticWash(
 	ctx.fillStyle = wash
 	ctx.fillRect(0, 0, width, height)
 	ctx.globalAlpha = 1
-
-	for (const line of lines) {
-		ctx.beginPath()
-		ctx.moveTo(line.ax, line.ay)
-		ctx.lineTo(line.bx, line.by)
-		ctx.strokeStyle = ink
-		ctx.globalAlpha = line.alpha
-		ctx.lineWidth = 1
-		ctx.setLineDash([5, 9])
-		ctx.stroke()
-		ctx.setLineDash([])
-		ctx.globalAlpha = 1
-	}
 
 	const frozen = 7
 	for (let i = 0; i < frozen; i += 1) {
@@ -134,19 +121,19 @@ const InkFlowAtmosphere = () => {
 		let time = 0
 		let last = performance.now()
 		let filaments: Filament[] = []
-		let lines: ConstructionLine[] = []
 		let cursor: Vec2 | null = null
 		const ink = readCssColor('--ink', '#3a342e')
 		const sky = readCssColor('--sky-tint', '#d4e8f4')
 		const reduced = prefersReducedMotion()
 
 		const recycle = (fil: Filament) => {
-			const next = spawnFilament(width, height, time)
+			const next = spawnFilament(width, height, time, 0)
 			fil.pts = next.pts
 			fil.speed = next.speed
 			fil.maxLen = next.maxLen
 			fil.life = 0
 			fil.maxLife = next.maxLife
+			fil.hold = next.hold
 			fil.blue = next.blue
 			fil.width = next.width
 		}
@@ -169,38 +156,31 @@ const InkFlowAtmosphere = () => {
 			ctx.fillRect(0, 0, width, height)
 			ctx.globalAlpha = 1
 
-			ctx.setLineDash([4, 10])
-			for (const line of lines) {
-				ctx.beginPath()
-				ctx.moveTo(line.ax, line.ay)
-				ctx.lineTo(line.bx, line.by)
-				ctx.strokeStyle = ink
-				ctx.globalAlpha = line.alpha
-				ctx.lineWidth = 1
-				ctx.stroke()
-			}
-			ctx.setLineDash([])
-			ctx.globalAlpha = 1
-
 			const colLeft = Math.max(0, (width - COLUMN) / 2)
 			const colRight = colLeft + Math.min(COLUMN, width)
 
 			for (const fil of filaments) {
 				const head = fil.pts[fil.pts.length - 1]
 				if (advance) {
-					const next = advectPoint(head.x, head.y, time, fil.speed * stepScale, cursor)
-					fil.pts.push(next)
-					if (fil.pts.length > fil.maxLen) fil.pts.shift()
-					fil.life += 1
-					const off =
-						next.x < -40 || next.x > width + 40 || next.y < -40 || next.y > height + 40 || fil.life > fil.maxLife
-					if (off) recycle(fil)
+					if (fil.hold > 0) {
+						fil.hold -= 1
+					} else {
+						const next = advectPoint(head.x, head.y, time, fil.speed * stepScale, cursor)
+						fil.pts.push(next)
+						if (fil.pts.length > fil.maxLen) fil.pts.shift()
+						fil.life += 1
+						const off =
+							next.x < -40 || next.x > width + 40 || next.y < -40 || next.y > height + 40 || fil.life > fil.maxLife
+						if (off) recycle(fil)
+					}
 				}
 
 				const tip = fil.pts[fil.pts.length - 1]
 				const faded = fil.life / fil.maxLife
+				const growIn = Math.min(1, Math.max(0, fil.pts.length - 1) / 48)
+				const fadeOut = faded < 0.64 ? 1 : Math.max(0, 1 - (faded - 0.64) / 0.36)
 				const inColumn = tip.x > colLeft + 24 && tip.x < colRight - 24
-				const alpha = (inColumn ? 0.12 : 0.34) * (1 - faded) * (0.55 + 0.45 * Math.min(1, fil.pts.length / 8))
+				const alpha = (inColumn ? 0.1 : 0.28) * fadeOut * (0.15 + 0.85 * growIn)
 				const color = fil.blue ? 'rgba(70, 96, 118, 1)' : ink
 				drawPolyline(ctx, fil.pts, color, fil.width, alpha)
 			}
@@ -221,11 +201,15 @@ const InkFlowAtmosphere = () => {
 			canvas.style.width = `${width}px`
 			canvas.style.height = `${height}px`
 			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-			lines = layoutConstructionLines(width, height)
 			const target = filamentCount(width)
 			if (filaments.length > target) filaments.length = target
-			while (filaments.length < target) filaments.push(spawnFilament(width, height, time))
-			if (reduced) paintStaticWash(ctx, width, height, ink, sky, lines)
+			while (filaments.length < target) {
+				const i = filaments.length
+				const alreadyHere = i < Math.floor(target * 0.38)
+				const grown = alreadyHere ? 36 + Math.floor(Math.random() * 70) : 0
+				filaments.push(spawnFilament(width, height, time, grown))
+			}
+			if (reduced) paintStaticWash(ctx, width, height, ink, sky)
 			else paint(false, performance.now())
 		}
 

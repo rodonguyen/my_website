@@ -1,4 +1,4 @@
-import { advectPoint, cursorWarp, fieldAngle, filamentCount, gutterSpawnX, layoutConstructionLines } from './flowField'
+import { advectPoint, cursorWarp, fieldAngle, filamentCount, gutterSpawnX } from './flowField'
 
 describe('flowField', () => {
 	it('keeps field angles finite and slowly changing', () => {
@@ -33,10 +33,8 @@ describe('flowField', () => {
 		expect(gutterHits).toBeGreaterThanOrEqual(4)
 	})
 
-	it('scales filament count and adds column construction lines on desktop', () => {
+	it('scales filament count on larger viewports', () => {
 		expect(filamentCount(390)).toBeLessThan(filamentCount(1280))
 		expect(filamentCount(1440)).toBeLessThanOrEqual(90)
-		const desktop = layoutConstructionLines(1280, 900)
-		expect(desktop.some((line) => line.ax === line.bx)).toBe(true)
 	})
 })

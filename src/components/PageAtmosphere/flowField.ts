@@ -1,13 +1,5 @@
 export type Vec2 = { x: number; y: number }
 
-export type ConstructionLine = {
-	ax: number
-	ay: number
-	bx: number
-	by: number
-	alpha: number
-}
-
 /** Deterministic 0–1 hash. Good enough for a studio field; no simplex. */
 export function hashNoise(x: number, y: number): number {
 	const n = Math.sin(x * 127.1 + y * 311.7) * 43758.5453123
@@ -20,7 +12,7 @@ export function hashNoise(x: number, y: number): number {
  */
 export function fieldAngle(x: number, y: number, time: number): number {
 	const s = 0.00185
-	const t = time * 0.042
+	const t = time * 0.022
 	const u = x * s
 	const v = y * s
 	const a = Math.sin(u * 1.31 + v * 0.47 + t)
@@ -36,7 +28,7 @@ export function fieldVector(x: number, y: number, time: number, speed: number): 
 }
 
 /** Gentle swirl + slight attract near the cursor so empty gutters feel alive. */
-export function cursorWarp(x: number, y: number, cursor: Vec2 | null, radius = 168, strength = 0.38): Vec2 {
+export function cursorWarp(x: number, y: number, cursor: Vec2 | null, radius = 180, strength = 0.16): Vec2 {
 	if (!cursor) return { x: 0, y: 0 }
 	const dx = x - cursor.x
 	const dy = y - cursor.y
@@ -45,8 +37,8 @@ export function cursorWarp(x: number, y: number, cursor: Vec2 | null, radius = 1
 	const d = Math.sqrt(d2)
 	const falloff = (1 - d / radius) ** 2 * strength
 	return {
-		x: (-dy / d) * falloff * 16 - dx * falloff * 0.07,
-		y: (dx / d) * falloff * 16 - dy * falloff * 0.07
+		x: (-dy / d) * falloff * 5.5 - dx * falloff * 0.04,
+		y: (dx / d) * falloff * 5.5 - dy * falloff * 0.04
 	}
 }
 
@@ -72,33 +64,3 @@ export function gutterSpawnX(width: number, random = Math.random, column = 800):
 	return gutter + random() * Math.min(column, width)
 }
 
-export function layoutConstructionLines(width: number, height: number): ConstructionLine[] {
-	const col = Math.min(800, width)
-	const left = (width - col) / 2
-	const right = left + col
-	const tilt = (11 * Math.PI) / 180
-	const lines: ConstructionLine[] = [
-		{ ax: 20, ay: height * 0.18, bx: width - 20, by: height * 0.18, alpha: 0.12 },
-		{
-			ax: width * 0.04,
-			ay: height * 0.06,
-			bx: width * 0.04 + Math.cos(tilt) * width * 0.42,
-			by: height * 0.06 + Math.sin(tilt) * height * 0.55,
-			alpha: 0.09
-		},
-		{
-			ax: width * 0.97,
-			ay: height * 0.12,
-			bx: width * 0.62,
-			by: height * 0.88,
-			alpha: 0.08
-		}
-	]
-	if (width > 880) {
-		lines.push(
-			{ ax: left, ay: 28, bx: left, by: height - 28, alpha: 0.14 },
-			{ ax: right, ay: 28, bx: right, by: height - 28, alpha: 0.14 }
-		)
-	}
-	return lines
-}
