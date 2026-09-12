@@ -9,8 +9,35 @@
     'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+  --page-bg: #f2e9dc;
+  --page-bg-highlight: #fffdf9;
+  --card-bg: #fffdf9;
+  --card-bg-hover: #fff4ea;
+  --card-border: #e6d9cc;
+  --card-border-hover: #d2c0ae;
+  --card-shadow: 0 1px 2px rgb(60 40 20 / 0.06);
+  --card-shadow-hover: 0 6px 16px rgb(60 40 20 / 0.08);
+  --featured-bg: #f8e6d4;
+  --featured-bg-hover: #f3d7bc;
+  --featured-border: #efd2b6;
+  --featured-border-hover: #e4bc94;
+  --focus-ring: #ff6719;
+}
+
 html {
   font-size: 1rem;
+  min-height: 100%;
+  background-color: var(--page-bg);
+  background-image: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
+  background-repeat: no-repeat;
+  background-size: 140% 100%;
+  background-position: top center;
+}
+
+body,
+.App {
+  background-color: transparent;
 }
 
 body {
@@ -19,6 +46,10 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-page {
+  background-color: transparent;
 }
 
 code {
@@ -34,7 +65,16 @@ code {
   .custom-card {
     --card-p: 0;
     --card-fs: 1rem;
-    @apply w-full my-4 p-4 md:p-5 bg-white border border-gray-200 shadow-sm hover:shadow-md rounded-xl text-left text-base transition-all duration-100 hover:border-gray-400 hover:bg-gray-100;
+    @apply w-full my-4 p-4 md:p-5 border rounded-xl text-left text-base transition-all duration-100;
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: var(--card-shadow);
+  }
+
+  .custom-card:hover {
+    background-color: var(--card-bg-hover);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
   }
 
   .h1 {
@@ -83,25 +123,21 @@ code {
   }
 
   .featured-card {
-    @apply flex h-full min-h-0 flex-col rounded-xl border border-gray-200 p-4 text-left text-inherit no-underline shadow-sm transition-all duration-200 md:p-5;
+    @apply flex h-full min-h-0 flex-col rounded-xl border p-4 text-left text-inherit no-underline transition-all duration-100 md:p-5;
+    background-color: var(--featured-bg);
+    border-color: var(--featured-border);
+    box-shadow: var(--card-shadow);
   }
 
   .featured-card:hover {
-    @apply border-gray-400 shadow-md;
+    background-color: var(--featured-bg-hover);
+    border-color: var(--featured-border-hover);
+    box-shadow: var(--card-shadow-hover);
   }
 
   .featured-card:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-rose-400;
-  }
-
-  .featured-card--writing,
-  .featured-card--video {
-    @apply bg-amber-500/15;
-  }
-
-  .featured-card--writing:hover,
-  .featured-card--video:hover {
-    @apply bg-amber-500/25;
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
   }
 
   .featured-card__label {

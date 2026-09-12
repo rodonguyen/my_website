@@ -34,7 +34,7 @@ const Home = () => {
 					<SocialIcons />
 				</div>
 
-				<div className="custom-card bg-sky-100/20 hover:bg-sky-100/50">
+				<div className="custom-card">
 					<div className="card-body text-left text-base-content/80">
 						<h2 className="card-title">👋 {t('homeIntro.greeting')}</h2>
 						<HomeIntro />
@@ -45,28 +45,28 @@ const Home = () => {
 
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">{t('homeOthers.title')}</h2>
 
-				<Link to="/career" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
+				<Link to="/career" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">👔 {t('homeOthers.careerTitle')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.careerDescription')}</p>
 					</div>
 				</Link>
 
-				<Link to="/apps" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
+				<Link to="/apps" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">🚀 {t('homeOthers.appsTitle')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.appsDescription')}</p>
 					</div>
 				</Link>
 
-				<Link to="/list-100" className="custom-card bg-blue-300/15 hover:bg-blue-300/20">
+				<Link to="/list-100" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 {t('homeOthers.list100Title')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.list100Description')}</p>
 					</div>
 				</Link>
 
-				<div className="custom-card bg-blue-300/15 hover:bg-blue-300/20 justify-center">
+				<div className="custom-card justify-center">
 					<div className="card-body">
 						<h2 className="card-title ">✍🏽 {t('homeOthers.subscribeTitle')} </h2>
 						<p>{t('homeOthers.subscribeDescription')}</p>

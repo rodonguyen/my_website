@@ -18,7 +18,7 @@ const Footer = () => {
 	const { t } = useTranslation()
 
 	return (
-		<footer className="mt-auto bg-base-100 pt-16 text-base-content">
+		<footer className="mt-auto bg-page pt-16 text-base-content">
 			<div className="border-t border-gray-200">
 				<div className="container flex flex-col gap-10 py-6 md:flex-row md:items-start md:justify-between">
 					<div className="flex flex-col items-start gap-3 text-left">

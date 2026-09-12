@@ -10,7 +10,7 @@ const NavBar = () => {
 	return (
 		<div
 			className={
-				'navbar fixed top-0 left-0 right-0 z-10 md:px-6 min-h-6 bg-base-100 shadow-sm p-0 text-base-content/80' +
+				'navbar fixed top-0 left-0 right-0 z-10 md:px-6 min-h-6 bg-page shadow-sm p-0 text-base-content/80' +
 				(hideNavBar ? ' hidden' : '')
 			}
 		>
