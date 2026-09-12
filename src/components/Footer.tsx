@@ -25,7 +25,7 @@ const Footer = () => {
 
 	return (
 		<footer className="mt-auto bg-page pt-8 text-base-content">
-			<div className="border-t border-gray-200">
+			<div className="border-t border-[var(--page-rule)]">
 				<div className="container py-8 md:py-10">
 					<div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-12">
 						<div className="order-2 flex min-w-0 flex-col items-start gap-5 text-left md:order-1">
