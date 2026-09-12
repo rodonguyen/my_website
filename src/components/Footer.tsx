@@ -5,7 +5,7 @@ import SocialIcons from './SocialIcons'
 const linkRows = [
 	[
 		{ to: '/', key: 'nav.home' },
-		{ to: '/list-100', key: 'nav.list100' },
+		{ to: '/list100', key: 'nav.list100' },
 		{ to: '/apps', key: 'nav.apps' }
 	],
 	[

@@ -10,7 +10,7 @@ import Housemate from './Housemate'
 import Visitors from './Visitors'
 import '../stylesheets/App.css'
 
-import { Outlet, BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { Outlet, BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 
 function AppShell() {
 	const showNav = useLocation().pathname !== '/'
@@ -35,7 +35,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<AppShell />}>
 						<Route index element={<Home />} />
-						<Route path="list-100" element={<List100 />} />
+						<Route path="list100" element={<List100 />} />
+						<Route path="list-100" element={<Navigate to="/list100" replace />} />
 						<Route path="career" element={<Career />} />
 						<Route path="housemate" element={<Housemate />} />
 						<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />

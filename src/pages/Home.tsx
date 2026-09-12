@@ -61,7 +61,7 @@ const Home = () => {
 					</div>
 				</Link>
 
-				<Link to="/list-100" className="custom-card">
+				<Link to="/list100" className="custom-card">
 					<div className="card-body text-left">
 						<h2 className="card-title">❤️‍🔥 {t('homeOthers.list100Title')}</h2>
 						<p className="text-base-content/65">{t('homeOthers.list100Description')}</p>

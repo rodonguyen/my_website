@@ -16,7 +16,7 @@ const HomeIntro = () => {
 				<Trans
 					i18nKey="homeIntro.intro1"
 					components={{
-						dreamLink: <Link to="/list-100" className={introLinkClass} />,
+						dreamLink: <Link to="/list100" className={introLinkClass} />,
 						appsLink: <Link to="/apps" className={introLinkClass} />
 					}}
 				/>

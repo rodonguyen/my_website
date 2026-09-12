@@ -23,7 +23,7 @@ export const changeWindowTitle = (path: string) => {
 		document.title = 'Rodo'
 	} else if (path === '/apps') {
 		document.title = 'Side Projects'
-	} else if (path === '/list-100') {
+	} else if (path === '/list100') {
 		document.title = 'List 100'
 	} else if (path === '/apps/timeihaveleft') {
 		document.title = 'Time I Have Left'

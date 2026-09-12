@@ -17,7 +17,7 @@ const NavBar = () => {
 			<div className="hidden md:flex">
 				<ul className="menu menu-horizontal px-1">
 					<li>
-						<Link to="/list-100">{t('nav.list100')}</Link>
+						<Link to="/list100">{t('nav.list100')}</Link>
 					</li>
 					<li>
 						<Link to="/apps">{t('nav.apps')}</Link>
@@ -51,7 +51,7 @@ const NavBar = () => {
 						className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-left text-2xl"
 					>
 						<li>
-							<Link to="/list-100" className="text-lg">
+							<Link to="/list100" className="text-lg">
 								{t('nav.list100')} <span className="badge bg-blue-100">Updated</span>
 							</Link>
 						</li>
