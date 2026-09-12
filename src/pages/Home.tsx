@@ -9,7 +9,6 @@ import ScrambleText from '../components/ScrambleText'
 import SubstackSubscribe from '../components/SubstackSubscribe'
 import ThoughtBubble from '../components/ThoughtBubble'
 import HomeIntro from '../components/HomeIntro'
-import InkFlowAtmosphere from '../components/PageAtmosphere/InkFlowAtmosphere'
 
 const Home = () => {
 	const { t } = useTranslation()
@@ -17,7 +16,6 @@ const Home = () => {
 
 	return (
 		<div className="home-page">
-			<InkFlowAtmosphere />
 			<LanguageSwitcher className="absolute top-4 right-4 z-30" />
 			<div className="container flex flex-col items-center text-center ">
 				<div className="avatar-stage">

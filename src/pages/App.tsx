@@ -7,6 +7,7 @@ import SideProjects from './SideProjects'
 import Footer from '../components/Footer'
 import Career from './Career'
 import Visitors from './Visitors'
+import InkFlowAtmosphere from '../components/PageAtmosphere/InkFlowAtmosphere'
 import '../stylesheets/App.css'
 
 import { Outlet, BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
@@ -15,9 +16,10 @@ function AppShell() {
 	const showNav = useLocation().pathname !== '/'
 
 	return (
-		<div className={`flex min-h-screen flex-col${showNav ? ' pt-12' : ''}`}>
+		<div className={`app-shell relative isolate flex min-h-screen flex-col${showNav ? ' pt-12' : ''}`}>
+			<InkFlowAtmosphere />
 			{showNav ? <NavBar /> : null}
-			<div className="flex min-h-0 flex-1 flex-col">
+			<div className="relative z-1 flex min-h-0 flex-1 flex-col">
 				<div className="flex-1">
 					<Outlet />
 				</div>

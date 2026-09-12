@@ -26,6 +26,7 @@
   --focus-ring: #ff6719;
   --paper: var(--page-bg);
   --ink: #3a342e;
+  --timeline-axis: color-mix(in srgb, var(--ink) 10%, var(--page-rule));
   --page-wash: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
 }
 
@@ -71,8 +72,6 @@ body {
 
 .home-page {
   position: relative;
-  z-index: 1;
-  isolation: isolate;
   min-height: 100%;
 }
 
@@ -104,6 +103,18 @@ code {
   .home-page .container {
     position: relative;
     z-index: 1;
+  }
+
+  .timeline {
+    --color-base-300: var(--timeline-axis);
+  }
+
+  .timeline>li>hr {
+    background-color: var(--timeline-axis);
+  }
+
+  .timeline .timeline-middle {
+    color: var(--ink);
   }
 
   .h1 {
@@ -355,8 +366,7 @@ code {
 
 html:root,
 body,
-.App,
-.home-page {
+.App {
   background-color: var(--page-bg) !important;
   background-image: var(--page-wash) !important;
   background-repeat: no-repeat !important;
