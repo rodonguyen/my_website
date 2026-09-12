@@ -40,7 +40,7 @@ const Footer = () => {
 									</div>
 								))}
 							</nav>
-							<nav aria-label={t('footer.socialMedia')} className="inline-grid grid-cols-4 gap-1 sm:flex sm:flex-wrap sm:gap-2">
+							<nav aria-label={t('footer.socialMedia')} className="flex max-w-full flex-wrap gap-2">
 								<SocialIcons className={iconClass} />
 							</nav>
 						</div>

@@ -1,10 +1,5 @@
 import { useEffect, useRef } from 'react'
-import {
-	advectPoint,
-	filamentCount,
-	gutterSpawnX,
-	type Vec2
-} from './flowField'
+import { advectPoint, filamentCount, gutterSpawnX, type Vec2 } from './flowField'
 
 type Filament = {
 	pts: Vec2[]
@@ -27,13 +22,13 @@ function prefersReducedMotion() {
 function spawnFilament(width: number, height: number, time = 0, grown = 0): Filament {
 	const fil: Filament = {
 		pts: [{ x: gutterSpawnX(width), y: Math.random() * height }],
-		speed: 0.28 + Math.random() * 0.18,
-		maxLen: 120 + Math.floor(Math.random() * 55),
+		speed: 0.4 + Math.random() * 0.26,
+		maxLen: 120 + Math.floor(Math.random() * 80),
 		life: 0,
-		maxLife: 860 + Math.random() * 720,
+		maxLife: 520 + Math.random() * 280,
 		hold: grown > 0 ? 0 : 20 + Math.floor(Math.random() * 240),
 		blue: Math.random() < 0.18,
-		width: 0.75 + Math.random() * 1.25
+		width: 0.45 + Math.random() * 0.75
 	}
 
 	let head = fil.pts[0]
@@ -51,7 +46,14 @@ function readCssColor(name: string, fallback: string) {
 	return value || fallback
 }
 
-function drawPolyline(ctx: CanvasRenderingContext2D, pts: Vec2[], color: string, width: number, alpha: number) {
+function drawPolyline(
+	ctx: CanvasRenderingContext2D,
+	pts: Vec2[],
+	color: string,
+	width: number,
+	alpha: number,
+	cap: CanvasLineCap = 'round'
+) {
 	if (pts.length < 2) return
 	ctx.beginPath()
 	ctx.moveTo(pts[0].x, pts[0].y)
@@ -67,32 +69,43 @@ function drawPolyline(ctx: CanvasRenderingContext2D, pts: Vec2[], color: string,
 	ctx.strokeStyle = color
 	ctx.globalAlpha = alpha
 	ctx.lineWidth = width
-	ctx.lineCap = 'round'
+	ctx.lineCap = cap
 	ctx.lineJoin = 'round'
 	ctx.stroke()
 	ctx.globalAlpha = 1
 }
 
-function paintStaticWash(
-	ctx: CanvasRenderingContext2D,
-	width: number,
-	height: number,
-	ink: string
-) {
+/** Head stays inked; tail drops off on a steep curve so it does not crawl as a solid worm. */
+function drawFadingStroke(ctx: CanvasRenderingContext2D, pts: Vec2[], color: string, width: number, alpha: number) {
+	const n = pts.length
+	if (n < 2) return
+	const pieces = Math.min(7, n - 1)
+	for (let s = 0; s < pieces; s += 1) {
+		const i0 = Math.floor((s / pieces) * (n - 1))
+		const i1 = Math.max(i0 + 1, Math.ceil(((s + 1) / pieces) * (n - 1)))
+		const along = (s + 0.9) / pieces
+		const fade = along ** 1.45
+		if (fade * alpha < 0.012) continue
+		const cap: CanvasLineCap = s === 0 || s === pieces - 1 ? 'round' : 'butt'
+		drawPolyline(ctx, pts.slice(i0, i1 + 1), color, width * (0.5 + 0.5 * along), alpha * fade, cap)
+	}
+}
+
+function paintStaticWash(ctx: CanvasRenderingContext2D, width: number, height: number, ink: string) {
 	ctx.clearRect(0, 0, width, height)
 
 	const frozen = 7
 	for (let i = 0; i < frozen; i += 1) {
-		let x = gutterSpawnX(width, () => (i * 17 + 3) % 97 / 97)
-		let y = ((i * 53 + 11) % 89 / 89) * height
+		let x = gutterSpawnX(width, () => ((i * 17 + 3) % 97) / 97)
+		let y = (((i * 53 + 11) % 89) / 89) * height
 		const pts: Vec2[] = [{ x, y }]
-		for (let s = 0; s < 28; s += 1) {
+		for (let s = 0; s < 42; s += 1) {
 			const next = advectPoint(x, y, 8 + i, 1.15, null)
 			x = next.x
 			y = next.y
 			pts.push({ x, y })
 		}
-		drawPolyline(ctx, pts, ink, 1.15, 0.2)
+		drawFadingStroke(ctx, pts, ink, 0.7, 0.2)
 	}
 }
 
@@ -150,22 +163,32 @@ const InkFlowAtmosphere = () => {
 					} else {
 						const next = advectPoint(head.x, head.y, time, fil.speed * stepScale, cursor)
 						fil.pts.push(next)
-						if (fil.pts.length > fil.maxLen) fil.pts.shift()
 						fil.life += 1
+						const aged = fil.life / fil.maxLife
+						let drop = Math.max(0, fil.pts.length - fil.maxLen)
+						if (aged > 0.58) drop += 1
+						if (aged > 0.74) drop += 1
+						if (aged > 0.86) drop += 1
+						if (drop > 0) fil.pts.splice(0, Math.min(drop, fil.pts.length - 1))
 						const off =
-							next.x < -40 || next.x > width + 40 || next.y < -40 || next.y > height + 40 || fil.life > fil.maxLife
+							next.x < -40 ||
+							next.x > width + 40 ||
+							next.y < -40 ||
+							next.y > height + 40 ||
+							fil.life > fil.maxLife ||
+							fil.pts.length < 2
 						if (off) recycle(fil)
 					}
 				}
 
 				const tip = fil.pts[fil.pts.length - 1]
 				const faded = fil.life / fil.maxLife
-				const growIn = Math.min(1, Math.max(0, fil.pts.length - 1) / 48)
-				const fadeOut = faded < 0.64 ? 1 : Math.max(0, 1 - (faded - 0.64) / 0.36)
+				const growIn = Math.min(1, Math.max(0, fil.pts.length - 1) / Math.max(12, fil.maxLen * 0.4))
+				const fadeOut = faded < 0.48 ? 1 : Math.max(0, 1 - (faded - 0.48) / 0.52)
 				const inColumn = tip.x > colLeft + 24 && tip.x < colRight - 24
 				const alpha = (inColumn ? 0.1 : 0.28) * fadeOut * (0.15 + 0.85 * growIn)
 				const color = fil.blue ? 'rgba(70, 96, 118, 1)' : ink
-				drawPolyline(ctx, fil.pts, color, fil.width, alpha)
+				drawFadingStroke(ctx, fil.pts, color, fil.width, alpha)
 			}
 		}
 
@@ -189,7 +212,7 @@ const InkFlowAtmosphere = () => {
 			while (filaments.length < target) {
 				const i = filaments.length
 				const alreadyHere = i < Math.floor(target * 0.38)
-				const grown = alreadyHere ? 36 + Math.floor(Math.random() * 70) : 0
+				const grown = alreadyHere ? 56 + Math.floor(Math.random() * 90) : 0
 				filaments.push(spawnFilament(width, height, time, grown))
 			}
 			if (reduced) paintStaticWash(ctx, width, height, ink)
@@ -239,13 +262,7 @@ const InkFlowAtmosphere = () => {
 		}
 	}, [])
 
-	return (
-		<canvas
-			ref={canvasRef}
-			className="ink-flow-atmosphere"
-			aria-hidden="true"
-		/>
-	)
+	return <canvas ref={canvasRef} className="ink-flow-atmosphere" aria-hidden="true" />
 }
 
 export default InkFlowAtmosphere
