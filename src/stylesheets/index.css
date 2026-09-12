@@ -26,16 +26,12 @@
   --focus-ring: #ff6719;
   --paper: var(--page-bg);
   --ink: #3a342e;
+  --page-wash: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
 }
 
 html {
   font-size: 1rem;
   min-height: 100%;
-}
-
-body,
-.App {
-  background-color: transparent;
 }
 
 body {
@@ -64,7 +60,6 @@ body {
   z-index: 1;
   isolation: isolate;
   min-height: 100%;
-  background-color: transparent;
 }
 
 code {
@@ -345,11 +340,13 @@ code {
 }
 
 html:root,
-body {
-  background-color: var(--page-bg);
-  background-image: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
-  background-repeat: no-repeat;
-  background-size: 160% 120%;
-  background-position: top center;
-  background-attachment: fixed;
+body,
+.App,
+.home-page {
+  background-color: var(--page-bg) !important;
+  background-image: var(--page-wash) !important;
+  background-repeat: no-repeat !important;
+  background-size: 160% 120% !important;
+  background-position: top center !important;
+  background-attachment: fixed !important;
 }
