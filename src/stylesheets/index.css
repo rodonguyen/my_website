@@ -29,11 +29,6 @@
 html {
   font-size: 1rem;
   min-height: 100%;
-  background-color: var(--page-bg);
-  background-image: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
-  background-repeat: no-repeat;
-  background-size: 140% 100%;
-  background-position: top center;
 }
 
 body,
@@ -323,4 +318,14 @@ code {
   .visitors-map #mapmyvisitors-widget {
     margin: 0 !important;
   }
+}
+
+html:root,
+body {
+  background-color: var(--page-bg);
+  background-image: radial-gradient(circle at 50% 0%, var(--page-bg-highlight) 0%, var(--page-bg) 62%);
+  background-repeat: no-repeat;
+  background-size: 160% 120%;
+  background-position: top center;
+  background-attachment: fixed;
 }
