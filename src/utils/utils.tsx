@@ -4,15 +4,17 @@ export const Hyperlink = ({
 	href,
 	className,
 	title,
-	children
+	children,
+	onClick
 }: {
 	href: string
 	className?: string
 	title?: string
 	children?: React.ReactNode
+	onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }) => {
 	return (
-		<a className={className} target="_blank" rel="noopener noreferrer" href={href} title={title}>
+		<a className={className} target="_blank" rel="noopener noreferrer" href={href} title={title} onClick={onClick}>
 			{children}
 		</a>
 	)

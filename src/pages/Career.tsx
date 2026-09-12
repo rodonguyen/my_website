@@ -1,6 +1,7 @@
 import { changeWindowTitle, Hyperlink } from '../utils/utils'
 import { rodoResumePdf } from '../assets/history'
 import { useTranslation } from 'react-i18next'
+import posthog from '../posthog'
 
 const TickIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
@@ -31,7 +32,7 @@ const Career = () => {
 							Griffith University
 						</Hyperlink>
 						<div className="text-base-content/60">
-							<a href={rodoResumePdf} download="Rodo_Resume">
+							<a href={rodoResumePdf} download="Rodo_Resume" onClick={() => posthog.capture('resume_downloaded')}>
 								👉🏽 / {t('career.currentResume')} /
 							</a>
 						</div>

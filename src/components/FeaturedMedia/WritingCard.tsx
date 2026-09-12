@@ -1,6 +1,7 @@
 import { BsSubstack } from 'react-icons/bs'
 import { Hyperlink } from '../../utils/utils'
 import type { PostPreview } from '../../data/types'
+import posthog from '../../posthog'
 
 type WritingCardProps = {
 	post: PostPreview
@@ -17,7 +18,11 @@ const formatPostDate = (isoDate: string, locale: string) => {
 
 const WritingCard = ({ post, label, cta, locale }: WritingCardProps) => {
 	return (
-		<Hyperlink href={post.url} className="featured-card featured-card--writing group">
+		<Hyperlink
+			href={post.url}
+			className="featured-card featured-card--writing group"
+			onClick={() => posthog.capture('featured_writing_opened')}
+		>
 			<p className="featured-card__label">
 				<BsSubstack className="featured-card__brand-icon featured-card__brand-icon--substack" />
 				{label}

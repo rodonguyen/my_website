@@ -4,9 +4,11 @@ import { FaGithub, FaMapMarkedAlt } from 'react-icons/fa'
 import { changeWindowTitle } from '../utils/utils'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import posthog from '../posthog'
 
 // Define the structure for a project
 interface Project {
+	analyticsId: string
 	titleKey: string
 	descriptionKey: string
 	mediaUrl?: string // Path relative to src/assets/apps/
@@ -18,6 +20,7 @@ interface Project {
 // Hardcoded project data
 const projects: Project[] = [
 	{
+		analyticsId: 'lucius_capital',
 		titleKey: 'apps.projects.luciusCapital.title',
 		descriptionKey: 'apps.projects.luciusCapital.description',
 		liveUrl: 'https://lucius.capital/',
@@ -25,6 +28,7 @@ const projects: Project[] = [
 		mediaType: 'image'
 	},
 	{
+		analyticsId: 'time_i_have_left',
 		titleKey: 'apps.projects.timeIHaveLeft.title',
 		descriptionKey: 'apps.projects.timeIHaveLeft.description',
 		mediaUrl: 'timeihaveleft.jpg',
@@ -33,6 +37,7 @@ const projects: Project[] = [
 		githubUrl: 'https://github.com/rodonguyen/my_website/blob/master/src/pages/TimeIHaveLeft.tsx'
 	},
 	{
+		analyticsId: 'brisbane_parking_finder',
 		titleKey: 'apps.projects.brisbaneParkingFinder.title',
 		descriptionKey: 'apps.projects.brisbaneParkingFinder.description',
 		mediaType: 'icon',
@@ -106,7 +111,11 @@ const SideProjects: React.FC = () => {
 							<div className="card-actions mt-2 flex justify-center gap-2">
 								{/* Live Project Button */}
 								{project.liveUrl && (
-									<Link to={project.liveUrl} className="btn btn-soft btn-primary">
+									<Link
+										to={project.liveUrl}
+										className="btn btn-soft btn-primary"
+										onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'live' })}
+									>
 										{t('apps.checkItOut')}
 									</Link>
 								)}
@@ -117,6 +126,7 @@ const SideProjects: React.FC = () => {
 										target="_blank"
 										rel="noopener noreferrer"
 										className="btn btn-" // Use a different style, e.g., secondary
+										onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'github' })}
 									>
 										<FaGithub />
 										{t('apps.github')}
@@ -131,6 +141,7 @@ const SideProjects: React.FC = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					className="card !rounded-[1rem] bg-base-100 shadow-xl hover:bg-indigo-100/10 transition-colors"
+					onClick={() => posthog.capture('project_opened', { project: 'github_profile', link_type: 'github' })}
 				>
 					<figure className="px-4 pt-4">
 						<div className="rounded-xl rounded-b-none bg-indigo-100/30 flex items-center justify-center h-48 w-full">

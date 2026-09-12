@@ -4,6 +4,7 @@ import lifebarAnnotationImage from '../assets/apps/TimeIHaveLeft_Lifebar_annotat
 import lifebarAnnotationImageVn from '../assets/apps/TimeIHaveLeft_Lifebar_annotation_vn.png'
 import './TimeIHaveLeft.css'
 import { useTranslation } from 'react-i18next'
+import posthog from '../posthog'
 
 interface TimeLeft {
 	years: number
@@ -50,6 +51,7 @@ const TimeIHaveLeft = () => {
 
 	const handleDobChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const newDob: Date = new Date(event.target.value)
+		posthog.capture('life_expectancy_calculated')
 		setDob(newDob)
 	}
 

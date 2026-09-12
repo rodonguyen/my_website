@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Hyperlink } from '../utils/utils'
+import posthog from '../posthog'
 
 const SUBSTACK_SUBSCRIBE_URL = 'https://rodonguyen.substack.com/api/v1/free?nojs=true'
 const IFRAME_NAME = 'substack-subscribe-frame'
@@ -18,7 +19,10 @@ const SubstackSubscribe = () => {
 				action={SUBSTACK_SUBSCRIBE_URL}
 				method="post"
 				target={IFRAME_NAME}
-				onSubmit={() => setSubmitted(true)}
+				onSubmit={() => {
+					posthog.capture('newsletter_subscription_submitted')
+					setSubmitted(true)
+				}}
 				className={submitted ? 'hidden' : 'join w-full'}
 			>
 				<input type="hidden" name="source" value="embed" />

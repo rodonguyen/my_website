@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import App from './pages/App'
 import './stylesheets/index.css'
 import './i18n/config'
+import './posthog'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 root.render(<App />)

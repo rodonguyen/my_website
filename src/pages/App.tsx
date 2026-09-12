@@ -6,7 +6,6 @@ import NotFound from './NotFound'
 import SideProjects from './SideProjects'
 import Footer from '../components/Footer'
 import Career from './Career'
-import Housemate from './Housemate'
 import Visitors from './Visitors'
 import '../stylesheets/App.css'
 
@@ -38,7 +37,6 @@ function App() {
 						<Route path="list100" element={<List100 />} />
 						<Route path="list-100" element={<Navigate to="/list100" replace />} />
 						<Route path="career" element={<Career />} />
-						<Route path="housemate" element={<Housemate />} />
 						<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />
 						<Route path="apps" element={<SideProjects />}></Route>
 						<Route path="visitors" element={<Visitors />} />

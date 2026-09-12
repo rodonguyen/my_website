@@ -1,5 +1,6 @@
 import { FaYoutube } from 'react-icons/fa6'
 import { Hyperlink } from '../../utils/utils'
+import posthog from '../../posthog'
 
 const YOUTUBE_ID = 'x8ZmhqwKTFY'
 
@@ -15,6 +16,7 @@ const VideoCard = ({ label, title, intro, playLabel }: VideoCardProps) => {
 		<Hyperlink
 			href={`https://www.youtube.com/watch?v=${YOUTUBE_ID}`}
 			className="featured-card featured-card--video"
+			onClick={() => posthog.capture('featured_video_opened')}
 		>
 			<p className="featured-card__label">
 				<FaYoutube className="featured-card__brand-icon featured-card__brand-icon--youtube" />

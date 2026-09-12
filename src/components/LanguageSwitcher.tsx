@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import posthog from '../posthog'
 
 const LanguageSwitcher = ({ className }: { className: string }) => {
 	const { i18n } = useTranslation()
@@ -7,6 +8,7 @@ const LanguageSwitcher = ({ className }: { className: string }) => {
 
 	const toggleLanguage = () => {
 		const newLang = isEnglish ? 'vi' : 'en'
+		posthog.capture('language_changed', { language: newLang })
 		i18n.changeLanguage(newLang)
 	}
 

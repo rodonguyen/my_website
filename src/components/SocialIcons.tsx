@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube, FaXTwitter, FaGithub } from 'react-icons/fa6'
 import { BsSubstack } from 'react-icons/bs'
+import posthog from '../posthog'
 
 export const INSTAGRAM_HREF = 'https://instagram.com/rodo.rodeo'
 export const YOUTUBE_HREF = 'https://youtube.com/@rodo.podcast'
@@ -41,6 +42,7 @@ const SocialIcons: React.FC<{ className?: string }> = ({ className }) => {
 					href={href}
 					aria-label={label}
 					className={socialIconClass}
+					onClick={() => posthog.capture('social_link_opened', { platform: label.toLowerCase() })}
 					{...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
 				>
 					<Icon aria-hidden />
