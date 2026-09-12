@@ -1,22 +1,16 @@
-import { Link, useLocation } from 'react-router-dom'
-import rodoImage from '../assets/home/Rodo.jpg'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const NavBar = () => {
 	const { t } = useTranslation()
-	const location = useLocation()
-	const hideNavBar = location.pathname === '/'
 
 	return (
-		<div
-			className={
-				'navbar fixed top-0 left-0 right-0 z-10 md:px-6 min-h-6 bg-page shadow-sm p-0 text-base-content/80' +
-				(hideNavBar ? ' hidden' : '')
-			}
-		>
+		<div className="navbar site-nav fixed top-0 left-0 right-0 z-10 md:px-6 min-h-6 shadow-sm p-0 text-base-content/80">
 			<div className="flex-1">
-				<Link to="/" className="btn btn-ghost text-xl">
-					<img title="Rodo" className="rounded-full w-6 h-6" src={rodoImage}></img>
+				<Link
+					to="/"
+					className="inline-flex min-h-11 items-center px-4 font-bold text-xl text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current md:px-2"
+				>
 					Rodo
 				</Link>
 			</div>

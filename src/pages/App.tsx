@@ -10,24 +10,30 @@ import Housemate from './Housemate'
 import Visitors from './Visitors'
 import '../stylesheets/App.css'
 
-import { Outlet, BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Outlet, BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 
-function App() {
-	const AppConstantElements = (
-		<div className="flex min-h-[calc(100vh-3rem)] flex-col">
-			<NavBar />
-			<div className="flex-1">
-				<Outlet />
-			</div>
-			<Footer />
-		</div>
-	)
+function AppShell() {
+	const showNav = useLocation().pathname !== '/'
 
 	return (
-		<div className="App flex min-h-screen flex-col pt-12">
+		<div className={`flex min-h-screen flex-col${showNav ? ' pt-12' : ''}`}>
+			{showNav ? <NavBar /> : null}
+			<div className="flex min-h-0 flex-1 flex-col">
+				<div className="flex-1">
+					<Outlet />
+				</div>
+				<Footer />
+			</div>
+		</div>
+	)
+}
+
+function App() {
+	return (
+		<div className="App flex min-h-screen flex-col">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={AppConstantElements}>
+					<Route path="/" element={<AppShell />}>
 						<Route index element={<Home />} />
 						<Route path="list-100" element={<List100 />} />
 						<Route path="career" element={<Career />} />
