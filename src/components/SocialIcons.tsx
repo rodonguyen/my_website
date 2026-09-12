@@ -4,40 +4,48 @@ import { BsSubstack } from 'react-icons/bs'
 
 export const INSTAGRAM_HREF = 'https://instagram.com/rodo.rodeo'
 export const YOUTUBE_HREF = 'https://youtube.com/@rodo.podcast'
+export const X_HREF = 'https://x.com/rodonguyen'
+export const SUBSTACK_HREF = 'https://rodonguyen.substack.com/'
+export const GITHUB_HREF = 'https://github.com/rodonguyen/'
+export const LINKEDIN_HREF = 'https://www.linkedin.com/in/rodonguyen/'
+export const EMAIL_HREF = 'mailto:rodonguyendd@gmail.com'
+export const EMAIL_ADDRESS = 'rodonguyendd@gmail.com'
 
-const defaultIconClass = 'text-2xl hover:text-rose-500 transition-colors duration-200'
+export type SocialLink = {
+	href: string
+	label: string
+	Icon: React.ComponentType<{ 'aria-hidden'?: boolean }>
+	external?: boolean
+}
+
+export const socialLinks: SocialLink[] = [
+	{ href: X_HREF, label: 'X', Icon: FaXTwitter },
+	{ href: SUBSTACK_HREF, label: 'Substack', Icon: BsSubstack },
+	{ href: INSTAGRAM_HREF, label: 'Instagram', Icon: FaInstagram },
+	{ href: GITHUB_HREF, label: 'GitHub', Icon: FaGithub },
+	{ href: LINKEDIN_HREF, label: 'LinkedIn', Icon: FaLinkedin },
+	{ href: YOUTUBE_HREF, label: 'YouTube', Icon: FaYoutube },
+	{ href: EMAIL_HREF, label: 'Email', Icon: FaEnvelope, external: false }
+]
+
+const defaultIconClass =
+	'text-2xl hover:text-rose-500 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
 
 const SocialIcons: React.FC<{ className?: string }> = ({ className }) => {
 	const socialIconClass = className ?? defaultIconClass
 	return (
 		<>
-			<a href="https://x.com/rodonguyen" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
-				<FaXTwitter />
-			</a>
-			{/* SubStack */}
-			<a href="https://rodonguyen.substack.com/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
-				<BsSubstack />
-			</a>
-			<a href={INSTAGRAM_HREF} target="_blank" rel="noopener noreferrer" className={socialIconClass}>
-				<FaInstagram />
-			</a>
-			<a href="https://github.com/rodonguyen/" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
-				<FaGithub />
-			</a>
-			<a
-				href="https://www.linkedin.com/in/rodonguyen/"
-				target="_blank"
-				rel="noopener noreferrer"
-				className={socialIconClass}
-			>
-				<FaLinkedin />
-			</a>
-			<a href={YOUTUBE_HREF} target="_blank" rel="noopener noreferrer" className={socialIconClass}>
-				<FaYoutube />
-			</a>
-			<a href="mailto:rodonguyendd@gmail.com" className={socialIconClass}>
-				<FaEnvelope />
-			</a>
+			{socialLinks.map(({ href, label, Icon, external = true }) => (
+				<a
+					key={label}
+					href={href}
+					aria-label={label}
+					className={socialIconClass}
+					{...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+				>
+					<Icon aria-hidden />
+				</a>
+			))}
 			{/* TikTok paused
 			<a href="https://www.tiktok.com/@rodo.podcast" target="_blank" rel="noopener noreferrer" className={socialIconClass}>
 				<FaTiktok />

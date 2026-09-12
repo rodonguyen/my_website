@@ -2,54 +2,59 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import SocialIcons from './SocialIcons'
 
-const pageColumns = [
+const linkRows = [
 	[
 		{ to: '/', key: 'nav.home' },
 		{ to: '/list-100', key: 'nav.list100' },
-		{ to: '/visitors', key: 'footer.visitors' }
+		{ to: '/apps', key: 'nav.apps' }
 	],
 	[
-		{ to: '/apps', key: 'nav.apps' },
-		{ to: '/career', key: 'nav.career' }
+		{ to: '/career', key: 'nav.career' },
+		{ to: '/visitors', key: 'footer.visitors' }
 	]
 ] as const
 
+const linkClass =
+	'inline-flex min-h-9 items-center text-sm text-base-content/70 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current md:min-h-0 md:py-0.5'
+const iconClass =
+	'inline-flex h-11 w-11 items-center justify-center text-xl text-base-content/80 transition-colors hover:text-rose-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current md:h-9 md:w-9'
+
 const Footer = () => {
 	const { t } = useTranslation()
+	const year = new Date().getFullYear()
 
 	return (
-		<footer className="mt-auto bg-page pt-16 text-base-content">
+		<footer className="mt-auto bg-page pt-8 text-base-content">
 			<div className="border-t border-gray-200">
-				<div className="container flex flex-col gap-10 py-6 md:flex-row md:items-start md:justify-between">
-					<div className="flex flex-col items-start gap-3 text-left">
-						<Link to="/" className="flex items-center gap-2 text-lg font-semibold text-base-content">
-							<img src="/favicon.png" alt="" width={32} height={32} className="h-8 w-8 rounded-sm" />
-							Rodo
-						</Link>
-						<p className="text-sm text-base-content/70">{t('homeIntro.tagline')}</p>
-						<div className="flex flex-wrap gap-4 text-base-content/80">
-							<SocialIcons className="text-xl hover:text-rose-500 transition-colors duration-200" />
-						</div>
-					</div>
-
-					<nav aria-label={t('footer.pages')} className="text-left">
-						<p className="mb-2 text-xs font-semibold uppercase tracking-wide text-base-content/50">
-							{t('footer.pages')}
-						</p>
-						<div className="grid grid-cols-2 gap-x-8 gap-y-1">
-							{pageColumns.map((column) => (
-								<ul key={column[0].to} className="flex flex-col gap-1">
-									{column.map((page) => (
-										<li key={page.to}>
-											<Link to={page.to} className="link link-hover text-sm text-base-content/80">
+				<div className="container py-8 md:py-10">
+					<div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-12">
+						<div className="order-2 flex min-w-0 flex-col items-start gap-5 text-left md:order-1">
+							<nav aria-label={t('footer.pages')} className="flex flex-col gap-1">
+								{linkRows.map((row) => (
+									<div key={row[0].to} className="flex flex-wrap gap-x-5">
+										{row.map((page) => (
+											<Link key={page.to} to={page.to} className={linkClass}>
 												{t(page.key)}
 											</Link>
-										</li>
-									))}
-								</ul>
-							))}
+										))}
+									</div>
+								))}
+							</nav>
+							<nav aria-label={t('footer.socialMedia')} className="inline-grid grid-cols-4 gap-1 sm:flex sm:flex-wrap sm:gap-2">
+								<SocialIcons className={iconClass} />
+							</nav>
 						</div>
-					</nav>
+
+						<div className="order-1 flex shrink-0 flex-col items-start gap-1 md:order-2 md:items-end">
+							<Link
+								to="/"
+								className="text-4xl font-bold text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current md:text-5xl"
+							>
+								Rodo
+							</Link>
+							<p className="text-sm text-base-content/60">{t('footer.copyright', { year })}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>

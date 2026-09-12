@@ -7,7 +7,9 @@
   },
   "footer": {
     "pages": "Pages",
-    "visitors": "MapMyVisitors"
+    "socialMedia": "Social media",
+    "visitors": "MapMyVisitors",
+    "copyright": "© {{year}} Rodo."
   },
   "errors": {
     "notFound": "Page Not Found...",
