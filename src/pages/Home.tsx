@@ -40,9 +40,11 @@ const Home = () => {
 						<HomeIntro />
 					</div>
 				</div>
+			</div>
 
-				<FeaturedMedia />
+			<FeaturedMedia />
 
+			<div className="container flex flex-col items-center text-center">
 				<h2 className="text-xl font-bold mt-6 text-base-content/65">{t('homeOthers.title')}</h2>
 
 				<Link to="/career" className="custom-card">

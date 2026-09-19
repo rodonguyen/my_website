@@ -25,18 +25,28 @@
     "intro4": "Mình thích chia sẻ nhưng vẫn không có thời gian làm content creator. Dù sao thì follow <instaLink>insta</instaLink> (reels) và <youtubeLink>youtube</youtubeLink> (video dài hơn) nếu bạn hứng thú nhé."
   },
   "homeFeatured": {
-    "label": "Bài viết và video"
+    "label": "Bài viết, video và bài đăng"
+  },
+  "homeMedia": {
+    "linkedin": "LinkedIn",
+    "linkedinCta": "Đọc trên LinkedIn →",
+    "substack": "Substack",
+    "substackCta": "Đọc trên Substack →",
+    "youtube": "YouTube",
+    "youtubeCta": "Xem trên YouTube →",
+    "x": "X",
+    "xCta": "Đọc trên X →",
+    "instagram": "Instagram",
+    "instagramCta": "Xem trên Instagram →",
+    "photo": "Ảnh",
+    "photoCta": "Mở ảnh →"
   },
   "homeLatestPosts": {
-    "writingTitle": "Bài viết mới",
-    "readCta": "Đọc trên Substack →",
     "empty": "Bài mới sắp tới. Tạm thời xem kho bài trên Substack nhé."
   },
   "homePodcast": {
-    "watchLabel": "Video mới",
     "title": "Chia sẻ là sẻ chia",
-    "intro1": "Đôi khi ngẫm lại mình đã lãng phí quãng thời gian đầu du học rất nhiều nên mình viết và làm video để chia sẻ những bài học mình ước ai đó đã dạy cho mình.",
-    "playLabel": "Xem trên YouTube"
+    "intro1": "Đôi khi ngẫm lại mình đã lãng phí quãng thời gian đầu du học rất nhiều nên mình viết và làm video để chia sẻ những bài học mình ước ai đó đã dạy cho mình."
   },
   "homeOthers": {
     "title": "Khác",

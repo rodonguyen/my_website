@@ -25,18 +25,28 @@
     "intro4": "I love sharing things but still struggle to find time to invest on this content creator thing. Anyway, do follow my <instaLink>insta</instaLink> (reels) and <youtubeLink>youtube</youtubeLink> for longer-form videos if you're interested."
   },
   "homeFeatured": {
-    "label": "Writing and video"
+    "label": "Writing, video, and posts"
+  },
+  "homeMedia": {
+    "linkedin": "LinkedIn",
+    "linkedinCta": "Read on LinkedIn →",
+    "substack": "Substack",
+    "substackCta": "Read on Substack →",
+    "youtube": "YouTube",
+    "youtubeCta": "Watch on YouTube →",
+    "x": "X",
+    "xCta": "Read on X →",
+    "instagram": "Instagram",
+    "instagramCta": "See on Instagram →",
+    "photo": "Photo",
+    "photoCta": "Open photo →"
   },
   "homeLatestPosts": {
-    "writingTitle": "Latest writing",
-    "readCta": "Read on Substack →",
     "empty": "New post coming. Meanwhile, the archive lives on Substack."
   },
   "homePodcast": {
-    "watchLabel": "Latest video",
     "title": "Sharing is caring",
-    "intro1": "Looking back to the time at university, I could have used those years better so this is me writing and filming the lessons I wish someone had told me earlier.",
-    "playLabel": "Watch on YouTube"
+    "intro1": "Looking back to the time at university, I could have used those years better so this is me writing and filming the lessons I wish someone had told me earlier."
   },
   "homeOthers": {
     "title": "Others",

@@ -1,24 +1,10 @@
-import React, { useState } from 'react'
+import { type AnchorHTMLAttributes } from 'react'
 
 export const Hyperlink = ({
-	href,
-	className,
-	title,
-	children,
-	onClick
-}: {
-	href: string
-	className?: string
-	title?: string
-	children?: React.ReactNode
-	onClick?: React.MouseEventHandler<HTMLAnchorElement>
-}) => {
-	return (
-		<a className={className} target="_blank" rel="noopener noreferrer" href={href} title={title} onClick={onClick}>
-			{children}
-		</a>
-	)
-}
+	target = '_blank',
+	rel = 'noopener noreferrer',
+	...props
+}: AnchorHTMLAttributes<HTMLAnchorElement>) => <a target={target} rel={rel} {...props} />
 
 export const changeWindowTitle = (path: string) => {
 	if (path === '/') {

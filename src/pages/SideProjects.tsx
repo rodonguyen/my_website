@@ -1,23 +1,22 @@
 import React from 'react'
-import { FaGithub, FaMapMarkedAlt } from 'react-icons/fa'
-// @ts-ignore
-import { changeWindowTitle } from '../utils/utils'
+import { FaGithub } from 'react-icons/fa6'
+import { FaMapMarkedAlt } from 'react-icons/fa'
+import { changeWindowTitle, Hyperlink } from '../utils/utils'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import posthog from '../posthog'
+import { GITHUB_HREF } from '../components/SocialIcons'
 
-// Define the structure for a project
 interface Project {
 	analyticsId: string
 	titleKey: string
 	descriptionKey: string
-	mediaUrl?: string // Path relative to src/assets/apps/
+	mediaUrl?: string
 	mediaType: 'image' | 'video' | 'gif' | 'icon'
-	liveUrl?: string // Optional link to the live project
-	githubUrl?: string // Optional link to the GitHub repository
+	liveUrl?: string
+	githubUrl?: string
 }
 
-// Hardcoded project data
 const projects: Project[] = [
 	{
 		analyticsId: 'lucius_capital',
@@ -45,40 +44,24 @@ const projects: Project[] = [
 	}
 ]
 
-// Helper function to get the full media path
-const getMediaPath = (mediaUrl: string) => {
-	// Vite handles static assets imported this way
-	// Adjust the base path if your assets directory structure is different
-	// This assumes your media files are directly inside src/assets/apps/
-	// For dynamic imports with variables, Vite requires a specific pattern.
-	// See: https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
-	// We might need to adjust this based on how assets are handled in your build.
-	// A simpler approach for now might be putting assets in the `public` folder.
-	try {
-		// Attempting dynamic import - might need refinement for Vite
-		return new URL(`../assets/apps/${mediaUrl}`, import.meta.url).href
-	} catch (e) {
-		console.error(`Error creating URL for ${mediaUrl}:`, e)
-		return '' // Return empty string or a placeholder path on error
-	}
-}
+const getMediaPath = (mediaUrl: string) => new URL(`../assets/apps/${mediaUrl}`, import.meta.url).href
 
 const SideProjects: React.FC = () => {
 	const { t } = useTranslation()
 	changeWindowTitle('/apps')
 
 	return (
-		<div className="container  mx-auto py-8">
+		<div className="container mx-auto py-8">
 			<h1 className="h1 text-center">{t('apps.pageTitle')}</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-				{projects.map((project, index) => (
-					<div key={index} className="card !rounded-[1rem] bg-base-100 shadow-xl">
-						<figure className="px-4 pt-4">
+				{projects.map((project) => (
+					<article key={project.analyticsId} className="project-card">
+						<div className="project-card__media">
 							{project.mediaType === 'image' && (
 								<img
 									src={getMediaPath(project.mediaUrl ?? '')}
-									alt={t(project.titleKey)}
-									className="rounded-xl rounded-b-none object-cover h-48 w-full"
+									alt=""
+									className="project-card__image"
 									loading="lazy"
 								/>
 							)}
@@ -86,79 +69,65 @@ const SideProjects: React.FC = () => {
 								<video
 									controls
 									src={getMediaPath(project.mediaUrl ?? '')}
-									className="rounded-xl object-cover h-48 w-full"
-									preload="metadata" // Load only metadata initially
+									className="project-card__image"
+									preload="metadata"
 								>
 									Your browser does not support the video tag.
 								</video>
 							)}
 							{project.mediaType === 'gif' && (
-								<img
-									src={getMediaPath(project.mediaUrl ?? '')}
-									alt={t(project.titleKey)}
-									className="rounded-xl object-cover h-48 w-full"
-								/>
+								<img src={getMediaPath(project.mediaUrl ?? '')} alt="" className="project-card__image" />
 							)}
 							{project.mediaType === 'icon' && (
-								<div className="rounded-xl rounded-b-none bg-primary/10 flex items-center justify-center h-48 w-full">
-									<FaMapMarkedAlt className="text-5xl text-primary" aria-hidden="true" />
+								<div className="project-card__media-well">
+									<FaMapMarkedAlt aria-hidden="true" />
 								</div>
 							)}
-						</figure>
-						<div className="card-body items-center text-center">
-							<h2 className="!card-title">{t(project.titleKey)}</h2>
-							<p>{t(project.descriptionKey)}</p>
-							<div className="card-actions mt-2 flex justify-center gap-2">
-								{/* Live Project Button */}
-								{project.liveUrl && (
-									<Link
-										to={project.liveUrl}
-										className="btn btn-soft btn-primary"
-										onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'live' })}
-									>
-										{t('apps.checkItOut')}
-									</Link>
-								)}
-								{/* GitHub Button */}
-								{project.githubUrl && (
-									<a
-										href={project.githubUrl}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="btn btn-" // Use a different style, e.g., secondary
-										onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'github' })}
-									>
-										<FaGithub />
-										{t('apps.github')}
-									</a>
-								)}
-							</div>
 						</div>
-					</div>
+						<h2 className="project-card__title">{t(project.titleKey)}</h2>
+						<p className="project-card__excerpt">{t(project.descriptionKey)}</p>
+						<div className="project-card__actions">
+							{project.liveUrl && (
+								<Link
+									to={project.liveUrl}
+									className="project-card__cta project-card__cta--primary"
+									onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'live' })}
+								>
+									{t('apps.checkItOut')}
+								</Link>
+							)}
+							{project.githubUrl && (
+								<Hyperlink
+									href={project.githubUrl}
+									className="project-card__cta"
+									onClick={() => posthog.capture('project_opened', { project: project.analyticsId, link_type: 'github' })}
+								>
+									<FaGithub aria-hidden="true" />
+									{t('apps.github')}
+								</Hyperlink>
+							)}
+						</div>
+					</article>
 				))}
-				<a
-					href="https://github.com/rodonguyen/"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="card !rounded-[1rem] bg-base-100 shadow-xl hover:bg-indigo-100/10 transition-colors"
+				<Hyperlink
+					href={GITHUB_HREF}
+					className="project-card"
 					onClick={() => posthog.capture('project_opened', { project: 'github_profile', link_type: 'github' })}
 				>
-					<figure className="px-4 pt-4">
-						<div className="rounded-xl rounded-b-none bg-indigo-100/30 flex items-center justify-center h-48 w-full">
-							<FaGithub className="text-5xl" />
-						</div>
-					</figure>
-					<div className="card-body items-center text-center py-4">
-						<h2 className="!card-title">{t('apps.githubCardTitle')}</h2>
-						<p className="text-sm">{t('apps.githubCardDescription')}</p>
-						<div className="card-actions mt-2 flex justify-center">
-							<span className="btn btn-soft">
-								<FaGithub />
-								{t('apps.github')}
-							</span>
+					<div className="project-card__media">
+						<div className="project-card__media-well">
+							<FaGithub aria-hidden="true" />
 						</div>
 					</div>
-				</a>
+					<h2 className="project-card__title">{t('apps.githubCardTitle')}</h2>
+					<p className="project-card__excerpt">{t('apps.githubCardDescription')}</p>
+					<div className="project-card__actions">
+						<span className="project-card__cta">
+							<FaGithub aria-hidden="true" />
+							{t('apps.github')}
+						</span>
+					</div>
+				</Hyperlink>
 			</div>
 		</div>
 	)
