@@ -4,7 +4,6 @@ import { Hyperlink } from '../utils/utils'
 import posthog from '../posthog'
 
 const SUBSTACK_SUBSCRIBE_URL = 'https://rodonguyen.substack.com/api/v1/free?nojs=true'
-const IFRAME_NAME = 'substack-subscribe-frame'
 
 const SubstackSubscribe = () => {
 	const { t } = useTranslation()
@@ -12,34 +11,39 @@ const SubstackSubscribe = () => {
 	const pageUrl = window.location.href
 
 	return (
-		<div className="mt-3 w-full max-w-md mx-auto">
-			<iframe name={IFRAME_NAME} title="Substack subscribe" className="hidden" />
+		<div className="mt-3 w-full max-w-[384px] mx-auto">
 			{submitted && <p className="text-sm text-base-content/70">{t('homeOthers.subscribeSuccess')}</p>}
 			<form
 				action={SUBSTACK_SUBSCRIBE_URL}
 				method="post"
-				target={IFRAME_NAME}
+				target="_blank"
+				rel="noopener noreferrer"
 				onSubmit={() => {
 					posthog.capture('newsletter_subscription_submitted')
 					setSubmitted(true)
 				}}
-				className={submitted ? 'hidden' : 'join w-full'}
+				className={submitted ? 'hidden' : 'w-full'}
 			>
 				<input type="hidden" name="source" value="embed" />
 				<input type="hidden" name="current_url" value={pageUrl} />
 				<input type="hidden" name="first_url" value={pageUrl} />
-				<input
-					type="email"
-					name="email"
-					required
-					autoComplete="email"
-					placeholder={t('homeOthers.subscribePlaceholder')}
-					aria-label={t('homeOthers.subscribePlaceholder')}
-					className="input input-bordered join-item bg-white text-neutral-800 flex-1 min-w-0"
-				/>
-				<button type="submit" className="btn join-item border-none text-white bg-[#FF6719] hover:bg-[#ff5600]">
-					{t('homeOthers.subscribeButton')}
-				</button>
+				<div className="join w-full">
+					<input
+						type="email"
+						name="email"
+						required
+						autoComplete="email"
+						placeholder={t('homeOthers.subscribePlaceholder')}
+						aria-label={t('homeOthers.subscribePlaceholder')}
+						className="input input-bordered join-item h-11 min-h-11 bg-white text-[#3a342e] placeholder:text-[#3a342e]/55 flex-1 min-w-0 border-[#d2c0ae] focus:border-[#ff6719]"
+					/>
+					<button
+						type="submit"
+						className="btn join-item h-11 min-h-11 border-none text-white bg-[#FF6719] hover:bg-[#ff5600]"
+					>
+						{t('homeOthers.subscribeButton')}
+					</button>
+				</div>
 			</form>
 			{!submitted && (
 				<p className="mt-2 text-xs text-base-content/50">
