@@ -71,9 +71,7 @@ const Career = () => {
 					<div className="timeline-end md:mb-10">
 						<time className="font-mono italic">2023</time>
 						<div className="text-lg font-semibold">{t('career.positions.softwareEngineer')}</div>
-						<Hyperlink href="https://dltx.io/" className="text-base-content/60">
-							DLTX Labs
-						</Hyperlink>
+						<div className="text-base-content/60">DLTX Labs</div>
 						<div className="text-lg font-semibold mt-4">{t('career.positions.sessionalStaff')}</div>
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT
