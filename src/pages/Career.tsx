@@ -2,6 +2,7 @@ import { changeWindowTitle, Hyperlink } from '../utils/utils'
 import { rodoResumePdf } from '../assets/history'
 import { useTranslation } from 'react-i18next'
 import posthog from '../posthog'
+import { YOUTUBE_HREF } from '../components/SocialIcons'
 
 const TickIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
@@ -36,7 +37,7 @@ const Career = () => {
 								👉🏽 / {t('career.currentResume')} /
 							</a>
 						</div>
-						<Hyperlink href="https://www.youtube.com/@rodo.podcast">
+						<Hyperlink href={YOUTUBE_HREF}>
 							<div className="text-lg font-semibold mt-4">{t('career.positions.contentCreator')}</div>
 						</Hyperlink>
 					</div>
@@ -56,7 +57,7 @@ const Career = () => {
 						<Hyperlink href="https://www.qut.edu.au/" className="text-base-content/60">
 							QUT
 						</Hyperlink>
-						<Hyperlink href="https://www.youtube.com/@rodo.podcast">
+						<Hyperlink href={YOUTUBE_HREF}>
 							<div className="text-lg font-semibold mt-4">{t('career.positions.youtuber')}</div>
 						</Hyperlink>
 					</div>

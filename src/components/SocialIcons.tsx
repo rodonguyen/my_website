@@ -4,7 +4,7 @@ import { BsSubstack } from 'react-icons/bs'
 import posthog from '../posthog'
 
 export const INSTAGRAM_HREF = 'https://instagram.com/rodo.rodeo'
-export const YOUTUBE_HREF = 'https://youtube.com/@rodo.podcast'
+export const YOUTUBE_HREF = 'https://youtube.com/@rodo.mp4'
 export const X_HREF = 'https://x.com/rodonguyen'
 export const SUBSTACK_HREF = 'https://rodonguyen.substack.com/'
 export const GITHUB_HREF = 'https://github.com/rodonguyen/'
