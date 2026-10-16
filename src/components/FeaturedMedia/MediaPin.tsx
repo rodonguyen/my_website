@@ -30,6 +30,9 @@ const MediaPin = ({ post, label, cta }: MediaPinProps) => (
 				alt={post.imageAlt}
 				className="featured-card__image"
 				loading="lazy"
+				decoding="async"
+				width={post.imageWidth}
+				height={post.imageHeight}
 				style={post.objectPosition ? { objectPosition: post.objectPosition } : undefined}
 			/>
 			<FeaturedBadge icon={platformIcons[post.platform]} platform={post.platform}>

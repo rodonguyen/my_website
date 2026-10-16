@@ -24,6 +24,9 @@ const VideoCard = ({ label, title, intro, cta }: VideoCardProps) => (
 				alt=""
 				className="featured-card__image"
 				loading="lazy"
+				decoding="async"
+				width={1280}
+				height={720}
 			/>
 			<FeaturedBadge icon={FaYoutube} platform="youtube">
 				{label}

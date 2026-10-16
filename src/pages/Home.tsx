@@ -21,7 +21,14 @@ const Home = () => {
 				<div className="avatar-stage">
 					<div className="avatar">
 						<div className="rounded-full md:w-48 w-24">
-							<img src={rodoImage} alt="Rodo Avatar" className="rounded-full" />
+							<img
+								src={rodoImage}
+								alt="Rodo Avatar"
+								className="rounded-full"
+								width={385}
+								height={384}
+								fetchPriority="high"
+							/>
 						</div>
 					</div>
 					<ThoughtBubble text={t('homeIntro.thought')} />

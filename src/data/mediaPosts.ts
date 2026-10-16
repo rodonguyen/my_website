@@ -12,7 +12,9 @@ export const mediaPosts: MediaPost[] = [
 		excerpt:
 			'Last night was a blast! Brisbane Claude Code meetup is packed with builders I can call “my people” — people who tap into latest tech, explore AI, and have fun along the way.',
 		analyticsId: 'linkedin_claude_brisbane_meetup',
-		objectPosition: 'center 18%'
+		objectPosition: 'center 18%',
+		imageWidth: 1026,
+		imageHeight: 1026
 	},
 	{
 		id: 'ickg-2026-paper-acceptance',
@@ -22,6 +24,8 @@ export const mediaPosts: MediaPost[] = [
 		imageAlt: 'Email notifying that the paper Survey: Graph-Based Personalized Memory for LLM Agents was accepted at ICKG 2026',
 		excerpt: "It's a bird! It's a plane! No, it's Nguyen et al.",
 		analyticsId: 'linkedin_ickg_2026_paper_acceptance',
-		objectPosition: 'center top'
+		objectPosition: 'center top',
+		imageWidth: 1049,
+		imageHeight: 1093
 	}
 ]
