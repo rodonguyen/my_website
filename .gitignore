@@ -27,4 +27,3 @@ package-lock.json
 .playwright-cli/
 
 
-encode-content.cjs
