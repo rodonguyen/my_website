@@ -17,4 +17,6 @@ export type MediaPost = {
 	excerpt: string
 	analyticsId: string
 	objectPosition?: string
+	imageWidth?: number
+	imageHeight?: number
 }

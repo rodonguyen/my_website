@@ -163,9 +163,21 @@ const TimeIHaveLeft = () => {
 						className="lifebar-annotation rounded-t-xl"
 						src={lifebarAnnotationImageVn}
 						alt="Life bar annotations in Vietnamese"
+						width={1124}
+						height={287}
+						loading="lazy"
+						decoding="async"
 					/>
 				) : (
-					<img className="lifebar-annotation rounded-t-xl" src={lifebarAnnotationImage} alt="Life bar annotations" />
+					<img
+						className="lifebar-annotation rounded-t-xl"
+						src={lifebarAnnotationImage}
+						alt="Life bar annotations"
+						width={1124}
+						height={287}
+						loading="lazy"
+						decoding="async"
+					/>
 				)}
 				<div className="bg-[#ffdebf] h-12 rounded-b-xl relative">
 					<div className="bg-[#4caf50] h-full rounded-bl-xl w-0 transition-all duration-1000" id="life-progress">

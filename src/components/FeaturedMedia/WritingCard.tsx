@@ -25,7 +25,7 @@ const WritingCard = ({ post, label, cta, locale }: WritingCardProps) => (
 	>
 		{post.coverImage ? (
 			<div className="featured-card__media">
-				<img src={post.coverImage} alt="" className="featured-card__image" loading="lazy" />
+				<img src={post.coverImage} alt="" className="featured-card__image" loading="lazy" decoding="async" />
 				<FeaturedBadge icon={BsSubstack} platform="substack">
 					{label}
 				</FeaturedBadge>

@@ -63,6 +63,7 @@ const SideProjects: React.FC = () => {
 									alt=""
 									className="project-card__image"
 									loading="lazy"
+									decoding="async"
 								/>
 							)}
 							{project.mediaType === 'video' && (
@@ -76,7 +77,13 @@ const SideProjects: React.FC = () => {
 								</video>
 							)}
 							{project.mediaType === 'gif' && (
-								<img src={getMediaPath(project.mediaUrl ?? '')} alt="" className="project-card__image" />
+								<img
+									src={getMediaPath(project.mediaUrl ?? '')}
+									alt=""
+									className="project-card__image"
+									loading="lazy"
+									decoding="async"
+								/>
 							)}
 							{project.mediaType === 'icon' && (
 								<div className="project-card__media-well">
