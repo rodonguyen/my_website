@@ -1,4 +1,22 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+
+/*
+ * Auto source detection scans every file in the tree that git does not ignore,
+ * which includes test files, tooling scripts, and stray build output. Words
+ * those files happen to contain were emitted as daisyUI component rules, so the
+ * render-blocking stylesheet changed size depending on what else was checked
+ * out. Naming the sources keeps the stylesheet a function of the application.
+ *
+ * The extension list is the application's own source, not just the tsx files
+ * that render today: an unimported .jsx file in this repo already needed it,
+ * and a silent missing source is a missing rule. Both the test files and the
+ * test setup file are excluded by name. Class names composed at runtime, or
+ * carried inside a translation string, still have to be listed here by hand.
+ */
+@source '../../index.html';
+@source '../**/*.{ts,tsx,js,jsx,mjs,cjs}';
+@source not '../**/*.test.{ts,tsx}';
+@source not '../setupTests.ts';
 
 @plugin "daisyui" {
   themes: light --default;
