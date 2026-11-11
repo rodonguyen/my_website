@@ -42,8 +42,14 @@ const Ickg26 = () => {
 					<li className="flex items-start gap-3">
 						<FaRegFilePowerpoint aria-hidden="true" className="mt-1 shrink-0" />
 						<div>
-							<span className="font-semibold">Conference slides</span>
-							<p className="text-base-content/70">To be updated after the conference</p>
+							<Hyperlink
+								href="https://github.com/icedpanda/awesome-personalized-graph-memory/blob/main/slides/Graph-Based%20Personalized%20Memory%20for%20LLM%20Agents%20%E2%80%94%20ICKG%202026.pdf"
+								className="link font-semibold"
+								onClick={() => posthog.capture('ickg26_link_opened', { link: 'slides' })}
+							>
+								Conference slides
+							</Hyperlink>
+							<p className="text-base-content/70">PDF on GitHub</p>
 						</div>
 					</li>
 					<li className="flex items-start gap-3">
