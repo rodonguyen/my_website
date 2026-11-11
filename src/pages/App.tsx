@@ -12,6 +12,7 @@ const NotFound = lazy(() => import('./NotFound'))
 const SideProjects = lazy(() => import('./SideProjects'))
 const Career = lazy(() => import('./Career'))
 const Visitors = lazy(() => import('./Visitors'))
+const Ickg26 = lazy(() => import('./Ickg26'))
 
 function RouteFallback() {
 	return (
@@ -54,6 +55,7 @@ function App() {
 						<Route path="apps/timeihaveleft" element={<TimeIHaveLeft />} />
 						<Route path="apps" element={<SideProjects />}></Route>
 						<Route path="visitors" element={<Visitors />} />
+						<Route path="ickg26" element={<Ickg26 />} />
 						<Route path="*" element={<NotFound />} />
 					</Route>
 				</Routes>
