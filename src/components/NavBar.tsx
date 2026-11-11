@@ -52,7 +52,7 @@ const NavBar = () => {
 					>
 						<li>
 							<Link to="/list100" className="text-lg">
-								{t('nav.list100')} <span className="badge bg-blue-100">Updated</span>
+								{t('nav.list100')}
 							</Link>
 						</li>
 						<li>
