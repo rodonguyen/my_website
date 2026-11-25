@@ -43,7 +43,7 @@ const Ickg26 = () => {
 						<FaRegFilePowerpoint aria-hidden="true" className="mt-1 shrink-0" />
 						<div>
 							<Hyperlink
-								href="https://github.com/icedpanda/awesome-personalized-graph-memory/tree/add-ickg26-slides/slides"
+								href="https://github.com/icedpanda/awesome-personalized-graph-memory/tree/main/slides"
 								className="link font-semibold"
 								onClick={() => posthog.capture('ickg26_link_opened', { link: 'slides' })}
 							>
